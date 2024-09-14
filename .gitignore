@@ -1,0 +1,35 @@
+full-semester/trek-2022/video/water-crossing.mp4
+poem/
+challenge/
+announcements/week-14/1-css-extra-credit.html
+announcements/week-11/5-positioning-solutions.html
+challenge.zip
+student/
+examples/alma
+grading/
+*~
+
+# temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
+
+# KDE directory preferences
+.directory
+
+# Linux trash folder which might appear on any partition or disk
+.Trash-*
+
+# .nfs files are created when an open file is removed but is still being accessed
+.nfs*
+
+
+#  These are to keep the VSCode settings you use from becoming public
+.vscode/*
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+trek-2022/video/water-crossing.mp4
+block/wireframes/*
+
