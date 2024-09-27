@@ -12,7 +12,7 @@
 }
 
 body {
-  background-color: #006eb6;
+  background-color: #bbddf3;
   font-family: 'Open Sans', sans-serif;
   box-sizing: border-box;
 }
@@ -32,6 +32,24 @@ a {
 
 img {
   max-width: 100%;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.nav-heading {
+  grid-column: 1/4;
+  justify-self: center;
+}
+
+nav a {
+  color: #fdfbfb;
+  padding: 1.5em 1em;
+  background-color: #021d38;
+  text-align: center;
+  margin: .5rem;
 }
 
 .content {
