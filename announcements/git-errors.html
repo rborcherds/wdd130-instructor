@@ -7,13 +7,14 @@
   <title>Git - Github error messages</title>
   <meta name="description"
     content="This page contains the Git/GitHub error message that students have received and how to fixe them. It also contains some helpful information on how to work more efficiently.">
+  <meta name="author" description="Ralph Borcherds">
   <link rel="stylesheet" href="styles/git-errors.css">
 </head>
 
 <body>
 
   <header>
-    <h1 id="top">Git - Github error messages & suggestions</h1>
+    <h1 id="top" class="title">Git - Github error messages / Issues & Suggestions</h1>
     <nav>
       <h2 class="nav-heading">Error Messages</h2>
       <a href="#no-secret-key">No Secret Key</a>
@@ -42,11 +43,16 @@
       <a href="#commit-message">How to add more details to commit message</a>
       <a href="#repo-description">How to add a description to your Repository</a>
       <a href="#multiple-users">How to add multiple users to a shared computer</a>
+      <h2 class="nav-heading">Additional Documentation</h2>
+      <a href="byui-email.html">Accessing BYU-I email</a>
+      <a href="git-github.html">Git/GitHb commit messages</a>
+      <a href="new-computer.html">Setup New computer</a>
+      <a href="zoom-setup.html">How to setup Zoom</a>
     </nav>
   </header>
 
   <main>
-    <h3>Git - GitHub - VSCode errors messages</h3>
+    <h2>Git - GitHub - VSCode errors messages</h2>
     <section class="errors">
       <details id="no-secret-key">
         <summary>Git: gpg: skipped &lt;email&gt;: No Secret Key</summary>
@@ -74,13 +80,11 @@
           GitHub
         </summary>
         <p>This error occurs when you have GitHub setup on one account and you try to use
-          another
-          account and GitHub auto logs you into the old account with VSCode. This process
-          is using the Windows Credential Manager.</p>
+          another account and GitHub auto logs you into the old account with VSCode. This
+          process is using the Windows Credential Manager.</p>
         <img src="images/git-error-push-github.png" alt="Git Error no authorization">
         <p>This error is because Git was previously configured for another user account on
-          the
-          computer using the global settings. There are a a few solutions.</p>
+          the computer using the global settings. There are a a few solutions.</p>
         <details>
           <summary>Remove Windows Credential Manager from auto logging into GitHub
           </summary>
@@ -89,8 +93,8 @@
           <p>There are two part to this. If you only do one of them it will work. It is
             recommended to do both parts.</p>
           <p>Go to GitHub and log into the old account and click on the user profile
-            picture in the
-            top right of the web page. <span class="menu-select"> Select Settings</span>
+            picture in the top right of the web page. <span class="menu-select"> Select
+              Settings</span>
           </p>
           <p> On the left navigation menu, select <span class="menu-select">Password and
               Authentication</span> </p>
@@ -134,8 +138,8 @@
       <details id="pages-not-initializing">
         <summary>GitHub Pages does not initialize</summary>
         <p> There is an issue where the GitHub pages do not initialize the first time.
-          This means
-          you must re-initialize a push to GitHub and then recreate the pages setup. </p>
+          This means you must re-initialize a push to GitHub and then recreate the pages
+          setup. </p>
         <ol>
           <li>
             <p>Go to the pages setup page and change the branch to NONE</p>
@@ -157,32 +161,27 @@
                 class="menu-select">Actions</span> tab</p>
             <img src="images/github-action-tab.png" alt="GitHub Actions Tab">
             <p> Watch the top entry until the icon to the left turns blue or green with a
-              check
-              mark. That means it is complete. The red circle with an X means that it
+              check mark. That means it is complete. The red circle with an X means that
+              it
               failed. </p>
             <img src="images/github-actions-list.png" alt="Github Actions List">
             <p> You will notice that the process will take longer than 1 minute. This is
-              due to some
-              change GitHub has made on the server due to new features that are being
-              added. Even
-              publishing the push/sync from VSCode takes as long as 5 min on very busy
-              days. </p>
+              due to some change GitHub has made on the server due to new features that
+              are being
+              added. Even publishing the push/sync from VSCode takes as long as 5 min on
+              very busy days. </p>
             <p> If the user gets a failed again, check the spelling of the folders and
-              file names.
-              This process seems to fail if the user has spaces in the folder and
-              filenames and
-              sometimes if there are underscores in these names. </p>
+              file names. This process seems to fail if the user has spaces in the folder
+              and filenames and sometimes if there are underscores in these names. </p>
           </li>
         </ol>
         <a href="#top" class="top-link">Back to Top</a>
       </details>
       <details id="user-name-email">
         <summary> Make sure to configure your &apos;user.name&apos; and
-          &apos;user.email&apos; in
-          git </summary>
+          &apos;user.email&apos; in git </summary>
         <p> If the user gets this error, they missed that step in the configuration of
-          Git. It is
-          found in the installation steps of Git for Windows. </p>
+          Git. It is found in the installation steps of Git for Windows. </p>
         <img src="images/git-username-useremail.png" alt="Git Username Email error">
         <p> Open the terminal or command prompt. This can be the one inside VSCode </p>
         <p>Type each of these commands into the command prompt/Terminal window </p>
@@ -206,8 +205,7 @@
               line </p>
             <pre>git push</pre>
             <p> You may get an error that says something like this (It will look different
-              on the
-              various OS&apos;s): </p>
+              on the various OS&apos;s): </p>
             <pre>
                                 There is no tracking information for the current branch.<br>
                                 Please specify which branch you want to merge with.<br>
@@ -216,19 +214,16 @@
                                 If you wish to set tracking information for this branch you can do so with:<br><br>
                                 git push --set-upstream origin master
                             </pre>
-            <p> If you get that error at the command line type in the command </p>
+            <p>If you get that error at the command line type in the command </p>
             <pre>git push &minus;set-upstream origin master</pre>
             <p>Then do a git push command</p>
             <p>You may be prompted to authenticate with GitHub again.</p>
             <p> Once the push/sync is complete, you will need to restart VSCode and the
-              GitHub
-              controls within VSCode should work again. </p>
+              GitHub controls within VSCode should work again. </p>
           </li>
           <li> The other reasons why this process will hang are too numerous and hard to
-            give
-            instructions on how to overcome in this document. This will require more
-            research with
-            debug logs to see if there is a reason for the hang. </li>
+            give instructions on how to overcome in this document. This will require more
+            research with debug logs to see if there is a reason for the hang. </li>
         </ol>
         <a href="#top" class="top-link">Back to Top</a>
       </details>
@@ -239,18 +234,15 @@
           following Windows System error </p>
         <img src="images/windows-unathorixed-change.jpg" alt="Windows Security Issue">
         <p> The instructions to fix this are specific to the version of Windows that is
-          being run.
-          Here are the basic steps: <a
+          being run. Here are the basic steps: <a
             href="https://support.microsoft.com/en-us/windows/allow-an-app-to-access-controlled-folders-b5b6627a-b008-2ca2-7931-7e51e912b034">
             https://support.microsoft.com/en-us/windows/allow-an-app-to-access-controlled-folders-b5b6627a-b008-2ca2-7931-7e51e912b034
           </a>
         </p>
         <h3>Use controlled folder access</h3>
         <p> Controlled folder access in Windows Security reviews the apps that can make
-          changes to
-          files in protected folders and block unauthorized or unsafe apps from accessing
-          or
-          changing files in those folders. </p>
+          changes to files in protected folders and block unauthorized or unsafe apps from
+          accessing or changing files in those folders. </p>
         <ol>
           <li> Select <span class="bolded"> Start> Settings> Update &amp; Security>
               Windows
@@ -267,14 +259,12 @@
           </li>
         </ol>
         <p> There is an option to allow just one program to run in this Controlled Folder
-          Access and
-          you can select git.exe from the recently blocked programs. </p>
+          Access and you can select git.exe from the recently blocked programs. </p>
         <p> If you look at the Windows Notifications, you may see an error like this. </p>
         <img src="images/windows-unathorixed-change-2.jpg"
           alt="Windows Notification Controlled Access">
         <p> This is the same step as above for the same error. Microsoft has a few diverse
-          ways to
-          present this message. It will also be logged in to the System Logs. </p>
+          ways to present this message. It will also be logged in to the System Logs. </p>
         <a href="#top" class="top-link">Back to Top</a>
       </details>
       <details id="git-rpc-curl-18">
@@ -295,12 +285,9 @@
               target="_blank">https://debugah.com/git-clone-error-rpc-failed-curl-18-transfer-closed-with-outstanding-read-data-remaining-18415/</a>
           </li>
           <li>Running Homebrew on a MAC or Linux machine. There are known issues at times
-            with this
-            error in Homebrew. Homebrew is not supported for students and they will have
-            to find the
-            answers on their own as Homebrew has its own command strcuture to work with
-            Git &
-            GitHub.</li>
+            with this error in Homebrew. Homebrew is not supported for students and they
+            will have to find the answers on their own as Homebrew has its own command
+            structure to work with Git & GitHub.</li>
         </ul>
         <a href="#top" class="top-link">Back to Top</a>
       </details>
@@ -310,12 +297,10 @@
         </summary>
         <img src="images/git-rpc-failue-error.png" alt="Git RPC Failure Error">
         <p> This error has to do with the amount of data being sent to GitHub. On bad
-          internet
-          connections, you can only send enough data that GitHub will keep the connection
-          open. Bad
-          internet connections will drop with this error. There are other reasons this
-          error can
-          occur, but this is the only reason for this error with the data we use. </p>
+          internet connections, you can only send enough data that GitHub will keep the
+          connection open. Bad internet connections will drop with this error. There are
+          other reasons this error can occur, but this is the only reason for this error
+          with the data we use. </p>
         <a href="#top" class="top-link">Back to Top</a>
       </details>
       <details id="git-add-folder-denied">
@@ -324,18 +309,17 @@
           this </p>
         <pre>Git Error - &apos;main/&apos; does not have a commit checked out</pre>
         <p> The issue is mot likely that the folder has been initialized as a git
-          repository. Go
-          into that folder and look for the hidden folder/directory called .git </p>
+          repository. Go into that folder and look for the hidden folder/directory called
+          .git </p>
         <p>Remove the .git folder in the sub-directory</p>
         <a href="#top" class="top-link">Back to Top</a>
       </details>
       <details id="git-ref-tips-error">
         <summary>Error: Failed to push some refs to…</summary>
         <p> Updates were rejected because the tip of your current branch is behind its
-          remote
-          counterpart. Integrate the remote change (e.g. &apos;git pull …&apos;) before
-          pushing
-          again. </p>
+          remote counterpart. Integrate the remote change (e.g. &apos;git pull …&apos;)
+          before
+          pushing again. </p>
         <img src="images/git-ref-tips-error.png" alt="Git Refs Tip Error">
         <p> The reason for this error is that the code on GitHub was edited and the user
           did not

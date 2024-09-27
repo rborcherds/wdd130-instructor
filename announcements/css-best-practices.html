@@ -9,6 +9,7 @@
 </head>
 
 <body>
+
     <main>
         <h1>Beginners CSS Best Practices</h1>
         <p>Here are some CSS best practices for those learning CSS. No one will
@@ -40,7 +41,7 @@
                     width.</p>
             </li>
             <li>
-                <h3>Don't use preprocessors</h3>
+                <h3>Don't use a preprocessor</h3>
                 <p>Don't use preprocessor syntax, such as Sass, Less, or Stylus.
                     These just add a layer of complexity that most sites do not
                     need.</p>
@@ -48,8 +49,8 @@
             <li>
                 <h3>Don't use resets</h3>
                 <p>For maximum control over CSS across platforms, a lot of people
-                    used to use CSS resets to remove every style, before then
-                    building things back up themselves. This certainly has its
+                    used to use CSS resets to remove every style, before they
+                    building the CSS themselves. This certainly has its
                     merits, but especially in the modern world, CSS resets can be an
                     overkill, resulting in a lot of extra time spent re-implementing
                     things that weren't completely broken in the first place, like
@@ -59,7 +60,7 @@
                 <h3>CSS comments</h3>
                 <p>Use CSS-style comments to comment code that isn't
                     self-documenting. Also note that you should leave a space
-                    between the asterisks and the comment.</p>
+                    between the asterisks and the comment for readability only.</p>
                 <pre> /* This is a CSS-style comment */</pre>
                 <p>Put your comments on separate lines preceding the code they are
                     referring to, like so:</p>
@@ -67,17 +68,22 @@
                    </pre>
             </li>
             <li>
-                <h3>Double quotes around values</h3> Where quotes can or should be
-                included, use them, and use double quotes. For example:
+                <h3>Double quotes around values</h3>
+                <p>
+                    Where quotes can or should be
+                    included, use them, and use double quotes. For example:
+                </p>
                 <pre>[data-vegetable="liquid"] {<br>  background-color: goldenrod;<br>  background-image: url("../../media/examples/lizard.png");<br>}<br>
                    </pre>
             </li>
             <li>
                 <h3>Longhand vs. shorthand rules</h3>
                 <p>Sometimes you want to specify the padding-top or border-right but from
-                experience, you will often come back to these to add more so adopt the habit to
-                always use the shorthand to make it easier to change without specifying many
-                properties. It is easier to change and it is less code.</p>
+                    experience, you will often come back to these to add more so adopt the
+                    habit to
+                    always use the shorthand to make it easier to change without
+                    specifying many
+                    properties. It is easier to change and it is less code.</p>
             </li>
             <li>
                 <h3>Selectors</h3>
@@ -112,11 +118,11 @@
             </li>
             <li>
                 <h3>Use CSS variables</h3>
-                <p>My #1 reason to use a pre-processor was the variables and CSS
-                    variables are way better because they stick around when loaded
-                    in the browser. The support is good and it allows you to create
-                    a more flexible and reusable UI, without mentioning it helps you
-                    create a more powerful design system and features.</p>
+                <p>The #1 reason to use a pre-processor in the past was the variables. CSS
+                    variables are way better because they stick around when loaded in the
+                    browser. The support is good and it allows you to create a more
+                    flexible and reusable UI, without mentioning it helps you create a
+                    more powerful design system and features.</p>
             </li>
             <li>
                 <h3>Format Text with CSS</h3>
@@ -142,7 +148,7 @@
                     sake, find one way to add colors and stick to it.</p>
             </li>
             <p>
-            <h3>Try to organize CSS to match the Markup Orde</h3>
+            <h3>Try to organize CSS to match the Markup Order</h3>
             <p>It sure makes for an easier way to understand your markup just by
                 looking at your CSS. It is something I do and saves me a lot of
                 time.</p>
@@ -160,10 +166,11 @@
             <li>
                 <h3>Hyphens or underscore?</h3>
                 <p>The most common separator for class and id names is a hyphen but
-                    whatever you pick, stick to it.</p>
+                    whatever you pick, stick to it. Hyphen is easier to read and
+                    troubleshoot than an underscore.</p>
             </li>
             <p>
-            <h3>Remove Unused CSS </h3>
+            <h3>Remove Unused CSS</h3>
             <p>For the same reason, you should ship the only CSS you will use,
                 consider using tools like PurgeCSS to remove CSS that will not be
                 needed in rendering. These tools will look at your CSS and HTML to

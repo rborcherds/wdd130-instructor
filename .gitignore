@@ -1,13 +1,4 @@
-full-semester/trek-2022/video/water-crossing.mp4
-poem/
-challenge/
-announcements/week-14/1-css-extra-credit.html
-announcements/week-11/5-positioning-solutions.html
-challenge.zip
-student/
-examples/alma
-grading/
-*~
+.extra-credit/
 
 # temporary files which can be created if a process still has a handle open of a deleted file
 .fuse_hidden*
@@ -30,6 +21,4 @@ grading/
 
 # Built Visual Studio Code Extensions
 *.vsix
-trek-2022/video/water-crossing.mp4
-block/wireframes/*
 
