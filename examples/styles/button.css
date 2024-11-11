@@ -8,21 +8,54 @@ body {
     margin: 0;
     padding: 0;
 }
+
 a {
     text-decoration: none;
 }
 
-main {
+header {
+    height: 6em;
+    background-color: #0a5e66;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(6em, 1fr));
+    width: 100%;
+
+}
+
+nav a {
+    padding: 1em;
+    color: #fff;
+    letter-spacing: 1px;
+    justify-self: center;
+}
+
+nav a:hover {
+    background-color: #fff;
+    color: #0a5e66;
+}
+
+main,
+header {
     max-width: 900px;
     margin: 0 auto;
-    /* DARK PINK */
+}
+
+main {
+
+    /* light teal */
     background: #9dcff0;
 
     /*TEAL*/
     /*background: #00B3B4;*/
 
-    font-size: 20px;
-    line-height: 28px;
+    font-size: 1.25rem;
+    line-height: 1.8rem;
     color: #323b40;
     padding: 3em;
 }

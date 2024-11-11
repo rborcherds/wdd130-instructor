@@ -1,4 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Inspiration&family=Mea+Culpa&family=Roboto&display=swap');
+header {
+  height: 6em;
+  background-color: #0a5e66;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(6em, 1fr));
+  width: 100%;
+
+}
+
+nav a {
+  padding: 1em;
+  color: #fff;
+  letter-spacing: 1px;
+  justify-self: center;
+}
+
+nav a:hover {
+  background-color: #fff;
+  color: #0a5e66;
+}
 
 :root {
   font-family: Roboto, arial;

@@ -1,6 +1,34 @@
 * {
     box-sizing: border-box
 }
+
+header {
+    height: 6em;
+    background-color: #0a5e66;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(6em, 1fr));
+    width: 100%;
+
+}
+
+nav a {
+    padding: 1em;
+    color: #fff;
+    letter-spacing: 1px;
+    justify-self: center;
+}
+
+nav a:hover {
+    background-color: #fff;
+    color: #0a5e66;
+}
+
 .content {
     max-width: 1200px;
     margin: 0 auto;
@@ -63,7 +91,8 @@ img {
 }
 
 /* Hide the images by default */
-.mySlides3, .mySlides4 {
+.mySlides3,
+.mySlides4 {
     display: none;
 }
 
@@ -71,7 +100,7 @@ img {
 .slide-grid {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(5,1fr);
+    grid-template-rows: repeat(5, 1fr);
 }
 
 figure {
@@ -79,11 +108,12 @@ figure {
     grid-row: 1/6;
     z-index: -1;
     display: flex;
-        flex-flow: column;
-        width: 100%;
-        margin: 0;
+    flex-flow: column;
+    width: 100%;
+    margin: 0;
 
 }
+
 /* Caption text */
 .text {
     color: #fa0303;
@@ -104,7 +134,8 @@ figure {
 }
 
 /* The dots/bullets/indicators */
-.dot3, .dot4 {
+.dot3,
+.dot4 {
     cursor: pointer;
     height: 15px;
     width: 15px;

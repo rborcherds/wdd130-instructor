@@ -1,7 +1,31 @@
+header,
 main {
   max-width: 800px;
   margin: 0 auto;
 }
+
+nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(6em, 1fr));
+  background-color: #0a5e66;
+}
+
+nav a {
+  padding: 1em;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+nav a::before {
+  content: unset;
+}
+
+nav a:hover {
+  background-color: #fff;
+  color: #0a5e66;
+}
+
+
 
 
 section {

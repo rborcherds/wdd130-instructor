@@ -1,0 +1,52 @@
+header {
+  height: 6em;
+  background-color: #0a5e66;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(6em, 1fr));
+  width: 100%;
+
+}
+
+nav a {
+  padding: 1em;
+  color: #fff;
+  letter-spacing: 1px;
+  justify-self: center;
+}
+
+nav a:hover {
+  background-color: #fff;
+  color: #0a5e66;
+}
+
+.checkmark li,
+.checkmark2 li {
+  display: flex;
+  align-items: center;
+  line-height: 1.5em;
+  padding: .5em 0;
+}
+
+.checkmark li::before {
+  content: url('../img/chckmark-16.webp');
+  width: 1rem;
+  height: 1rem;
+  margin-right: .5em;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.checkmark2 li::before {
+  content: url('../img/chckmark-32.webp');
+  width: 2rem;
+  height: 2rem;
+  margin-right: .5em;
+  display: inline-block;
+  vertical-align: middle;
+}
