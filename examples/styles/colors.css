@@ -4,6 +4,9 @@
   --color-primary: hsl(var(--color), var(--l));
   --color-primary-lighter: hsl(var(--color), calc(var(--l) + 15%));
   --color-primary-darker: hsl(var(--color), calc(var(--l) - 15%));
+  --hsl-color-White: hsl(0, 0%, 100%);
+  --hsl-color-black: hsl(0, 0%, 0%);
+  --hsl-color-blue: hsl(240, 100%, 50%);
 }
 
 header {

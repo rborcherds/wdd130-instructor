@@ -44,6 +44,7 @@ main,
 header {
     max-width: 900px;
     margin: 0 auto;
+    padding: 0 3rem;
 }
 
 main {
@@ -57,7 +58,7 @@ main {
     font-size: 1.25rem;
     line-height: 1.8rem;
     color: #323b40;
-    padding: 3em;
+    padding: 3rem;
 }
 
 .content {
