@@ -15,20 +15,20 @@ Fonts are separated by a | */
     --paragraph-font: "Nunito Sans", Lato, Helvetica, sans-serif;
 
     /* these colors below should be chosen from among your palette colors above */
-    --headline-color-on-white: black;
+    --headline-color-on-white: #180d0d;
     /* headlines on a white background */
     --headline-color-on-color: #FFFFFF;
     /* headlines on a colored background */
     --headline-background-color: #23362b;
-    --paragraph-color-on-white: black;
+    --paragraph-color-on-white: #180d0d;
     /* paragraph text on a white background */
     --paragraph-color-on-color: #efeeea;
     /* paragraph text on a colored background */
     --text-background-color: #23362b;
-    --nav-link-color: rbga(245, 230, 224, 0.3);
-    --nav-background-color: rgba(0, 0, 255, 0.5);
-    --nav-hover-link-color: #23362b;
-    --nav-hover-background-color: #fed45b;
+    --nav-link-color: #f5e6e0;
+    --nav-background-color: #030346;
+    --nav-hover-link-color: #030346;
+    --nav-hover-background-color: #f5e6e0;
 
 }
 
@@ -98,6 +98,9 @@ nav {
 
 nav a {
     padding: 1em;
+    font-family: Halant, sans-serif;
+    font-weight: 600;
+    font-size: 1.5rem;
     color: #fff;
     letter-spacing: 1px;
     justify-self: center;
@@ -261,4 +264,9 @@ nav a:hover {
     grid-area: right;
     border-top: 1px solid;
     border-right: 1px solid;
+}
+
+.page-img {
+    max-width: 600px;
+    /* width: 100%; */
 }
