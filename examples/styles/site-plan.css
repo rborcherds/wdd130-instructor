@@ -19,6 +19,7 @@ Fonts are separated by a | */
     /* headlines on a white background */
     --headline-color-on-color: #FFFFFF;
     /* headlines on a colored background */
+    --headline-background-color: #23362b;
     --paragraph-color-on-white: black;
     /* paragraph text on a white background */
     --paragraph-color-on-color: #efeeea;
@@ -28,19 +29,19 @@ Fonts are separated by a | */
     --nav-background-color: rgba(0, 0, 255, 0.5);
     --nav-hover-link-color: #23362b;
     --nav-hover-background-color: #fed45b;
-    font-size: 16px;
+
 }
 
 /*  Look around below...but DON'T CHANGE ANYTHING! */
-html {
-    background-color: var(--primary-color);
+body {
+    font-size: 16px;
 }
 
-body {
-    max-width: 900px;
+header,
+main,
+footer {
+    max-width: 1000px;
     margin: 0 auto;
-    background-color: white;
-    padding: 1em;
 }
 
 img {
@@ -54,12 +55,13 @@ h4,
 h5,
 h6 {
     font-family: var(--heading-font);
-    color: var(--headline-color-on-white);
+
 }
 
 h1 {
     font-size: 3.5em;
     margin: 0.5em;
+    color: var(--headline-color-on-white);
 }
 
 h2 {
@@ -109,8 +111,13 @@ nav a:hover {
 .title {
     padding: 1em;
     text-align: center;
-    color: var(--paragraph-color-on-color);
-    background-color: var(--text-background-color);
+    color: var(--headline-color-on-color);
+    background-color: var(--headline-background-color);
+}
+
+.title h2,
+.title h1 {
+    color: var(--headline-color-on-color);
 }
 
 header>h1,
