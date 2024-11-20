@@ -31,6 +31,12 @@
 body {
     font-size: 16px;
     font-family: var(--paragraph-font);
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100,
+        "YTLC" 500;
 }
 
 header,
