@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Example how CSS order is applied</title>
+  <meta name="description"
+    content="This page shows you how one CSS rule can overwrite anotehr rule by the order they come in the CSS file">
+  <meta name="author" content="Ralph Borcherds">
+  <link rel="stylesheet" href="styles/css-order.css">
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html">Examples Home</a>
+    </nav>
+  </header>
+
+  <main>
+    <p class="description">The class names are in each box. The CSS has them in number
+      order.</p>
+    <div class="class1">
+      <p>class1</p>
+    </div>
+    <div class="class2">
+      <p>class2</p>
+    </div>
+
+    <p class="explanation">This box has 2 class names assigned and the the class3 rule is
+      applied because it comes second in the CSS list of rules.</p>
+
+    <div class="class2 class3">
+      <p>class2 class3</p>
+    </div>
+    <div class="class3">
+      <p>class3</p>
+    </div>
+  </main>
+  <footer>
+
+  </footer>
+</body>
+</html>

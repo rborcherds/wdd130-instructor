@@ -1,0 +1,73 @@
+header,
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+header {
+  height: 6em;
+  background-color: #0a5e66;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(6em, 1fr));
+  width: 100%;
+
+}
+
+nav a {
+  padding: 1em;
+  color: #fff;
+  letter-spacing: 1px;
+  justify-self: center;
+}
+
+nav a:hover {
+  background-color: #fff;
+  color: #0a5e66;
+}
+
+.class1,
+.class2,
+.class3 {
+  width: 400px;
+  height: 400px;
+  margin: 3em;
+  position: relative
+}
+
+.class1 {
+  background-color: #0a5e66;
+}
+
+.class2 {
+  background-color: #3f3d3e;
+}
+
+.class3 {
+  background-color: #c97522;
+}
+
+.class1 p,
+.class2 p,
+.class3 p {
+  position: absolute;
+  left: 50%;
+  top: 11.35rem;
+  transform: translateX(-50%);
+  font-size: 2em;
+  color: #eee;
+  margin: 0;
+  padding: 0;
+}
+
+.description,
+.explanation {
+  font-size: 2em;
+  position: relative;
+  color: #333;
+}
