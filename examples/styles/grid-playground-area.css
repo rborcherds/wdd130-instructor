@@ -1,0 +1,833 @@
+/*********************************************************************
+Only modify the grid-column and grid-row of each placement rule.
+
+Grid-area takes the placement of the area names in this format
+
+grid-area: row-start / column-start / row-end / column-end;
+
+If you only use 1 entry then you get 1 grid square used.
+
+If you use 2 entries then you get 1 square because the 
+first entry is for the grid row start and end
+second entry is the grid column start and end
+
+If you use 3 entries then this is the format
+grid row start / grid column start / grid row end / grid column end will
+be the same as grid column start
+
+If is always best to use all 4 columns and rows for the grid-area.
+*********************************************************************/
+
+.placement1 {
+    grid-area: c1r1 / c1r1 / c1r1 / c1r1;
+    background-color: #f97d8f;
+    padding: .5rem;
+}
+
+.placement2 {
+    grid-area: c1r3 / c1r3 / c1r3 / c1r3;
+    background-color: #b5f97d;
+    padding: .5rem;
+}
+
+.placement3 {
+    grid-area: c1r5 / c1r5 / c1r5 / c1r5;
+    background-color: #ecf97d;
+    padding: .5rem;
+}
+
+.placement4 {
+    grid-area: c1r7 / c1r7 / c1r7 / c1r7;
+    background-color: #f488f8;
+    padding: .5rem;
+}
+
+.placement5 {
+    grid-area: c1r9 / c1r9 / c1r9 / c1r9;
+    background-color: #f1072a;
+    padding: .5rem;
+}
+
+.placement6 {
+    grid-area: c1r11 / c1r11 / c1r11 / c1r11;
+    background-color: #050357;
+    color: #fff;
+    padding: .5rem;
+}
+
+.placement7 {
+    grid-area: c3r2 / c3r2 / c5r4 / c5r4;
+    background-color: #19a2f1;
+    padding: .5rem;
+}
+
+
+/********************************************************************
+*
+*       DO NOT MODIFY BELOW THIS LINE UNTIL YOU HAVE MASTERED
+        grid-template-column and grid-template-row placement
+
+*       This is what defines the grid display and sets the background
+*       body color.
+*
+*       There is a grid gap of 10px between the rows
+*       and 16px between the columns. That is the last line
+*       of the main rule below.
+*
+*       The width and height of the grid is defined with the
+*       width and height properties in the main rule below.
+*
+********************************************************************/
+
+body {
+    background-color: #9fd7f8;
+    margin: 2em 0 0 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+main {
+    width: 1200px;
+    height: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas: "c1r1 c2r1 c3r1 c4r1 c5r1 c6r1 c7r1 c8r1 c9r1 c10r1 c11r1 c12r1"
+        "c1r2 c2r2 c3r2 c4r2 c5r2 c6r2 c7r2 c8r2 c9r2 c10r2 c11r2 c12r2"
+        "c1r3 c2r3 c3r3 c4r3 c5r3 c6r3 c7r3 c8r3 c9r3 c10r3 c11r3 c12r3"
+        "c1r4 c2r4 c3r4 c4r4 c5r4 c6r4 c7r4 c8r4 c9r4 c10r4 c11r4 c12r4"
+        "c1r5 c2r5 c3r5 c4r5 c5r5 c6r5 c7r5 c8r5 c9r5 c10r5 c11r5 c12r5"
+        "c1r6 c2r6 c3r6 c4r6 c5r6 c6r6 c7r6 c8r6 c9r6 c10r6 c11r6 c12r6"
+        "c1r7 c2r7 c3r7 c4r7 c5r7 c6r7 c7r7 c8r7 c9r7 c10r7 c11r7 c12r7"
+        "c1r8 c2r8 c3r8 c4r8 c5r8 c6r8 c7r8 c8r8 c9r8 c10r8 c11r8 c12r8"
+        "c1r9 c2r9 c3r9 c4r9 c5r9 c6r9 c7r9 c8r9 c9r9 c10r9 c11r9 c12r9"
+        "c1r10 c2r10 c3r10 c4r10 c5r10 c6r10 c7r10 c8r10 c9r10 c10r10 c11r10 c12r10"
+        "c1r11 c2r11 c3r11 c4r11 c5r11 c6r11 c7r11 c8r11 c9r11 c10r11 c11r11 c12r11"
+        "c1r12 c2r12 c3r12 c4r12 c5r12 c6r12 c7r12 c8r12 c9r12 c10r12 c11r12 c12r12";
+    gap: 10px 16px;
+}
+
+/*****************************************************************************
+    The first rule below puts the border around each grid square.
+    The rest of the rules are to show you the grid placement for each div
+    in the HTML code. There are 144 of these grid placements for a 12 x 12
+    grid layout.
+*****************************************************************************/
+.border {
+    border: 1px solid #535252;
+}
+
+
+.sq1-1 {
+    grid-area: c1r1;
+}
+
+.sq1-2 {
+    grid-area: c2r1;
+}
+
+.sq1-3 {
+    grid-area: c3r1;
+}
+
+.sq1-4 {
+    grid-area: c4r1;
+}
+
+.sq1-5 {
+    grid-area: c5r1;
+}
+
+.sq1-6 {
+    grid-area: c6r1;
+}
+
+.sq1-7 {
+    grid-area: c7r1;
+}
+
+.sq1-8 {
+    grid-area: c8r1;
+
+}
+
+.sq1-9 {
+    grid-area: c9r1;
+
+}
+
+.sq1-10 {
+    grid-area: c10r1;
+
+}
+
+.sq1-11 {
+    grid-area: c11r1;
+
+}
+
+.sq1-12 {
+    grid-area: c12r1;
+
+}
+
+.sq2-1 {
+    grid-area: c1r2;
+
+}
+
+.sq2-2 {
+    grid-area: c2r2;
+
+}
+
+.sq2-3 {
+    grid-area: c3r2;
+
+}
+
+.sq2-4 {
+    grid-area: c4r2;
+
+}
+
+.sq2-5 {
+    grid-area: c5r2;
+
+}
+
+.sq2-6 {
+    grid-area: c6r2;
+
+}
+
+.sq2-7 {
+    grid-area: c7r2;
+
+}
+
+.sq2-8 {
+    grid-area: c8r2;
+
+}
+
+.sq2-9 {
+    grid-area: c9r2;
+
+}
+
+.sq2-10 {
+    grid-area: c10r2;
+
+}
+
+.sq2-11 {
+    grid-area: c11r2;
+
+}
+
+.sq2-12 {
+    grid-area: c12r2;
+
+}
+
+.sq3-1 {
+    grid-area: c1r3;
+
+}
+
+.sq3-2 {
+    grid-area: c2r3;
+
+}
+
+.sq3-3 {
+    grid-area: c3r3;
+
+}
+
+.sq3-4 {
+    grid-area: c4r3;
+
+}
+
+.sq3-5 {
+    grid-area: c5r3;
+
+}
+
+.sq3-6 {
+    grid-area: c6r3;
+
+}
+
+.sq3-7 {
+    grid-area: c7r3;
+
+}
+
+.sq3-8 {
+    grid-area: c8r3;
+
+}
+
+.sq3-9 {
+    grid-area: c9r3;
+
+}
+
+.sq3-10 {
+    grid-area: c10r3;
+
+}
+
+.sq3-11 {
+    grid-area: c11r3;
+
+}
+
+.sq3-12 {
+    grid-area: c12r3;
+
+}
+
+.sq4-1 {
+    grid-area: c1r4;
+
+}
+
+.sq4-2 {
+    grid-area: c2r4;
+
+}
+
+.sq4-3 {
+    grid-area: c3r4;
+
+}
+
+.sq4-4 {
+    grid-area: c4r4;
+
+}
+
+.sq4-5 {
+    grid-area: c5r4;
+
+}
+
+.sq4-6 {
+    grid-area: c6r4;
+
+}
+
+.sq4-7 {
+    grid-area: c7r4;
+
+}
+
+.sq4-8 {
+    grid-area: c8r4;
+
+}
+
+.sq4-9 {
+    grid-area: c9r4;
+
+}
+
+.sq4-10 {
+    grid-area: c10r4;
+
+}
+
+.sq4-11 {
+    grid-area: c11r4;
+
+}
+
+.sq4-12 {
+    grid-area: c12r4;
+
+}
+
+.sq5-1 {
+    grid-area: c1r5;
+
+}
+
+.sq5-2 {
+    grid-area: c2r5;
+
+}
+
+.sq5-3 {
+    grid-area: c3r5;
+
+}
+
+.sq5-4 {
+    grid-area: c4r5;
+
+}
+
+.sq5-5 {
+    grid-area: c5r5;
+
+}
+
+.sq5-6 {
+    grid-area: c6r5;
+
+}
+
+.sq5-7 {
+    grid-area: c7r5;
+
+}
+
+.sq5-8 {
+    grid-area: c8r5;
+
+}
+
+.sq5-9 {
+    grid-area: c9r5;
+
+}
+
+.sq5-10 {
+    grid-area: c10r5;
+
+}
+
+.sq5-11 {
+    grid-area: c11r5;
+
+}
+
+.sq5-12 {
+    grid-area: c12r5;
+
+}
+
+.sq6-1 {
+    grid-area: c1r6;
+
+}
+
+.sq6-2 {
+    grid-area: c2r6;
+
+}
+
+.sq6-3 {
+    grid-area: c3r6;
+
+}
+
+.sq6-4 {
+    grid-area: c4r6;
+
+}
+
+.sq6-5 {
+    grid-area: c5r6;
+
+}
+
+.sq6-6 {
+    grid-area: c6r6;
+
+}
+
+.sq6-7 {
+    grid-area: c7r6;
+
+}
+
+.sq6-8 {
+    grid-area: c8r6;
+
+}
+
+.sq6-9 {
+    grid-area: c9r6;
+
+}
+
+.sq6-10 {
+    grid-area: c10r6;
+
+}
+
+.sq6-11 {
+    grid-area: c11r6;
+
+}
+
+.sq6-12 {
+    grid-area: c12r6;
+
+}
+
+.sq7-1 {
+    grid-area: c1r7;
+
+}
+
+.sq7-2 {
+    grid-area: c2r7;
+
+}
+
+.sq7-3 {
+    grid-area: c3r7;
+
+}
+
+.sq7-4 {
+    grid-area: c4r7;
+
+}
+
+.sq7-5 {
+    grid-area: c5r7;
+
+}
+
+.sq7-6 {
+    grid-area: c6r7;
+
+}
+
+.sq7-7 {
+    grid-area: c7r7;
+
+}
+
+.sq7-8 {
+    grid-area: c8r7;
+
+}
+
+.sq7-9 {
+    grid-area: c9r7;
+
+}
+
+.sq7-10 {
+    grid-area: c10r7;
+
+}
+
+.sq7-11 {
+    grid-area: c11r7;
+
+}
+
+.sq7-12 {
+    grid-area: c12r7;
+
+}
+
+
+.sq8-1 {
+    grid-area: c1r8;
+
+}
+
+.sq8-2 {
+    grid-area: c2r8;
+
+}
+
+.sq8-3 {
+    grid-area: c3r8;
+
+}
+
+.sq8-4 {
+    grid-area: c4r8;
+
+}
+
+.sq8-5 {
+    grid-area: c5r8;
+
+}
+
+.sq8-6 {
+    grid-area: c6r8;
+
+}
+
+.sq8-7 {
+    grid-area: c7r8;
+
+}
+
+.sq8-8 {
+    grid-area: c8r8;
+
+}
+
+.sq8-9 {
+    grid-area: c9r8;
+
+}
+
+.sq8-10 {
+    grid-area: c10r8;
+
+}
+
+.sq8-11 {
+    grid-area: c11r8;
+
+}
+
+.sq8-12 {
+    grid-area: c12r8;
+
+}
+
+.sq9-1 {
+    grid-area: c1r9;
+
+}
+
+.sq9-2 {
+    grid-area: c2r9;
+
+}
+
+.sq9-3 {
+    grid-area: c3r9;
+
+}
+
+.sq9-4 {
+    grid-area: c4r9;
+
+}
+
+.sq9-5 {
+    grid-area: c5r9;
+
+}
+
+.sq9-6 {
+    grid-area: c6r9;
+
+}
+
+.sq9-7 {
+    grid-area: c7r9;
+
+}
+
+.sq9-8 {
+    grid-area: c8r9;
+
+}
+
+.sq9-9 {
+    grid-area: c9r9;
+
+}
+
+.sq9-10 {
+    grid-area: c10r9;
+
+}
+
+.sq9-11 {
+    grid-area: c11r9;
+
+}
+
+.sq9-12 {
+    grid-area: c12r9;
+
+}
+
+
+.sq10-1 {
+    grid-area: c1r10;
+
+}
+
+.sq10-2 {
+    grid-area: c2r10;
+
+}
+
+.sq10-3 {
+    grid-area: c3r10;
+
+}
+
+.sq10-4 {
+    grid-area: c4r10;
+
+}
+
+.sq10-5 {
+    grid-area: c5r10;
+
+}
+
+.sq10-6 {
+    grid-area: c6r10;
+
+}
+
+.sq10-7 {
+    grid-area: c7r10;
+
+}
+
+.sq10-8 {
+    grid-area: c8r10;
+
+}
+
+.sq10-9 {
+    grid-area: c9r10;
+
+}
+
+.sq10-10 {
+    grid-area: c10r10;
+
+}
+
+.sq10-11 {
+    grid-area: c11r10;
+
+}
+
+.sq10-12 {
+    grid-area: c12r10;
+
+}
+
+.sq11-1 {
+    grid-area: c1r11;
+
+}
+
+.sq11-2 {
+    grid-area: c2r11;
+
+}
+
+.sq11-3 {
+    grid-area: c3r11;
+
+}
+
+.sq11-4 {
+    grid-area: c4r11;
+
+}
+
+.sq11-5 {
+    grid-area: c5r11;
+
+}
+
+.sq11-6 {
+    grid-area: c6r11;
+
+}
+
+.sq11-7 {
+    grid-area: c7r11;
+
+}
+
+.sq11-8 {
+    grid-area: c8r11;
+
+}
+
+.sq11-9 {
+    grid-area: c9r11;
+
+}
+
+.sq11-10 {
+    grid-area: c10r11;
+
+}
+
+.sq11-11 {
+    grid-area: c11r11;
+
+}
+
+.sq11-12 {
+    grid-area: c12r11;
+
+}
+
+.sq12-1 {
+    grid-area: c1r12;
+
+}
+
+.sq12-2 {
+    grid-area: c2r12;
+
+}
+
+.sq12-3 {
+    grid-area: c3r12;
+
+}
+
+.sq12-4 {
+    grid-area: c4r12;
+
+}
+
+.sq12-5 {
+    grid-area: c5r12;
+
+}
+
+.sq12-6 {
+    grid-area: c6r12;
+
+}
+
+.sq12-7 {
+    grid-area: c7r12;
+
+}
+
+.sq12-8 {
+    grid-area: c8r12;
+
+}
+
+.sq12-9 {
+    grid-area: c9r12;
+
+}
+
+.sq12-10 {
+    grid-area: c10r12;
+
+}
+
+.sq12-11 {
+    grid-area: c11r12;
+
+}
+
+.sq12-12 {
+    grid-area: c12r12;
+
+}

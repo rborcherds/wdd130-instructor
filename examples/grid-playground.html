@@ -8,7 +8,13 @@
     <meta name="description"
         content="This is a basic example of how grid works. The JavaScript code reads the Computed CSS for each placement block and then writes the text of each placement into the corresponding color for the 7 placement blocks">
     <meta name="author" description="Ralph Borcherds">
-    <link rel="stylesheet" href="styles/grid-playground.css">
+
+    <!-- only uncomment one of these at a time so that you only use the correct
+     css file setup for the Grid placements you are learning  -->
+
+    <!-- <link rel="stylesheet" href="styles/grid-playground.css"> -->
+    <link rel="stylesheet" href="styles/grid-playground-area.css">
+
 </head>
 <!-- --------------------------------------------------------------------------------
     This is a basic example of using Grid to help you understand the concepts. 
@@ -163,6 +169,9 @@
         <div class="border sq12-10"></div>
         <div class="border sq12-11"></div>
         <div class="border sq12-12"></div>
+
+        <!-- these next 7 lines are the color blocks that are placed in the grid
+         by using the CSS file for either grid-area a grid-template -->
         <div class="placement1" id="placement1"></div>
         <div class="placement2" id="placement2"></div>
         <div class="placement3" id="placement3"></div>
@@ -174,38 +183,54 @@
     </main>
 
     <!-- 
-    Do Not Modify this code. This code reads the CSS file and writes the text into the correct color.
-    
+    Do Not Modify this code. This code reads which CSS file is in use and then
+    writes the correct styling properties to the correct color box.
     -->
     <script>
+        let cssfile = document.styleSheets[0];
         let place1 = document.getElementById('placement1');
         let place1comp = getComputedStyle(placement1);
-        place1.innerHTML = 'Placement 1<br>grid-column: ' + place1comp.gridColumn + '<br> grid-row: ' + place1comp.gridRow;
 
         let place2 = document.getElementById('placement2');
         let place2comp = getComputedStyle(placement2);
-        place2.innerHTML = 'Placement 2<br>grid-column: ' + place2comp.gridColumn + '<br> grid-row: ' + place2comp.gridRow;
 
         let place3 = document.getElementById('placement3');
         let place3comp = getComputedStyle(placement3);
-        place3.innerHTML = 'Placement 3<br>grid-column: ' + place3comp.gridColumn + '<br> grid-row: ' + place3comp.gridRow;
 
         let place4 = document.getElementById('placement4');
         let place4comp = getComputedStyle(placement4);
-        place4.innerHTML = 'Placement 4<br>grid-column: ' + place4comp.gridColumn + '<br> grid-row: ' + place4comp.gridRow;
 
         let place5 = document.getElementById('placement5');
         let place5comp = getComputedStyle(placement5);
-        place5.innerHTML = 'Placement 5<br>grid-column: ' + place5comp.gridColumn + '<br> grid-row: ' + place5comp.gridRow;
 
         let place6 = document.getElementById('placement6');
         let place6comp = getComputedStyle(placement6);
-        place6.innerHTML = 'Placement 6<br>grid-column: ' + place6comp.gridColumn + '<br> grid-row: ' + place6comp.gridRow;
 
         let place7 = document.getElementById('placement7');
         let place7comp = getComputedStyle(placement7);
-        place7.innerHTML = 'Placement 7<br>grid-column: ' + place7comp.gridColumn + '<br> grid-row: ' + place7comp.gridRow;
 
+        if (cssfile.href.endsWith('grid-playground-area.css')) {
+
+            // This is to write the grid-area properties to the screen
+            place1.innerHTML = 'Placement 1<br>grid-area: ' + place1comp.gridArea;
+            place2.innerHTML = 'Placement 2<br>grid-area: ' + place2comp.gridArea;
+            place3.innerHTML = 'Placement 3<br>grid-area: ' + place3comp.gridArea;
+            place4.innerHTML = 'Placement 4<br>grid-area: ' + place4comp.gridArea;
+            place5.innerHTML = 'Placement 5<br>grid-area: ' + place5comp.gridArea;
+            place6.innerHTML = 'Placement 6<br>grid-area: ' + place6comp.gridArea;
+            place7.innerHTML = 'Placement 7<br>grid-area: ' + place7comp.gridArea;
+
+        } else {
+
+            // This is to write the grid-template properties to the screen
+            place1.innerHTML = 'Placement 1<br>grid-column: ' + place1comp.gridColumn + '<br> grid-row: ' + place1comp.gridRow;
+            place2.innerHTML = 'Placement 2<br>grid-column: ' + place2comp.gridColumn + '<br> grid-row: ' + place2comp.gridRow;
+            place3.innerHTML = 'Placement 3<br>grid-column: ' + place3comp.gridColumn + '<br> grid-row: ' + place3comp.gridRow;
+            place4.innerHTML = 'Placement 4<br>grid-column: ' + place4comp.gridColumn + '<br> grid-row: ' + place4comp.gridRow;
+            place5.innerHTML = 'Placement 5<br>grid-column: ' + place5comp.gridColumn + '<br> grid-row: ' + place5comp.gridRow;
+            place6.innerHTML = 'Placement 6<br>grid-column: ' + place6comp.gridColumn + '<br> grid-row: ' + place6comp.gridRow;
+            place7.innerHTML = 'Placement 7<br>grid-column: ' + place7comp.gridColumn + '<br> grid-row: ' + place7comp.gridRow;
+        }
 
     </script>
 </body>
