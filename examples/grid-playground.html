@@ -12,8 +12,8 @@
     <!-- only uncomment one of these at a time so that you only use the correct
      css file setup for the Grid placements you are learning  -->
 
-    <!-- <link rel="stylesheet" href="styles/grid-playground.css"> -->
-    <link rel="stylesheet" href="styles/grid-playground-area.css">
+    <link rel="stylesheet" href="styles/grid-playground.css">
+    <!-- <link rel="stylesheet" href="styles/grid-playground-area.css"> -->
 
 </head>
 <!-- --------------------------------------------------------------------------------
@@ -218,17 +218,17 @@
         if (cssfile.href.endsWith('grid-playground-area.css')) {
 
             // This is to write the grid-area properties to the screen
-            place1.innerHTML = 'Placement 1<br>grid-area: ' + place1comp.gridArea;
-            place2.innerHTML = 'Placement 2<br>grid-area: ' + place2comp.gridArea;
-            place3.innerHTML = 'Placement 3<br>grid-area: ' + place3comp.gridArea;
-            place4.innerHTML = 'Placement 4<br>grid-area: ' + place4comp.gridArea;
-            place5.innerHTML = 'Placement 5<br>grid-area: ' + place5comp.gridArea;
-            place6.innerHTML = 'Placement 6<br>grid-area: ' + place6comp.gridArea;
-            place7.innerHTML = 'Placement 7<br>grid-area: ' + place7comp.gridArea;
+            place1.innerHTML = 'Placement 1<br>grid-area: ' + place1comp.gridArea + '<br>grid-column: ' + place1comp.gridColumn + '<br> grid-row: ' + place1comp.gridRow;
+            place2.innerHTML = 'Placement 2<br>grid-area: ' + place2comp.gridArea + '<br>grid-column: ' + place2comp.gridColumn + '<br> grid-row: ' + place2comp.gridRow;
+            place3.innerHTML = 'Placement 3<br>grid-area: ' + place3comp.gridArea + '<br>grid-column: ' + place3comp.gridColumn + '<br> grid-row: ' + place3comp.gridRow;
+            place4.innerHTML = 'Placement 4<br>grid-area: ' + place4comp.gridArea + '<br>grid-column: ' + place4comp.gridColumn + '<br> grid-row: ' + place4comp.gridRow;
+            place5.innerHTML = 'Placement 5<br>grid-area: ' + place5comp.gridArea + '<br>grid-column: ' + place5comp.gridColumn + '<br> grid-row: ' + place5comp.gridRow;
+            place6.innerHTML = 'Placement 6<br>grid-area: ' + place6comp.gridArea + '<br>grid-column: ' + place6comp.gridColumn + '<br> grid-row: ' + place6comp.gridRow;
+            place7.innerHTML = 'Placement 7<br>grid-area: ' + place7comp.gridArea + '<br>grid-column: ' + place7comp.gridColumn + '<br> grid-row: ' + place7comp.gridRow;
 
         } else {
 
-            // This is to write the grid-template properties to the screen
+            // This is to write the grid-template-columns and rows properties to the screen
             place1.innerHTML = 'Placement 1<br>grid-column: ' + place1comp.gridColumn + '<br> grid-row: ' + place1comp.gridRow;
             place2.innerHTML = 'Placement 2<br>grid-column: ' + place2comp.gridColumn + '<br> grid-row: ' + place2comp.gridRow;
             place3.innerHTML = 'Placement 3<br>grid-column: ' + place3comp.gridColumn + '<br> grid-row: ' + place3comp.gridRow;
