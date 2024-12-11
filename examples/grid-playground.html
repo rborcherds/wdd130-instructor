@@ -6,14 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grid Playground</title>
     <meta name="description"
-        content="This is a basic example of how grid works. The JavaScript code reads the Computed CSS for each placement block and then writes the text of each placement into the corresponding color for the 7 placement blocks">
+        content="This is a basic example of how grid works. The JavaScript code reads the Computed CSS for each placement block and then writes the text of each placement block into the corresponding color for the 7 placement blocks">
     <meta name="author" description="Ralph Borcherds">
 
-    <!-- only uncomment one of these at a time so that you only use the correct
-     css file setup for the Grid placements you are learning  -->
+    <!-- only uncomment one of these at a time so that you only use the  css file setup 
+     for the Grid placements you are learning. CSS Grid area can be used 
+     in conjunction with the grid-column and grid-row by either using the grid-playground-area.css 
+     file to work with both.  -->
 
-    <link rel="stylesheet" href="styles/grid-playground.css">
-    <!-- <link rel="stylesheet" href="styles/grid-playground-area.css"> -->
+    <!-- <link rel="stylesheet" href="styles/grid-playground.css"> -->
+    <link rel="stylesheet" href="styles/grid-playground-area.css">
 
 </head>
 <!-- --------------------------------------------------------------------------------
@@ -23,14 +25,16 @@
 
 <body>
 
-    <!-- Please remove the header once on local computer -->
+    <!-- Please remove the header once you have this on your local computer.
+    This is used to download the zip file which you already have downloaded. -->
 
     <header>
         <a href="grid-playground.zip" download="grid-playground.zip">Download Zip File</a>
     </header>
 
     <main>
-
+        <!-- All these 144 div tags create the grid squares. The border rule adds the border
+         so that you can see each square. There is a gap so that you can see the grid lines. -->
         <div class="border sq1-1"></div>
         <div class="border sq1-2"></div>
         <div class="border sq1-3"></div>
@@ -176,8 +180,8 @@
         <div class="border sq12-11"></div>
         <div class="border sq12-12"></div>
 
-        <!-- these next 7 lines are the color blocks that are placed in the grid
-         by using the CSS file for either grid-area a grid-template -->
+        <!-- These next 7 lines are the color blocks that are placed on the grid
+         by using the CSS file for either grid-area a grid-column, grid-row. -->
         <div class="placement1" id="placement1"></div>
         <div class="placement2" id="placement2"></div>
         <div class="placement3" id="placement3"></div>
@@ -193,7 +197,11 @@
     writes the correct styling properties to the correct color box.
     -->
     <script>
+        // This reads the first CSS file. There should only be 1 CSS file used at a time in this HTML
         let cssfile = document.styleSheets[0];
+
+        // These next 14 let statements is what gets a handle on each colored div and then 
+        // reads the Computed CSS for each placement block
         let place1 = document.getElementById('placement1');
         let place1comp = getComputedStyle(placement1);
 
@@ -215,9 +223,14 @@
         let place7 = document.getElementById('placement7');
         let place7comp = getComputedStyle(placement7);
 
+
+        // This if statement is to check which CSS file is in use and then run the specific statements
+        // to write the correct text into the colored blocks.
         if (cssfile.href.endsWith('grid-playground-area.css')) {
 
             // This is to write the grid-area properties to the screen
+            // This also writes the grid-column and grid-row properties as you can use grid-area 
+            // with grid-column and grid-row
             place1.innerHTML = 'Placement 1<br>grid-area: ' + place1comp.gridArea + '<br>grid-column: ' + place1comp.gridColumn + '<br> grid-row: ' + place1comp.gridRow;
             place2.innerHTML = 'Placement 2<br>grid-area: ' + place2comp.gridArea + '<br>grid-column: ' + place2comp.gridColumn + '<br> grid-row: ' + place2comp.gridRow;
             place3.innerHTML = 'Placement 3<br>grid-area: ' + place3comp.gridArea + '<br>grid-column: ' + place3comp.gridColumn + '<br> grid-row: ' + place3comp.gridRow;
@@ -228,7 +241,9 @@
 
         } else {
 
-            // This is to write the grid-template-columns and rows properties to the screen
+            // This is to write only the grid-column and grd-row properties to the screen.
+            // This does not write the grid-area properties as that generally confuses new 
+            // developers to gird. This is the easier of the grid placement methods to learn.
             place1.innerHTML = 'Placement 1<br>grid-column: ' + place1comp.gridColumn + '<br> grid-row: ' + place1comp.gridRow;
             place2.innerHTML = 'Placement 2<br>grid-column: ' + place2comp.gridColumn + '<br> grid-row: ' + place2comp.gridRow;
             place3.innerHTML = 'Placement 3<br>grid-column: ' + place3comp.gridColumn + '<br> grid-row: ' + place3comp.gridRow;
