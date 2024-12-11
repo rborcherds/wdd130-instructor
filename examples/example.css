@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Lora&family=Roboto+Slab&display=swap');
-
-
+/*
+This CSS file expects that the Google Fonts HTML tags are in the head area
+of the HTML file.  
+*/
 
 /************************************************************
   *
@@ -40,7 +41,7 @@
 /*******************************************************************
 *
 *   Default HTML TAG settings. These apply to all tags
-*   on all pages of the site. Chaining one of these will
+*   on all pages of the site. Changing one of these will
 *   affect all pages.
 *
 ********************************************************************/
@@ -100,6 +101,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: wavy;
+}
+
 img {
   /* This makes sure that all images are scaled correctly to fit their containers. */
   max-width: 100%;
@@ -150,10 +155,16 @@ footer {
 ********************************************************/
 header {}
 
-/* This rule is for the <a href> around the logo image if needed */
+/* 
+This rule is for the <a href> around the logo image if needed using this format
+<a href="" class="logo_link"><img src=images/logo.png" alt="logo"></a>
+*/
 .logo_link {}
 
-/* Put this as a class name in the logo img tag to style the placement of the img */
+/* 
+Put this as a class name in the logo img tag to style the placement of the img 
+<img src="images/logo.png" alt="logo" class="logo">
+*/
 .logo {}
 
 nav {}
@@ -169,13 +180,12 @@ nav a:hover {}
 *******************************************************/
 footer {}
 
-/* This is for any text in the footer */
+/* 
+This is for any text in the footer if you want to format the p tag 
+<p class="footer-p">footer text</p>
+*/
 .footer-p {}
 
-/* This is for the nav area in the footer. Make sure to override the nav items above. */
-.footer-menu {}
-
-.footermenu:hover {}
 
 /* This is for the social media icons in the footer. */
 .sociallinks {}
