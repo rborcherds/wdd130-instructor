@@ -12,16 +12,16 @@ learn the other format. You will encounter all formats as a web developer.
 *********************************************************************/
 
 .placement1 {
-    grid-column: 1/4;
-    grid-row: 2;
+    grid-column: 4 / 7;
+    grid-row: 2 / 7;
     background-color: #f97d8f;
     padding: .5rem;
-    z-index: 1
+    z-index: 1;
 }
 
 .placement2 {
-    grid-column: 1 / span 3;
-    grid-row: 3 / span 1;
+    grid-column: 4 / span 6;
+    grid-row: 5 / span 4;
     background-color: #b5f97d;
     padding: .5rem;
 }
@@ -115,7 +115,7 @@ header a {
 header a:hover {
     background-color: #fff;
     color: rgb(3, 3, 73);
-    box-shadow: 0 0 5px 2px rgb(3, 3, 73);
+    box-shadow: 0 0 5px 2px #030349;
 }
 
 /* This is the main rule that defines the grid. You may not understand the grid setup
