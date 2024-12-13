@@ -14,8 +14,8 @@
      in conjunction with the grid-column and grid-row by either using the grid-playground-area.css 
      file to work with both.  -->
 
-    <!-- <link rel="stylesheet" href="styles/grid-playground.css"> -->
-    <link rel="stylesheet" href="styles/grid-playground-area.css">
+    <link rel="stylesheet" href="styles/grid-playground.css">
+    <!-- <link rel="stylesheet" href="styles/grid-playground-area.css"> -->
 
 </head>
 <!-- --------------------------------------------------------------------------------
@@ -244,13 +244,13 @@
             // This is to write only the grid-column and grd-row properties to the screen.
             // This does not write the grid-area properties as that generally confuses new 
             // developers to gird. This is the easier of the grid placement methods to learn.
-            place1.innerHTML = 'Placement 1<br>grid-column: ' + place1comp.gridColumn + '<br> grid-row: ' + place1comp.gridRow;
-            place2.innerHTML = 'Placement 2<br>grid-column: ' + place2comp.gridColumn + '<br> grid-row: ' + place2comp.gridRow;
-            place3.innerHTML = 'Placement 3<br>grid-column: ' + place3comp.gridColumn + '<br> grid-row: ' + place3comp.gridRow;
-            place4.innerHTML = 'Placement 4<br>grid-column: ' + place4comp.gridColumn + '<br> grid-row: ' + place4comp.gridRow;
-            place5.innerHTML = 'Placement 5<br>grid-column: ' + place5comp.gridColumn + '<br> grid-row: ' + place5comp.gridRow;
-            place6.innerHTML = 'Placement 6<br>grid-column: ' + place6comp.gridColumn + '<br> grid-row: ' + place6comp.gridRow;
-            place7.innerHTML = 'Placement 7<br>grid-column: ' + place7comp.gridColumn + '<br> grid-row: ' + place7comp.gridRow;
+            place1.innerHTML = 'Placement 1<br>grid-column: ' + place1comp.gridColumn + '<br> grid-row: ' + place1comp.gridRow + '<br>grid-area: ' + place1comp.gridArea;
+            place2.innerHTML = 'Placement 2<br>grid-column: ' + place2comp.gridColumn + '<br> grid-row: ' + place2comp.gridRow + '<br>grid-area: ' + place2comp.gridArea;
+            place3.innerHTML = 'Placement 3<br>grid-column: ' + place3comp.gridColumn + '<br> grid-row: ' + place3comp.gridRow + '<br>grid-area: ' + place2comp.gridArea;
+            place4.innerHTML = 'Placement 4<br>grid-column: ' + place4comp.gridColumn + '<br> grid-row: ' + place4comp.gridRow + '<br>grid-area: ' + place3comp.gridArea;
+            place5.innerHTML = 'Placement 5<br>grid-column: ' + place5comp.gridColumn + '<br> grid-row: ' + place5comp.gridRow + '<br>grid-area: ' + place5comp.gridArea;
+            place6.innerHTML = 'Placement 6<br>grid-column: ' + place6comp.gridColumn + '<br> grid-row: ' + place6comp.gridRow + '<br>grid-area: ' + place6comp.gridArea;
+            place7.innerHTML = 'Placement 7<br>grid-column: ' + place7comp.gridColumn + '<br> grid-row: ' + place7comp.gridRow + '<br>grid-area: ' + place7comp.gridArea;
         }
 
     </script>

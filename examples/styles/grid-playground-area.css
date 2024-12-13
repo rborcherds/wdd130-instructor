@@ -23,13 +23,13 @@ If is always best to use all 4 columns and rows for the grid-area.
     same location for all 4 values. It was written out to make it easier to understand.
     grid-area: c1r1; 
     */
-    grid-area: c3r1 / c3r1 / c7r4 / c7r4;
+    grid-area: c1r1 / c1r1 / c2r1 / c2r2;
     background-color: #f97d8f;
     padding: .5rem;
 }
 
 .placement2 {
-    grid-area: c5r3 / c9r6;
+    grid-area: c1r3 / c2r3;
     background-color: #b5f97d;
     padding: .5rem;
 }
@@ -64,12 +64,12 @@ If is always best to use all 4 columns and rows for the grid-area.
     /* This can be written using either of these 2 methods */
     /* grid-column: c3r7 / c5r7;
     grid-row: c3r10 / c5r10; */
-    /* 
-    grid-row-start: c3r2 
+
+    /* grid-row-start: c3r2;
     grid-column-start: c3r2;
     grid-row-end: c5r4;
-    grid-column-end: c5r4;
-    */
+    grid-column-end: c5r4; */
+
     background-color: #19a2f1;
     padding: .5rem;
 }
@@ -99,6 +99,31 @@ body {
     font-size: 18px;
 }
 
+header {
+    width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+header a {
+    margin: 2em;
+    padding: 1em;
+    background-color: rgb(3, 3, 73);
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+header a:hover {
+    background-color: #fff;
+    color: rgb(3, 3, 73);
+    box-shadow: 0 0 5px 2px rgb(3, 3, 73);
+}
+
 /********************************************************************
 This is how you setup a grid-area using names for each area. You have 
 to define each column and row. Since this is a 12 x 12 grid you have 
@@ -118,6 +143,8 @@ main {
     height: 1200px;
     margin: 0 auto;
     display: grid;
+    grid-template-columns: repeat(12, minmax(10px, 100px));
+    grid-template-rows: repeat(12, minmax(10px, 100px));
     grid-template-areas:
         "c1r1 c2r1 c3r1 c4r1 c5r1 c6r1 c7r1 c8r1 c9r1 c10r1 c11r1 c12r1"
         "c1r2 c2r2 c3r2 c4r2 c5r2 c6r2 c7r2 c8r2 c9r2 c10r2 c11r2 c12r2"
