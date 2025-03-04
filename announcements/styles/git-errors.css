@@ -226,3 +226,7 @@ footer {
   height: 30px;
   fill: #006000;
 }
+
+footer {
+  padding: 1em 2em
+}

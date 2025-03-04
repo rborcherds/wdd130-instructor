@@ -64,7 +64,7 @@
                 <pre> /* This is a CSS-style comment */</pre>
                 <p>Put your comments on separate lines preceding the code they are
                     referring to, like so:</p>
-                <pre>h3 {<br>  /* Creates a red drop shadow, offset 1px right and down, w/2px blur radius */<br>  text-shadow: 1px 1px 2px red;<br>  /* Sets the font-size to double the default document font size */<br>  font-size: 2rem;<br>}<br>
+                <pre>h3 {<br>  /* Creates a red drop shadow, offset 1px right and down,<br>w/2px blur radius */ <br> text-shadow: 1px 1px 2px red;<br>  /* Sets the font-size to double the default document font size */<br>  font-size: 2rem;<br>}<br>
                    </pre>
             </li>
             <li>
@@ -80,10 +80,11 @@
                 <h3>Longhand vs. shorthand rules</h3>
                 <p>Sometimes you want to specify the padding-top or border-right but from
                     experience, you will often come back to these to add more so adopt the
-                    habit to
-                    always use the shorthand to make it easier to change without
-                    specifying many
-                    properties. It is easier to change and it is less code.</p>
+                    habit to always use the shorthand to make it easier to change without
+                    specifying many properties. It is easier to change and it is less
+                    code.</p>
+                <p>These values go in this order: top right bottom left. </p>
+                <pre> padding: 1em inherit inherit inherit;</pre>
             </li>
             <li>
                 <h3>Selectors</h3>
@@ -92,7 +93,8 @@
                     to make code lines shorter. </p>
                 <p>Don't use ID selectors because they are:</p>
                 <ul>
-                    <li>less flexible; you can't add more if you discover you need
+                    <li>less flexible; you can't add more to the id attribute if you
+                        discover you need
                         more than one.</li>
                     <li>harder to override because they have higher specificity than
                         classes.</li>
@@ -115,6 +117,7 @@
                     for the page. Fonts can take time to load and be applied and
                     when you have too many fonts your UI normally jumps into place
                     after the fonts are loaded.</p>
+                <p>Always try to keep your fonts to just 2 font names.</p>
             </li>
             <li>
                 <h3>Use CSS variables</h3>

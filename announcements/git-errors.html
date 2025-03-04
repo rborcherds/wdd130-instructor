@@ -40,15 +40,17 @@
         directory</a>
       <h2 class="nav-heading">Hints &amp; Suggestions</h2>
       <a href="#formatters-configure">Formatter not configured</a>
-      <a href="#project-manager">Project Manager Extension</a>
       <a href="#commit-sync">Commit &amp; sync with one button</a>
       <a href="#commit-message">How to add more details to commit message</a>
       <a href="#repo-description">How to add a description to your Repository</a>
       <a href="#multiple-users">How to add multiple users to a shared computer</a>
+      <a href="#github-pages-url">How to add a quick link to GitHub Pages URL</a>
       <h2 class="nav-heading">Additional Documentation</h2>
-      <!-- <a href="byui-email.html">Accessing BYU-I email</a> -->
-      <a href="git-github.html">Git/GitHb commit messages</a>
-      <a href="new-computer.html">Setup New computer</a>
+      <p class="nav-heading">These links open in a new window/tab.</p>
+      <a href="project-manager.html" target="_blank">Project Manager Extension</a>
+      <a href="git-github.html" target="_blank">Git/GitHb commit messages</a>
+      <a href="new-computer.html" target="_blank">Setup New computer</a>
+      <a href="css-best-practices.html" target="_blank">Beginners CSS Best Practices</a>
       <!-- <a href="zoom-setup.html">How to setup Zoom</a> -->
     </nav>
   </header>
@@ -776,73 +778,7 @@
           option. </p>
         <a href="#top" class="top-link">Back to Top</a>
       </details>
-      <details id="project-manager">
-        <summary>Users with multiple coding projects/classes</summary>
-        <p> It is recommended that if you are doing multiple coding projects at a time and
-          each has
-          its own folder/directory structure, you install an extension called Project
-          Manager </p>
-        <p>Go to extensions</p>
-        <p>Search for Project Manager</p>
-        <img src="images/project-manager-search.png" alt="Search Project Manager">
-        <p>Click Install.</p>
-        <p>Once installed open one project folder in VSCode</p>
-        <p> Click on the Project Manager icon in the icons on the left or right of the
-          editor </p>
-        <img src="images/project-manager-icon.png" alt="Project Manager Icon">
-        <p> You should see a blue button that states: Project Manager: Save Project -
-          Click that
-          button and you will be prompted for a name at the top center of the screen. The
-          default
-          name is the folder name. </p>
-        <img src="images/project-manager-1st-save.png" alt="Project Manager 1st Save">
-        <p>You will be prompted to give the project a name</p>
-        <img src="images/project-mananger-naming.png" alt="Naming Project">
-        <p> That will then add that project name to the Project Manager list of projects.
-        </p>
-        <p>Open the second project folder in its own workspace.</p>
-        <p>Click the Save icon in the Project Manager folder icon area.</p>
-        <img src="images/project-manager-save.png" alt="Project Manager Save">
-        <p> Give your project a name and hit enter. This will add it to the list. </p>
-        <img src="images/project-mananger-naming.png" alt="Naming Project">
-        <p> If you click the edit icon, it will open the JSON file that lists your
-          projects. The
-          format is quite easy to follow. The rule is that each project must be enclosed
-          with { }
-          and must have a comma between the project section. </p>
-        <ul>
-          <li>
-            <span class="bold-text">Name</span> is the name of the project
-          </li>
-          <li>
-            <span class="bold-text">Rootpath</span> is the path to the project.
-          </li>
-          <li>
-            <span class="bold-text">Paths</span> is not used at this time
-          </li>
-          <li>
-            <span class="bold-text">Tags</span> is a way to categorize the type of project
-            for
-            sorting. This list is up to the person
-          </li>
-          <li>
-            <span class="bold-text">Enabled</span> is if the project will display or not
-            in the list
-            of projects. This is a way to only show projects you are currently working on.
-          </li>
-        </ul>
-        <p>This is the format of the JSON File</p>
-        <pre>
-                        {<br>
-                        "name": "WDD-130",<br>
-                        "rootPath": "/var/www/html/school/wdd130",<br>
-                        "paths": [],<br>
-                        "tags": ["School", "WDD-130"],<br>
-                        "enabled": true<br>
-                        },
-                    </pre>
-        <a href="#top" class="top-link">Back to Top</a>
-      </details>
+
       <details id="commit-sync">
         <summary>Pushing to GitHub using fewer steps</summary>
         <p> When you are on the Git tab in VSCode, the button to Commit and Sync may state
@@ -1257,6 +1193,30 @@
         <pre
           class="colde-style">[user]<br>    name = YourName<br>    email = your@email.com</pre>
         <a href="#top" class="top-link">Back to Top</a>
+      </details>
+      <details id="github-pages-url">
+        <summary>How to add a quick link to your GitHub Pages URL</summary>
+        <p>Log into your repository on GitHub.Then click on the cog icon to the right of
+          the word About.</p>
+        <img
+          src="//rborcherds.github.io/wdd130-instructor/announcements/images/github-gear-icon.webp"
+          alt="GitHub repository gear icon">
+        <p>Click the checkbox for "Use your GitHub Pages website".</p>
+        <img
+          src="//rborcherds.github.io/wdd130-instructor/announcements/images/github-pages-checkbox.webp"
+          alt="GitHUb Pages Check Box">
+        <p>You can add tags to your repository such as HTML5, CSS3, School work, etc. You
+          decide what topics you want to use.</p>
+        <p>It is also recommended to uncheck the Releases and Packages checkbox's. We do
+          not create a release or a package in this class. Those are for code repositories
+          where you are releasing code as software to download and use on a computer or in
+          another program.</p>
+        <p>You can click the save button at the bottom of the modal and then you will see
+          the link to your GitHub Pages website. on your repository page.</p>
+        <img
+          src="//rborcherds.github.io/wdd130-instructor/announcements/images/github-pages-url.webp"
+          alt="Link to GitHub Pages URL">
+
       </details>
     </section>
   </main>
