@@ -26,6 +26,14 @@ pre {
   background-color: #333;
   color: #fff;
   padding: 1em;
+  white-space: nowrap;
+}
+
+code {
+
+  display: block;
+  overflow-x: auto;
+
 }
 
 footer {

@@ -64,17 +64,29 @@
                 <pre> /* This is a CSS-style comment */</pre>
                 <p>Put your comments on separate lines preceding the code they are
                     referring to, like so:</p>
-                <pre>h3 {<br>  /* Creates a red drop shadow, offset 1px right and down,<br>w/2px blur radius */ <br> text-shadow: 1px 1px 2px red;<br>  /* Sets the font-size to double the default document font size */<br>  font-size: 2rem;<br>}<br>
-                   </pre>
+                <pre>
+                    <code>h3 {<br>  
+                        &nbsp;&nbsp;&nbsp;    /* Creates a red drop shadow, offset 1px right and down, with a 2px blur radius */ <br>
+                        &nbsp;&nbsp;&nbsp;text-shadow: 1px 1px 2px red;<br>  
+                        &nbsp;&nbsp;&nbsp;/* Sets the font-size to double the default document font size */<br>  
+                        &nbsp;&nbsp;&nbsp;font-size: 2rem;<br>
+                        }<br>
+                    </code>
+                </pre>
             </li>
             <li>
                 <h3>Double quotes around values</h3>
                 <p>
-                    Where quotes can or should be
-                    included, use them, and use double quotes. For example:
+                    Where quotes can or should be included, use them, and use double
+                    quotes. For example:
                 </p>
-                <pre>[data-vegetable="liquid"] {<br>  background-color: goldenrod;<br>  background-image: url("../../media/examples/lizard.png");<br>}<br>
-                   </pre>
+                <pre>
+                    <code>[data-vegetable="liquid"] {<br>  
+                        &nbsp;&nbsp;&nbsp;background-color: goldenrod;<br>  
+                        &nbsp;&nbsp;&nbsp;background-image: url("../../media/examples/lizard.png");<br>
+                        }<br>
+                    </code>
+                </pre>
             </li>
             <li>
                 <h3>Longhand vs. shorthand rules</h3>
@@ -94,8 +106,7 @@
                 <p>Don't use ID selectors because they are:</p>
                 <ul>
                     <li>less flexible; you can't add more to the id attribute if you
-                        discover you need
-                        more than one.</li>
+                        discover you need more than one.</li>
                     <li>harder to override because they have higher specificity than
                         classes.</li>
                 </ul>
@@ -186,8 +197,7 @@
     </main>
     <footer>
         <p>This file is created and updated for the use of students at BYU-Idaho taking
-            WDD
-            130</p>
+            WDD 130</p>
         <p>Maintained by Ralph Borcherds</p>
     </footer>
 </body>
