@@ -137,6 +137,11 @@ details img {
   margin: 1rem 0;
 }
 
+.sub-details {
+  margin: 1rem 2rem;
+  padding: 1rem;
+}
+
 pre {
   font-size: 20px;
   line-height: 28px;

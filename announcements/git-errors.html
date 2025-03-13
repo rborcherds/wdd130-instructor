@@ -565,7 +565,7 @@
           <li>Select a Default web browser</li>
         </ul>
         <p>Linux Users</p>
-        <p>This command will show you what your current defautl web browser is:</p>
+        <p>This command will show you what your current default web browser is:</p>
         <code>xdg-settings get default-web-browser</code>
         <p>To set the default browser you will use this following format command. Change
           the
@@ -576,87 +576,148 @@
         <a href="#top" class="top-link">Back to Top</a>
       </details>
       <details id="git-build-fail">
-        <summary>Github Pages Build process fails </summary>
-        <p>There is an issue that does not occur much with students but does in the
-          workplace. It
-          can affect sudents if they are not careful. This mainly happens when a folder is
-          moved to
-          be a sub-folder of a Git Repository.</p>
-        <p>You will first notice that your project did not build and if you look on the
-          code page in
-          GitHub, you will find the last commit message has a red X to the right of it.
-        </p>
-        <img src="images/github-buld-error-x.webp" alt="GitHub Build error indicator">
-        <p>Click on the Red X and you will be presented with something that looks like
-          this.</p>
-        <img src="images/github-build-check-dialog.webp" alt="Build Check Dialog">
-        <p>Click on the details option next to the item with the red X</p>
-        <img src="images/github-build-check-dialog-details.webp" alt="click details link">
-        <p>Look for the error lines. They start with the word Error: and are in red
-          background color
-          by default</p>
-        <img src="images/github-submodule-error.png" alt="submoduel error">
-        <p>If the first like of the errors reads like this:</p>
-        <pre
-          class="code-style">&quot;Error: fatal: No url found for submodule path &lt;path to issue&gt; in .gitmodules&quot;</pre>
-        <p>You have this issue. You have a sub-folder that is also been initialized to be
-          a git
-          repository</p>
-        <p>Another way to see this potential issue is to look at the code and look at the
-          location
-          in the error above. You should see a folder icon with an arrow pointing to the
-          right next
-          to the folder name like this</p>
-        <img src="images/github-submodule-icon-folder.png"
-          alt="submodule folder icon with repository on GitHUb">
-        <p>A third way to check this is in VSCode. </p>
-        <p>To fix this you have to go into the sub-folder mentioned in the error and
-          delete the
-          hidden folder called .git</p>
-        <p>Easiest way to do this is within VSCode. Go to the source control area and
-          click the 3
-          dots to the right of Source control</p>
-        <img src="images/vscode-source-control.webp" alt="source control">
-        <p>Select Views then click Source Control Repositories</p>
-        <img src="images/vscode-source-coltrol-repositories.webp"
-          alt="source control repositories">
-        <p>This will then show you all the repositories under the main folder that is open
-          in
-          VSCode. It will look something like this if there are more then 1.</p>
-        <img src="images/vscode-multiple-source-repos.webp" alt="Multiple repositories">
-        <p class="bold-text">Windows Users</p>
-        <ul>
-          <li>open terminal</li>
-          <li>Change the terminal type to Git Bash by clicking on the chevron pointing
-            down next to
-            the Plus sign</li>
-          <li>Type the following command:
-            <pre class="code-style">rm .git -rf</pre>
-          </li>
-        </ul>
-        <p class="bold-text">Mac and Linux users</p>
-        <ul>
-          <li>open terminal</li>
-          <li>Type the following command:
-            <pre class="code-style">rm .git -rf</pre>
-          </li>
-        </ul>
-        <p>Once done commit and sync with GitHub so that the build process can be
-          re-initialized
-        </p>
+        <summary>Github Pages Build process fails</summary>
+        <h3>There are 2 potential reasons that have been identified with students.</h3>
+        <details class="sub-details">
+          <summary>User setup GitHub Pages incorrectly</summary>
+          <p>To verify if this is the issue you need to look for this in the error log of
+            the GitHub Pages publishing process.</p>
+          <p>Step 1:</p>
+          <p>Go to the Actions tab of the repository</p>
+          <img src="images/github-action-tab.png" alt="GitHub Actions Tab">
+          <p>Click on the pages build and deployment link next to the error icon</p>
+          <img src="images/github-pages-build-fail.jpg"
+            alt="Link to the pages build error">
+          <p>Then click on either option to see the error</p>
+          <img src="images/github-pages-error-lnks.jpg"
+            alt="GitHub Pages Build Error link">
+
+          <p>This is the error and the part that tells you what is wrong is at the end</p>
+          <img src="images/github-pages-build-error-msg.jpg"
+            alt="GitHub pages build error message">
+
+
+          <p>This is the error text you need to look for at the end of the message</p>
+          <pre
+            class="code-style">Error: No such file or directory @ dir_chdir0 - /github/workspace/docs</pre>
+
+          <p>What the student did was to change the folder in the GitHub Pages setup page.
+            They student has something like this:</p>
+          <img src="images/github-pages-docs.png" alt="GitHub pages docs folder setup">
+          <p>It must be the root folder like this.</p>
+          <img src="images/github-pages-root-folder.png"
+            alt="GitHUb Pages Root Folder setup">
+          <p>Once the user changes it to the root folder and saves the change, a new
+            publishing process will start and it should publish if that is the only issue.
+          </p>
+        </details>
+        <details class="sub-details">
+          <summary>User creates a repository within a repository</summary>
+
+          <p>This issue does occur and can occur if the student creates multiple
+            repositories during the course.</p>
+          <p>You will first notice that your project did not build and if you look on the
+            code page in GitHub, you will find the last commit message has a red X to the
+            right of it.
+          </p>
+          <img src="images/github-buld-error-x.webp" alt="GitHub Build error indicator">
+          <p>Click on the Red X and you will be presented with something that looks like
+            this.</p>
+          <img src="images/github-build-check-dialog.webp" alt="Build Check Dialog">
+          <p>Click on the details option next to the item with the red X</p>
+          <img src="images/github-build-check-dialog-details.webp"
+            alt="click details link">
+          <p>Look for the error lines. They start with the word Error: and are in red
+            background color by default</p>
+          <img src="images/github-submodule-error.png" alt="submodule error">
+          <p>If the first like of the errors reads like this:</p>
+          <pre
+            class="code-style">&quot;Error: fatal: No url found for submodule path &lt;path to issue&gt; in .gitmodules&quot;</pre>
+          <p>If you have this issue. You have a sub-folder that is also been initialized
+            to
+            be a git repository</p>
+          <p>Another way to see this potential issue is to look at the code and look at
+            the location in the error above. You should see a folder icon with an arrow
+            pointing to the right next to the folder name like this</p>
+          <img src="images/github-submodule-icon-folder.png"
+            alt="submodule folder icon with repository on GitHUb">
+          <p>A third way to check this is in VSCode. </p>
+          <p>To fix this you have to go into the sub-folder mentioned in the error and
+            delete the hidden folder called .git</p>
+          <p>Easiest way to do this is within VSCode. Go to the source control area and
+            click the 3 dots to the right of Source control</p>
+          <img src="images/vscode-source-control.webp" alt="source control">
+          <p>Select Views then click Source Control Repositories</p>
+          <img src="images/vscode-source-coltrol-repositories.webp"
+            alt="source control repositories">
+          <p>This will then show you all the repositories under the main folder that is
+            open in VSCode. It will look something like this if there are more then 1.</p>
+          <img src="images/vscode-multiple-source-repos.webp" alt="Multiple repositories">
+
+          <h3>How to delete the second local repository.</h3>
+          <p>Use your file manger and go to the sub folder with the initialized
+            repository.
+            Make sure to turn on "Show Hidden Items" and look for the .git folder name and
+            delete it. Do not delete the one in the root folder. </p>
+          <pre>For example: do not delete the wdd130/.git folder, but delete all other .git folders in sub folders under the wdd130 folder.</pre>
+          <p>How to do this form command line/terminal using VSCode.</p>
+          <p class="bold-text">Windows Users</p>
+          <p>Option 1:</p>
+          <ul>
+            <li>open terminal</li>
+            <li>Change the terminal type to Git Bash by clicking on the chevron pointing
+              down next to the Plus sign</li>
+            <li>Change folder to the folder with the second repository. For example using
+              the image above:
+              <pre>cd cse210b</pre>
+            </li>
+            <li>Type the following command:
+              <pre class="code-style">rm .git -rf</pre>
+            </li>
+          </ul>
+          <p>Option 2:</p>
+          <ul>
+            <li>open terminal. It will default to Powershell</li>
+            <li>Change folder to the folder with the second repository. For example using
+              the image above:
+              <pre>cd cse210b</pre>
+            </li>
+            <li>Type the following command:
+              <pre class="code-style">Remove-Item -Recurse -Force .git</pre>
+            </li>
+          </ul>
+          <p class="bold-text">Mac and Linux users</p>
+          <ul>
+            <li>open terminal</li>
+            <li>Change folder to the folder with the second repository. For example using
+              the image above:
+              <pre>cd cse210b</pre>
+            </li>
+            <li>Type the following command for Git Bash:
+              <pre class="code-style">rm .git -rf</pre>
+            </li>
+          </ul>
+          <p>Once done commit and sync with GitHub so that the build process can be
+            re-initialized
+          </p>
+
+
+        </details>
+
         <a href="#top" class="top-link">Back to Top</a>
       </details>
       <details id="git-allow-unrelated">
         <summary>Git refusing to merge unrelated histories</summary>
         <p>When you get the following General Git Error message</p>
-        <img src="imags/git-general-error.png" alt="Git Generall Error">
+        <img src="imags/git-general-error.png" alt="Git General Error">
         <p>Click on the Show Command Output button</p>
-        <P>IF ou get a message that looks like this with the last line stating Fata:
-          refusing to
-          merge unrelated histories</P>
+        <p>If you get a message that looks like this with the last line stating </p>
+        <pre class="code-style">
+          Fatal: refusing to merge unrelated histories
+        </pre>
         <img src="images/git-error-unlrelated-histories.png"
-          alt="Unlrealted histories error">
-        <p>Type the follwoing commands in a terminal window in VSCode</p>
+          alt="Unrelated histories error">
+        <p>Type the following commands in a terminal window in VSCode</p>
         <pre class="code-style">
             git merge --allow-unrelated-histories<br>
             git merge origin origin/main
