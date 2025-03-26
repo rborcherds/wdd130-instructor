@@ -1,6 +1,9 @@
 body {
     max-width: 1200px;
     margin: 0 auto;
+    font-size: 16pt;
+    font-family: "Open Sans", sans-serif;
+    line-height: 1.25;
 }
 
 h1,
@@ -10,10 +13,8 @@ h4,
 h5,
 h6 {
     margin: 6px 0;
-    font-family: "Lato Extended", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: bold;
+    font-family: "Tinos", serif;
     line-height: 1.5;
-    text-rendering: optimizeLegibility;
 }
 
 
@@ -31,4 +32,26 @@ pre {
     word-wrap: break-word;
     white-space: pre;
     white-space: pre-wrap;
+}
+
+h1 {
+    color: #230101;
+}
+
+h2 {
+    color: #030138;
+}
+
+h3 {
+    color: #040153;
+}
+
+hr {
+    margin: 3rem 0;
+    border: 2px dashed #013d13;
+}
+
+.answer {
+    font-weight: 500;
+    font-style: italic;
 }
