@@ -1,6 +1,7 @@
 body {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 1rem 1.5rem;
     font-size: 16pt;
     font-family: "Open Sans", sans-serif;
     line-height: 1.25;
