@@ -25,8 +25,15 @@ nav a:hover {
     color: #0a5e66;
 }
 
+hr {
+    border: 3px solid #0a5e66;
+    margin: 2em 0;
+}
 
-
+main {
+    max-width: 50rem;
+    margin: 0 auto;
+}
 
 /*  These rule is used on all 3 form examples */
 
@@ -111,7 +118,7 @@ fieldset {
 }
 
 
-/* Form 3 */
+/* Form-3 & Form-4 Grid Layout */
 .grid-form {
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -178,4 +185,174 @@ fieldset {
 .select select {
     padding: .5em;
     border-radius: 10px;
+}
+
+
+/* Form-4 Block layout */
+.block-fieldset {
+    display: block;
+    border: 1px solid #3e3e3e;
+    border-radius: 10px;
+    margin: 1em 0;
+    padding: 1em;
+}
+
+.block-fieldset legend {
+    color: #3e0000;
+    max-width: 100%;
+    padding: 0;
+    white-space: normal;
+}
+
+.block-fieldset label {
+    display: inline-block;
+    margin: 0 0 1em 0;
+    vertical-align: top;
+    width: 15%;
+}
+
+.block-fieldset input {
+    margin: 0 0 1em 0;
+    width: 80%
+}
+
+.block-fieldset textarea {
+    margin: 0 0 1em 0;
+}
+
+.block-select {
+    display: block;
+    border: 1px solid #3e3e3e;
+    border-radius: 10px;
+    margin: 1em 0;
+    padding: 1em;
+}
+
+.block-select select {
+    display: inline-block;
+    padding: .5em;
+    border-radius: 10px;
+    margin: 0 0 1em 0;
+}
+
+.block-select label {
+    display: inline-block;
+    margin: 0 0 1em 0;
+    vertical-align: center;
+}
+
+.block-form {
+    display: block;
+    border: 1px solid #3e3e3e;
+    border-radius: 10px;
+    margin: 1em 0;
+    padding: 1em;
+}
+
+.block-form input {
+    display: inline-block;
+    padding: .5em;
+    border-radius: 10px;
+    margin: 0 0 1em 0;
+
+    vertical-align: center;
+}
+
+.block-form label {
+    display: inline-block;
+    margin: 0 0 1em 0;
+    vertical-align: center;
+}
+
+/* Form-4 Flex layout */
+.flex-form {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #3e3e3e;
+    border-radius: 10px;
+    margin: 1em 0;
+    padding: 1em;
+}
+
+.flex-form .field {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 0 1em 0;
+}
+
+.field label {
+    margin: 0 0 1em 0;
+    vertical-align: top;
+    flex: 1 0 25%;
+    padding: 0 1em 0 0;
+    text-align: right;
+}
+
+.field input {
+    flex: 1 0 70%;
+    padding: .5em;
+    border-radius: 10px;
+    margin: 0 0 1em 0;
+}
+
+.field textarea {
+    flex: 1 0 70%;
+    padding: .5em;
+    border-radius: 10px;
+    margin: 0 0 1em 0;
+}
+
+.flex-select {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 0 1em 0;
+    border: 1px solid #3e3e3e;
+    border-radius: 10px;
+}
+
+.flex-select label {
+    margin: 0 0 1em 0;
+    vertical-align: top;
+    flex: 1 0 25%;
+    padding: 0 1em 0 0;
+}
+
+.flex-select select {
+    flex: 1 0 30%;
+    padding: .5em;
+    border-radius: 10px;
+    margin: 0 0 1em 0;
+}
+
+.flex-form-checkbox {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #3e3e3e;
+    border-radius: 10px;
+    margin: 1em 0;
+    padding: 1em;
+}
+
+.flex-form-checkbox .field {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 0 1em 0;
+}
+
+.flex-form-checkbox .field label {
+    margin: 0 0 1em 0;
+    vertical-align: top;
+    flex: 1 1 auto;
+    padding: 0 1em 0 0;
+    text-align: left;
+}
+
+.flex-form-checkbox .field input {
+    flex: 0 0 auto;
+    padding: .5em;
+    border-radius: 10px;
+    margin: 0 1em 1em 0;
 }
