@@ -10,6 +10,11 @@
   --summary-hover-color: #1a252f;
   --summary-text-color: #fff;
   --gh-btn-bkg-color: #1f6feb;
+  --nav-background-color: #021d38;
+  --nav-text-color: #fff;
+  --nav-hover-color: #021d38;
+  --nav-background-hover-color: #e6effa;
+  --nav-hover-border-color: #03234a;
 }
 
 *,
@@ -38,6 +43,10 @@ h2 {
   color: var(--heading-color);
 }
 
+a {
+  text-decoration: none;
+}
+
 img {
   max-width: 100%;
 }
@@ -56,6 +65,28 @@ pre {
 code {
   overflow: auto;
 
+}
+
+nav {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+
+nav a {
+  color: var(--nav-text-color);
+  padding: 1.5em 1em;
+  background-color: var(--nav-background-color);
+  border: solid var(--nav-background-color) 2px;
+  text-align: center;
+  margin: .5rem;
+  border-radius: 50px;
+}
+
+nav a:hover {
+  background-color: var(--nav-background-hover-color);
+  color: var(--nav-hover-color);
+  border: solid var(--nav-hover-border-color) 2px;
 }
 
 .bold-code {
