@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Manager Extension for VSCode</title>
+  <meta name="description"
+    content="This page describes how to set up the project manager extension for VSCode.">
+  <meta name="author" content="Ralph Borcherds">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+
+<body>
+
+  <header>
+    <nav class="nav-header">
+      <a href="index.html">Resources Home</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <h1>Users with multiple coding projects/classes</h1>
+    <p>It is recommended that if you are doing multiple coding projects at a time and
+      each has its own folder/directory structure, you install an extension called Project
+      Manager </p>
+    <p>Go to extensions</p>
+    <p>Search for Project Manager</p>
+    <img src="images/project-manager-search.png" alt="Search Project Manager">
+    <p>Click Install.</p>
+    <p>Once installed open one project folder in VSCode</p>
+    <p> Click on the Project Manager icon in the icons on the left or right of the
+      editor </p>
+    <img src="images/project-manager-icon.png" alt="Project Manager Icon">
+    <p> You should see a blue button that states: Project Manager: Save Project -
+      Click that button and you will be prompted for a name at the top center of the
+      screen. The
+      default name is the folder name. </p>
+    <img src="images/project-manager-1st-save.png" alt="Project Manager 1st Save">
+    <p>You will be prompted to give the project a name</p>
+    <img src="images/project-mananger-naming.png" alt="Naming Project">
+    <p> That will then add that project name to the Project Manager list of projects.
+    </p>
+    <p>Open the second project folder in its own workspace.</p>
+    <p>Click the Save icon in the Project Manager folder icon area.</p>
+    <img src="images/project-manager-save.png" alt="Project Manager Save">
+    <p> Give your project a name and hit enter. This will add it to the list. </p>
+    <img src="images/project-mananger-naming.png" alt="Naming Project">
+    <p> If you click the edit icon, it will open the JSON file that lists your
+      projects. The format is quite easy to follow. The rule is that each project must be
+      enclosed
+      with { } and must have a comma between the project section. </p>
+    <ul>
+      <li>
+        <span class="bold-text">Name</span> is the name of the project
+      </li>
+      <li>
+        <span class="bold-text">Rootpath</span> is the path to the project.
+      </li>
+      <li>
+        <span class="bold-text">Paths</span> is not used at this time
+      </li>
+      <li>
+        <span class="bold-text">Tags</span> is a way to categorize the type of project
+        for sorting. This list is up to the person
+      </li>
+      <li>
+        <span class="bold-text">Enabled</span> is if the project will display or not
+        in the list of projects. This is a way to only show projects you are currently
+        working on.
+      </li>
+    </ul>
+    <p>This is the format of the JSON File</p>
+    <pre>
+      {<br>
+      "name": "WDD-130",<br>
+      "rootPath": "/var/www/html/school/wdd130",<br>
+      "paths": [],<br>
+      "tags": ["School", "WDD-130"],<br>
+      "enabled": true<br>
+      },
+    </pre>
+
+  </main>
+  <footer>
+    <p>This file is created and updated for the use of students at BYU Pathway
+      Worldwide taking WDD 130</p>
+    <p>Maintained by Ralph Borcherds</p>
+  </footer>
+</body>
+</html>
