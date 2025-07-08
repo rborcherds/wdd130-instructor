@@ -1,7 +1,16 @@
-@import url(https://fonts.bunny.net/css?family=allerta:400|anek-bangla:400,700);
+:root {
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --heading-color: steelblue;
+    --nav-background-color: #e6effa;
+    --nav-hover-color: #021d38;
+    --nav-hover-border-color: #03234a;
+    --font-body: "Allerta", sans-serif;
+    --font-heading: "Roboto Flex", sans-serif;
+}
 
 body {
-    font-family: 'Allerta', sans-serif;
+    font-family: "Allerta", sans-serif;
 }
 
 nav {
@@ -9,7 +18,7 @@ nav {
     padding: 10px;
     display: flex;
     justify-content: space-around;
-    font-family: 'Anek Bangla', sans-serif;
+    font-family: var(--font-heading)
 }
 
 a {
@@ -33,6 +42,7 @@ p {
 main {
     max-width: 1200px;
 }
+
 aside {
     width: 300px;
     margin: 10px 20px;
@@ -41,6 +51,7 @@ aside {
     background-color: none;
     color: #1a044e;
 }
+
 footer {
     background-color: steelblue;
     color: white;
