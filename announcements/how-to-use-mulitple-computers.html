@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Setup New Computer for GitHub</title>
+    <meta name="description"
+        content="This page describes how to use multiple computers for a student to keep working with their GitHub repository.">
+    <meta name="author" content="Ralph Borcherds">
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="nav-header">
+            <a href="pages.html">Resources Home</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>How to code with multiple computers without causing conflicts</h1>
+        <p>When you are working on a project, you may want to use multiple computers. This
+            is common for students who work on their assignments at home and at school.
+        </p>
+        <p>To do this, you need to make sure that you are using GitHub correctly to avoid
+            conflicts. Here are the steps to
+            follow:</p>
+        <ol>
+            <li>Make sure you have Git installed on all computers.</li>
+            <li>Clone your GitHub repository to each computer.</li>
+            <li>Before you start working, pull the latest changes from GitHub.</li>
+            <li>When you finish working, commit your changes and push them to GitHub.</li>
+            <li>Before switching computers, always pull the latest changes from GitHub.
+            </li>
+        </ol>
+        <p>By following these steps, you can work on your project from multiple computers
+            without causing conflicts. If you do encounter a conflict, Git will help you
+            resolve it.</p>
+        <p>For more information on how to use Git and GitHub, you can refer to the <a
+                href="https://docs.github.com/en/get-started/quickstart">GitHub Quickstart
+                Guide</a>.</p>
+        <p>Remember to always commit your changes and push them to GitHub before switching
+            computers. This will ensure that your work is saved and can be accessed from
+            any computer.</p>
+
+        <h2>Here are the step-by-step instructions</h2>
+        <p>Follow the instructions found in the <a href="new-computer.html">Setup New
+                Computer</a>. These instructions are specific to school work and you may
+            have to do other things for work setup.</p>
+        <p>Open VSCode on your computer and go to the Source Control icon</p>
+        <img src="images/vscode-source-control.webp" alt="Source Control icon">
+        <p>Then click on the 3 dots to the right of Changes and select Branch - Create New
+            Branch</p>
+        <img src="images/vscode-new-branch.webp" alt="Create New Branch">
+        <p>Enter a name for your branch, such as "dev" and press Enter. The branch name
+            can be anything you want to use.</p>
+        <img src="images/vscode-new-branch-name.webp" alt="Enter New Branch Name">
+        <p>
+            Click the Publish Branch button that appears at the top of the Source Control
+            panel. This will create the branch on GitHub and set it as the current branch
+            in VSCode.
+        </p>
+        <img src="images/vscode-publish-branch.webp" alt="Publish Branch">
+        <p>Now you can make changes to your code without affecting the main branch. When
+            you are ready to save your changes, you can commit them to the new branch. You
+            can verify that you are on the new branch by checking the branch name in the
+            bottom left corner of the VSCode window.</p>
+        <img src="images/vscode-check-branch-name.webp" alt="Check Branch Name">
+        <p>Now you can make all the edits you want on this computer. To use the same
+            branch on another computer, you need to follow these steps:</p>
+        <ol>
+            <li>Commit and sync your changes from the original computer to GitHub.</li>
+            <li>Open VSCode on the new computer.</li>
+            <li>Clone your GitHub repository to the new computer if not already on your
+                computer.</li>
+            <li>Open the Source Control panel and click on the 3 dots to the right of
+                Changes.</li>
+            <li>Select Branch - Checkout to Branch and choose the branch you created.</li>
+        </ol>
+        <img src="images/vscode-branch-checkout-to.webp" alt="Checkout Branch">
+        <p>Now you can continue working on the same branch on the new computer. Remember
+            to always pull the latest changes from GitHub before making any changes, and
+            push your changes when you are done.</p>
+        <p>Make sure to always do a pull request before you start to work on the new
+            computer.</p>
+        <img src="images/vscode-git-pull.webp" alt="Git Pull Request">
+        <p>If you ever get a Merge Conflict and you are not sure how to fix that, contact
+            your instructor or refer to this video on YouTube that shows you how to fix a
+            merge conflict. <a
+                href="https://www.youtube.com/watch?v=mn1S3ldbS58">Mastering Merge
+                Conflicts in VS Code</a></p>
+
+        <h2>Merging dev branch to main branch to publish on GitHub Pages</h2>
+        <p>As you push changes to GitHub, you may see the following message in Github on
+            the Code page of your repository. You can ignore this until you are ready to
+            merge it into the main branch.</p>
+        <img src="images/github-auto-pull-request-notice.webp"
+            alt="Auto Pull Request Notice">
+        </p>
+        <p>Once you are ready to publish your code so that it is available on GitHub Pages
+            for grading, follow these steps.</p>
+        <ol>
+            <li>Make sure you are on the dev branch in VSCode.</li>
+            <li>Commit all your changes to the dev branch.</li>
+            <li>Push the dev branch to GitHub.</li>
+            <li>Go to GitHub and create a pull request from the dev branch to the main
+                branch.</li>
+            <li>Review the changes and merge the pull request.</li>
+            <li>Switch back to the main branch in VSCode.</li>
+            <li>Pull the latest changes from the main branch.</li>
+            <li>Now your main branch is up to date with the dev branch.</li>
+        </ol>
+        <img src="images/github-new-pull-request.webp" alt="New Pull Request">
+        <p>You will then select the main branch as the base branch and the dev branch as
+            the compare branch.</p>
+        <img src="images/github-base-compare-branch.webp" alt="Compare Branches">
+        <p>The web page will then fill in and it will look something like this.</p>
+        <img src="images/github-compare-pull-request.webp" alt="Compare Pull Request">
+        <p>Click on the "Create pull request" button to create the pull request.</p>
+        <p>GitHub will then show you the changes that will be merged into the main
+            branch. You can review the changes and make sure everything looks good.</p>
+        <p>Once you are satisfied with the changes, you can add a title and description
+            for the pull request. This will help you and others understand what changes
+            were made and why. The screen will look something like this.</p>
+        <img src="images/github-pull-request-title.webp" alt="Pull Request Title">
+        <p>After you have added a title and description, click on the "Create pull
+            request" button. This will create the pull request and notify the repository
+            owner that there are changes ready to be reviewed. The owner in this case is
+            you.</p>
+        <p>After you have created the pull request, you will see the page to merge the
+            pull request. This will only show you the Merge ull request button if there
+            are no conflicts with the code in the main branch. If there are conflicts you
+            will have to decide how to handle the conflict so that you can merge the other
+            changes into main.</p>
+        <img src="images/github-pull-request-details.webp" alt="Pull Request Details">
+        <p>You can add more details in the comment area below the button. That is not
+            necessary as you should be the only one making changes. This part is mainly
+            used when there are multiple developers working on a project.</p>
+        <p>Click on the "Merge pull request" button to merge the changes from the dev
+            branch into the main branch.</p>
+        <p>After you click the "Merge pull request" button, GitHub will show you a
+            confirmation page. You can review the changes one last time before merging.
+            Click the Confirm merge button to finalize the merge.</p>
+        <img src="images/github-confirm-branch-merge.webp"
+            alt="Merge Pull Request Confirmation">
+        <p>Once you confirm the merge, GitHub will merge the changes from the dev branch
+            into the main branch. You will see a message indicating that the pull request
+            was successfully merged.</p>
+        <img src="images/github-branch-merge-success.webp" alt="Pull Request Merged">
+        <p>Once the pull request is merged, Give the system a couple of minutes and your
+            changes will be live on GitHub Pages.</p>
+    </main>
+    <footer>
+        <p>This file is created and updated for the use of students at BYU Pathway
+            Worldwide taking WDD 130</p>
+        <p>Maintained by Ralph Borcherds</p>
+    </footer>
+
+</body>
+</html>
