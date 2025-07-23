@@ -255,13 +255,13 @@ fieldset {
     border-radius: 10px;
     margin: 0 0 1em 0;
 
-    vertical-align: center;
+    vertical-align: baseline;
 }
 
 .block-form label {
     display: inline-block;
     margin: 0 0 1em 0;
-    vertical-align: center;
+    vertical-align: baseline;
 }
 
 /* Form-4 Flex layout */
