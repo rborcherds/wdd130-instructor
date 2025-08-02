@@ -1,0 +1,479 @@
+/* Root CSS variables for easy theme management */
+:root {
+
+  /* Dark color for primary text */
+  --primary-color: #4d4c49;
+  --primary-color-dark: #c6c3bf;
+
+  /* Secondary color, slightly lighter */
+  --secondary-color: #484029;
+  --secondary-color-dark: #f3f3f3;
+
+  /* Accent color 1 */
+  --accent1-color: #484029;
+  --accent1-color-dark: #f3f3f3;
+
+  /* Accent color 2 */
+  --accent2-color: #37471e;
+  --accent2-color-dark: #e0e0e0;
+
+  /* Accent color 3 */
+  --accent3-color: #254768;
+  --accent3-color-dark: #d0d0d0;
+
+  /* White color */
+  --white: #f3eded;
+
+  /* Black color */
+  --black: #0e0c0c;
+
+  /* Button Background colors */
+  --button-color: #714a0e;
+  --button-color-hover: #f3a530;
+
+  --cta-button-color: #1bdd01;
+  --cta-button-color-hover: #04083e;
+
+  /* Top Navigation Colors */
+  /* Background color for navigation bar */
+  --nav-background-color: var(--accent2-color);
+  /* Color for navigation links */
+  --nav-link-color: #fff;
+  /* Hover color for links */
+  --nav-hover-link-color: var(--accent2-color);
+  /* Background color on hover for navigation links */
+  --nav-hover-background-color: #fff;
+
+  /* Font for headings */
+  --heading-font: 'Arvo', 'sans-serif';
+  /* Font for paragraphs */
+  --paragraph-font: 'Oswald', 'sans-serif';
+
+  --light-background: #dedede;
+  --dark-background: #333;
+}
+
+/* body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.3s, color 0.3s;
+  
+} */
+
+header {
+  height: 6em;
+  background-color: #0a5e66;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(6em, 1fr));
+  width: 100%;
+
+}
+
+nav a {
+  padding: 1em;
+  color: #fff;
+  letter-spacing: 1px;
+  justify-self: center;
+}
+
+nav a:hover {
+  background-color: #fff;
+  color: #0a5e66;
+}
+
+/* Dark/light mode button styling */
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+
+
+/* These rules are for the about us page styleing */
+/* CSS from original example site for about us page */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/***********************************. {****
+*
+*   defaults for all pages - Begin
+*
+****************************************/
+body {
+  font-family: var(--paragraph-font);
+  font-weight: 400;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p {
+  padding: 10px;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.center {
+  justify-self: center;
+  align-self: center;
+}
+
+/* Sets default width and centers content in browser */
+header,
+main,
+footer {
+  max-width: 1280px;
+  margin: auto;
+}
+
+
+/* header items styling */
+.site-header {
+  margin: 2em auto 0;
+  display: grid;
+  grid-template-columns: 200px auto;
+  align-items: center;
+  background-color: #484029;
+  color: var(--white);
+  height: auto;
+}
+
+.site-nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  justify-items: center;
+  font-family: var(--heading-font);
+}
+
+.navitem {
+  padding: 1rem;
+  font-size: 1.25rem;
+  font-family: var(--heading-font);
+  color: #fff;
+  display: flex;
+  align-items: center;
+}
+
+.navitem:hover {
+  background-color: #fff;
+  color: #484029;
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+  align-items: center;
+  padding: 1rem;
+  background-color: #242321;
+  margin-top: 100px;
+}
+
+
+/* Footer Styling */
+footer p {
+  color: #fff;
+}
+
+.footer-menu {
+  color: #fff;
+}
+
+/* Social media link styling */
+.socialmedia {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.socialmedia img {
+  width: 2rem;
+}
+
+.hero {
+  position: relative;
+}
+
+.hero>img {
+  display: block;
+  width: 100%;
+}
+
+
+/*************************************
+*
+*   Modal CSS
+*
+**************************************/
+
+.modal-window>div {
+  border-radius: 1rem;
+}
+
+.modal-window div:not(:last-of-type) {
+  margin-bottom: 15px;
+}
+
+.modal-window {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.25);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  visibility: hidden;
+  opacity: 0;
+  /* pointer-events: none; */
+  transition: all 0.3s;
+}
+
+.modal-window:target {
+  visibility: visible;
+  opacity: 1;
+  /* pointer-events: auto; */
+}
+
+.modal-window>div {
+  max-width: fit-content;
+  position: relative;
+  top: 30px;
+  left: 50%;
+  bottom: 30px;
+  transform: translateX(-50%);
+  padding: 2em;
+  background: white;
+}
+
+.modal-window img {
+  max-width: fit-content;
+  max-height: 90vh;
+}
+
+.modal-close {
+  color: var(--primary-color);
+  line-height: 50px;
+  font-size: 80%;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 0;
+  width: 70px;
+}
+
+.modal-close:hover {
+  color: black;
+}
+
+/****************************************************
+*
+*   about us styling 
+*
+****************************************************/
+.abs-heading1 {
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(56, 59, 103, 0.6);
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.abs-article {
+  background-color: rgba(255, 255, 255, .35);
+  position: absolute;
+  top: 6rem;
+  left: 6rem;
+  right: 6rem;
+}
+
+.abs-article img {
+  float: right;
+  margin: 2rem;
+  width: 15rem;
+}
+
+.abs-article p {
+  color: #1e1a1a;
+  /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; */
+  font-size: x-large;
+  text-align: center;
+}
+
+
+
+
+
+.history-section {
+  margin: 50px 0;
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  /* This creates three columns */
+  gap: 20px;
+  /* This is the gap between columns */
+  align-items: center;
+  text-align: justify;
+}
+
+.history-img {
+  grid-column: 2 / 3;
+  grid-row: 2;
+  /* This places the image in the center column */
+}
+
+.history-section p:first-of-type {
+  grid-column: 1 / 2;
+  grid-row: 2;
+  /* This places the first paragraph in the left column */
+  padding: 0 20px;
+  /* Add padding for better text readability */
+}
+
+.history-section p:last-of-type {
+  grid-column: 3 / 4;
+  grid-row: 2;
+  /* This places the second paragraph in the right column */
+  padding: 0 20px;
+  /* Add padding for better text readability */
+}
+
+/* Ensure the h2 is full-width above the columns */
+.history-section>h2 {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  /* This spans the h2 across all columns */
+  text-align: center;
+  /* Center the text of the h2 */
+  padding-bottom: 1rem;
+  /* Add some space below the h2 */
+}
+
+.adventures {
+  margin: 50px 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  justify-items: center;
+}
+
+.history h2,
+.adventures h2 {
+  grid-column: 1/-1;
+  justify-self: center;
+  padding: 1em 0;
+}
+
+figure:nth-of-type(odd) {
+  background-color: var(--accent1-color);
+  color: var(--nav-link-color);
+  align-self: center;
+
+}
+
+figure:nth-of-type(even) {
+  background-color: var(--accent2-color);
+  color: var(--nav-link-color);
+  align-self: center;
+}
+
+figure:nth-last-child(odd):hover,
+figure:nth-last-of-type(even):hover {
+  transform: scale(1.3);
+  transition: all 0.5s ease-in-out 0.1ms;
+}
+
+figcaption {
+  text-align: center;
+  padding: 1em 0;
+}
+
+.history {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr;
+  gap: 2em;
+  margin: 50px 0;
+}
+
+
+/* styling to switch */
+body.light-mode {
+  background-color: var(--light-background);
+  color: var(--primary-color);
+}
+
+body.dark-mode {
+  background-color: var(--dark-background);
+  color: var(--primary-color-dark);
+}
+
+body.light-mode .history h2,
+body.light-mode .adventures h2 {
+  color: var(--primary-color);
+}
+
+body.dark-mode .history h2,
+body.dark-mode .adventures h2 {
+  color: var(--primary-color-dark);
+}
