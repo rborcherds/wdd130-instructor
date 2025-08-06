@@ -161,16 +161,19 @@ nav a:hover {
   grid-column: 2/12;
   grid-row: 2/5;
   background-color: var(--article-bg-color);
-  padding: 2rem
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1em;
 }
 
 .grid-article img {
-  float: right;
-  margin: 2rem;
-  width: 15rem;
+  grid-column: 9/13;
+
 }
 
 .grid-article p {
+  grid-column: 1/9;
   color: var(--text-color);
   font-size: x-large;
   text-align: center;
