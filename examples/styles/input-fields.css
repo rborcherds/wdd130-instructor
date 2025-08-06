@@ -10,16 +10,7 @@ body {
     font-size: 1.5rem !important;
     font-weight: bold !important;
     width: 100%;
-    margin: 0 !important;
-    padding: 0 !important;
 }
-
-*,
-*:before,
-*:after {
-    box-sizing: border-box !important;
-}
-
 
 .font-bold {
     font-weight: bold;

@@ -1,5 +1,7 @@
-body {
-    max-width: 1000px;
+header,
+main,
+footer {
+    max-width: 1200px;
     margin: 0 auto;
 
 }
@@ -11,11 +13,6 @@ body {
     font-style: normal;
     font-variation-settings: "wdth" 100;
 }
-
-a {
-    text-decoration: none;
-}
-
 
 
 p {

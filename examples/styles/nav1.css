@@ -6,12 +6,9 @@ img {
     width: 75px;
 }
 
-a {
-    text-decoration: none;
-}
-
 header,
-main {
+main,
+footer {
     max-width: 1200px;
     margin: 0 auto;
 }

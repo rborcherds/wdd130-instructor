@@ -1,7 +1,5 @@
 body {
     background-color: #2b54a7;
-    margin: 0;
-    padding: 0;
 }
 
 
@@ -12,10 +10,6 @@ footer {
     margin: 0 auto;
     /* DARK PINK */
     background: #9dcff0;
-
-    /*TEAL*/
-    /*background: #00B3B4;*/
-
     font-size: 20px;
     line-height: 28px;
     color: #323b40;
