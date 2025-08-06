@@ -1,56 +1,63 @@
- .content {
-     width: 600px;
-     background-color: burlywood;
-     margin: 0 auto;
-     padding: 2em 0;
- }
+header,
+main,
+footer {
+    max-width: 1024px;
+    margin: 0 auto;
+}
 
- p {
-     margin: 0;
-     padding: 0;
- }
+.content {
+    width: 600px;
+    background-color: burlywood;
+    margin: 0 auto;
+    padding: 2em 0;
+}
 
- table {
-     width: 100%;
- }
+p {
+    margin: 0;
+    padding: 0;
+}
 
- tr td {
-     padding: .5em;
-     border: #4e4e4e solid 2px;
- }
+table {
+    width: 100%;
+}
 
- td {
-     width: 49%;
- }
+tr td {
+    padding: .5em;
+    border: #4e4e4e solid 2px;
+}
 
- .hours-display {
-     display: grid;
-     grid-template-columns: 1fr 1fr;
-     gap: .5em 1em;
- }
+td {
+    width: 49%;
+}
 
- .day {
-     grid-column: 1;
-     padding: .5em;
-     border: #3e3e3e solid 2px;
- }
+.hours-display {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: .5em 1em;
+}
 
- .hours {
-     grid-column: 2;
-     padding: .5em;
-     border: #3e3e3e solid 2px;
- }
+.day {
+    grid-column: 1;
+    padding: .5em;
+    border: #3e3e3e solid 2px;
+}
 
- .hours-display2 {
-     display: flex;
-     flex-direction: row;
-     flex-wrap: wrap;
- }
+.hours {
+    grid-column: 2;
+    padding: .5em;
+    border: #3e3e3e solid 2px;
+}
 
- .day2,
- .hours2 {
-     width: 46%;
-     padding: .5em;
-     border: #3e3e3e solid 2px;
-     margin: 5px 2px;
- }
+.hours-display2 {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.day2,
+.hours2 {
+    width: 46%;
+    padding: .5em;
+    border: #3e3e3e solid 2px;
+    margin: 5px 2px;
+}
