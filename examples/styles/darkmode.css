@@ -53,41 +53,6 @@
   --dark-background: #333;
 }
 
-/* body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  transition: background-color 0.3s, color 0.3s;
-  
-} */
-
-header {
-  height: 6em;
-  background-color: #0a5e66;
-  display: flex;
-  align-items: center;
-  width: 100%;
-}
-
-nav {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(6em, 1fr));
-  width: 100%;
-
-}
-
-nav a {
-  padding: 1em;
-  color: #fff;
-  letter-spacing: 1px;
-  justify-self: center;
-}
-
-nav a:hover {
-  background-color: #fff;
-  color: #0a5e66;
-}
-
 /* Dark/light mode button styling */
 button {
   padding: 10px 20px;
