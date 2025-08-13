@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Absolute vs Grid Layout</title>
+  <meta name="description" content="Demo on Absolute vs Grid Layout">
+  <meta name="author" content="Ralph Borcherds">
+  <link rel="stylesheet" href="styles/main-nav.css">
+  <link rel="stylesheet" href="styles/abs-vs-grid.css">
+</head>
+
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html">Examples Home</a>
+    </nav>
+  </header>
+
+  <header class="site-header">
+    <a href="index.html"><img src="images/logo.jpg" alt="Site Logo" class="logo"></a>
+    <nav class="site-nav">
+      <a href="index.html" class="navitem">Home</a>
+      <a href="about.html" class="navitem">About Us</a>
+      <a href="trips.html" class="navitem">Trips</a>
+      <a href="contact.html" class="navitem">Contact Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="abs-hero">
+      <img src="images/rafting13_1024.jpg" alt="Hero Image">
+      <h1 class="abs-heading1">Dry Oar River Rafting</h1>
+      <article class="abs-article">
+        <img src="images/rafting65_600.jpg" alt="happy rafters">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto debitis
+          nisi
+          quibusdam magni voluptatum ad autem inventore eius at odit? Reprehenderit,
+          earum. Tenetur cum quod inventore nemo! Laboriosam, minus maiores!</p>
+      </article>
+    </div>
+    <div class="grid-hero">
+      <article class="grid-article">
+        <img src="images/rafting65_600.jpg" alt="happy rafters">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto debitis
+          nisi
+          quibusdam magni voluptatum ad autem inventore eius at odit? Reprehenderit,
+          earum. Tenetur cum quod inventore nemo! Laboriosam, minus maiores!</p>
+      </article>
+      <h1 class="grid-heading1">Dry Oar River Rafting</h1>
+
+      <img src="images/rafting13_1024.jpg" alt="Hero Image" class="grid-img">
+    </div>
+  </main>
+
+</body>
+</html>
