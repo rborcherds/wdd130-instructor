@@ -1,5 +1,11 @@
 .extra-credit/
 
+# Default home directory files
+*~
+
+# Log files created by default by the nohup command
+nohup.out
+
 # temporary files which can be created if a process still has a handle open of a deleted file
 .fuse_hidden*
 
