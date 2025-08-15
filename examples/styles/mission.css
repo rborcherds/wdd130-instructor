@@ -4,10 +4,16 @@ body {
     font-size: 20px;
 }
 
-main {
+header,
+main,
+footer {
     max-width: 1600px;
     margin: 0 auto;
-    gap: 100px
+
+}
+
+main {
+    gap: 100px;
 }
 
 .original {
