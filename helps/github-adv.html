@@ -51,9 +51,7 @@
         wiki pages associated with the repository.</p>
       <p>Also note that deleting a repository will not delete the local repository on your
         computer, so you will need to delete the local repository manually.</p>
-      <p>To delete the local repository, you will need to remove the folder that contains
-        the
-        repository on your computer.</p>
+
       <h2>These steps unlinks your local folder with GitHub</h2>
 
       <p>Open the root folder of the repository in VSCode.</p>
@@ -62,7 +60,7 @@
 
       <p>Once the terminal is open, type the following command:</p>
       <p>On Windows:</p>
-      <pre><code>Remove-Item c:\Tmp\* -Recurse -Force</code></pre>
+      <pre><code>Remove-Item .git -Recurse -Force</code></pre>
 
       <p>On a Mac and Linux:</p>
       <pre><code>rm .git -rf</code></pre>
@@ -70,6 +68,17 @@
       <p>These commands removes the tracking folder that GIT uses when syncing with
         GitHub. This hidden folder contains all the configuration information and tracking
         the changes to know what to sync with GitHub.</p>
+
+      <p>Now exit VSCode and open your file manager / File explorer and navigate to the
+        folder where your local repository is located.</p>
+
+      <p>Now rename the folder to a new name.</p>
+
+      <h2>Go back to the course instructions</h2>
+      <p>Go back to the <a
+          href="https://byui-cse.github.io/wdd130-ww-course/week01/setup-github.html#create-repo">course
+          instructions, Step 2: Create Your Course Repository</a> and follow the steps to
+        create a new wdd130 repository.</p>
     </details>
 
     <details>
