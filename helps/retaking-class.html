@@ -47,14 +47,35 @@
         </p>
       </li>
       <li>
-        <p>You must delete the hidden folder called .git or you must edit the .git/config
-          file in the renamed folder to point to the new repository URL.
-        </p>
+        <p>There is one of three things you can do at this point:</p>
+        <ul>
+          <li>Delete the local repository folder and re-clone the renamed repository from
+            GitHub.</li>
+          <li>Edit the .git/config file in the renamed folder to point to the new
+            repository
+            name.</li>
+          <li>Use the git command line to set the new URL for the renamed repository.</li>
+        </ul>
+        <p>Here are the instructions for the last two options:</p>
+        <h2>Editing the .git/config file</h2>
+        <p>Open the .git folder inside the renamed local repository folder. Inside that
+          folder is a file called config. Open that file in a text editor such as VSCode
+          or Notepad.</p>
+        <p>Find the line that starts with "url = " and change the URL to match the new
+          repository name on GitHub.</p>
         <img src="images/vscode--git-config.webp"
           alt="VSCode showing the .git/config file line to edit">
         <p>You can get the new URL by opening the repository on GitHub and copying the URL
           from the address bar and add .git at the end like the image above.</p>
         <p>This process will allow you to keep the old code in sync with GitHub.</p>
+
+        <h2>Using the git command line to set the new URL</h2>
+        <p>Open a terminal in VSCode. On Windows you use Ctrl+` and on a MAC you use ⌃` or
+          you can use the menu option VIEW - Terminal.</p>
+        <p>Once the terminal is open, type the following command, replacing the NEW-URL
+          with
+          the new repository URL:</p>
+        <pre><code>git remote set-url origin NEW-URL</code></pre>
       </li>
     </ol>
     <p>Now continue with the rest of the setup instructions found at <a
