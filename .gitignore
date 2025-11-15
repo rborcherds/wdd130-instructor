@@ -28,3 +28,4 @@ nohup.out
 # Built Visual Studio Code Extensions
 *.vsix
 
+helps/frontend-resources.html
