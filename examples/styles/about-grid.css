@@ -1,0 +1,350 @@
+/* Root CSS variables for easy theme management */
+:root {
+
+  /* Color Theme */
+  --primary-color: #1157ab;
+  --secondary-color: #622e30;
+  --accent1-color: #7e2d2d;
+  --accent2-color: #225242;
+  --accent3-color: #624d1c;
+  --accent4-color: #b0e6fc;
+  --white: #fff6f6;
+  --black: #0e0c0c;
+  --light-gray: #e1e1e1;
+  --focus-red: #d81616;
+  --focus-green: #1cfc63;
+  --focus-gray: #3f3f3f;
+  --footer-background-color: #242321;
+
+  --transparent-background-color: #03062299;
+
+  --table-background-color-odd: #d9d5d5;
+  --table-background-color-even: #ccc3ef;
+
+  /* Standard Button colors */
+  --button-background-color: #00d148;
+  --button-color: #0e1e20;
+  --button-color-hover: #f3a530;
+  --button-border-color: #3e3e3e;
+
+  /* CTA Button colors */
+  --cta-button-color: #f2f2f2;
+  --cta-button-background-color: #912727;
+  --cta-button-color-hover: #04083e;
+  --cta-button-background-color-hover: #f3a530;
+
+  /* Top Navigation Colors */
+  --nav-background-color: var(--primary-color);
+  --nav-link-color: var(--white);
+  --nav-hover-link-color: var(--primary-color);
+  --nav-hover-background-color: var(--white);
+
+  /* Fonts for all pages */
+  --heading-font: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  --paragraph-font: Arial, Helvetica, sans-serif;
+
+  /* Box Shadow Colors */
+  --box-shadow: 0px -10px 20px 5px rgba(0, 0, 0, .23),
+    10px 0px 10px 5px rgba(0, 0, 0, .23),
+    0px 10px 10px 5px rgba(0, 0, 0, .23),
+    -10px 0px 10px 5px rgba(0, 0, 0, .23)
+}
+
+/* Universal selector */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/***********************************************
+*
+*   defaults for all pages - Begin
+*
+*   HTML tags are listed first then Class names
+*
+*   
+***********************************************/
+
+body {
+  font-family: var(--paragraph-font);
+  font-weight: 400;
+  color: var(--black);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+  padding: .5em;
+}
+
+h1 {
+  font-size: 3rem;
+
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p {
+  padding: 10px;
+}
+
+/* With box=sizing set this will force all img to be 100% width within the constraints of their container */
+img {
+  width: 100%;
+}
+
+/* This removes the underline from all links */
+a {
+  text-decoration: none;
+}
+
+/* Use something like this to set bold and not the <b> tag in the HTML */
+.bold {
+  font-weight: 700;
+}
+
+.center {
+  /* This is the same as these two declarations justify-self: center; align-self: center; */
+  place-content: center;
+}
+
+/* Sets default width and centers content in browser */
+header,
+main,
+footer {
+  max-width: 1248px;
+  margin: auto;
+}
+
+/* header items styling */
+header {
+  display: grid;
+  grid-template-columns: 150px auto;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+nav {
+  display: grid;
+  grid-auto-flow: column;
+  margin: auto;
+  background-color: var(--nav-background-color);
+}
+
+.home-link {
+  /* This forces the height of the header to be exactly as tall as the logo */
+  display: contents;
+}
+
+/* This rule is the same as nav a rule */
+.navitem {
+  padding: 1rem;
+  font-size: 1.5rem;
+  font-family: var(--heading-font);
+  color: var(--nav-link-color);
+}
+
+/* This is the same as nav a:hover rule */
+.navitem:hover {
+  background-color: var(--nav-hover-background-color);
+  color: var(--nav-hover-link-color);
+}
+
+footer {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--footer-background-color);
+  color: var(--white);
+  margin-top: 100px;
+}
+
+/* Social media link styling */
+.socialmedia {
+  display: inline-block;
+  grid-column: -1;
+  background-color: unset;
+
+}
+
+.socialmedia a {
+  text-decoration: none;
+  padding: 0 1em;
+}
+
+.socialmedia img {
+  width: 2rem;
+}
+
+/* default grid layout for all pages */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
+}
+
+
+
+/***************************************
+*
+*   defaults for all pages - End
+*
+****************************************/
+
+
+
+/***************************************
+*
+*   About Us styling - Begin
+*
+****************************************/
+.hero {
+  gap: 1rem;
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.hero>img {
+  display: block;
+  width: 100%;
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+}
+
+.hero h1 {
+  grid-column: 2/12;
+  grid-row: 1;
+  text-align: center;
+  color: var(--white);
+  background-color: var(--transparent-background-color);
+  text-shadow: -1px -1px 0 var(--black), 1px -1px 0 var(--black), -1px 1px 0 var(--black), 1px 1px 0 var(--black);
+}
+
+.hero article {
+  background-color: var(--transparent-background-color);
+  grid-column: 2/12;
+  grid-row: 4/6;
+}
+
+.hero article img {
+  float: right;
+  margin: 2rem;
+  width: 15rem;
+}
+
+.hero article p {
+  color: var(--white);
+  /* text-shadow: -1px -1px 0 var(--black), 1px -1px 0 var(--black), -1px 1px 0 var(--black), 1px 1px 0 var(--black); */
+  font-size: x-large;
+  text-align: left;
+}
+
+.history-section {
+  margin: 50px 0;
+  gap: 2em;
+}
+
+.history-section p:nth-last-of-type(1) {
+  grid-column: 2/5;
+  grid-row: 2;
+}
+
+.history-section p:nth-last-of-type(2) {
+  grid-column: 8/12;
+  grid-row: 2;
+}
+
+.history-section img {
+  grid-column: 5/8;
+  grid-row: 2;
+}
+
+.adventures {
+  margin: 50px 0;
+  gap: 2em 1em;
+}
+
+.history-section>h2,
+.adventures>h2 {
+  grid-column: 1/-1;
+  grid-row: 1;
+  justify-self: center;
+  padding: 1em 0;
+}
+
+figure:nth-of-type(odd) {
+  background-color: var(--accent1-color);
+  color: var(--white);
+  align-self: center;
+
+}
+
+figure:nth-of-type(even) {
+  background-color: var(--accent2-color);
+  color: var(--white);
+  align-self: center;
+}
+
+figure:nth-last-child(odd):hover,
+figure:nth-last-of-type(even):hover {
+  transform: scale(1.3);
+  transition: all 0.5s ease-in-out 0.1ms;
+}
+
+figure:nth-of-type(1) {
+  grid-column: 2/4;
+}
+
+figure:nth-of-type(2) {
+  grid-column: 4/6;
+}
+
+figure:nth-of-type(3) {
+  grid-column: 6/8;
+}
+
+figure:nth-of-type(4) {
+  grid-column: 8/10;
+}
+
+figure:nth-of-type(5) {
+  grid-column: 10/12;
+}
+
+figcaption {
+  text-align: center;
+  padding: 1em 0;
+}
+
+/***************************************
+*
+*   about us styling - end 
+*
+****************************************/
