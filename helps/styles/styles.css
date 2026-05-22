@@ -103,18 +103,54 @@ nav a:hover {
   border: solid var(--nav-hover-border-color) 2px;
 }
 
+.header-layout {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  background-color: var(--nav-background-color);
+}
+
 .nav-header {
-  width: 100%;
   color: var(--nav-text-color);
   background-color: var(--nav-background-color);
-  text-align: center;
-  margin: .5rem;
-  display: block;
+  text-align: left;
 }
 
 .nav-header a {
-  display: block;
+  display: inline-block;
 }
+
+.lang-selector {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  align-items: center;
+}
+
+.lang-btn {
+  background-color: transparent;
+  color: var(--nav-text-color);
+  border: solid var(--nav-text-color) 1px;
+  padding: 0.35rem 0.85rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+}
+
+.lang-btn:hover {
+  background-color: var(--nav-background-hover-color);
+  color: var(--nav-hover-color);
+  border-color: var(--nav-hover-border-color);
+}
+
+.lang-btn.active {
+  background-color: var(--nav-text-color);
+  color: var(--nav-background-color);
+}
+
+html[lang="en"] .lang-pt { display: none; }
+html[lang="pt"] .lang-en { display: none; }
 
 .bold-code {
   font-weight: 600;
