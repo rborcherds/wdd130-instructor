@@ -18,202 +18,441 @@
 
 <body>
 
-  <header>
+  <header class="header-layout">
+
     <nav class="nav-header">
-      <a href="index.html">Resources Home</a>
+      <a href="index.html">
+        <span class="lang-en">Resources Home</span>
+        <span class="lang-pt">Início dos Recursos</span>
+      </a>
     </nav>
+    <div class="lang-selector">
+      <button onclick="setLang('en')" class="lang-btn" id="btn-en">English</button>
+      <button onclick="setLang('pt')" class="lang-btn" id="btn-pt">Português</button>
+    </div>
+
   </header>
 
   <main>
-    <h1>Beginners CSS Best Practices</h1>
-    <p>Here are some CSS best practices for those learning CSS. No one will
-      start writing better CSS overnight, it takes practice and fine tuning. Every
-      experience is unique and you should keep an open mind in order to try
-      things until they feel right for you.</p>
-    <p>Don&apos;t be afraid to adopt tools to help you but also don&apos;t be
-      too eager to jump into something just because everybody is doing so.
-      There is an art level in understanding, writing, and organizing CSS.
-      Whatever the rules you end up adopting, remain consistent.</p>
+    <h1>
+      <span class="lang-en">Beginners CSS Best Practices</span>
+      <span class="lang-pt">Melhores Práticas de CSS para Iniciantes</span>
+    </h1>
+    <p>
+      <span class="lang-en">Here are some CSS best practices for those learning CSS. No
+        one will
+        start writing better CSS overnight, it takes practice and fine tuning. Every
+        experience is unique and you should keep an open mind in order to try
+        things until they feel right for you.</span>
+      <span class="lang-pt">Aqui estão algumas melhores práticas de CSS para quem está
+        aprendendo CSS. Ninguém
+        começa a escrever CSS melhor da noite para o dia, isso requer prática e ajuste
+        fino. Cada
+        experiência é única e você deve manter a mente aberta para tentar coisas até que
+        elas
+        pareçam certas para você.</span>
+    </p>
+    <p>
+      <span class="lang-en">Don&apos;t be afraid to adopt tools to help you but also
+        don&apos;t be
+        too eager to jump into something just because everybody is doing so.
+        There is an art level in understanding, writing, and organizing CSS.
+        Whatever the rules you end up adopting, remain consistent.</span>
+      <span class="lang-pt">Não tenha medo de adotar ferramentas para ajudá-lo, mas também
+        não seja apressado
+        em entrar em algo só porque todo mundo está fazendo isso. Há um nível de arte em
+        entender,
+        escrever e organizar CSS. Seja quais forem as regras que você acabar adotando,
+        mantenha a
+        consistência.</span>
+    </p>
     <ul>
       <li>
-        <h3>Plan you CSS</h3>
-        <p>Before writing your CSS, plan your page layout and plan how you
-          are going to use your CSS. What general styles are going to be
-          needed, what different layouts do you need to create, what
-          specific overrides need to be created, and are they reusable?
-          Above all, you need to try to avoid too much overriding. If you
-          keep finding yourself writing styles and then canceling them
-          again a few rules down, you probably need to rethink your
-          strategy.</p>
-      </li>
-      <li>
-        <h3>Use flexible/relative units</h3>
-        <p>For maximum flexibility over the widest possible range of
-          devices, it is a good idea to size containers, padding, etc.
-          using relative units like ems and rems or percentages and
-          viewport units if you want them to vary depending on viewport
-          width.</p>
-      </li>
-      <li>
-        <h3>Don't use a preprocessor</h3>
-        <p>Don't use preprocessor syntax, such as Sass, Less, or Stylus.
-          These just add a layer of complexity that most sites do not
-          need.</p>
-      </li>
-      <li>
-        <h3>Don't use resets</h3>
-        <p>For maximum control over CSS across platforms, a lot of people
-          used to use CSS resets to remove every style, before they
-          building the CSS themselves. This certainly has its
-          merits, but especially in the modern world, CSS resets can be an
-          overkill, resulting in a lot of extra time spent re-implementing
-          things that weren't completely broken in the first place, like
-          default margins, list styles, etc.</p>
-      </li>
-      <li>
-        <h3>CSS comments</h3>
-        <p>Use CSS-style comments to comment code that isn't
-          self-documenting. Also note that you should leave a space
-          between the asterisks and the comment for readability only.</p>
-        <pre> /* This is a CSS-style comment */</pre>
-        <p>Put your comments on separate lines preceding the code they are
-          referring to, like so:</p>
-        <pre>
-										<code>h3 {<br>  
-												&nbsp;&nbsp;&nbsp;    /* Creates a red drop shadow, offset 1px right and down, with a 2px blur radius */ <br>
-												&nbsp;&nbsp;&nbsp;text-shadow: 1px 1px 2px red;<br>  
-												&nbsp;&nbsp;&nbsp;/* Sets the font-size to double the default document font size */<br>  
-												&nbsp;&nbsp;&nbsp;font-size: 2rem;<br>
-												}<br>
-										</code>
-								</pre>
-      </li>
-      <li>
-        <h3>Double quotes around values</h3>
+        <h3>
+          <span class="lang-en">Plan you CSS</span>
+          <span class="lang-pt">Planeje seu CSS</span>
+        </h3>
         <p>
-          Where quotes can or should be included, use them, and use double
-          quotes. For example:
+          <span class="lang-en">Before writing your CSS, plan your page layout and plan
+            how you are going to use your CSS. What general styles are going to be needed,
+            what different layouts do you need to create, what specific overrides need to
+            be created, and are they reusable? Above all, you need to try to avoid too
+            much overriding. If you keep finding yourself writing styles and then
+            canceling them again a few rules down, you probably need to rethink your
+            strategy.</span>
+          <span class="lang-pt">Antes de escrever seu CSS, planeje o layout da sua página
+            e planeje como você vai usar seu CSS. Quais estilos gerais serão necessários,
+            quais layouts diferentes você precisa criar, quais substituições específicas
+            precisam ser criadas e elas são reutilizáveis? Acima de tudo, você precisa
+            tentar evitar substituições em excesso. Se você continuar encontrando-se
+            escrevendo estilos e depois cancelando-os algumas regras adiante,
+            provavelmente precisa repensar sua estratégia.</span>
+        </p>
+      </li>
+      <li>
+        <h3>
+          <span class="lang-en">Use flexible/relative units</span>
+          <span class="lang-pt">Use unidades flexíveis/relativas</span>
+        </h3>
+        <p>
+          <span class="lang-en">For maximum flexibility over the widest possible range of
+            devices, it is a good idea to size containers, padding, etc. using relative
+            units like ems and rems or percentages and viewport units if you want them to
+            vary depending on viewport width.</span>
+          <span class="lang-pt">Para máxima flexibilidade em uma ampla gama de
+            dispositivos, é uma boa ideia dimensionar contêineres, padding, etc. usando
+            unidades relativas como ems e rems ou porcentagens e unidades de viewport se
+            você quiser que elas variem dependendo da largura da viewport.</span>
+        </p>
+      </li>
+      <li>
+        <h3>
+          <span class="lang-en">Don't use a preprocessor</span>
+          <span class="lang-pt">Não use um pré-processador</span>
+        </h3>
+        <p>
+          <span class="lang-en">Don't use preprocessor syntax, such as Sass, Less, or
+            Stylus. These just add a layer of complexity that most sites do not
+            need.</span>
+          <span class="lang-pt">Não use sintaxe de pré-processador, como Sass, Less ou
+            Stylus. Eles apenas adicionam uma camada de complexidade que a maioria dos
+            sites não precisa.</span>
+        </p>
+      </li>
+      <li>
+        <h3>
+          <span class="lang-en">Don't use resets</span>
+          <span class="lang-pt">Não use resets</span>
+        </h3>
+        <p>
+          <span class="lang-en">For maximum control over CSS across platforms, a lot of
+            people used to use CSS resets to remove every style, before they building the
+            CSS themselves. This certainly has its merits, but especially in the modern
+            world, CSS resets can be an overkill, resulting in a lot of extra time spent
+            re-implementing things that weren't completely broken in the first place, like
+            default margins, list styles, etc.</span>
+          <span class="lang-pt">Para máximo controle sobre CSS em diferentes plataformas,
+            muitas pessoas costumavam usar CSS resets para remover todos os estilos, antes
+            de construírem o CSS eles mesmos. Isso certamente tem seus méritos, mas
+            especialmente no mundo moderno, CSS resets podem ser excessivos, resultando em
+            muito tempo extra gasto reimplementando coisas que não estavam completamente
+            quebradas no começo, como margens padrão, estilos de lista, etc.</span>
+        </p>
+      </li>
+      <li>
+        <h3>
+          <span class="lang-en">CSS comments</span>
+          <span class="lang-pt">Comentários CSS</span>
+        </h3>
+        <p>
+          <span class="lang-en">Use CSS-style comments to comment code that isn't
+            self-documenting. Also note that you should leave a space between the
+            asterisks and the comment for readability only.</span>
+          <span class="lang-pt">Use comentários no estilo CSS para comentar código que não
+            é autoexplicativo. Note também que você deve deixar um espaço entre os
+            asteriscos e o comentário apenas para legibilidade.</span>
+        </p>
+        <pre> /* This is a CSS-style comment */</pre>
+        <p>
+          <span class="lang-en">Put your comments on separate lines preceding the code
+            they are referring to, like so:</span>
+          <span class="lang-pt">Coloque seus comentários em linhas separadas antes do
+            código ao qual eles se referem, assim:</span>
         </p>
         <pre>
-										<code>[data-vegetable="liquid"] {<br>  
-												&nbsp;&nbsp;&nbsp;background-color: goldenrod;<br>  
-												&nbsp;&nbsp;&nbsp;background-image: url("../../media/examples/lizard.png");<br>
+									<code>h3 {<br>
+												&nbsp;&nbsp;&nbsp;    /* Creates a red drop shadow, offset 1px right and down, with a 2px blur radius */ <br>
+												&nbsp;&nbsp;&nbsp;text-shadow: 1px 1px 2px red;<br>
+												&nbsp;&nbsp;&nbsp;/* Sets the font-size to double the default document font size */<br>
+												&nbsp;&nbsp;&nbsp;font-size: 2rem;<br>
 												}<br>
-										</code>
-								</pre>
+									</code>
+							</pre>
       </li>
       <li>
-        <h3>Longhand vs. shorthand rules</h3>
-        <p>Sometimes you want to specify the padding-top or border-right but from
-          experience, you will often come back to these to add more so adopt the
-          habit to always use the shorthand to make it easier to change without
-          specifying many properties. It is easier to change and it is less
-          code.</p>
-        <p>These values go in this order: top right bottom left. </p>
+        <h3>
+          <span class="lang-en">Double quotes around values</span>
+          <span class="lang-pt">Aspas duplas em torno de valores</span>
+        </h3>
+        <p>
+          <span class="lang-en">Where quotes can or should be included, use them, and use
+            double quotes. For example:</span>
+          <span class="lang-pt">Onde aspas podem ou devem ser incluídas, use-as e use
+            aspas duplas. Por exemplo:</span>
+        </p>
+        <pre>
+									<code>[data-vegetable="liquid"] {<br>
+												&nbsp;&nbsp;&nbsp;background-color: goldenrod;<br>
+												&nbsp;&nbsp;&nbsp;background-image: url("../../media/examples/lizard.png");<br>
+												}<br>
+									</code>
+							</pre>
+      </li>
+      <li>
+        <h3>
+          <span class="lang-en">Longhand vs. shorthand rules</span>
+          <span class="lang-pt">Regras longas vs. abreviadas</span>
+        </h3>
+        <p>
+          <span class="lang-en">Sometimes you want to specify the padding-top or
+            border-right but from experience, you will often come back to these to add
+            more so adopt the habit to always use the shorthand to make it easier to
+            change without specifying many properties. It is easier to change and it is
+            less code.</span>
+          <span class="lang-pt">Às vezes você quer especificar o padding-top ou
+            border-right, mas pela experiência, você frequentemente voltará a eles para
+            adicionar mais, então adote o hábito de sempre usar a forma abreviada para
+            facilitar a alteração sem especificar muitas propriedades. É mais fácil de
+            mudar e há menos código.</span>
+        </p>
+        <p>
+          <span class="lang-en">These values go in this order: top right bottom
+            left.</span>
+          <span class="lang-pt">Esses valores vão nesta ordem: topo direita baixo
+            esquerda.</span>
+        </p>
         <pre> padding: 1em inherit inherit inherit;</pre>
       </li>
       <li>
-        <h3>Selectors</h3>
-        <p>When a rule has multiple selectors, put each selector on a new
-          line. This makes the selector list easier to read and can help
-          to make code lines shorter. </p>
-        <p>Don't use ID selectors because they are:</p>
+        <h3>
+          <span class="lang-en">Selectors</span>
+          <span class="lang-pt">Seletores</span>
+        </h3>
+        <p>
+          <span class="lang-en">When a rule has multiple selectors, put each selector on a
+            new line. This makes the selector list easier to read and can help to make
+            code lines shorter.</span>
+          <span class="lang-pt">Quando uma regra tem vários seletores, coloque cada
+            seletor em uma nova linha. Isso torna a lista de seletores mais fácil de ler e
+            pode ajudar a tornar as linhas de código mais curtas.</span>
+        </p>
+        <p>
+          <span class="lang-en">Don't use ID selectors because they are:</span>
+          <span class="lang-pt">Não use seletores de ID porque eles são:</span>
+        </p>
         <ul>
-          <li>less flexible; you can't add more to the id attribute if you
-            discover you need more than one.</li>
-          <li>harder to override because they have higher specificity than
-            classes.</li>
+          <li> <span class="lang-en">less flexible; you can't add more to the id attribute
+              if you discover you need more than one.</span> <span class="lang-pt">menos
+              flexíveis; você não pode adicionar mais ao atributo id se descobrir que
+              precisa de mais de um.</span>
+          </li>
+          <li> <span class="lang-en">harder to override because they have higher
+              specificity than classes.</span> <span class="lang-pt">mais difíceis de
+              substituir porque têm maior especificidade do que as classes.</span>
+          </li>
         </ul>
       </li>
       <li>
-        <h3>Write CSS consistently</h3>
-        <p>Consistency is key. Even if you are doing everything wrong,
-          remain consistent as it will be easier to fix them later. Find a
-          naming convention that works for you, adopt a CSS methodology,
-          organize styles the same way, define how many levels you nest
-          selectors, etc. Define your style and stick to it and improve it
-          over time.</p>
-      </li>
-      <li>
-        <h3>Avoid too many font files</h3>
-        <p>Maybe the designers handed you too many font files which is a red
-          flag. A website with too many fonts can be chaotic and confusing
-          so, always make sure you are including the fonts you will need
-          for the page. Fonts can take time to load and be applied and
-          when you have too many fonts your UI normally jumps into place
-          after the fonts are loaded.</p>
-        <p>Always try to keep your fonts to just 2 font names.</p>
-      </li>
-      <li>
-        <h3>Use CSS variables</h3>
-        <p>The #1 reason to use a pre-processor in the past was the variables. CSS
-          variables are way better because they stick around when loaded in the
-          browser. The support is good and it allows you to create a more
-          flexible and reusable UI, without mentioning it helps you create a
-          more powerful design system and features.</p>
-      </li>
-      <li>
-        <h3>Format Text with CSS</h3>
-        <p>CSS can format your HTML text. No need to manually write all
-          caps, all lower or capitalized words in your HTML. Changing a
-          CSS property value is way faster to change than going around
-          changing all the text in HTML, and it is also better for
-          internationalization as it allows you to write the text as you
-          want and manipulates how it looks with CSS.</p>
-      </li>
-      <li>
-        <h3>Let the content define the size</h3>
-        <p>Instead of setting the width and height of a button, for example,
-          consider setting some padding for spacing and including a
-          max-width instead and max-height instead unless the design calls
-          for a strict size.</p>
-      </li>
-      <li>
-        <h3>Avoid color names</h3>
-        <p>Prefer to specify your color values with hex and color functions
-          instead of saying red, purple, or cyan. There are millions of
-          hex color values and no name for all of them. For consistency's
-          sake, find one way to add colors and stick to it.</p>
-      </li>
-      <li>
-        <h3>Try to organize CSS to match the Markup Order</h3>
-        <p>It sure makes for an easier way to understand your markup just by
-          looking at your CSS. It is something I do and saves me a lot of
-          time.</p>
-      </li>
-      <li>
-        <h3>Keep HTML semantics and use CSS for styling</h3>
-        <p>It is common to find developers who go around changing their HTML in
-          order to apply a certain style. In general, let the styling to CSS
-          and let your HTML structured in a way that makes sense semantically.
-          There are exceptions to this rule but always ensure that the adopted
-          structure does not go against any HTML semantic rules. Write your
-          HTML first with content in mind, not styling. Then add CSS and try
-          your best before changing your HTML for styling reasons.</p>
-      </li>
-      <li>
-        <h3>Hyphens or underscore?</h3>
-        <p>The most common separator for class and id names is a hyphen but
-          whatever you pick, stick to it. Hyphen is easier to read and
-          troubleshoot than an underscore.</p>
-      </li>
-      <li>
-        <h3>Remove Unused CSS</h3>
-        <p>For the same reason, you should ship the only CSS you will use,
-          consider using tools like PurgeCSS to remove CSS that will not be
-          needed in rendering. These tools will look at your CSS and HTML to
-          determine which styles you will need. If you are not sure you need
-          this, consider using browser tools that look for your code coverage
-          which will tell you whether you are shipping unused style or not.
+        <h3>
+          <span class="lang-en">Write CSS consistently</span>
+          <span class="lang-pt">Escreva CSS de forma consistente</span>
+        </h3>
+        <p>
+          <span class="lang-en">Consistency is key. Even if you are doing everything
+            wrong, remain consistent as it will be easier to fix them later. Find a naming
+            convention that works for you, adopt a CSS methodology, organize styles the
+            same way, define how many levels you nest selectors, etc. Define your style
+            and stick to it and improve it over time.</span>
+          <span class="lang-pt">Consistência é fundamental. Mesmo que você esteja fazendo
+            tudo errado, mantenha a consistência, pois será mais fácil corrigi-los mais
+            tarde. Encontre uma convenção de nomenclatura que funcione para você, adote
+            uma metodologia CSS, organize os estilos da mesma forma, defina quantos níveis
+            você aninha seletores, etc. Defina seu estilo e mantenha-o e melhore-o ao
+            longo do tempo.</span>
         </p>
-        </l>
+      </li>
+      <li>
+        <h3>
+          <span class="lang-en">Avoid too many font files</span>
+          <span class="lang-pt">Evite muitos arquivos de fonte</span>
+        </h3>
+        <p>
+          <span class="lang-en">Maybe the designers handed you too many font files which
+            is a red flag. A website with too many fonts can be chaotic and confusing so,
+            always make sure you are including the fonts you will need for the page. Fonts
+            can take time to load and be applied and when you have too many fonts your UI
+            normally jumps into place after the fonts are loaded.</span>
+          <span class="lang-pt">Talvez os designers tenham lhe entregado muitos arquivos
+            de fonte, o que é um sinal de alerta. Um site com muitas fontes pode ser
+            caótico e confuso, então sempre certifique-se de incluir as fontes que você
+            precisará para a página. As fontes podem levar tempo para carregar e serem
+            aplicadas e quando você tem muitas fontes, sua UI normalmente salta para o
+            lugar depois que as fontes são carregadas.</span>
+        </p>
+        <p>
+          <span class="lang-en">Always try to keep your fonts to just 2 font names.</span>
+          <span class="lang-pt">Sempre tente manter suas fontes em apenas 2 nomes de
+            fonte.</span>
+        </p>
+      </li>
+      <li>
+        <h3>
+          <span class="lang-en">Use CSS variables</span>
+          <span class="lang-pt">Use variáveis CSS</span>
+        </h3>
+        <p>
+          <span class="lang-en">The #1 reason to use a pre-processor in the past was the
+            variables. CSS variables are way better because they stick around when loaded
+            in the browser. The support is good and it allows you to create a more
+            flexible and reusable UI, without mentioning it helps you create a more
+            powerful design system and features.</span>
+          <span class="lang-pt">A razão número 1 para usar um pré-processador no passado
+            eram as variáveis. As variáveis CSS são muito melhores porque persistem quando
+            carregadas no navegador. O suporte é bom e permite criar uma UI mais flexível
+            e reutilizável, sem mencionar que ajuda a criar um sistema de design e
+            recursos mais poderosos.</span>
+        </p>
+      </li>
+      <li>
+        <h3>
+          <span class="lang-en">Format Text with CSS</span>
+          <span class="lang-pt">Formate texto com CSS</span>
+        </h3>
+        <p>
+          <span class="lang-en">CSS can format your HTML text. No need to manually write
+            all caps, all lower or capitalized words in your HTML. Changing a CSS property
+            value is way faster to change than going around changing all the text in HTML,
+            and it is also better for internationalization as it allows you to write the
+            text as you want and manipulates how it looks with CSS.</span>
+          <span class="lang-pt">O CSS pode formatar seu texto HTML. Não é necessário
+            escrever manualmente tudo em maiúsculas, minúsculas ou palavras capitalizadas
+            no seu HTML. Alterar um valor de propriedade CSS é muito mais rápido do que ir
+            mudando todo o texto no HTML, e também é melhor para internacionalização, pois
+            permite escrever o texto como você quer e manipular como ele parece com
+            CSS.</span>
+        </p>
+      </li>
+      <li>
+        <h3>
+          <span class="lang-en">Let the content define the size</span>
+          <span class="lang-pt">Deixe o conteúdo definir o tamanho</span>
+        </h3>
+        <p>
+          <span class="lang-en">Instead of setting the width and height of a button, for
+            example, consider setting some padding for spacing and including a max-width
+            instead and max-height instead unless the design calls for a strict
+            size.</span>
+          <span class="lang-pt">Em vez de definir a largura e a altura de um botão, por
+            exemplo, considere definir algum padding para espaçamento e incluir um
+            max-width e max-height em vez disso, a menos que o design exija um tamanho
+            estrito.</span>
+        </p>
+      </li>
+      <li>
+        <h3>
+          <span class="lang-en">Avoid color names</span>
+          <span class="lang-pt">Evite nomes de cores</span>
+        </h3>
+        <p>
+          <span class="lang-en">Prefer to specify your color values with hex and color
+            functions instead of saying red, purple, or cyan. There are millions of hex
+            color values and no name for all of them. For consistency's sake, find one way
+            to add colors and stick to it.</span>
+          <span class="lang-pt">Prefira especificar seus valores de cor com hex e funções
+            de cor em vez de dizer red, purple ou cyan. Existem milhões de valores de cor
+            hex e não há nome para todos eles. Por consistência, encontre uma forma de
+            adicionar cores e mantenha-a.</span>
+        </p>
+      </li>
+      <li>
+        <h3>
+          <span class="lang-en">Try to organize CSS to match the Markup Order</span>
+          <span class="lang-pt">Tente organizar o CSS para corresponder à ordem do
+            Markup</span>
+        </h3>
+        <p>
+          <span class="lang-en">It sure makes for an easier way to understand your markup
+            just by looking at your CSS. It is something I do and saves me a lot of
+            time.</span>
+          <span class="lang-pt">Certamente torna mais fácil entender seu markup apenas
+            olhando para seu CSS. É algo que eu faço e me economiza muito tempo.</span>
+        </p>
+      </li>
+      <li>
+        <h3>
+          <span class="lang-en">Keep HTML semantics and use CSS for styling</span>
+          <span class="lang-pt">Mantenha a semântica HTML e use CSS para
+            estilização</span>
+        </h3>
+        <p>
+          <span class="lang-en">It is common to find developers who go around changing
+            their HTML in order to apply a certain style. In general, let the styling to
+            CSS and let your HTML structured in a way that makes sense semantically. There
+            are exceptions to this rule but always ensure that the adopted structure does
+            not go against any HTML semantic rules. Write your HTML first with content in
+            mind, not styling. Then add CSS and try your best before changing your HTML
+            for styling reasons.</span>
+          <span class="lang-pt">É comum encontrar desenvolvedores que ficam alterando seu
+            HTML para aplicar um determinado estilo. Em geral, deixe a estilização para o
+            CSS e deixe seu HTML estruturado de uma forma que faça sentido semanticamente.
+            Há exceções a esta regra, mas sempre garanta que a estrutura adotada não vá
+            contra nenhuma regra semântica HTML. Escreva seu HTML primeiro com o conteúdo
+            em mente, não a estilização. Depois adicione CSS e tente ao máximo antes de
+            mudar seu HTML por razões de estilização.</span>
+        </p>
+      </li>
+      <li>
+        <h3>
+          <span class="lang-en">Hyphens or underscore?</span>
+          <span class="lang-pt">Hifens ou sublinhado?</span>
+        </h3>
+        <p>
+          <span class="lang-en">The most common separator for class and id names is a
+            hyphen but whatever you pick, stick to it. Hyphen is easier to read and
+            troubleshoot than an underscore.</span>
+          <span class="lang-pt">O separador mais comum para nomes de classe e id é um
+            hífen, mas seja qual for o que você escolher, mantenha-o. O hífen é mais fácil
+            de ler e depurar do que um sublinhado.</span>
+        </p>
+      </li>
+      <li>
+        <h3>
+          <span class="lang-en">Remove Unused CSS</span>
+          <span class="lang-pt">Remova CSS não utilizado</span>
+        </h3>
+        <p>
+          <span class="lang-en">For the same reason, you should ship the only CSS you will
+            use, consider using tools like PurgeCSS to remove CSS that will not be needed
+            in rendering. These tools will look at your CSS and HTML to determine which
+            styles you will need. If you are not sure you need this, consider using
+            browser tools that look for your code coverage which will tell you whether you
+            are shipping unused style or not.</span>
+          <span class="lang-pt">Pelo mesmo motivo, você deve enviar apenas o CSS que
+            usará. Considere usar ferramentas como PurgeCSS para remover CSS que não será
+            necessário na renderização. Essas ferramentas analisarão seu CSS e HTML para
+            determinar quais estilos você precisará. Se não tiver certeza se precisa
+            disso, considere usar ferramentas do navegador que verificam a cobertura do
+            seu código e lhe dirão se está enviando estilos não utilizados ou não.</span>
+        </p>
+      </li>
     </ul>
   </main>
   <footer>
-    <p>This file is created and updated for the use of students at BYU Pathway
-      Worldwide taking WDD 130</p>
-    <p>Maintained by Ralph Borcherds</p>
+    <p>
+      <span class="lang-en">This file is created and updated for the use of students at
+        BYU Pathway
+        Worldwide taking WDD 130</span>
+      <span class="lang-pt">Este arquivo é criado e atualizado para uso dos alunos da BYU
+        Pathway
+        Worldwide que cursam WDD 130</span>
+    </p>
+    <p>
+      <span class="lang-en">Maintained by Ralph Borcherds</span>
+      <span class="lang-pt">Mantido por Ralph Borcherds</span>
+    </p>
   </footer>
+
+  <script>
+    function setLang(lang) {
+      document.documentElement.lang = lang;
+      localStorage.setItem('preferredLang', lang);
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-pt').classList.toggle('active', lang === 'pt');
+    }
+
+    const savedLang = localStorage.getItem('preferredLang') || 'en';
+    setLang(savedLang);
+  </script>
 </body>
 
 </html>
