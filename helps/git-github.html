@@ -24,11 +24,13 @@
       <a href="index.html">
         <span class="lang-en">Resources Home</span>
         <span class="lang-pt">Início dos Recursos</span>
+        <span class="lang-es">Inicio de Recursos</span>
       </a>
     </nav>
     <div class="lang-selector">
       <button onclick="setLang('en')" class="lang-btn" id="btn-en">English</button>
       <button onclick="setLang('pt')" class="lang-btn" id="btn-pt">Português</button>
+      <button onclick="setLang('es')" class="lang-btn" id="btn-es">Español</button>
     </div>
 
   </header>
@@ -37,18 +39,23 @@
     <h1>
       <span class="lang-en">VSCode - Git - GitHub basic explanations</span>
       <span class="lang-pt">VSCode - Git - GitHub explicações básicas</span>
+      <span class="lang-es">VSCode - Git - GitHub explicaciones básicas</span>
     </h1>
     <p>
       <span class="lang-en">The question has come up as to what to type into the git
         commit message area.</span>
       <span class="lang-pt">A pergunta surgiu sobre o que digitar na área de mensagem do
         git commit.</span>
+      <span class="lang-es">Ha surgido la pregunta sobre qué escribir en el área de
+        mensaje del git commit.</span>
     </p>
     <p>
       <span class="lang-en">Before I get into the best practice, I want to explain a few
         things.</span>
       <span class="lang-pt">Antes de entrar nas melhores práticas, quero explicar algumas
         coisas.</span>
+      <span class="lang-es">Antes de entrar en las mejores prácticas, quiero explicar
+        algunas cosas.</span>
     </p>
     <ol>
       <li>
@@ -62,6 +69,11 @@
             estão as etapas que ocorrem em segundo plano no VSCode. Estas etapas mostram o
             processo de linha de comando
             caso você tivesse que digitá-las você mesmo.</span>
+          <span class="lang-es">El proceso de commit y sincronización con GitHub es un
+            procedimiento de varios pasos. Aquí
+            están los pasos que ocurren en segundo plano en VSCode. Estos pasos muestran el
+            proceso de línea de comando
+            si tuviera que escribirlos usted mismo.</span>
         </p>
         <ul>
           <li>
@@ -72,6 +84,9 @@
               <span class="lang-pt">Você deve inserir uma mensagem de commit na caixa
                 acima do botão COMMIT. Essa
                 caixa de mensagem é explicada com mais detalhes abaixo.</span>
+              <span class="lang-es">Debe ingresar un mensaje de commit en el cuadro
+                encima del botón COMMIT. Esta
+                caja de mensaje se explica con más detalles a continuación.</span>
             </p>
             <img
               src="//rborcherds.github.io/wdd130-instructor/announcements/images/vscode-commit-message-box.png"
@@ -91,6 +106,12 @@
               coisas ao mesmo tempo.
               Ele adiciona a mensagem e faz o commit na lista de arquivos e define o
               status como staged.</span>
+            <span class="lang-es">Al hacer clic en el botón Commit, está cambiando el
+              estado de los archivos actualizados/nuevos
+              al estado staged&nbsp;&nbsp; (git commit -m "mensaje"). El comando hace 2
+              cosas al mismo tiempo.
+              Agrega el mensaje y hace el commit en la lista de archivos y establece el
+              estado como staged.</span>
           </li>
           <li>
             <span class="lang-en">Most of you will have the branch name of MAIN. This is
@@ -102,23 +123,32 @@
               definido como o nome padrão no
               VSCode quando você inicializa o repositório. Estou usando o nome main nos
               comandos de linha de comando aqui.</span>
+            <span class="lang-es">La mayoría de ustedes tendrá el nombre de rama MAIN.
+              Este es el nombre predeterminado en VSCode cuando inicializa el repositorio.
+              Estoy usando el nombre main en los comandos de línea de comando aquí.</span>
           </li>
           <li>
             <span class="lang-en">Here are the steps that VSCode goes through when you
               click the sync button.</span>
             <span class="lang-pt">Aqui estão as etapas pelas quais o VSCode passa quando
               você clica no botão sync.</span>
+            <span class="lang-es">Aquí están los pasos que VSCode sigue cuando hace clic
+              en el botón sync.</span>
             <ol>
               <li>
                 <span class="lang-en">Pull any changes from GitHub to local computer. (git
                   pull origin/main)</span>
                 <span class="lang-pt">Baixar quaisquer alterações do GitHub para o
                   computador local. (git pull origin/main)</span>
+                <span class="lang-es">Descargar cualquier cambio de GitHub a la
+                  computadora local. (git pull origin/main)</span>
               </li>
               <li>
                 <span class="lang-en">Push the staged files to GitHub. (git push origin
                   origin/main)</span>
                 <span class="lang-pt">Enviar os arquivos staged para o GitHub. (git push
+                  origin origin/main)</span>
+                <span class="lang-es">Enviar los archivos staged a GitHub. (git push
                   origin origin/main)</span>
               </li>
             </ol>
@@ -137,6 +167,13 @@
             &amp; Sync ou clicando na seta para baixo no lado direito do botão e
             selecionando
             commit &amp; sync</span>
+          <span class="lang-es">Puede hacer todos estos comandos al mismo tiempo en VSCode
+            haciendo un Commit
+            &amp; Sync. En VSCode, esto se hace haciendo clic en el botón azul si dice
+            Commit
+            &amp; Sync o haciendo clic en la flecha hacia abajo en el lado derecho del
+            botón y seleccionando
+            commit &amp; sync</span>
         </p>
         <p>
           <span class="lang-en">VScode still runs the command line commands one at a time,
@@ -147,6 +184,10 @@
             de cada vez, então ele executa
             todos os três comandos listados acima nessa ordem, mas você clica apenas uma
             vez para iniciar o processo.</span>
+          <span class="lang-es">VSCode todavía ejecuta los comandos de línea de comando
+            uno a la vez, así que ejecuta
+            los tres comandos listados arriba en ese orden, pero usted solo hace clic una
+            vez para iniciar el proceso.</span>
         </p>
         <p>
           <img
@@ -162,6 +203,9 @@
           <span class="lang-pt">Esta captura de tela mostra o commit &amp; sync como um
             botão. A maioria de vocês
             terá apenas o botão COMMIT.</span>
+          <span class="lang-es">Esta captura de pantalla muestra el commit &amp; sync
+            como un botón. La mayoría de ustedes
+            solo tendrá el botón COMMIT.</span>
         </p>
         <img
           src="//rborcherds.github.io/wdd130-instructor/announcements/images/vscode-commit-message-box.png"
@@ -177,6 +221,11 @@
             que parece algo como esta imagem. Você deve digitar uma mensagem na linha 1.
             Você deve salvar e fechar esta tela do editor para que o processo de commit
             continue.</span>
+          <span class="lang-es">Si hace clic en el botón commit sin un mensaje, obtendrá
+            una pantalla de editor
+            que se ve algo así como esta imagen. Debe escribir un mensaje en la línea 1.
+            Debe guardar y cerrar esta pantalla del editor para que el proceso de commit
+            continúe.</span>
         </p>
         <p>
           <img
@@ -188,6 +237,7 @@
         <p>
           <span class="lang-en">What to type in the MESSAGE box.</span>
           <span class="lang-pt">O que digitar na caixa de MENSAGEM.</span>
+          <span class="lang-es">Qué escribir en el cuadro de MENSAJE.</span>
         </p>
         <p>
           <span class="lang-en">This is limited to 72 characters in length. The best
@@ -196,6 +246,9 @@
           <span class="lang-pt">Isso é limitado a 72 caracteres. As melhores mensagens de
             commit seguem
             as diretrizes deste artigo (Somente em inglês):</span>
+          <span class="lang-es">Esto está limitado a 72 caracteres. Los mejores mensajes
+            de commit siguen
+            las pautas de este artículo (Solo en inglés):</span>
           <a href="https://gist.github.com/robertpainsi/b632364184e70900af4ab688decf6f53"
             target="_blank" rel="noopener">
             https://gist.github.com/robertpainsi/b632364184e70900af4ab688decf6f53
@@ -204,6 +257,7 @@
         <p>
           <span class="lang-en">Basically it is this type of message</span>
           <span class="lang-pt">Basicamente é este tipo de mensagem</span>
+          <span class="lang-es">Básicamente es este tipo de mensaje</span>
         </p>
 
         <pre class="lang-en"><code>Write your commit message in the imperative:<br>
@@ -214,18 +268,27 @@
         <pre class="lang-pt">
           <code>Escreva sua mensagem de commit no imperativo:<br>
            "Corrigir bug" e não "Bug corrigido" ou "Corrige bug".<br>
-           Esta convenção corresponde às mensagens de commit geradas por comandos<br> 
+           Esta convenção corresponde às mensagens de commit geradas por comandos<br>
            como git merge e git revert.</code>
+        </pre>
+        <pre class="lang-es">
+          <code>Escriba su mensaje de commit en imperativo:<br>
+           "Corregir bug" y no "Bug corregido" o "Corrige bug".<br>
+           Esta convención coincide con los mensajes de commit generados por comandos<br>
+           como git merge y git revert.</code>
         </pre>
         <p>
           <span class="lang-en">From the page mentioned. There are 2 types of
             messages.</span>
           <span class="lang-pt">Da página mencionada. Existem 2 tipos de mensagens.</span>
+          <span class="lang-es">De la página mencionada. Hay 2 tipos de mensajes.</span>
         </p>
         <div class="preformatted">
           <h2>
             <span class="lang-en">Rules for a great git commit message style</span>
             <span class="lang-pt">Regras para um ótimo estilo de mensagem de commit
+              git</span>
+            <span class="lang-es">Reglas para un excelente estilo de mensaje de commit
               git</span>
           </h2>
           <ul>
@@ -233,22 +296,29 @@
               <span class="lang-en">Separate subject from body with a blank line</span>
               <span class="lang-pt">Separe o assunto do corpo com uma linha em
                 branco</span>
+              <span class="lang-es">Separe el asunto del cuerpo con una línea en
+                blanco</span>
             </li>
             <li>
               <span class="lang-en">Do not end the subject line with a period</span>
               <span class="lang-pt">Não termine a linha de assunto com ponto</span>
+              <span class="lang-es">No termine la línea de asunto con punto</span>
             </li>
             <li>
               <span class="lang-en">Capitalize the subject line and each paragraph</span>
               <span class="lang-pt">Capitalize a linha de assunto e cada parágrafo</span>
+              <span class="lang-es">Escriba en mayúscula la línea de asunto y cada
+                párrafo</span>
             </li>
             <li>
               <span class="lang-en">Use the imperative mood in the subject line</span>
               <span class="lang-pt">Use o modo imperativo na linha de assunto</span>
+              <span class="lang-es">Use el modo imperativo en la línea de asunto</span>
             </li>
             <li>
               <span class="lang-en">Wrap lines at 72 characters</span>
               <span class="lang-pt">Quebre as linhas em 72 caracteres</span>
+              <span class="lang-es">Ajuste las líneas a 72 caracteres</span>
             </li>
             <li>
               <span class="lang-en">Use the body to explain what and why you have done
@@ -257,30 +327,39 @@
               <span class="lang-pt">Use o corpo para explicar o que e por que você fez
                 algo. Na maioria dos casos,
                 você pode omitir detalhes sobre como uma alteração foi feita.</span>
+              <span class="lang-es">Use el cuerpo para explicar qué y por qué hizo algo.
+                En la mayoría de los casos,
+                puede omitir los detalles sobre cómo se realizó un cambio.</span>
             </li>
           </ul>
           <h2>
             <span class="lang-en">Information in commit messages</span>
             <span class="lang-pt">Informações nas mensagens de commit</span>
+            <span class="lang-es">Información en los mensajes de commit</span>
           </h2>
           <ul>
             <li>
               <span class="lang-en">Describe why a change is being made.</span>
               <span class="lang-pt">Descreva por que uma alteração está sendo
                 feita.</span>
+              <span class="lang-es">Describa por qué se está realizando un cambio.</span>
             </li>
             <li>
               <span class="lang-en">How does it address the issue?</span>
               <span class="lang-pt">Como ela resolve o problema?</span>
+              <span class="lang-es">¿Cómo aborda el problema?</span>
             </li>
             <li>
               <span class="lang-en">What effects does the patch have?</span>
               <span class="lang-pt">Quais efeitos o patch tem?</span>
+              <span class="lang-es">¿Qué efectos tiene el parche?</span>
             </li>
             <li>
               <span class="lang-en">Do not assume the reviewer understands what the
                 original problem was.</span>
               <span class="lang-pt">Não assuma que o revisor entende qual era o problema
+                original.</span>
+              <span class="lang-es">No asuma que el revisor entiende cuál era el problema
                 original.</span>
             </li>
             <li>
@@ -288,25 +367,35 @@
                 self-evident/self-documenting.</span>
               <span class="lang-pt">Não assuma que o código é
                 autoexplicativo/autodocumentado.</span>
+              <span class="lang-es">No asuma que el código es
+                autoexplicativo/autodocumentado.</span>
             </li>
             <li>
               <span class="lang-en">Read the commit message to see if it hints at improved
                 code structure.</span>
               <span class="lang-pt">Leia a mensagem de commit para ver se ela sugere uma
                 estrutura de código melhorada.</span>
+              <span class="lang-es">Lea el mensaje de commit para ver si sugiere una
+                estructura de código mejorada.</span>
             </li>
             <li>
               <span class="lang-en">The first commit line is the most important.</span>
               <span class="lang-pt">A primeira linha do commit é a mais importante.</span>
+              <span class="lang-es">La primera línea del commit es la más
+                importante.</span>
             </li>
             <li>
               <span class="lang-en">Describe any limitations of the current code.</span>
               <span class="lang-pt">Descreva quaisquer limitações do código atual.</span>
+              <span class="lang-es">Describa cualquier limitación del código
+                actual.</span>
             </li>
             <li>
               <span class="lang-en">Do not include patch set-specific comments.</span>
               <span class="lang-pt">Não inclua comentários específicos do conjunto de
                 patches.</span>
+              <span class="lang-es">No incluya comentarios específicos del conjunto de
+                parches.</span>
             </li>
           </ul>
         </div>
@@ -315,6 +404,8 @@
             can be found on</span>
           <span class="lang-pt">Detalhes para cada ponto e exemplos de boas mensagens de
             commit podem ser encontrados em (Somente em inglês)</span>
+          <span class="lang-es">Detalles para cada punto y ejemplos de buenos mensajes de
+            commit se pueden encontrar en (Solo en inglés)</span>
           <a href="https://wiki.openstack.org/wiki/GitCommitMessages#Information_in_commit_messages"
             target="_blank">
             https://wiki.openstack.org/wiki/GitCommitMessages#Information_in_commit_messages
@@ -340,6 +431,15 @@
             Esta captura de tela dá um exemplo disso. A seta apontando para a linha
             vertical é a largura máxima de caracteres permitida por linha. A seta na parte
             inferior mostra uma mensagem adicional adicionada.</span>
+          <span class="lang-es">Si desea agregar más datos que la línea principal del
+            mensaje, que es la línea 1 del texto, haga clic en el botón commit antes de
+            escribir cualquier cosa en el cuadro de mensaje y haga clic en commit. Verá
+            entonces la pantalla del editor donde agrega su mensaje y luego va debajo de
+            lo que está allí e ingresa información adicional. Recuerde mantenerlo lo más
+            corto posible. Todos en internet pueden leer esa información si así lo desean.
+            Esta captura de pantalla le da un ejemplo de eso. La flecha que apunta a la
+            línea vertical es el ancho máximo de caracteres permitido por línea. La flecha
+            en la parte inferior muestra un mensaje adicional agregado.</span>
         </p>
         <p>
           <img
@@ -355,12 +455,17 @@
       <span class="lang-pt">Há muito mais informações que podem ser fornecidas sobre este
         tópico, mas vou deixar isso para você pesquisar e ler se assim desejar. Estas são
         apenas as informações necessárias para começar.</span>
+      <span class="lang-es">Hay mucha más información que se puede dar sobre este tema,
+        pero lo dejaré a usted para investigar y leer si así lo desea. Esta es solo la
+        información que necesita para comenzar.</span>
     </p>
     <p>
       <span class="lang-en">VSCode documentation on Source Control and how it works within
         VSCode:</span>
       <span class="lang-pt">Documentação do VSCode sobre Controle de Código Fonte e como
         funciona no VSCode:</span>
+      <span class="lang-es">Documentación de VSCode sobre Control de Código Fuente y cómo
+        funciona en VSCode:</span>
       <a href="https://code.visualstudio.com/docs/sourcecontrol/overview" target="_blank"
         rel="noopener">
         https://code.visualstudio.com/docs/sourcecontrol/overview
@@ -373,6 +478,9 @@
       <span class="lang-pt">Para ler as mensagens de commit e ver quais alterações foram
         feitas. Abra um repositório, clique nos commits. O número ao lado da palavra será
         diferente para cada repositório</span>
+      <span class="lang-es">Para leer los mensajes de commit y ver qué cambios se han
+        realizado. Abra un repositorio, haga clic en los commits. El número al lado de la
+        palabra será diferente para cada repositorio</span>
     </p>
     <p>
       <img
@@ -386,6 +494,9 @@
       <span class="lang-pt">Você verá uma tela como esta. Clique na pequena caixa com os 3
         pontos e você verá a mensagem adicional se a pessoa que fez o commit adicionou
         informações adicionais.</span>
+      <span class="lang-es">Verá una pantalla como esta. Haga clic en la pequeña caja con
+        los 3 puntos y verá el mensaje adicional si la persona que hizo el commit agregó
+        información adicional.</span>
     </p>
     <p>
       <img
@@ -400,6 +511,10 @@
         que a publicação nas
         GitHub Pages está em execução. A marca de seleção significa que o commit foi
         bem-sucedido.</span>
+      <span class="lang-es">En la imagen de arriba notará un punto naranja. Eso significa
+        que la publicación en
+        GitHub Pages está en ejecución. La marca de verificación significa que el commit
+        fue exitoso.</span>
     </p>
     <p>
       <span class="lang-en">In this next image it shows the additional message and it has
@@ -414,6 +529,13 @@
         que o processo de publicação das GitHub Pages pudesse terminar, então o GitHub
         cancelou o processo em execução
         e iniciou o novo processo.</span>
+      <span class="lang-es">En esta siguiente imagen se muestra el mensaje adicional y
+        tiene un círculo rojo con una X,
+        lo que significa que la publicación en GitHub Pages falló. En este caso, hubo un
+        segundo commit en GitHub antes
+        de que el proceso de publicación de GitHub Pages pudiera terminar, por lo que
+        GitHub canceló el proceso en ejecución
+        y comenzó el nuevo proceso.</span>
     </p>
     <p>
       <img
@@ -425,6 +547,7 @@
         Teams.</span>
       <span class="lang-pt">Me avise se você tiver alguma dúvida no Microsoft
         Teams.</span>
+      <span class="lang-es">Avíseme si tiene alguna pregunta en Microsoft Teams.</span>
     </p>
   </main>
   <footer>
@@ -435,10 +558,14 @@
       <span class="lang-pt">Este arquivo é criado e atualizado para uso dos alunos da BYU
         Pathway
         Worldwide que cursam WDD 130</span>
+      <span class="lang-es">Este archivo es creado y actualizado para uso de los
+        estudiantes de BYU Pathway
+        Worldwide que cursan WDD 130</span>
     </p>
     <p>
       <span class="lang-en">Maintained by Ralph Borcherds</span>
       <span class="lang-pt">Mantido por Ralph Borcherds</span>
+      <span class="lang-es">Mantenido por Ralph Borcherds</span>
     </p>
   </footer>
 
@@ -447,14 +574,15 @@
       document.documentElement.lang = lang;
       localStorage.setItem('preferredLang', lang);
       document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-      document.getElementById('btn-pt').classList.toggle('active', lang === 'pt-BR');
+      document.getElementById('btn-pt').classList.toggle('active', lang === 'pt');
+      document.getElementById('btn-es').classList.toggle('active', lang === 'es');
     }
 
     function detectBrowserLang() {
       const browserLang = navigator.language || navigator.userLanguage || 'en';
-      if (browserLang.toLowerCase().startsWith('pt')) {
-        return 'pt-BR';
-      }
+      const lang = browserLang.toLowerCase();
+      if (lang.startsWith('pt')) return 'pt';
+      if (lang.startsWith('es')) return 'es';
       return 'en';
     }
 

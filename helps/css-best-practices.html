@@ -24,11 +24,13 @@
       <a href="index.html">
         <span class="lang-en">Resources Home</span>
         <span class="lang-pt">Início dos Recursos</span>
+        <span class="lang-es">Inicio de Recursos</span>
       </a>
     </nav>
     <div class="lang-selector">
       <button onclick="setLang('en')" class="lang-btn" id="btn-en">English</button>
       <button onclick="setLang('pt')" class="lang-btn" id="btn-pt">Português</button>
+      <button onclick="setLang('es')" class="lang-btn" id="btn-es">Español</button>
     </div>
 
   </header>
@@ -37,6 +39,7 @@
     <h1>
       <span class="lang-en">Beginners CSS Best Practices</span>
       <span class="lang-pt">Melhores Práticas de CSS para Iniciantes</span>
+      <span class="lang-es">Mejores Prácticas de CSS para Principiantes</span>
     </h1>
     <p>
       <span class="lang-en">Here are some CSS best practices for those learning CSS. No
@@ -51,6 +54,12 @@
         experiência é única e você deve manter a mente aberta para tentar coisas até que
         elas
         pareçam certas para você.</span>
+      <span class="lang-es">Aquí hay algunas mejores prácticas de CSS para quienes están
+        aprendiendo CSS. Nadie
+        comenzará a escribir mejor CSS de la noche a la mañana, se necesita práctica y
+        ajuste fino. Cada
+        experiencia es única y debe mantener la mente abierta para intentar cosas hasta
+        que se sientan correctas para usted.</span>
     </p>
     <p>
       <span class="lang-en">Don&apos;t be afraid to adopt tools to help you but also
@@ -65,12 +74,17 @@
         escrever e organizar CSS. Seja quais forem as regras que você acabar adotando,
         mantenha a
         consistência.</span>
+      <span class="lang-es">No tenga miedo de adoptar herramientas para ayudarlo, pero
+        tampoco sea demasiado ansioso en adoptar algo solo porque todos lo están haciendo.
+        Hay un nivel de arte en entender, escribir y organizar CSS. Cualesquiera que sean
+        las reglas que adopte, mantenga la consistencia.</span>
     </p>
     <ul>
       <li>
         <h3>
           <span class="lang-en">Plan you CSS</span>
           <span class="lang-pt">Planeje seu CSS</span>
+          <span class="lang-es">Planifique su CSS</span>
         </h3>
         <p>
           <span class="lang-en">Before writing your CSS, plan your page layout and plan
@@ -87,12 +101,20 @@
             tentar evitar substituições em excesso. Se você continuar encontrando-se
             escrevendo estilos e depois cancelando-os algumas regras adiante,
             provavelmente precisa repensar sua estratégia.</span>
+          <span class="lang-es">Antes de escribir su CSS, planifique el diseño de su
+            página y planifique cómo va a usar su CSS. ¿Qué estilos generales se
+            necesitarán, qué diseños diferentes necesita crear, qué anulaciones específicas
+            deben crearse y son reutilizables? Sobre todo, debe intentar evitar demasiadas
+            anulaciones. Si continúa encontrándose escribiendo estilos y luego
+            cancelándolos algunas reglas más adelante, probablemente necesite repensar su
+            estrategia.</span>
         </p>
       </li>
       <li>
         <h3>
           <span class="lang-en">Use flexible/relative units</span>
           <span class="lang-pt">Use unidades flexíveis/relativas</span>
+          <span class="lang-es">Use unidades flexibles/relativas</span>
         </h3>
         <p>
           <span class="lang-en">For maximum flexibility over the widest possible range of
@@ -103,12 +125,17 @@
             dispositivos, é uma boa ideia dimensionar contêineres, padding, etc. usando
             unidades relativas como ems e rems ou porcentagens e unidades de viewport se
             você quiser que elas variem dependendo da largura da viewport.</span>
+          <span class="lang-es">Para máxima flexibilidad en la más amplia gama posible de
+            dispositivos, es buena idea dimensionar contenedores, padding, etc. usando
+            unidades relativas como ems y rems o porcentajes y unidades de viewport si
+            desea que varíen dependiendo del ancho del viewport.</span>
         </p>
       </li>
       <li>
         <h3>
           <span class="lang-en">Don't use a preprocessor</span>
           <span class="lang-pt">Não use um pré-processador</span>
+          <span class="lang-es">No use un preprocesador</span>
         </h3>
         <p>
           <span class="lang-en">Don't use preprocessor syntax, such as Sass, Less, or
@@ -117,12 +144,16 @@
           <span class="lang-pt">Não use sintaxe de pré-processador, como Sass, Less ou
             Stylus. Eles apenas adicionam uma camada de complexidade que a maioria dos
             sites não precisa.</span>
+          <span class="lang-es">No use sintaxis de preprocesador, como Sass, Less o
+            Stylus. Estos solo agregan una capa de complejidad que la mayoría de los sitios
+            no necesitan.</span>
         </p>
       </li>
       <li>
         <h3>
           <span class="lang-en">Don't use resets</span>
           <span class="lang-pt">Não use resets</span>
+          <span class="lang-es">No use resets</span>
         </h3>
         <p>
           <span class="lang-en">For maximum control over CSS across platforms, a lot of
@@ -137,12 +168,20 @@
             especialmente no mundo moderno, CSS resets podem ser excessivos, resultando em
             muito tempo extra gasto reimplementando coisas que não estavam completamente
             quebradas no começo, como margens padrão, estilos de lista, etc.</span>
+          <span class="lang-es">Para máximo control sobre CSS en diferentes plataformas,
+            muchas personas solían usar CSS resets para eliminar todos los estilos, antes
+            de construir el CSS ellos mismos. Esto ciertamente tiene sus méritos, pero
+            especialmente en el mundo moderno, los CSS resets pueden ser excesivos,
+            resultando en mucho tiempo extra gastado reimplementando cosas que no estaban
+            completamente rotas en primer lugar, como márgenes predeterminados, estilos de
+            lista, etc.</span>
         </p>
       </li>
       <li>
         <h3>
           <span class="lang-en">CSS comments</span>
           <span class="lang-pt">Comentários CSS</span>
+          <span class="lang-es">Comentarios CSS</span>
         </h3>
         <p>
           <span class="lang-en">Use CSS-style comments to comment code that isn't
@@ -151,14 +190,20 @@
           <span class="lang-pt">Use comentários no estilo CSS para comentar código que não
             é autoexplicativo. Note também que você deve deixar um espaço entre os
             asteriscos e o comentário apenas para legibilidade.</span>
+          <span class="lang-es">Use comentarios de estilo CSS para comentar código que no
+            es autoexplicativo. También tenga en cuenta que debe dejar un espacio entre los
+            asteriscos y el comentario solo para legibilidad.</span>
         </p>
         <pre class="lang-en"> /* This is a CSS-style comment */</pre>
         <pre class="lang-pt"> /* Este é um comentário no estilo CSS. */</pre>
+        <pre class="lang-es"> /* Este es un comentario de estilo CSS. */</pre>
         <p>
           <span class="lang-en">Put your comments on separate lines preceding the code
             they are referring to, like so:</span>
           <span class="lang-pt">Coloque seus comentários em linhas separadas antes do
             código ao qual eles se referem, assim:</span>
+          <span class="lang-es">Coloque sus comentarios en líneas separadas antes del
+            código al que se refieren, así:</span>
         </p>
         <pre class="lang-en">
 					<code>h3 {<br>
@@ -178,18 +223,30 @@
 								}<br>
 					</code>
 				</pre>
+        <pre class="lang-es">
+					<code>h3 {<br>
+								&nbsp;&nbsp;&nbsp;    /* Crea una sombra roja, desplazada 1px a la derecha y hacia abajo, con un radio de desenfoque de 2px */ <br>
+								&nbsp;&nbsp;&nbsp;text-shadow: 1px 1px 2px red;<br>
+								&nbsp;&nbsp;&nbsp;/* Establece el tamaño de fuente al doble del tamaño de fuente predeterminado del documento */<br>
+								&nbsp;&nbsp;&nbsp;font-size: 2rem;<br>
+								}<br>
+					</code>
+				</pre>
 
       </li>
       <li>
         <h3>
           <span class="lang-en">Double quotes around values</span>
           <span class="lang-pt">Aspas duplas em torno de valores</span>
+          <span class="lang-es">Comillas dobles alrededor de valores</span>
         </h3>
         <p>
           <span class="lang-en">Where quotes can or should be included, use them, and use
             double quotes. For example:</span>
           <span class="lang-pt">Onde aspas podem ou devem ser incluídas, use-as e use
             aspas duplas. Por exemplo:</span>
+          <span class="lang-es">Donde las comillas pueden o deben incluirse, úselas y use
+            comillas dobles. Por ejemplo:</span>
         </p>
         <pre>
 					<code>[data-vegetable="liquid"] {<br>
@@ -203,6 +260,7 @@
         <h3>
           <span class="lang-en">Longhand vs. shorthand rules</span>
           <span class="lang-pt">Regras longas vs. abreviadas</span>
+          <span class="lang-es">Reglas largas vs. abreviadas</span>
         </h3>
         <p>
           <span class="lang-en">Sometimes you want to specify the padding-top or
@@ -215,12 +273,19 @@
             adicionar mais, então adote o hábito de sempre usar a forma abreviada para
             facilitar a alteração sem especificar muitas propriedades. É mais fácil de
             mudar e há menos código.</span>
+          <span class="lang-es">A veces desea especificar el padding-top o border-right,
+            pero por experiencia, frecuentemente volverá a estos para agregar más, así que
+            adopte el hábito de siempre usar la forma abreviada para facilitar el cambio
+            sin especificar muchas propiedades. Es más fácil de cambiar y hay menos
+            código.</span>
         </p>
         <p>
           <span class="lang-en">These values go in this order: top right bottom
             left.</span>
           <span class="lang-pt">Esses valores vão nesta ordem: topo direita baixo
             esquerda.</span>
+          <span class="lang-es">Estos valores van en este orden: arriba derecha abajo
+            izquierda.</span>
         </p>
         <pre> padding: 1em 2em 1em 2em;</pre>
       </li>
@@ -228,6 +293,7 @@
         <h3>
           <span class="lang-en">Selectors</span>
           <span class="lang-pt">Seletores</span>
+          <span class="lang-es">Selectores</span>
         </h3>
         <p>
           <span class="lang-en">When a rule has multiple selectors, put each selector on a
@@ -236,20 +302,31 @@
           <span class="lang-pt">Quando uma regra tem vários seletores, coloque cada
             seletor em uma nova linha. Isso torna a lista de seletores mais fácil de ler e
             pode ajudar a tornar as linhas de código mais curtas.</span>
+          <span class="lang-es">Cuando una regla tiene múltiples selectores, coloque cada
+            selector en una nueva línea. Esto hace que la lista de selectores sea más fácil
+            de leer y puede ayudar a acortar las líneas de código.</span>
         </p>
         <p>
           <span class="lang-en">Don't use ID selectors because they are:</span>
           <span class="lang-pt">Não use seletores de ID porque eles são:</span>
+          <span class="lang-es">No use selectores de ID porque son:</span>
         </p>
         <ul>
-          <li> <span class="lang-en">less flexible; you can't add more to the id attribute
-              if you discover you need more than one.</span> <span class="lang-pt">menos
-              flexíveis; você não pode adicionar mais ao atributo id se descobrir que
-              precisa de mais de um.</span>
+          <li>
+            <span class="lang-en">less flexible; you can't add more to the id attribute
+              if you discover you need more than one.</span>
+            <span class="lang-pt">menos flexíveis; você não pode adicionar mais ao
+              atributo id se descobrir que precisa de mais de um.</span>
+            <span class="lang-es">menos flexibles; no puede agregar más al atributo id si
+              descubre que necesita más de uno.</span>
           </li>
-          <li> <span class="lang-en">harder to override because they have higher
-              specificity than classes.</span> <span class="lang-pt">mais difíceis de
-              substituir porque têm maior especificidade do que as classes.</span>
+          <li>
+            <span class="lang-en">harder to override because they have higher
+              specificity than classes.</span>
+            <span class="lang-pt">mais difíceis de substituir porque têm maior
+              especificidade do que as classes.</span>
+            <span class="lang-es">más difíciles de anular porque tienen mayor
+              especificidad que las clases.</span>
           </li>
         </ul>
       </li>
@@ -257,6 +334,7 @@
         <h3>
           <span class="lang-en">Write CSS consistently</span>
           <span class="lang-pt">Escreva CSS de forma consistente</span>
+          <span class="lang-es">Escriba CSS de forma consistente</span>
         </h3>
         <p>
           <span class="lang-en">Consistency is key. Even if you are doing everything
@@ -270,12 +348,19 @@
             uma metodologia CSS, organize os estilos da mesma forma, defina quantos níveis
             você aninha seletores, etc. Defina seu estilo e mantenha-o e melhore-o ao
             longo do tempo.</span>
+          <span class="lang-es">La consistencia es clave. Incluso si está haciendo todo
+            mal, mantenga la consistencia, ya que será más fácil corregirlos más tarde.
+            Encuentre una convención de nomenclatura que funcione para usted, adopte una
+            metodología CSS, organice los estilos de la misma manera, defina cuántos
+            niveles anida los selectores, etc. Defina su estilo, manténgalo y mejórelo con
+            el tiempo.</span>
         </p>
       </li>
       <li>
         <h3>
           <span class="lang-en">Avoid too many font files</span>
           <span class="lang-pt">Evite muitos arquivos de fonte</span>
+          <span class="lang-es">Evite demasiados archivos de fuente</span>
         </h3>
         <p>
           <span class="lang-en">Maybe the designers handed you too many font files which
@@ -289,17 +374,26 @@
             precisará para a página. As fontes podem levar tempo para carregar e serem
             aplicadas e quando você tem muitas fontes, sua UI normalmente salta para o
             lugar depois que as fontes são carregadas.</span>
+          <span class="lang-es">Quizás los diseñadores le entregaron demasiados archivos
+            de fuente, lo cual es una señal de alerta. Un sitio web con demasiadas fuentes
+            puede ser caótico y confuso, así que siempre asegúrese de incluir las fuentes
+            que necesitará para la página. Las fuentes pueden tardar en cargarse y
+            aplicarse, y cuando tiene demasiadas fuentes, su UI normalmente se coloca en su
+            lugar después de que las fuentes se cargan.</span>
         </p>
         <p>
           <span class="lang-en">Always try to keep your fonts to just 2 font names.</span>
           <span class="lang-pt">Sempre tente manter suas fontes em apenas 2 nomes de
             fonte.</span>
+          <span class="lang-es">Siempre intente mantener sus fuentes en solo 2 nombres de
+            fuente.</span>
         </p>
       </li>
       <li>
         <h3>
           <span class="lang-en">Use CSS variables</span>
           <span class="lang-pt">Use variáveis CSS</span>
+          <span class="lang-es">Use variables CSS</span>
         </h3>
         <p>
           <span class="lang-en">The #1 reason to use a pre-processor in the past was the
@@ -312,12 +406,18 @@
             carregadas no navegador. O suporte é bom e permite criar uma UI mais flexível
             e reutilizável, sem mencionar que ajuda a criar um sistema de design e
             recursos mais poderosos.</span>
+          <span class="lang-es">La razón número 1 para usar un preprocesador en el pasado
+            eran las variables. Las variables CSS son mucho mejores porque permanecen
+            cuando se cargan en el navegador. El soporte es bueno y permite crear una UI
+            más flexible y reutilizable, sin mencionar que ayuda a crear un sistema de
+            diseño y características más poderosos.</span>
         </p>
       </li>
       <li>
         <h3>
           <span class="lang-en">Format Text with CSS</span>
           <span class="lang-pt">Formate texto com CSS</span>
+          <span class="lang-es">Formatee texto con CSS</span>
         </h3>
         <p>
           <span class="lang-en">CSS can format your HTML text. No need to manually write
@@ -331,12 +431,18 @@
             mudando todo o texto no HTML, e também é melhor para internacionalização, pois
             permite escrever o texto como você quer e manipular como ele parece com
             CSS.</span>
+          <span class="lang-es">CSS puede formatear su texto HTML. No es necesario escribir
+            manualmente todo en mayúsculas, minúsculas o palabras capitalizadas en su HTML.
+            Cambiar un valor de propiedad CSS es mucho más rápido que ir cambiando todo el
+            texto en HTML, y también es mejor para la internacionalización, ya que permite
+            escribir el texto como desee y manipular cómo se ve con CSS.</span>
         </p>
       </li>
       <li>
         <h3>
           <span class="lang-en">Let the content define the size</span>
           <span class="lang-pt">Deixe o conteúdo definir o tamanho</span>
+          <span class="lang-es">Deje que el contenido defina el tamaño</span>
         </h3>
         <p>
           <span class="lang-en">Instead of setting the width and height of a button, for
@@ -347,12 +453,17 @@
             exemplo, considere definir algum padding para espaçamento e incluir um
             max-width e max-height em vez disso, a menos que o design exija um tamanho
             estrito.</span>
+          <span class="lang-es">En vez de establecer el ancho y la altura de un botón, por
+            ejemplo, considere establecer algo de padding para el espaciado e incluir un
+            max-width y max-height en su lugar, a menos que el diseño requiera un tamaño
+            estricto.</span>
         </p>
       </li>
       <li>
         <h3>
           <span class="lang-en">Avoid color names</span>
           <span class="lang-pt">Evite nomes de cores</span>
+          <span class="lang-es">Evite nombres de colores</span>
         </h3>
         <p>
           <span class="lang-en">Prefer to specify your color values with hex and color
@@ -363,12 +474,18 @@
             de cor em vez de dizer red, purple ou cyan. Existem milhões de valores de cor
             hex e não há nome para todos eles. Por consistência, encontre uma forma de
             adicionar cores e mantenha-a.</span>
+          <span class="lang-es">Prefiera especificar sus valores de color con hex y
+            funciones de color en lugar de decir red, purple o cyan. Hay millones de
+            valores de color hex y no hay nombre para todos ellos. Por consistencia,
+            encuentre una forma de agregar colores y manténgala.</span>
         </p>
       </li>
       <li>
         <h3>
           <span class="lang-en">Try to organize CSS to match the Markup Order</span>
           <span class="lang-pt">Tente organizar o CSS para corresponder à ordem do
+            Markup</span>
+          <span class="lang-es">Intente organizar CSS para que coincida con el orden del
             Markup</span>
         </h3>
         <p>
@@ -377,6 +494,8 @@
             time.</span>
           <span class="lang-pt">Certamente torna mais fácil entender seu markup apenas
             olhando para seu CSS. É algo que eu faço e me economiza muito tempo.</span>
+          <span class="lang-es">Ciertamente hace que sea más fácil entender su markup solo
+            mirando su CSS. Es algo que hago y me ahorra mucho tiempo.</span>
         </p>
       </li>
       <li>
@@ -384,6 +503,8 @@
           <span class="lang-en">Keep HTML semantics and use CSS for styling</span>
           <span class="lang-pt">Mantenha a semântica HTML e use CSS para
             estilização</span>
+          <span class="lang-es">Mantenga la semántica HTML y use CSS para
+            estilización</span>
         </h3>
         <p>
           <span class="lang-en">It is common to find developers who go around changing
@@ -400,12 +521,21 @@
             contra nenhuma regra semântica HTML. Escreva seu HTML primeiro com o conteúdo
             em mente, não a estilização. Depois adicione CSS e tente ao máximo antes de
             mudar seu HTML por razões de estilização.</span>
+          <span class="lang-es">Es común encontrar desarrolladores que van cambiando su
+            HTML para aplicar un determinado estilo. En general, deje la estilización al
+            CSS y deje su HTML estructurado de una manera que tenga sentido semánticamente.
+            Hay excepciones a esta regla, pero siempre asegúrese de que la estructura
+            adoptada no vaya en contra de ninguna regla semántica HTML. Escriba su HTML
+            primero con el contenido en mente, no la estilización. Luego agregue CSS y
+            haga su mejor esfuerzo antes de cambiar su HTML por razones de
+            estilización.</span>
         </p>
       </li>
       <li>
         <h3>
           <span class="lang-en">Hyphens or underscore?</span>
           <span class="lang-pt">Hifens ou sublinhado?</span>
+          <span class="lang-es">¿Guiones o guión bajo?</span>
         </h3>
         <p>
           <span class="lang-en">The most common separator for class and id names is a
@@ -414,12 +544,16 @@
           <span class="lang-pt">O separador mais comum para nomes de classe e id é um
             hífen, mas seja qual for o que você escolher, mantenha-o. O hífen é mais fácil
             de ler e depurar do que um sublinhado.</span>
+          <span class="lang-es">El separador más común para nombres de clase e id es un
+            guión, pero cualquiera que elija, manténgalo. El guión es más fácil de leer y
+            depurar que un guión bajo.</span>
         </p>
       </li>
       <li>
         <h3>
           <span class="lang-en">Remove Unused CSS</span>
           <span class="lang-pt">Remova CSS não utilizado</span>
+          <span class="lang-es">Elimine CSS no utilizado</span>
         </h3>
         <p>
           <span class="lang-en">For the same reason, you should ship the only CSS you will
@@ -434,6 +568,12 @@
             determinar quais estilos você precisará. Se não tiver certeza se precisa
             disso, considere usar ferramentas do navegador que verificam a cobertura do
             seu código e lhe dirão se está enviando estilos não utilizados ou não.</span>
+          <span class="lang-es">Por la misma razón, debe enviar solo el CSS que usará.
+            Considere usar herramientas como PurgeCSS para eliminar CSS que no será
+            necesario en la renderización. Estas herramientas analizarán su CSS y HTML para
+            determinar qué estilos necesitará. Si no está seguro de necesitar esto,
+            considere usar herramientas del navegador que buscan la cobertura de su código
+            y le dirán si está enviando estilos no utilizados o no.</span>
         </p>
       </li>
     </ul>
@@ -444,10 +584,13 @@
         BYU Pathway Worldwide taking WDD 130</span>
       <span class="lang-pt">Este arquivo é criado e atualizado para uso dos alunos da BYU
         Pathway Worldwide que cursam WDD 130</span>
+      <span class="lang-es">Este archivo es creado y actualizado para uso de los
+        estudiantes de BYU Pathway Worldwide que cursan WDD 130</span>
     </p>
     <p>
       <span class="lang-en">Maintained by Ralph Borcherds</span>
       <span class="lang-pt">Mantido por Ralph Borcherds</span>
+      <span class="lang-es">Mantenido por Ralph Borcherds</span>
     </p>
   </footer>
 
@@ -456,14 +599,15 @@
       document.documentElement.lang = lang;
       localStorage.setItem('preferredLang', lang);
       document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-      document.getElementById('btn-pt').classList.toggle('active', lang === 'pt-BR');
+      document.getElementById('btn-pt').classList.toggle('active', lang === 'pt');
+      document.getElementById('btn-es').classList.toggle('active', lang === 'es');
     }
 
     function detectBrowserLang() {
       const browserLang = navigator.language || navigator.userLanguage || 'en';
-      if (browserLang.toLowerCase().startsWith('pt')) {
-        return 'pt-BR';
-      }
+      const lang = browserLang.toLowerCase();
+      if (lang.startsWith('pt')) return 'pt';
+      if (lang.startsWith('es')) return 'es';
       return 'en';
     }
 

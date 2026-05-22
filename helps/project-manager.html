@@ -16,68 +16,190 @@
   <link rel="stylesheet" href="styles/styles.css">
 </head>
 
-
 <body>
 
-  <header>
+  <header class="header-layout">
+
     <nav class="nav-header">
-      <a href="index.html">Resources Home</a>
+      <a href="index.html">
+        <span class="lang-en">Resources Home</span>
+        <span class="lang-pt">Início dos Recursos</span>
+        <span class="lang-es">Inicio de Recursos</span>
+      </a>
     </nav>
+    <div class="lang-selector">
+      <button onclick="setLang('en')" class="lang-btn" id="btn-en">English</button>
+      <button onclick="setLang('pt')" class="lang-btn" id="btn-pt">Português</button>
+      <button onclick="setLang('es')" class="lang-btn" id="btn-es">Español</button>
+    </div>
+
   </header>
 
   <main>
 
-    <h1>Users with multiple coding projects/classes</h1>
-    <p>It is recommended that if you are doing multiple coding projects at a time and
-      each has its own folder/directory structure, you install an extension called Project
-      Manager </p>
-    <p>Go to extensions</p>
-    <p>Search for Project Manager</p>
-    <img src="images/project-manager-search.png" alt="Search Project Manager">
-    <p>Click Install.</p>
-    <p>Once installed open one project folder in VSCode</p>
-    <p> Click on the Project Manager icon in the icons on the left or right of the
-      editor </p>
-    <img src="images/project-manager-icon.png" alt="Project Manager Icon">
-    <p> You should see a blue button that states: Project Manager: Save Project -
-      Click that button and you will be prompted for a name at the top center of the
-      screen. The
-      default name is the folder name. </p>
-    <img src="images/project-manager-1st-save.png" alt="Project Manager 1st Save">
-    <p>You will be prompted to give the project a name</p>
-    <img src="images/project-mananger-naming.png" alt="Naming Project">
-    <p> That will then add that project name to the Project Manager list of projects.
+    <h1>
+      <span class="lang-en">Users with multiple coding projects/classes</span>
+      <span class="lang-pt">Usuários com múltiplos projetos/aulas de programação</span>
+      <span class="lang-es">Usuarios con múltiples proyectos/clases de programación</span>
+    </h1>
+    <p>
+      <span class="lang-en">It is recommended that if you are doing multiple coding
+        projects at a time and each has its own folder/directory structure, you install an
+        extension called Project Manager</span>
+      <span class="lang-pt">É recomendado que, se você estiver trabalhando em múltiplos
+        projetos de programação ao mesmo tempo e cada um tiver sua própria estrutura de
+        pasta/diretório, você instale uma extensão chamada Project Manager</span>
+      <span class="lang-es">Se recomienda que, si está trabajando en múltiples proyectos
+        de programación al mismo tiempo y cada uno tiene su propia estructura de
+        carpeta/directorio, instale una extensión llamada Project Manager</span>
     </p>
-    <p>Open the second project folder in its own workspace.</p>
-    <p>Click the Save icon in the Project Manager folder icon area.</p>
-    <img src="images/project-manager-save.png" alt="Project Manager Save">
-    <p> Give your project a name and hit enter. This will add it to the list. </p>
+    <p>
+      <span class="lang-en">Go to extensions</span>
+      <span class="lang-pt">Vá para extensões</span>
+      <span class="lang-es">Vaya a extensiones</span>
+    </p>
+    <p>
+      <span class="lang-en">Search for Project Manager</span>
+      <span class="lang-pt">Pesquise por Project Manager</span>
+      <span class="lang-es">Busque Project Manager</span>
+    </p>
+    <img src="images/project-manager-search.png" alt="Search Project Manager">
+    <p>
+      <span class="lang-en">Click Install.</span>
+      <span class="lang-pt">Clique em Install.</span>
+      <span class="lang-es">Haga clic en Install.</span>
+    </p>
+    <p>
+      <span class="lang-en">Once installed open one project folder in VSCode</span>
+      <span class="lang-pt">Depois de instalado, abra uma pasta de projeto no VSCode</span>
+      <span class="lang-es">Una vez instalado, abra una carpeta de proyecto en VSCode</span>
+    </p>
+    <p>
+      <span class="lang-en">Click on the Project Manager icon in the icons on the left or
+        right of the editor</span>
+      <span class="lang-pt">Clique no ícone do Project Manager nos ícones à esquerda ou
+        à direita do editor</span>
+      <span class="lang-es">Haga clic en el ícono del Project Manager en los íconos a la
+        izquierda o derecha del editor</span>
+    </p>
+    <img src="images/project-manager-icon.png" alt="Project Manager Icon">
+    <p>
+      <span class="lang-en">You should see a blue button that states: Project Manager:
+        Save Project - Click that button and you will be prompted for a name at the top
+        center of the screen. The default name is the folder name.</span>
+      <span class="lang-pt">Você deve ver um botão azul que diz: Project Manager: Save
+        Project - Clique nesse botão e será solicitado que você dê um nome no centro
+        superior da tela. O nome padrão é o nome da pasta.</span>
+      <span class="lang-es">Debería ver un botón azul que dice: Project Manager: Save
+        Project - Haga clic en ese botón y se le solicitará un nombre en la parte superior
+        central de la pantalla. El nombre predeterminado es el nombre de la carpeta.</span>
+    </p>
+    <img src="images/project-manager-1st-save.png" alt="Project Manager 1st Save">
+    <p>
+      <span class="lang-en">You will be prompted to give the project a name</span>
+      <span class="lang-pt">Você será solicitado a dar um nome ao projeto</span>
+      <span class="lang-es">Se le solicitará que le dé un nombre al proyecto</span>
+    </p>
     <img src="images/project-mananger-naming.png" alt="Naming Project">
-    <p> If you click the edit icon, it will open the JSON file that lists your
-      projects. The format is quite easy to follow. The rule is that each project must be
-      enclosed
-      with { } and must have a comma between the project section. </p>
+    <p>
+      <span class="lang-en">That will then add that project name to the Project Manager
+        list of projects.</span>
+      <span class="lang-pt">Isso então adicionará esse nome de projeto à lista de projetos
+        do Project Manager.</span>
+      <span class="lang-es">Eso agregará ese nombre de proyecto a la lista de proyectos
+        del Project Manager.</span>
+    </p>
+    <p>
+      <span class="lang-en">Open the second project folder in its own workspace.</span>
+      <span class="lang-pt">Abra a segunda pasta de projeto em seu próprio
+        workspace.</span>
+      <span class="lang-es">Abra la segunda carpeta de proyecto en su propio
+        workspace.</span>
+    </p>
+    <p>
+      <span class="lang-en">Click the Save icon in the Project Manager folder icon
+        area.</span>
+      <span class="lang-pt">Clique no ícone de Save na área de ícones da pasta do Project
+        Manager.</span>
+      <span class="lang-es">Haga clic en el ícono de Save en el área de íconos de carpeta
+        del Project Manager.</span>
+    </p>
+    <img src="images/project-manager-save.png" alt="Project Manager Save">
+    <p>
+      <span class="lang-en">Give your project a name and hit enter. This will add it to
+        the list.</span>
+      <span class="lang-pt">Dê um nome ao seu projeto e pressione Enter. Isso o
+        adicionará à lista.</span>
+      <span class="lang-es">Dé un nombre a su proyecto y presione Enter. Esto lo agregará
+        a la lista.</span>
+    </p>
+    <img src="images/project-mananger-naming.png" alt="Naming Project">
+    <p>
+      <span class="lang-en">If you click the edit icon, it will open the JSON file that
+        lists your projects. The format is quite easy to follow. The rule is that each
+        project must be enclosed with { } and must have a comma between the project
+        section.</span>
+      <span class="lang-pt">Se você clicar no ícone de editar, ele abrirá o arquivo JSON
+        que lista seus projetos. O formato é bastante fácil de seguir. A regra é que cada
+        projeto deve estar entre { } e deve ter uma vírgula entre as seções de
+        projeto.</span>
+      <span class="lang-es">Si hace clic en el ícono de editar, se abrirá el archivo JSON
+        que lista sus proyectos. El formato es bastante fácil de seguir. La regla es que
+        cada proyecto debe estar entre { } y debe tener una coma entre las secciones de
+        proyecto.</span>
+    </p>
     <ul>
       <li>
-        <span class="bold-text">Name</span> is the name of the project
+        <span class="lang-en"><span class="bold-text">Name</span> is the name of the
+          project</span>
+        <span class="lang-pt"><span class="bold-text">Name</span> é o nome do
+          projeto</span>
+        <span class="lang-es"><span class="bold-text">Name</span> es el nombre del
+          proyecto</span>
       </li>
       <li>
-        <span class="bold-text">Rootpath</span> is the path to the project.
+        <span class="lang-en"><span class="bold-text">Rootpath</span> is the path to the
+          project.</span>
+        <span class="lang-pt"><span class="bold-text">Rootpath</span> é o caminho para o
+          projeto.</span>
+        <span class="lang-es"><span class="bold-text">Rootpath</span> es la ruta hacia el
+          proyecto.</span>
       </li>
       <li>
-        <span class="bold-text">Paths</span> is not used at this time
+        <span class="lang-en"><span class="bold-text">Paths</span> is not used at this
+          time</span>
+        <span class="lang-pt"><span class="bold-text">Paths</span> não é utilizado neste
+          momento</span>
+        <span class="lang-es"><span class="bold-text">Paths</span> no se utiliza en este
+          momento</span>
       </li>
       <li>
-        <span class="bold-text">Tags</span> is a way to categorize the type of project
-        for sorting. This list is up to the person
+        <span class="lang-en"><span class="bold-text">Tags</span> is a way to categorize
+          the type of project for sorting. This list is up to the person</span>
+        <span class="lang-pt"><span class="bold-text">Tags</span> é uma forma de
+          categorizar o tipo de projeto para ordenação. Esta lista fica a critério do
+          usuário</span>
+        <span class="lang-es"><span class="bold-text">Tags</span> es una forma de
+          categorizar el tipo de proyecto para ordenación. Esta lista queda a criterio del
+          usuario</span>
       </li>
       <li>
-        <span class="bold-text">Enabled</span> is if the project will display or not
-        in the list of projects. This is a way to only show projects you are currently
-        working on.
+        <span class="lang-en"><span class="bold-text">Enabled</span> is if the project
+          will display or not in the list of projects. This is a way to only show projects
+          you are currently working on.</span>
+        <span class="lang-pt"><span class="bold-text">Enabled</span> define se o projeto
+          será exibido ou não na lista de projetos. Esta é uma forma de mostrar apenas os
+          projetos em que você está trabalhando atualmente.</span>
+        <span class="lang-es"><span class="bold-text">Enabled</span> define si el proyecto
+          se mostrará o no en la lista de proyectos. Esta es una forma de mostrar solo los
+          proyectos en los que está trabajando actualmente.</span>
       </li>
     </ul>
-    <p>This is the format of the JSON File</p>
+    <p>
+      <span class="lang-en">This is the format of the JSON File</span>
+      <span class="lang-pt">Este é o formato do arquivo JSON</span>
+      <span class="lang-es">Este es el formato del archivo JSON</span>
+    </p>
     <pre>
       {<br>
       "name": "WDD-130",<br>
@@ -90,9 +212,40 @@
 
   </main>
   <footer>
-    <p>This file is created and updated for the use of students at BYU Pathway
-      Worldwide taking WDD 130</p>
-    <p>Maintained by Ralph Borcherds</p>
+    <p>
+      <span class="lang-en">This file is created and updated for the use of students at
+        BYU Pathway Worldwide taking WDD 130</span>
+      <span class="lang-pt">Este arquivo é criado e atualizado para uso dos alunos da BYU
+        Pathway Worldwide que cursam WDD 130</span>
+      <span class="lang-es">Este archivo es creado y actualizado para uso de los
+        estudiantes de BYU Pathway Worldwide que cursan WDD 130</span>
+    </p>
+    <p>
+      <span class="lang-en">Maintained by Ralph Borcherds</span>
+      <span class="lang-pt">Mantido por Ralph Borcherds</span>
+      <span class="lang-es">Mantenido por Ralph Borcherds</span>
+    </p>
   </footer>
+
+  <script>
+    function setLang(lang) {
+      document.documentElement.lang = lang;
+      localStorage.setItem('preferredLang', lang);
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-pt').classList.toggle('active', lang === 'pt');
+      document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+    }
+
+    function detectBrowserLang() {
+      const browserLang = navigator.language || navigator.userLanguage || 'en';
+      const lang = browserLang.toLowerCase();
+      if (lang.startsWith('pt')) return 'pt';
+      if (lang.startsWith('es')) return 'es';
+      return 'en';
+    }
+
+    const savedLang = localStorage.getItem('preferredLang') || detectBrowserLang();
+    setLang(savedLang);
+  </script>
 </body>
 </html>

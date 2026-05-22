@@ -18,149 +18,536 @@
 
 <body>
 
-  <header>
+  <header class="header-layout">
+
     <nav class="nav-header">
-      <a href="indexs.html">Resources Home</a>
+      <a href="index.html">
+        <span class="lang-en">Resources Home</span>
+        <span class="lang-pt">Início dos Recursos</span>
+        <span class="lang-es">Inicio de Recursos</span>
+      </a>
     </nav>
+    <div class="lang-selector">
+      <button onclick="setLang('en')" class="lang-btn" id="btn-en">English</button>
+      <button onclick="setLang('pt')" class="lang-btn" id="btn-pt">Português</button>
+      <button onclick="setLang('es')" class="lang-btn" id="btn-es">Español</button>
+    </div>
+
   </header>
 
   <main>
-    <h1>How to code with multiple computers without causing conflicts</h1>
-    <p>When you are working on a project, you may want to use multiple computers. This
-      is common for students who work on their assignments at home and at school.
+    <h1>
+      <span class="lang-en">How to code with multiple computers without causing
+        conflicts</span>
+      <span class="lang-pt">Como programar com múltiplos computadores sem causar
+        conflitos</span>
+      <span class="lang-es">Cómo programar con múltiples computadoras sin causar
+        conflictos</span>
+    </h1>
+    <p>
+      <span class="lang-en">When you are working on a project, you may want to use
+        multiple computers. This is common for students who work on their assignments at
+        home and at school.</span>
+      <span class="lang-pt">Quando você está trabalhando em um projeto, pode querer usar
+        múltiplos computadores. Isso é comum para estudantes que trabalham em suas tarefas
+        em casa e na escola.</span>
+      <span class="lang-es">Cuando está trabajando en un proyecto, es posible que desee
+        usar múltiples computadoras. Esto es común para estudiantes que trabajan en sus
+        tareas en casa y en la escuela.</span>
     </p>
-    <p>To do this, you need to make sure that you are using GitHub correctly to avoid
-      conflicts. Here are the steps to
-      follow:</p>
+    <p>
+      <span class="lang-en">To do this, you need to make sure that you are using GitHub
+        correctly to avoid conflicts. Here are the steps to follow:</span>
+      <span class="lang-pt">Para fazer isso, você precisa garantir que está usando o
+        GitHub corretamente para evitar conflitos. Aqui estão os passos a seguir:</span>
+      <span class="lang-es">Para hacer esto, debe asegurarse de que está usando GitHub
+        correctamente para evitar conflictos. Aquí están los pasos a seguir:</span>
+    </p>
     <ol>
-      <li>Make sure you have Git installed on all computers.</li>
-      <li>Clone your GitHub repository to each computer.</li>
-      <li>Before you start working, pull the latest changes from GitHub.</li>
-      <li>When you finish working, commit your changes and push them to GitHub.</li>
-      <li>Before switching computers, always pull the latest changes from GitHub.
+      <li>
+        <span class="lang-en">Make sure you have Git installed on all
+          computers.</span>
+        <span class="lang-pt">Certifique-se de ter o Git instalado em todos os
+          computadores.</span>
+        <span class="lang-es">Asegúrese de tener Git instalado en todas las
+          computadoras.</span>
+      </li>
+      <li>
+        <span class="lang-en">Clone your GitHub repository to each
+          computer.</span>
+        <span class="lang-pt">Clone seu repositório do GitHub em cada
+          computador.</span>
+        <span class="lang-es">Clone su repositorio de GitHub en cada
+          computadora.</span>
+      </li>
+      <li>
+        <span class="lang-en">Before you start working, pull the latest changes from
+          GitHub.</span>
+        <span class="lang-pt">Antes de começar a trabalhar, faça pull das alterações mais
+          recentes do GitHub.</span>
+        <span class="lang-es">Antes de comenzar a trabajar, haga pull de los últimos
+          cambios de GitHub.</span>
+      </li>
+      <li>
+        <span class="lang-en">When you finish working, commit your changes and push them
+          to GitHub.</span>
+        <span class="lang-pt">Quando terminar de trabalhar, faça commit das suas
+          alterações e envie-as para o GitHub com push.</span>
+        <span class="lang-es">Cuando termine de trabajar, haga commit de sus cambios y
+          envíelos a GitHub con push.</span>
+      </li>
+      <li>
+        <span class="lang-en">Before switching computers, always pull the latest changes
+          from GitHub.</span>
+        <span class="lang-pt">Antes de trocar de computador, sempre faça pull das
+          alterações mais recentes do GitHub.</span>
+        <span class="lang-es">Antes de cambiar de computadora, siempre haga pull de los
+          últimos cambios de GitHub.</span>
       </li>
     </ol>
-    <p>By following these steps, you can work on your project from multiple computers
-      without causing conflicts. If you do encounter a conflict, Git will help you
-      resolve it.</p>
-    <p>For more information on how to use Git and GitHub, you can refer to the <a
-        href="https://docs.github.com/en/get-started/quickstart">GitHub Quickstart
-        Guide</a>.</p>
-    <p>Remember to always commit your changes and push them to GitHub before switching
-      computers. This will ensure that your work is saved and can be accessed from
-      any computer.</p>
+    <p>
+      <span class="lang-en">By following these steps, you can work on your project from
+        multiple computers without causing conflicts. If you do encounter a conflict, Git
+        will help you resolve it.</span>
+      <span class="lang-pt">Seguindo esses passos, você pode trabalhar no seu projeto em
+        múltiplos computadores sem causar conflitos. Se você encontrar um conflito, o Git
+        ajudará você a resolvê-lo.</span>
+      <span class="lang-es">Siguiendo estos pasos, puede trabajar en su proyecto desde
+        múltiples computadoras sin causar conflictos. Si encuentra un conflicto, Git le
+        ayudará a resolverlo.</span>
+    </p>
+    <p>
+      <span class="lang-en">For more information on how to use Git and GitHub, you can
+        refer to the <a href="https://docs.github.com/en/get-started/quickstart">GitHub
+          Quickstart Guide</a>.</span>
+      <span class="lang-pt">Para mais informações sobre como usar o Git e o GitHub, você
+        pode consultar o <a href="https://docs.github.com/en/get-started/quickstart">Guia
+          de Início Rápido do GitHub</a> (Somente em inglês).</span>
+      <span class="lang-es">Para más información sobre cómo usar Git y GitHub, puede
+        consultar la <a href="https://docs.github.com/en/get-started/quickstart">Guía de
+          Inicio Rápido de GitHub</a> (Solo en inglés).</span>
+    </p>
+    <p>
+      <span class="lang-en">Remember to always commit your changes and push them to
+        GitHub before switching computers. This will ensure that your work is saved and
+        can be accessed from any computer.</span>
+      <span class="lang-pt">Lembre-se de sempre fazer commit das suas alterações e
+        enviá-las para o GitHub com push antes de trocar de computador. Isso garantirá
+        que seu trabalho seja salvo e possa ser acessado de qualquer computador.</span>
+      <span class="lang-es">Recuerde siempre hacer commit de sus cambios y enviarlos a
+        GitHub con push antes de cambiar de computadora. Esto asegurará que su trabajo
+        esté guardado y pueda accederse desde cualquier computadora.</span>
+    </p>
 
-    <h2>Here are the step-by-step instructions</h2>
-    <p>Follow the instructions found in the <a href="new-computer.html">Setup New
-        Computer</a>. These instructions are specific to school work and you may
-      have to do other things for work setup.</p>
-    <p>Open VSCode on your computer and go to the Source Control icon</p>
+    <h2>
+      <span class="lang-en">Here are the step-by-step instructions</span>
+      <span class="lang-pt">Aqui estão as instruções passo a passo</span>
+      <span class="lang-es">Aquí están las instrucciones paso a paso</span>
+    </h2>
+    <p>
+      <span class="lang-en">Follow the instructions found in the <a
+          href="new-computer.html">Setup New Computer</a>. These instructions are specific
+        to school work and you may have to do other things for work setup.</span>
+      <span class="lang-pt">Siga as instruções encontradas em <a
+          href="new-computer.html">Configurar Novo Computador</a>. Essas instruções são
+        específicas para trabalhos escolares e você pode ter que fazer outras coisas para
+        configuração de trabalho.</span>
+      <span class="lang-es">Siga las instrucciones que se encuentran en <a
+          href="new-computer.html">Configurar Nueva Computadora</a>. Estas instrucciones son
+        específicas para tareas escolares y puede que deba hacer otras cosas para la
+        configuración del trabajo.</span>
+    </p>
+    <p>
+      <span class="lang-en">Open VSCode on your computer and go to the Source Control
+        icon</span>
+      <span class="lang-pt">Abra o VSCode no seu computador e vá para o ícone de Source
+        Control</span>
+      <span class="lang-es">Abra VSCode en su computadora y vaya al ícono de Source
+        Control</span>
+    </p>
     <img src="images/vscode-source-control.webp" alt="Source Control icon">
-    <p>Then click on the 3 dots to the right of Changes and select Branch - Create New
-      Branch</p>
+    <p>
+      <span class="lang-en">Then click on the 3 dots to the right of Changes and select
+        Branch - Create New Branch</span>
+      <span class="lang-pt">Em seguida, clique nos 3 pontos à direita de Changes e
+        selecione Branch - Create New Branch</span>
+      <span class="lang-es">Luego haga clic en los 3 puntos a la derecha de Changes y
+        seleccione Branch - Create New Branch</span>
+    </p>
     <img src="images/vscode-new-branch.webp" alt="Create New Branch">
-    <p>Enter a name for your branch, such as "dev" and press Enter. The branch name
-      can be anything you want to use.</p>
+    <p>
+      <span class="lang-en">Enter a name for your branch, such as "dev" and press Enter.
+        The branch name can be anything you want to use.</span>
+      <span class="lang-pt">Digite um nome para seu branch, como "dev" e pressione Enter.
+        O nome do branch pode ser qualquer coisa que você queira usar.</span>
+      <span class="lang-es">Ingrese un nombre para su branch, como "dev" y presione Enter.
+        El nombre del branch puede ser cualquier cosa que desee usar.</span>
+    </p>
     <img src="images/vscode-new-branch-name.webp" alt="Enter New Branch Name">
     <p>
-      Click the Publish Branch button that appears at the top of the Source Control
-      panel. This will create the branch on GitHub and set it as the current branch
-      in VSCode.
+      <span class="lang-en">Click the Publish Branch button that appears at the top of
+        the Source Control panel. This will create the branch on GitHub and set it as the
+        current branch in VSCode.</span>
+      <span class="lang-pt">Clique no botão Publish Branch que aparece no topo do painel
+        de Source Control. Isso criará o branch no GitHub e o definirá como o branch atual
+        no VSCode.</span>
+      <span class="lang-es">Haga clic en el botón Publish Branch que aparece en la parte
+        superior del panel de Source Control. Esto creará el branch en GitHub y lo
+        establecerá como el branch actual en VSCode.</span>
     </p>
     <img src="images/vscode-publish-branch.webp" alt="Publish Branch">
-    <p>Now you can make changes to your code without affecting the main branch. When
-      you are ready to save your changes, you can commit them to the new branch. You
-      can verify that you are on the new branch by checking the branch name in the
-      bottom left corner of the VSCode window.</p>
+    <p>
+      <span class="lang-en">Now you can make changes to your code without affecting the
+        main branch. When you are ready to save your changes, you can commit them to the
+        new branch. You can verify that you are on the new branch by checking the branch
+        name in the bottom left corner of the VSCode window.</span>
+      <span class="lang-pt">Agora você pode fazer alterações no seu código sem afetar o
+        branch main. Quando estiver pronto para salvar suas alterações, você pode fazer
+        commit delas no novo branch. Você pode verificar que está no novo branch
+        verificando o nome do branch no canto inferior esquerdo da janela do VSCode.</span>
+      <span class="lang-es">Ahora puede hacer cambios en su código sin afectar el branch
+        main. Cuando esté listo para guardar sus cambios, puede hacer commit de ellos en
+        el nuevo branch. Puede verificar que está en el nuevo branch revisando el nombre
+        del branch en la esquina inferior izquierda de la ventana de VSCode.</span>
+    </p>
     <img src="images/vscode-check-branch-name.webp" alt="Check Branch Name">
-    <p>Now you can make all the edits you want on this computer. To use the same
-      branch on another computer, you need to follow these steps:</p>
+    <p>
+      <span class="lang-en">Now you can make all the edits you want on this computer. To
+        use the same branch on another computer, you need to follow these steps:</span>
+      <span class="lang-pt">Agora você pode fazer todas as edições que quiser neste
+        computador. Para usar o mesmo branch em outro computador, você precisa seguir
+        estes passos:</span>
+      <span class="lang-es">Ahora puede hacer todas las ediciones que desee en esta
+        computadora. Para usar el mismo branch en otra computadora, debe seguir estos
+        pasos:</span>
+    </p>
     <ol>
-      <li>Commit and sync your changes from the original computer to GitHub.</li>
-      <li>Open VSCode on the new computer.</li>
-      <li>Clone your GitHub repository to the new computer if not already on your
-        computer.</li>
-      <li>Open the Source Control panel and click on the 3 dots to the right of
-        Changes.</li>
-      <li>Select Branch - Checkout to Branch and choose the branch you created.</li>
+      <li>
+        <span class="lang-en">Commit and sync your changes from the original computer to
+          GitHub.</span>
+        <span class="lang-pt">Faça commit e sync das suas alterações do computador
+          original para o GitHub.</span>
+        <span class="lang-es">Haga commit y sync de sus cambios de la computadora
+          original a GitHub.</span>
+      </li>
+      <li>
+        <span class="lang-en">Open VSCode on the new computer.</span>
+        <span class="lang-pt">Abra o VSCode no novo computador.</span>
+        <span class="lang-es">Abra VSCode en la nueva computadora.</span>
+      </li>
+      <li>
+        <span class="lang-en">Clone your GitHub repository to the new computer if not
+          already on your computer.</span>
+        <span class="lang-pt">Clone seu repositório do GitHub no novo computador, se
+          ainda não estiver no seu computador.</span>
+        <span class="lang-es">Clone su repositorio de GitHub en la nueva computadora si
+          aún no está en su computadora.</span>
+      </li>
+      <li>
+        <span class="lang-en">Open the Source Control panel and click on the 3 dots to
+          the right of Changes.</span>
+        <span class="lang-pt">Abra o painel de Source Control e clique nos 3 pontos à
+          direita de Changes.</span>
+        <span class="lang-es">Abra el panel de Source Control y haga clic en los 3 puntos
+          a la derecha de Changes.</span>
+      </li>
+      <li>
+        <span class="lang-en">Select Branch - Checkout to Branch and choose the branch
+          you created.</span>
+        <span class="lang-pt">Selecione Branch - Checkout to Branch e escolha o branch
+          que você criou.</span>
+        <span class="lang-es">Seleccione Branch - Checkout to Branch y elija el branch
+          que creó.</span>
+      </li>
     </ol>
     <img src="images/vscode-branch-checkout-to.webp" alt="Checkout Branch">
-    <p>Now you can continue working on the same branch on the new computer. Remember
-      to always pull the latest changes from GitHub before making any changes, and
-      push your changes when you are done.</p>
-    <p>Make sure to always do a pull request before you start to work on the new
-      computer.</p>
-    <img src="images/vscode-git-pull.webp" alt="Git Pull Request">
-    <p>If you ever get a Merge Conflict and you are not sure how to fix that, contact
-      your instructor or refer to this video on YouTube that shows you how to fix a
-      merge conflict. <a href="https://www.youtube.com/watch?v=mn1S3ldbS58">Mastering
-        Merge
-        Conflicts in VS Code</a></p>
-
-    <h2>Merging dev branch to main branch to publish on GitHub Pages</h2>
-    <p>As you push changes to GitHub, you may see the following message in Github on
-      the Code page of your repository. You can ignore this until you are ready to
-      merge it into the main branch.</p>
-    <img src="images/github-auto-pull-request-notice.webp" alt="Auto Pull Request Notice">
+    <p>
+      <span class="lang-en">Now you can continue working on the same branch on the new
+        computer. Remember to always pull the latest changes from GitHub before making any
+        changes, and push your changes when you are done.</span>
+      <span class="lang-pt">Agora você pode continuar trabalhando no mesmo branch no novo
+        computador. Lembre-se de sempre fazer pull das alterações mais recentes do GitHub
+        antes de fazer qualquer alteração, e enviar suas alterações com push quando
+        terminar.</span>
+      <span class="lang-es">Ahora puede continuar trabajando en el mismo branch en la
+        nueva computadora. Recuerde siempre hacer pull de los últimos cambios de GitHub
+        antes de hacer cualquier cambio, y enviar sus cambios con push cuando termine.</span>
     </p>
-    <p>Once you are ready to publish your code so that it is available on GitHub Pages
-      for grading, follow these steps.</p>
+    <p>
+      <span class="lang-en">Make sure to always do a pull request before you start to
+        work on the new computer.</span>
+      <span class="lang-pt">Certifique-se de sempre fazer um pull antes de começar a
+        trabalhar no novo computador.</span>
+      <span class="lang-es">Asegúrese de siempre hacer un pull antes de comenzar a
+        trabajar en la nueva computadora.</span>
+    </p>
+    <img src="images/vscode-git-pull.webp" alt="Git Pull Request">
+    <p>
+      <span class="lang-en">If you ever get a Merge Conflict and you are not sure how to
+        fix that, contact your instructor or refer to this video on YouTube that shows you
+        how to fix a merge conflict. <a
+          href="https://www.youtube.com/watch?v=mn1S3ldbS58">Mastering Merge Conflicts in
+          VS Code</a></span>
+      <span class="lang-pt">Se você encontrar um Merge Conflict e não souber como
+        corrigi-lo, entre em contato com seu instrutor ou consulte este vídeo no YouTube
+        que mostra como corrigir um merge conflict (Somente em inglês). <a
+          href="https://www.youtube.com/watch?v=mn1S3ldbS58">Mastering Merge Conflicts in
+          VS Code</a></span>
+      <span class="lang-es">Si alguna vez recibe un Merge Conflict y no sabe cómo
+        solucionarlo, comuníquese con su instructor o consulte este video en YouTube que
+        muestra cómo solucionar un merge conflict (Solo en inglés). <a
+          href="https://www.youtube.com/watch?v=mn1S3ldbS58">Mastering Merge Conflicts in
+          VS Code</a></span>
+    </p>
+
+    <h2>
+      <span class="lang-en">Merging dev branch to main branch to publish on GitHub
+        Pages</span>
+      <span class="lang-pt">Mesclando branch dev ao branch main para publicar no GitHub
+        Pages</span>
+      <span class="lang-es">Fusionando el branch dev al branch main para publicar en
+        GitHub Pages</span>
+    </h2>
+    <p>
+      <span class="lang-en">As you push changes to GitHub, you may see the following
+        message in Github on the Code page of your repository. You can ignore this until
+        you are ready to merge it into the main branch.</span>
+      <span class="lang-pt">Conforme você envia alterações para o GitHub com push, pode
+        ver a seguinte mensagem no GitHub na página Code do seu repositório. Você pode
+        ignorar isso até estar pronto para mesclá-lo ao branch main.</span>
+      <span class="lang-es">A medida que envía cambios a GitHub con push, es posible que
+        vea el siguiente mensaje en GitHub en la página Code de su repositorio. Puede
+        ignorar esto hasta que esté listo para fusionarlo en el branch main.</span>
+    </p>
+    <img src="images/github-auto-pull-request-notice.webp" alt="Auto Pull Request Notice">
+    <p>
+      <span class="lang-en">Once you are ready to publish your code so that it is
+        available on GitHub Pages for grading, follow these steps.</span>
+      <span class="lang-pt">Quando estiver pronto para publicar seu código para que fique
+        disponível no GitHub Pages para avaliação, siga estes passos.</span>
+      <span class="lang-es">Una vez que esté listo para publicar su código para que esté
+        disponible en GitHub Pages para evaluación, siga estos pasos.</span>
+    </p>
     <ol>
-      <li>Make sure you are on the dev branch in VSCode.</li>
-      <li>Commit all your changes to the dev branch.</li>
-      <li>Push the dev branch to GitHub.</li>
-      <li>Go to GitHub and create a pull request from the dev branch to the main
-        branch.</li>
-      <li>Review the changes and merge the pull request.</li>
-      <li>Switch back to the main branch in VSCode.</li>
-      <li>Pull the latest changes from the main branch.</li>
-      <li>Now your main branch is up to date with the dev branch.</li>
+      <li>
+        <span class="lang-en">Make sure you are on the dev branch in VSCode.</span>
+        <span class="lang-pt">Certifique-se de estar no branch dev no VSCode.</span>
+        <span class="lang-es">Asegúrese de estar en el branch dev en VSCode.</span>
+      </li>
+      <li>
+        <span class="lang-en">Commit all your changes to the dev branch.</span>
+        <span class="lang-pt">Faça commit de todas as suas alterações no branch
+          dev.</span>
+        <span class="lang-es">Haga commit de todos sus cambios en el branch dev.</span>
+      </li>
+      <li>
+        <span class="lang-en">Push the dev branch to GitHub.</span>
+        <span class="lang-pt">Envie o branch dev para o GitHub com push.</span>
+        <span class="lang-es">Envíe el branch dev a GitHub con push.</span>
+      </li>
+      <li>
+        <span class="lang-en">Go to GitHub and create a pull request from the dev branch
+          to the main branch.</span>
+        <span class="lang-pt">Vá ao GitHub e crie um pull request do branch dev para o
+          branch main.</span>
+        <span class="lang-es">Vaya a GitHub y cree un pull request del branch dev al
+          branch main.</span>
+      </li>
+      <li>
+        <span class="lang-en">Review the changes and merge the pull request.</span>
+        <span class="lang-pt">Revise as alterações e mescle o pull request.</span>
+        <span class="lang-es">Revise los cambios y fusione el pull request.</span>
+      </li>
+      <li>
+        <span class="lang-en">Switch back to the main branch in VSCode.</span>
+        <span class="lang-pt">Volte para o branch main no VSCode.</span>
+        <span class="lang-es">Cambie de regreso al branch main en VSCode.</span>
+      </li>
+      <li>
+        <span class="lang-en">Pull the latest changes from the main branch.</span>
+        <span class="lang-pt">Faça pull das alterações mais recentes do branch main.</span>
+        <span class="lang-es">Haga pull de los últimos cambios del branch main.</span>
+      </li>
+      <li>
+        <span class="lang-en">Now your main branch is up to date with the dev
+          branch.</span>
+        <span class="lang-pt">Agora seu branch main está atualizado com o branch
+          dev.</span>
+        <span class="lang-es">Ahora su branch main está actualizado con el branch
+          dev.</span>
+      </li>
     </ol>
     <img src="images/github-new-pull-request.webp" alt="New Pull Request">
-    <p>You will then select the main branch as the base branch and the dev branch as
-      the compare branch.</p>
+    <p>
+      <span class="lang-en">You will then select the main branch as the base branch and
+        the dev branch as the compare branch.</span>
+      <span class="lang-pt">Você então selecionará o branch main como o branch base e o
+        branch dev como o branch de comparação.</span>
+      <span class="lang-es">Luego seleccionará el branch main como el branch base y el
+        branch dev como el branch de comparación.</span>
+    </p>
     <img src="images/github-base-compare-branch.webp" alt="Compare Branches">
-    <p>The web page will then fill in and it will look something like this.</p>
+    <p>
+      <span class="lang-en">The web page will then fill in and it will look something
+        like this.</span>
+      <span class="lang-pt">A página web será então preenchida e ficará parecida com
+        isto.</span>
+      <span class="lang-es">La página web se llenará y se verá algo así.</span>
+    </p>
     <img src="images/github-compare-pull-request.webp" alt="Compare Pull Request">
-    <p>Click on the "Create pull request" button to create the pull request.</p>
-    <p>GitHub will then show you the changes that will be merged into the main
-      branch. You can review the changes and make sure everything looks good.</p>
-    <p>Once you are satisfied with the changes, you can add a title and description
-      for the pull request. This will help you and others understand what changes
-      were made and why. The screen will look something like this.</p>
+    <p>
+      <span class="lang-en">Click on the "Create pull request" button to create the pull
+        request.</span>
+      <span class="lang-pt">Clique no botão "Create pull request" para criar o pull
+        request.</span>
+      <span class="lang-es">Haga clic en el botón "Create pull request" para crear el
+        pull request.</span>
+    </p>
+    <p>
+      <span class="lang-en">GitHub will then show you the changes that will be merged
+        into the main branch. You can review the changes and make sure everything looks
+        good.</span>
+      <span class="lang-pt">O GitHub mostrará então as alterações que serão mescladas ao
+        branch main. Você pode revisar as alterações e garantir que tudo esteja
+        correto.</span>
+      <span class="lang-es">GitHub luego le mostrará los cambios que se fusionarán en el
+        branch main. Puede revisar los cambios y asegurarse de que todo se vea bien.</span>
+    </p>
+    <p>
+      <span class="lang-en">Once you are satisfied with the changes, you can add a title
+        and description for the pull request. This will help you and others understand
+        what changes were made and why. The screen will look something like this.</span>
+      <span class="lang-pt">Quando estiver satisfeito com as alterações, você pode
+        adicionar um título e descrição para o pull request. Isso ajudará você e outros a
+        entender quais alterações foram feitas e por quê. A tela ficará parecida com
+        isto.</span>
+      <span class="lang-es">Una vez que esté satisfecho con los cambios, puede agregar un
+        título y descripción para el pull request. Esto le ayudará a usted y a otros a
+        entender qué cambios se hicieron y por qué. La pantalla se verá algo así.</span>
+    </p>
     <img src="images/github-pull-request-title.webp" alt="Pull Request Title">
-    <p>After you have added a title and description, click on the "Create pull
-      request" button. This will create the pull request and notify the repository
-      owner that there are changes ready to be reviewed. The owner in this case is
-      you.</p>
-    <p>After you have created the pull request, you will see the page to merge the
-      pull request. This will only show you the Merge ull request button if there
-      are no conflicts with the code in the main branch. If there are conflicts you
-      will have to decide how to handle the conflict so that you can merge the other
-      changes into main.</p>
+    <p>
+      <span class="lang-en">After you have added a title and description, click on the
+        "Create pull request" button. This will create the pull request and notify the
+        repository owner that there are changes ready to be reviewed. The owner in this
+        case is you.</span>
+      <span class="lang-pt">Depois de adicionar um título e descrição, clique no botão
+        "Create pull request". Isso criará o pull request e notificará o proprietário do
+        repositório que há alterações prontas para serem revisadas. O proprietário neste
+        caso é você.</span>
+      <span class="lang-es">Después de agregar un título y descripción, haga clic en el
+        botón "Create pull request". Esto creará el pull request y notificará al
+        propietario del repositorio que hay cambios listos para ser revisados. El
+        propietario en este caso es usted.</span>
+    </p>
+    <p>
+      <span class="lang-en">After you have created the pull request, you will see the
+        page to merge the pull request. This will only show you the Merge pull request
+        button if there are no conflicts with the code in the main branch. If there are
+        conflicts you will have to decide how to handle the conflict so that you can merge
+        the other changes into main.</span>
+      <span class="lang-pt">Depois de criar o pull request, você verá a página para
+        mesclar o pull request. O botão Merge pull request só será exibido se não houver
+        conflitos com o código no branch main. Se houver conflitos, você terá que decidir
+        como lidar com o conflito para poder mesclar as outras alterações ao main.</span>
+      <span class="lang-es">Después de crear el pull request, verá la página para
+        fusionar el pull request. Este solo le mostrará el botón Merge pull request si no
+        hay conflictos con el código en el branch main. Si hay conflictos, deberá decidir
+        cómo manejar el conflicto para poder fusionar los otros cambios en main.</span>
+    </p>
     <img src="images/github-pull-request-details.webp" alt="Pull Request Details">
-    <p>You can add more details in the comment area below the button. That is not
-      necessary as you should be the only one making changes. This part is mainly
-      used when there are multiple developers working on a project.</p>
-    <p>Click on the "Merge pull request" button to merge the changes from the dev
-      branch into the main branch.</p>
-    <p>After you click the "Merge pull request" button, GitHub will show you a
-      confirmation page. You can review the changes one last time before merging.
-      Click the Confirm merge button to finalize the merge.</p>
+    <p>
+      <span class="lang-en">You can add more details in the comment area below the
+        button. That is not necessary as you should be the only one making changes. This
+        part is mainly used when there are multiple developers working on a
+        project.</span>
+      <span class="lang-pt">Você pode adicionar mais detalhes na área de comentários
+        abaixo do botão. Isso não é necessário, pois você deve ser o único a fazer
+        alterações. Esta parte é usada principalmente quando há múltiplos desenvolvedores
+        trabalhando em um projeto.</span>
+      <span class="lang-es">Puede agregar más detalles en el área de comentarios debajo
+        del botón. Eso no es necesario ya que usted debe ser el único que realiza cambios.
+        Esta parte se usa principalmente cuando hay múltiples desarrolladores trabajando
+        en un proyecto.</span>
+    </p>
+    <p>
+      <span class="lang-en">Click on the "Merge pull request" button to merge the changes
+        from the dev branch into the main branch.</span>
+      <span class="lang-pt">Clique no botão "Merge pull request" para mesclar as
+        alterações do branch dev ao branch main.</span>
+      <span class="lang-es">Haga clic en el botón "Merge pull request" para fusionar los
+        cambios del branch dev en el branch main.</span>
+    </p>
+    <p>
+      <span class="lang-en">After you click the "Merge pull request" button, GitHub will
+        show you a confirmation page. You can review the changes one last time before
+        merging. Click the Confirm merge button to finalize the merge.</span>
+      <span class="lang-pt">Depois de clicar no botão "Merge pull request", o GitHub
+        mostrará uma página de confirmação. Você pode revisar as alterações uma última vez
+        antes de mesclar. Clique no botão Confirm merge para finalizar a mesclagem.</span>
+      <span class="lang-es">Después de hacer clic en el botón "Merge pull request",
+        GitHub le mostrará una página de confirmación. Puede revisar los cambios una
+        última vez antes de fusionar. Haga clic en el botón Confirm merge para finalizar
+        la fusión.</span>
+    </p>
     <img src="images/github-confirm-branch-merge.webp"
       alt="Merge Pull Request Confirmation">
-    <p>Once you confirm the merge, GitHub will merge the changes from the dev branch
-      into the main branch. You will see a message indicating that the pull request
-      was successfully merged.</p>
+    <p>
+      <span class="lang-en">Once you confirm the merge, GitHub will merge the changes
+        from the dev branch into the main branch. You will see a message indicating that
+        the pull request was successfully merged.</span>
+      <span class="lang-pt">Após confirmar a mesclagem, o GitHub mesclará as alterações
+        do branch dev ao branch main. Você verá uma mensagem indicando que o pull request
+        foi mesclado com sucesso.</span>
+      <span class="lang-es">Una vez que confirme la fusión, GitHub fusionará los cambios
+        del branch dev en el branch main. Verá un mensaje indicando que el pull request
+        se fusionó correctamente.</span>
+    </p>
     <img src="images/github-branch-merge-success.webp" alt="Pull Request Merged">
-    <p>Once the pull request is merged, Give the system a couple of minutes and your
-      changes will be live on GitHub Pages.</p>
+    <p>
+      <span class="lang-en">Once the pull request is merged, Give the system a couple of
+        minutes and your changes will be live on GitHub Pages.</span>
+      <span class="lang-pt">Após mesclar o pull request, aguarde alguns minutos e suas
+        alterações estarão publicadas no GitHub Pages.</span>
+      <span class="lang-es">Una vez que se fusione el pull request, espere unos minutos
+        y sus cambios estarán publicados en GitHub Pages.</span>
+    </p>
   </main>
   <footer>
-    <p>This file is created and updated for the use of students at BYU Pathway
-      Worldwide taking WDD 130</p>
-    <p>Maintained by Ralph Borcherds</p>
+    <p>
+      <span class="lang-en">This file is created and updated for the use of students at
+        BYU Pathway Worldwide taking WDD 130</span>
+      <span class="lang-pt">Este arquivo é criado e atualizado para uso dos alunos da BYU
+        Pathway Worldwide que cursam WDD 130</span>
+      <span class="lang-es">Este archivo es creado y actualizado para uso de los
+        estudiantes de BYU Pathway Worldwide que cursan WDD 130</span>
+    </p>
+    <p>
+      <span class="lang-en">Maintained by Ralph Borcherds</span>
+      <span class="lang-pt">Mantido por Ralph Borcherds</span>
+      <span class="lang-es">Mantenido por Ralph Borcherds</span>
+    </p>
   </footer>
 
+  <script>
+    function setLang(lang) {
+      document.documentElement.lang = lang;
+      localStorage.setItem('preferredLang', lang);
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-pt').classList.toggle('active', lang === 'pt');
+      document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+    }
+
+    function detectBrowserLang() {
+      const browserLang = navigator.language || navigator.userLanguage || 'en';
+      const lang = browserLang.toLowerCase();
+      if (lang.startsWith('pt')) return 'pt';
+      if (lang.startsWith('es')) return 'es';
+      return 'en';
+    }
+
+    const savedLang = localStorage.getItem('preferredLang') || detectBrowserLang();
+    setLang(savedLang);
+  </script>
 </body>
 </html>

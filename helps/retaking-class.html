@@ -24,11 +24,13 @@
       <a href="index.html">
         <span class="lang-en">Resources Home</span>
         <span class="lang-pt">Início dos Recursos</span>
+        <span class="lang-es">Inicio de Recursos</span>
       </a>
     </nav>
     <div class="lang-selector">
       <button onclick="setLang('en')" class="lang-btn" id="btn-en">English</button>
       <button onclick="setLang('pt')" class="lang-btn" id="btn-pt">Português</button>
+      <button onclick="setLang('es')" class="lang-btn" id="btn-es">Español</button>
     </div>
 
   </header>
@@ -37,6 +39,7 @@
     <h1>
       <span class="lang-en">Retaking WDD130 at BYU-Idaho</span>
       <span class="lang-pt">Repetindo WDD130 na BYU-Idaho</span>
+      <span class="lang-es">Retomando WDD130 en BYU-Idaho</span>
     </h1>
     <p>
       <span class="lang-en">If you are retaking WDD130, please follow these instructions
@@ -45,6 +48,8 @@
       <span class="lang-pt">Se você está repetindo WDD130, siga estas instruções para
         configurar seu
         computador:</span>
+      <span class="lang-es">Si está retomando WDD130, siga estas instrucciones para
+        configurar su computadora:</span>
     </p>
     <ol>
       <li>
@@ -57,6 +62,11 @@
             "wdd130" e adicione algo descritivo como "antigo" ou "anterior", como
             "wdd130-old". Esta imagem mostra a caixa de entrada e ela está na aba de
             configurações do repositório / menu General no topo.</span>
+          <span class="lang-es">Vaya a GitHub y cambie el nombre de su repositorio para
+            incluir "wdd130" y agregue algo descriptivo como "old" (antiguo) o "previous"
+            (anterior), como "wdd130-old". Esta imagen muestra el cuadro de entrada y se
+            encuentra en la pestaña de configuración del repositorio / menú General en la
+            parte superior.</span>
         </p>
         <img src="images/github-repository-rename.webp" alt="GitHub rename repository">
         <p>
@@ -64,6 +74,8 @@
             button.</span>
           <span class="lang-pt">Depois de digitar o novo nome, clique no botão
             "Rename".</span>
+          <span class="lang-es">Una vez que haya escrito el nuevo nombre, haga clic en el
+            botón "Rename".</span>
         </p>
       </li>
       <li>
@@ -74,6 +86,9 @@
           <span class="lang-pt">Renomeie a pasta no seu computador local de wdd130 para
             corresponder ao que você renomeou o repositório. Como fazer isso dependerá do
             seu sistema operacional.</span>
+          <span class="lang-es">Cambie el nombre de la carpeta en su computadora local de
+            wdd130 para que coincida con el nuevo nombre del repositorio. La forma de
+            hacerlo dependerá de su sistema operativo.</span>
         </p>
       </li>
       <li>
@@ -82,31 +97,46 @@
             point:</span>
           <span class="lang-pt">Há uma de três coisas que você pode fazer neste
             ponto:</span>
+          <span class="lang-es">Hay una de tres cosas que puede hacer en este
+            punto:</span>
         </p>
         <ul>
-          <li> <span class="lang-en">Delete the local repository folder and re-clone the
-              renamed repository from GitHub.</span> <span class="lang-pt">Excluir a pasta
-              do repositório local e clonar novamente o repositório renomeado do
-              GitHub.</span>
+          <li>
+            <span class="lang-en">Delete the local repository folder and re-clone the
+              renamed repository from GitHub.</span>
+            <span class="lang-pt">Excluir a pasta do repositório local e clonar novamente
+              o repositório renomeado do GitHub.</span>
+            <span class="lang-es">Eliminar la carpeta del repositorio local y volver a
+              clonar el repositorio renombrado desde GitHub.</span>
           </li>
-          <li> <span class="lang-en">Edit the .git/config file in the renamed folder to
-              point to the new repository name.</span> <span class="lang-pt">Editar o
-              arquivo .git/config na pasta renomeada para apontar para o novo nome do
-              repositório.</span>
+          <li>
+            <span class="lang-en">Edit the .git/config file in the renamed folder to
+              point to the new repository name.</span>
+            <span class="lang-pt">Editar o arquivo .git/config na pasta renomeada para
+              apontar para o novo nome do repositório.</span>
+            <span class="lang-es">Editar el archivo .git/config en la carpeta renombrada
+              para que apunte al nuevo nombre del repositorio.</span>
           </li>
-          <li> <span class="lang-en">Use the git command line to set the new URL for the
-              renamed repository.</span> <span class="lang-pt">Usar a linha de comando do
-              git para definir o novo URL do repositório renomeado.</span>
+          <li>
+            <span class="lang-en">Use the git command line to set the new URL for the
+              renamed repository.</span>
+            <span class="lang-pt">Usar a linha de comando do git para definir o novo URL
+              do repositório renomeado.</span>
+            <span class="lang-es">Usar la línea de comando de git para establecer el nuevo
+              URL del repositorio renombrado.</span>
           </li>
         </ul>
         <p>
           <span class="lang-en">Here are the instructions for the last two options:</span>
           <span class="lang-pt">Aqui estão as instruções para as duas últimas
             opções:</span>
+          <span class="lang-es">Aquí están las instrucciones para las dos últimas
+            opciones:</span>
         </p>
         <h2>
           <span class="lang-en">Editing the .git/config file</span>
           <span class="lang-pt">Editando o arquivo .git/config</span>
+          <span class="lang-es">Editando el archivo .git/config</span>
         </h2>
         <p>
           <span class="lang-en">Open the .git folder inside the renamed local repository
@@ -115,12 +145,17 @@
           <span class="lang-pt">Abra a pasta .git dentro da pasta do repositório local
             renomeado. Dentro dessa pasta há um arquivo chamado config. Abra esse arquivo
             em um editor de texto como VSCode ou Notepad.</span>
+          <span class="lang-es">Abra la carpeta .git dentro de la carpeta del repositorio
+            local renombrado. Dentro de esa carpeta hay un archivo llamado config. Abra ese
+            archivo en un editor de texto como VSCode o Notepad.</span>
         </p>
         <p>
           <span class="lang-en">Find the line that starts with "url = " and change the URL
             to match the new repository name on GitHub.</span>
           <span class="lang-pt">Encontre a linha que começa com "url = " e altere o URL
             para corresponder ao novo nome do repositório no GitHub.</span>
+          <span class="lang-es">Encuentre la línea que comienza con "url = " y cambie el
+            URL para que coincida con el nuevo nombre del repositorio en GitHub.</span>
         </p>
         <img src="images/vscode--git-config.webp"
           alt="VSCode showing the .git/config file line to edit">
@@ -131,17 +166,24 @@
           <span class="lang-pt">Você pode obter o novo URL abrindo o repositório no GitHub
             e copiando o URL da barra de endereços e adicionando .git no final, como na
             imagem acima.</span>
+          <span class="lang-es">Puede obtener el nuevo URL abriendo el repositorio en
+            GitHub y copiando el URL de la barra de direcciones y agregando .git al final,
+            como en la imagen de arriba.</span>
         </p>
         <p>
           <span class="lang-en">This process will allow you to keep the old code in sync
             with GitHub.</span>
           <span class="lang-pt">Este processo permitirá que você mantenha o código antigo
             sincronizado com o GitHub.</span>
+          <span class="lang-es">Este proceso le permitirá mantener el código antiguo
+            sincronizado con GitHub.</span>
         </p>
 
         <h2>
           <span class="lang-en">Using the git command line to set the new URL</span>
           <span class="lang-pt">Usando a linha de comando do git para definir o novo
+            URL</span>
+          <span class="lang-es">Usando la línea de comando de git para establecer el nuevo
             URL</span>
         </h2>
         <p>
@@ -149,12 +191,16 @@
             on a MAC you use ⌃` or you can use the menu option VIEW - Terminal.</span>
           <span class="lang-pt">Abra um terminal no VSCode. No Windows, use Ctrl+` e no
             MAC, use ⌃` ou você pode usar a opção de menu VIEW - Terminal.</span>
+          <span class="lang-es">Abra un terminal en VSCode. En Windows use Ctrl+` y en
+            MAC use ⌃` o puede usar la opción de menú VIEW - Terminal.</span>
         </p>
         <p>
           <span class="lang-en">Once the terminal is open, type the following command,
             replacing the NEW-URL with the new repository URL:</span>
           <span class="lang-pt">Depois que o terminal estiver aberto, digite o seguinte
             comando, substituindo NEW-URL pelo novo URL do repositório:</span>
+          <span class="lang-es">Una vez que el terminal esté abierto, escriba el siguiente
+            comando, reemplazando NEW-URL con el nuevo URL del repositorio:</span>
         </p>
         <pre><code>git remote set-url origin NEW-URL</code></pre>
       </li>
@@ -164,12 +210,15 @@
         at</span>
       <span class="lang-pt">Agora continue com o restante das instruções de configuração
         encontradas em</span>
+      <span class="lang-es">Ahora continúe con el resto de las instrucciones de
+        configuración que se encuentran en</span>
       <a
         href="https://byui-cse.github.io/wdd130-ww-course/week01/setup-github.html#create-repo">
         https://byui-cse.github.io/wdd130-ww-course/week01/setup-github.html#create-repo
       </a>
       <span class="lang-en">Step 2. This link will take you directly to Step 2</span>
       <span class="lang-pt">Passo 2. Este link levará você diretamente ao Passo 2</span>
+      <span class="lang-es">Paso 2. Este enlace lo llevará directamente al Paso 2</span>
     </p>
   </main>
   <footer>
@@ -180,10 +229,14 @@
       <span class="lang-pt">Este arquivo é criado e atualizado para uso dos alunos da BYU
         Pathway
         Worldwide que cursam WDD 130</span>
+      <span class="lang-es">Este archivo es creado y actualizado para uso de los
+        estudiantes de BYU Pathway
+        Worldwide que cursan WDD 130</span>
     </p>
     <p>
       <span class="lang-en">Maintained by Ralph Borcherds</span>
       <span class="lang-pt">Mantido por Ralph Borcherds</span>
+      <span class="lang-es">Mantenido por Ralph Borcherds</span>
     </p>
   </footer>
 
@@ -192,14 +245,15 @@
       document.documentElement.lang = lang;
       localStorage.setItem('preferredLang', lang);
       document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-      document.getElementById('btn-pt').classList.toggle('active', lang === 'pt-BR');
+      document.getElementById('btn-pt').classList.toggle('active', lang === 'pt');
+      document.getElementById('btn-es').classList.toggle('active', lang === 'es');
     }
 
     function detectBrowserLang() {
       const browserLang = navigator.language || navigator.userLanguage || 'en';
-      if (browserLang.toLowerCase().startsWith('pt')) {
-        return 'pt-BR';
-      }
+      const lang = browserLang.toLowerCase();
+      if (lang.startsWith('pt')) return 'pt';
+      if (lang.startsWith('es')) return 'es';
       return 'en';
     }
 

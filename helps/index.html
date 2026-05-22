@@ -18,29 +18,120 @@
 
 <body>
 
+  <header class="header-layout">
+
+    <nav class="nav-header">
+      <a href="index.html">
+        <span class="lang-en">Resources Home</span>
+        <span class="lang-pt">Início dos Recursos</span>
+        <span class="lang-es">Inicio de Recursos</span>
+      </a>
+    </nav>
+    <div class="lang-selector">
+      <button onclick="setLang('en')" class="lang-btn" id="btn-en">English</button>
+      <button onclick="setLang('pt')" class="lang-btn" id="btn-pt">Português</button>
+      <button onclick="setLang('es')" class="lang-btn" id="btn-es">Español</button>
+    </div>
+
+  </header>
+
   <main>
-    <h1>Resources to help Instructors</h1>
-    <p>This page lists the resource documentation that has been created to help
-      instructors with students so that the instructor can send the student a link to one
-      of these pages so the student can learn to solve issues on their own.</p>
+    <h1>
+      <span class="lang-en">Resources to help Instructors</span>
+      <span class="lang-pt">Recursos para ajudar os Instrutores</span>
+      <span class="lang-es">Recursos para ayudar a los Instructores</span>
+    </h1>
+    <p>
+      <span class="lang-en">This page lists the resource documentation that has been created to help
+        instructors with students so that the instructor can send the student a link to one
+        of these pages so the student can learn to solve issues on their own.</span>
+      <span class="lang-pt">Esta página lista a documentação de recursos criada para ajudar os instrutores
+        com os alunos, para que o instrutor possa enviar ao aluno um link para uma dessas
+        páginas e o aluno aprenda a resolver problemas por conta própria.</span>
+      <span class="lang-es">Esta página lista la documentación de recursos creada para ayudar a los
+        instructores con los estudiantes, para que el instructor pueda enviar al estudiante
+        un enlace a una de estas páginas y el estudiante aprenda a resolver problemas por
+        su cuenta.</span>
+    </p>
     <nav>
-      <a href="git-errors.html">Git - GitHub- VSCode errors</a>
-      <a href="git-github.html">Git &amp; GitHub commit / Sync process</a>
-      <a href="github-adv.html">GitHub Features &amp; Configuration</a>
-      <a href="new-computer.html">How to get repositories onto a new Computer</a>
-      <a href="how-to-use-multiple-computers.html">How to use multiple computers with
-        GitHub</a>
-      <a href="project-manager.html">Project Manager VSCode Extension</a>
-      <a href="css-best-practices.html">CSS Best Practices for New web developers</a>
-      <a href="retaking-class.html">Retaking WDD130</a>
+      <a href="git-errors.html">
+        <span class="lang-en">Git - GitHub - VSCode errors</span>
+        <span class="lang-pt">Git - GitHub - VSCode erros</span>
+        <span class="lang-es">Git - GitHub - VSCode errores</span>
+      </a>
+      <a href="git-github.html">
+        <span class="lang-en">Git &amp; GitHub commit / Sync process</span>
+        <span class="lang-pt">Processo de commit / Sync do Git e GitHub</span>
+        <span class="lang-es">Proceso de commit / Sync de Git y GitHub</span>
+      </a>
+      <a href="github-adv.html">
+        <span class="lang-en">GitHub Features &amp; Configuration</span>
+        <span class="lang-pt">Recursos e Configuração do GitHub</span>
+        <span class="lang-es">Funciones y Configuración de GitHub</span>
+      </a>
+      <a href="new-computer.html">
+        <span class="lang-en">How to get repositories onto a new Computer</span>
+        <span class="lang-pt">Como colocar repositories em um novo computador</span>
+        <span class="lang-es">Cómo colocar repositories en un nuevo computador</span>
+      </a>
+      <a href="how-to-use-multiple-computers.html">
+        <span class="lang-en">How to use multiple computers with GitHub</span>
+        <span class="lang-pt">Como usar múltiplos computadores com o GitHub</span>
+        <span class="lang-es">Cómo usar múltiples computadores con GitHub</span>
+      </a>
+      <a href="project-manager.html">
+        <span class="lang-en">Project Manager VSCode Extension</span>
+        <span class="lang-pt">Extensão Project Manager para VSCode</span>
+        <span class="lang-es">Extensión Project Manager para VSCode</span>
+      </a>
+      <a href="css-best-practices.html">
+        <span class="lang-en">CSS Best Practices for New web developers</span>
+        <span class="lang-pt">Melhores Práticas de CSS para Novos Desenvolvedores Web</span>
+        <span class="lang-es">Mejores Prácticas de CSS para Nuevos Desarrolladores Web</span>
+      </a>
+      <a href="retaking-class.html">
+        <span class="lang-en">Retaking WDD130</span>
+        <span class="lang-pt">Repetindo WDD130</span>
+        <span class="lang-es">Repitiendo WDD130</span>
+      </a>
     </nav>
   </main>
   <footer>
-    <p>This file is created and updated for the use of students and instructor at
-      BYU Pathway Worldwide taking WDD 130</p>
-    <p>Maintained by Ralph Borcherds</p>
-
+    <p>
+      <span class="lang-en">This file is created and updated for the use of students and instructor at
+        BYU Pathway Worldwide taking WDD 130</span>
+      <span class="lang-pt">Este arquivo é criado e atualizado para uso dos alunos e instrutores da
+        BYU Pathway Worldwide que cursam WDD 130</span>
+      <span class="lang-es">Este archivo es creado y actualizado para uso de los estudiantes e
+        instructores de BYU Pathway Worldwide que cursan WDD 130</span>
+    </p>
+    <p>
+      <span class="lang-en">Maintained by Ralph Borcherds</span>
+      <span class="lang-pt">Mantido por Ralph Borcherds</span>
+      <span class="lang-es">Mantenido por Ralph Borcherds</span>
+    </p>
   </footer>
+
+  <script>
+    function setLang(lang) {
+      document.documentElement.lang = lang;
+      localStorage.setItem('preferredLang', lang);
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-pt').classList.toggle('active', lang === 'pt');
+      document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+    }
+
+    function detectBrowserLang() {
+      const browserLang = navigator.language || navigator.userLanguage || 'en';
+      const lang = browserLang.toLowerCase();
+      if (lang.startsWith('pt')) return 'pt';
+      if (lang.startsWith('es')) return 'es';
+      return 'en';
+    }
+
+    const savedLang = localStorage.getItem('preferredLang') || detectBrowserLang();
+    setLang(savedLang);
+  </script>
 </body>
 
 </html>

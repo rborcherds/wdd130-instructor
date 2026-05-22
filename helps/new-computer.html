@@ -2,91 +2,273 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Setup New Computer for GitHub</title>
-    <meta name="description"
-        content="This page describes how to set up a new computer for a student to keep working with GitHub without having to recreate the code or the repository.">
-    <meta name="author" content="Ralph Borcherds">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Slab:wght@100..900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="styles/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Setup New Computer for GitHub</title>
+  <meta name="description"
+    content="This page describes how to set up a new computer for a student to keep working with GitHub without having to recreate the code or the repository.">
+  <meta name="author" content="Ralph Borcherds">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Slab:wght@100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
 
-    <header>
-        <nav class="nav-header">
-            <a href="index.html">Resources Home</a>
-        </nav>
-    </header>
+  <header class="header-layout">
 
-    <main>
-        <h1>Setup New Computer for coding with GitHub</h1>
-        <p>This page describes how to set up a new computer for a student to keep working
-            with GitHub without having to recreate the code or the repository.</p>
-        <h2>Setup VSCode</h2>
-        <p>Install VSCode and the extensions that are require for class. Do not install
-            extra extension as they will not be used and will slow down the startup time.
-        </p>
-        <h2>Setup Git</h2>
-        <p>Make sure to run the 3 commands for windows or 2 for Mac and Linux</p>
-        <ul>
-            <li>Type in this configuration command to set the global git username:
-                <pre> git config --global user.name "your GitHub username" </pre> and hit
-                Enter.
-                Nothing will happen if you did it right. If you get an error, you need to
-                fix it.
-            </li>
-            <li>Enter this configuration command to set the email:
-                <pre> git config --global user.email "your email@example.com"</pre> and
-                hit Enter.
-                Nothing will happen if you did it right. If you get an error, you need to
-                fix it.
-            </li>
-            <li>This next command is for Windows only. It does not hurt to also type this
-                command on the MAC and Linux system. Type in this configuration command in
-                order to not ignore case changes in files and folder names:
-                <pre>git config --global core.ignorecase false</pre> and hit Enter.
-                Nothing will happen if you did it right. If you get an error, you need to
-                fix it.
-            </li>
-        </ul>
-        <h2>Go to Repository on GitHub</h2>
-        <p>Log into your GitHub account. Open the repository. Click on the icons in the
-            following image in the order shown with numbers.</p>
-        <figure> <img src="images/github-clone-urlpng"
-                alt="How to get the clone URL for a GitHub repository">
-            <figcaption>The second icon will copy the URL to the left of it to the
-                clipboard on your computer.</figcaption>
-        </figure>
-        <h2>Open VSCode</h2>
-        <p>Open VSCode and then open the parent folder of where you want to put your code.
-            In this example I will use Desktop</p>
-        <p>Once you have opened the folder in VSCode using the FILE - OPEN FOLDER menu,
-            then open a terminal window using CTRL+SHIFT+` or use the menus at the top
-            TERMINAL - NEW TERMINAL
-        </p>
-        <p>Type the following command into the terminal</p>
-        <pre>git clone &gt;paste the github URL you copied with the second click&lt;</pre>
-        <p>This will create a clone of the wdd130 folder from GitHub onto your computer on
-            the Desktop.</p>
-        <h2>Finish Setup</h2>
-        <p>Now you need to make any edit and save it. Then go to the Source Control and
-            commit and sync with GutHub. This will force the Git and GitHub authorization
-            logins to take place.
-        </p>
-        <h3>If you have any issues with this make sure to contact your instructor for
-            additional help.</h3>
-    </main>
-    <footer>
-        <p>This file is created and updated for the use of students at BYU Pathway
-            Worldwide taking WDD 130</p>
-        <p>Maintained by Ralph Borcherds</p>
-    </footer>
+    <nav class="nav-header">
+      <a href="index.html">
+        <span class="lang-en">Resources Home</span>
+        <span class="lang-pt">Início dos Recursos</span>
+        <span class="lang-es">Inicio de Recursos</span>
+      </a>
+    </nav>
+    <div class="lang-selector">
+      <button onclick="setLang('en')" class="lang-btn" id="btn-en">English</button>
+      <button onclick="setLang('pt')" class="lang-btn" id="btn-pt">Português</button>
+      <button onclick="setLang('es')" class="lang-btn" id="btn-es">Español</button>
+    </div>
 
+  </header>
+
+  <main>
+    <h1>
+      <span class="lang-en">Setup New Computer for coding with GitHub</span>
+      <span class="lang-pt">Configurar Novo Computador para programação com GitHub</span>
+      <span class="lang-es">Configurar Nuevo Computador para codificación con GitHub</span>
+    </h1>
+    <p>
+      <span class="lang-en">This page describes how to set up a new computer for a student
+        to keep working with GitHub without having to recreate the code or the
+        repository.</span>
+      <span class="lang-pt">Esta página descreve como configurar um novo computador para
+        um estudante continuar trabalhando com o GitHub sem precisar recriar o código ou
+        o repositório.</span>
+      <span class="lang-es">Esta página describe cómo configurar un nuevo computador para
+        que un estudiante continúe trabajando con GitHub sin necesidad de recrear el código
+        o el repositorio.</span>
+    </p>
+    <h2>
+      <span class="lang-en">Setup VSCode</span>
+      <span class="lang-pt">Configurar VSCode</span>
+      <span class="lang-es">Configurar VSCode</span>
+    </h2>
+    <p>
+      <span class="lang-en">Install VSCode and the extensions that are require for class.
+        Do not install extra extension as they will not be used and will slow down the
+        startup time.</span>
+      <span class="lang-pt">Instale o VSCode e as extensões necessárias para a aula. Não
+        instale extensões extras, pois elas não serão usadas e irão desacelerar o tempo
+        de inicialização.</span>
+      <span class="lang-es">Instale VSCode y las extensiones necesarias para la clase. No
+        instale extensiones adicionales, ya que no se utilizarán y ralentizarán el tiempo
+        de inicio.</span>
+    </p>
+    <h2>
+      <span class="lang-en">Setup Git</span>
+      <span class="lang-pt">Configurar Git</span>
+      <span class="lang-es">Configurar Git</span>
+    </h2>
+    <p>
+      <span class="lang-en">Make sure to run the 3 commands for windows or 2 for Mac and
+        Linux</span>
+      <span class="lang-pt">Certifique-se de executar os 3 comandos para Windows ou 2
+        para Mac e Linux</span>
+      <span class="lang-es">Asegúrese de ejecutar los 3 comandos para Windows o 2 para
+        Mac y Linux</span>
+    </p>
+    <ul>
+      <li>
+        <p>
+          <span class="lang-en">Type in this configuration command to set the global git
+            username:</span>
+          <span class="lang-pt">Digite este comando de configuração para definir o nome
+            de usuário global do git:</span>
+          <span class="lang-es">Escriba este comando de configuración para establecer el
+            nombre de usuario global de git:</span>
+        </p>
+        <pre> git config --global user.name "your GitHub username" </pre>
+        <p>
+          <span class="lang-en">and hit Enter. Nothing will happen if you did it right.
+            If you get an error, you need to fix it.</span>
+          <span class="lang-pt">e pressione Enter. Nada acontecerá se você fez certo. Se
+            você obtiver um erro, você precisa corrigi-lo.</span>
+          <span class="lang-es">y presione Enter. Nada ocurrirá si lo hizo correctamente.
+            Si obtiene un error, debe corregirlo.</span>
+        </p>
+      </li>
+      <li>
+        <p>
+          <span class="lang-en">Enter this configuration command to set the email:</span>
+          <span class="lang-pt">Digite este comando de configuração para definir o
+            e-mail:</span>
+          <span class="lang-es">Escriba este comando de configuración para establecer el
+            correo electrónico:</span>
+        </p>
+        <pre> git config --global user.email "your email@example.com"</pre>
+        <p>
+          <span class="lang-en">and hit Enter. Nothing will happen if you did it right.
+            If you get an error, you need to fix it.</span>
+          <span class="lang-pt">e pressione Enter. Nada acontecerá se você fez certo. Se
+            você obtiver um erro, você precisa corrigi-lo.</span>
+          <span class="lang-es">y presione Enter. Nada ocurrirá si lo hizo correctamente.
+            Si obtiene un error, debe corregirlo.</span>
+        </p>
+      </li>
+      <li>
+        <p>
+          <span class="lang-en">This next command is for Windows only. It does not hurt
+            to also type this command on the MAC and Linux system. Type in this
+            configuration command in order to not ignore case changes in files and folder
+            names:</span>
+          <span class="lang-pt">Este próximo comando é apenas para Windows. Não faz mal
+            também digitar este comando no sistema MAC e Linux. Digite este comando de
+            configuração para não ignorar mudanças de maiúsculas/minúsculas em nomes de
+            arquivos e pastas:</span>
+          <span class="lang-es">Este siguiente comando es solo para Windows. No hace daño
+            escribir este comando también en el sistema MAC y Linux. Escriba este comando
+            de configuración para no ignorar los cambios de mayúsculas/minúsculas en los
+            nombres de archivos y carpetas:</span>
+        </p>
+        <pre>git config --global core.ignorecase false</pre>
+        <p>
+          <span class="lang-en">and hit Enter. Nothing will happen if you did it right.
+            If you get an error, you need to fix it.</span>
+          <span class="lang-pt">e pressione Enter. Nada acontecerá se você fez certo. Se
+            você obtiver um erro, você precisa corrigi-lo.</span>
+          <span class="lang-es">y presione Enter. Nada ocurrirá si lo hizo correctamente.
+            Si obtiene un error, debe corregirlo.</span>
+        </p>
+      </li>
+    </ul>
+    <h2>
+      <span class="lang-en">Go to Repository on GitHub</span>
+      <span class="lang-pt">Acesse o Repositório no GitHub</span>
+      <span class="lang-es">Acceda al Repositorio en GitHub</span>
+    </h2>
+    <p>
+      <span class="lang-en">Log into your GitHub account. Open the repository. Click on
+        the icons in the following image in the order shown with numbers.</span>
+      <span class="lang-pt">Faça login na sua conta do GitHub. Abra o repositório. Clique
+        nos ícones na imagem a seguir na ordem mostrada com números.</span>
+      <span class="lang-es">Inicie sesión en su cuenta de GitHub. Abra el repositorio.
+        Haga clic en los íconos en la imagen siguiente en el orden mostrado con los
+        números.</span>
+    </p>
+    <figure>
+      <img src="images/github-clone-urlpng"
+        alt="How to get the clone URL for a GitHub repository">
+      <figcaption>
+        <span class="lang-en">The second icon will copy the URL to the left of it to the
+          clipboard on your computer.</span>
+        <span class="lang-pt">O segundo ícone copiará o URL à sua esquerda para a área de
+          transferência do seu computador.</span>
+        <span class="lang-es">El segundo ícono copiará el URL a su izquierda al
+          portapapeles de su computador.</span>
+      </figcaption>
+    </figure>
+    <h2>
+      <span class="lang-en">Open VSCode</span>
+      <span class="lang-pt">Abrir VSCode</span>
+      <span class="lang-es">Abrir VSCode</span>
+    </h2>
+    <p>
+      <span class="lang-en">Open VSCode and then open the parent folder of where you want
+        to put your code. In this example I will use Desktop</span>
+      <span class="lang-pt">Abra o VSCode e depois abra a pasta pai de onde você quer
+        colocar seu código. Neste exemplo, usarei o Desktop</span>
+      <span class="lang-es">Abra VSCode y luego abra la carpeta principal donde desea
+        colocar su código. En este ejemplo usaré el Desktop</span>
+    </p>
+    <p>
+      <span class="lang-en">Once you have opened the folder in VSCode using the FILE -
+        OPEN FOLDER menu, then open a terminal window using CTRL+SHIFT+` or use the menus
+        at the top TERMINAL - NEW TERMINAL</span>
+      <span class="lang-pt">Depois de abrir a pasta no VSCode usando o menu FILE - OPEN
+        FOLDER, abra uma janela de terminal usando CTRL+SHIFT+` ou use os menus no topo
+        TERMINAL - NEW TERMINAL</span>
+      <span class="lang-es">Una vez que haya abierto la carpeta en VSCode usando el menú
+        FILE - OPEN FOLDER, abra una ventana de terminal usando CTRL+SHIFT+` o use los
+        menús en la parte superior TERMINAL - NEW TERMINAL</span>
+    </p>
+    <p>
+      <span class="lang-en">Type the following command into the terminal</span>
+      <span class="lang-pt">Digite o seguinte comando no terminal</span>
+      <span class="lang-es">Escriba el siguiente comando en el terminal</span>
+    </p>
+    <pre>git clone &gt;paste the github URL you copied with the second click&lt;</pre>
+    <p>
+      <span class="lang-en">This will create a clone of the wdd130 folder from GitHub
+        onto your computer on the Desktop.</span>
+      <span class="lang-pt">Isso criará um clone da pasta wdd130 do GitHub no seu
+        computador no Desktop.</span>
+      <span class="lang-es">Esto creará un clone de la carpeta wdd130 de GitHub en su
+        computador en el Desktop.</span>
+    </p>
+    <h2>
+      <span class="lang-en">Finish Setup</span>
+      <span class="lang-pt">Finalizar Configuração</span>
+      <span class="lang-es">Finalizar Configuración</span>
+    </h2>
+    <p>
+      <span class="lang-en">Now you need to make any edit and save it. Then go to the
+        Source Control and commit and sync with GutHub. This will force the Git and GitHub
+        authorization logins to take place.</span>
+      <span class="lang-pt">Agora você precisa fazer alguma edição e salvá-la. Em seguida,
+        vá para o Source Control e faça commit e sync com o GitHub. Isso forçará os logins
+        de autorização do Git e GitHub a ocorrerem.</span>
+      <span class="lang-es">Ahora necesita hacer alguna edición y guardarla. Luego vaya
+        al Source Control y haga commit y sync con GitHub. Esto obligará a que se realicen
+        los inicios de sesión de autorización de Git y GitHub.</span>
+    </p>
+    <h3>
+      <span class="lang-en">If you have any issues with this make sure to contact your
+        instructor for additional help.</span>
+      <span class="lang-pt">Se você tiver algum problema com isso, entre em contato com
+        seu instrutor para obter ajuda adicional.</span>
+      <span class="lang-es">Si tiene algún problema con esto, asegúrese de comunicarse
+        con su instructor para obtener ayuda adicional.</span>
+    </h3>
+  </main>
+  <footer>
+    <p>
+      <span class="lang-en">This file is created and updated for the use of students at
+        BYU Pathway Worldwide taking WDD 130</span>
+      <span class="lang-pt">Este arquivo é criado e atualizado para uso dos alunos da BYU
+        Pathway Worldwide que cursam WDD 130</span>
+      <span class="lang-es">Este archivo es creado y actualizado para uso de los
+        estudiantes de BYU Pathway Worldwide que cursan WDD 130</span>
+    </p>
+    <p>
+      <span class="lang-en">Maintained by Ralph Borcherds</span>
+      <span class="lang-pt">Mantido por Ralph Borcherds</span>
+      <span class="lang-es">Mantenido por Ralph Borcherds</span>
+    </p>
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.documentElement.lang = lang;
+      localStorage.setItem('preferredLang', lang);
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-pt').classList.toggle('active', lang === 'pt');
+      document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+    }
+
+    function detectBrowserLang() {
+      const browserLang = navigator.language || navigator.userLanguage || 'en';
+      const lang = browserLang.toLowerCase();
+      if (lang.startsWith('pt')) return 'pt';
+      if (lang.startsWith('es')) return 'es';
+      return 'en';
+    }
+
+    const savedLang = localStorage.getItem('preferredLang') || detectBrowserLang();
+    setLang(savedLang);
+  </script>
 </body>
 </html>

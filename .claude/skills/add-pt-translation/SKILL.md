@@ -146,7 +146,9 @@ Wrap every user-visible text node in a matching `lang-en` / `lang-pt` span pair.
 
 Two completed examples live in this project:
 
-- `helps/git-github.html` — long page with nested lists, headings, images, external links
+- `helps/git-github.html` — trilingual (EN/PT/ES) long page with nested lists, headings, images, external links. **Note:** this page also has Spanish (`lang-es` spans and a third button) — use only the EN/PT span pattern when adding Portuguese-only translation.
 - `helps/retaking-class.html` — shorter page with ordered list, `<pre><code>` block, mixed paragraph/link content
 
 Read either file if you need to verify a pattern before applying it.
+
+To add Spanish on top of a Portuguese-translated page, use the `add-es-translation` skill instead.

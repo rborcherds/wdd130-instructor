@@ -14,207 +14,422 @@
     href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Slab:wght@100..900&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="styles/git-errors.css">
+  <link rel="stylesheet" href="styles/styles.css">
 </head>
 
 <body>
 
   <header>
-    <nav class="nav-header">
-      <a href="index.html">Resources Home</a>
-    </nav>
+    <div class="header-layout">
+      <nav class="nav-header">
+        <a href="index.html">
+          <span class="lang-en">Resources Home</span>
+          <span class="lang-pt">Início dos Recursos</span>
+        </a>
+      </nav>
+      <div class="lang-selector">
+        <button onclick="setLang('en')" class="lang-btn" id="btn-en">English</button>
+        <button onclick="setLang('pt')" class="lang-btn" id="btn-pt">Português</button>
+      </div>
+    </div>
 
-
-
-    <h1 id="top" class="title">Git - Github - VSCode error messages &amp; Suggestions</h1>
+    <h1 id="top" class="title">
+      <span class="lang-en">Git - Github - VSCode error messages &amp; Suggestions</span>
+      <span class="lang-pt">Git - Github - VSCode mensagens de erro &amp; Sugestões</span>
+    </h1>
     <nav>
-      <h2 class="nav-heading">Error Messages</h2>
-      <a href="#no-secret-key">No Secret Key</a>
-      <a href="#no-permission-to-push">No permission to push to GitHub</a>
-      <a href="#pages-not-initializing">GitHub Pages not initializing</a>
-      <a href="#user-name-email">Must configure user.name</a>
-      <a href="#sync-hang">Git Sync hangs</a>
-      <a href="#git-blocked">Windows Git is blocked</a>
-      <a href="#git-rpc-curl-18">Got Error RPC curl 19</a>
-      <a href="#git-rpc-curl-92">Git RPC error 92</a>
-      <a href="#git-add-folder-denied">Unable to add folder to Github</a>
-      <a href="#git-ref-tips-error">Git failed to push some Refs</a>
-      <a href="#git-credential-manager-error">Git Credential Manager could not be
-        started</a>
-      <a href="#mac-xcode-error">MacOS Xcode error</a>
-      <a href="#libcurl-not-found">Git LoadLibraryExw() Failed</a>
-      <a href="#install-git">VSCode message "Install Git" first</a>
-      <a href="#git-login-not-working">Never get Git login web Page</a>
-      <a href="#git-build-fail">GitHub actions build Failed</a>
-      <a href="#git-allow-unrelated">Git sync error Unrelated histories</a>
-      <a href="#git-ssl-error">git OpenSSL SSL_read: SSL_ERROR_SYSCALL, erro 0</a>
-      <a href="#git-gpg-error">Git GPG Error">Git: cannot run gpg: No such file or
-        directory</a>
-      <h2 class="nav-heading">Hints &amp; Suggestions</h2>
-      <a href="#formatters-configure">Formatter not configured</a>
-      <a href="#commit-sync">Commit &amp; sync with one button</a>
-      <a href="#commit-message">How to add more details to commit message</a>
-      <a href="#repo-description">How to add a description to your Repository</a>
-      <a href="#multiple-users">How to add multiple users to a shared computer</a>
-      <a href="#github-pages-url">How to add a quick link to GitHub Pages URL</a>
-
+      <h2 class="nav-heading">
+        <span class="lang-en">Error Messages</span>
+        <span class="lang-pt">Mensagens de Erro</span>
+      </h2>
+      <a href="#no-secret-key">
+        <span class="lang-en">No Secret Key</span>
+        <span class="lang-pt">Sem Chave Secreta</span>
+      </a>
+      <a href="#no-permission-to-push">
+        <span class="lang-en">No permission to push to GitHub</span>
+        <span class="lang-pt">Sem permissão para push no GitHub</span>
+      </a>
+      <a href="#pages-not-initializing">
+        <span class="lang-en">GitHub Pages not initializing</span>
+        <span class="lang-pt">GitHub Pages não inicializa</span>
+      </a>
+      <a href="#user-name-email">
+        <span class="lang-en">Must configure user.name</span>
+        <span class="lang-pt">Configurar user.name</span>
+      </a>
+      <a href="#sync-hang">
+        <span class="lang-en">Git Sync hangs</span>
+        <span class="lang-pt">Git Sync trava</span>
+      </a>
+      <a href="#git-blocked">
+        <span class="lang-en">Windows Git is blocked</span>
+        <span class="lang-pt">Git no Windows bloqueado</span>
+      </a>
+      <a href="#git-rpc-curl-18">
+        <span class="lang-en">Got Error RPC curl 19</span>
+        <span class="lang-pt">Erro RPC curl 19</span>
+      </a>
+      <a href="#git-rpc-curl-92">
+        <span class="lang-en">Git RPC error 92</span>
+        <span class="lang-pt">Erro RPC do Git 92</span>
+      </a>
+      <a href="#git-add-folder-denied">
+        <span class="lang-en">Unable to add folder to Github</span>
+        <span class="lang-pt">Não é possível adicionar pasta ao Github</span>
+      </a>
+      <a href="#git-ref-tips-error">
+        <span class="lang-en">Git failed to push some Refs</span>
+        <span class="lang-pt">Git falhou ao enviar algumas Refs</span>
+      </a>
+      <a href="#git-credential-manager-error">
+        <span class="lang-en">Git Credential Manager could not be started</span>
+        <span class="lang-pt">Git Credential Manager não pôde ser iniciado</span>
+      </a>
+      <a href="#mac-xcode-error">
+        <span class="lang-en">MacOS Xcode error</span>
+        <span class="lang-pt">Erro Xcode no MacOS</span>
+      </a>
+      <a href="#libcurl-not-found">
+        <span class="lang-en">Git LoadLibraryExw() Failed</span>
+        <span class="lang-pt">Git LoadLibraryExw() Falhou</span>
+      </a>
+      <a href="#install-git">
+        <span class="lang-en">VSCode message "Install Git" first</span>
+        <span class="lang-pt">Mensagem VSCode "Install Git" primeiro</span>
+      </a>
+      <a href="#git-login-not-working">
+        <span class="lang-en">Never get Git login web Page</span>
+        <span class="lang-pt">Nunca aparece a página de login do Git</span>
+      </a>
+      <a href="#git-build-fail">
+        <span class="lang-en">GitHub actions build Failed</span>
+        <span class="lang-pt">Falha no build do GitHub Actions</span>
+      </a>
+      <a href="#git-allow-unrelated">
+        <span class="lang-en">Git sync error Unrelated histories</span>
+        <span class="lang-pt">Erro de sync do Git: Históricos não relacionados</span>
+      </a>
+      <a href="#git-ssl-error">
+        <span class="lang-en">git OpenSSL SSL_read: SSL_ERROR_SYSCALL, erro 0</span>
+        <span class="lang-pt">git OpenSSL SSL_read: SSL_ERROR_SYSCALL, erro 0</span>
+      </a>
+      <a href="#git-gpg-error">
+        <span class="lang-en">Git GPG Error: Git: cannot run gpg: No such file or directory</span>
+        <span class="lang-pt">Erro GPG do Git: Git: não é possível executar gpg: arquivo ou diretório não encontrado</span>
+      </a>
+      <h2 class="nav-heading">
+        <span class="lang-en">Hints &amp; Suggestions</span>
+        <span class="lang-pt">Dicas &amp; Sugestões</span>
+      </h2>
+      <a href="#formatters-configure">
+        <span class="lang-en">Formatter not configured</span>
+        <span class="lang-pt">Formatador não configurado</span>
+      </a>
+      <a href="#commit-sync">
+        <span class="lang-en">Commit &amp; sync with one button</span>
+        <span class="lang-pt">Commit &amp; sync com um botão</span>
+      </a>
+      <a href="#commit-message">
+        <span class="lang-en">How to add more details to commit message</span>
+        <span class="lang-pt">Como adicionar mais detalhes à mensagem de commit</span>
+      </a>
+      <a href="#repo-description">
+        <span class="lang-en">How to add a description to your Repository</span>
+        <span class="lang-pt">Como adicionar uma descrição ao seu Repository</span>
+      </a>
+      <a href="#multiple-users">
+        <span class="lang-en">How to add multiple users to a shared computer</span>
+        <span class="lang-pt">Como adicionar múltiplos usuários a um computador compartilhado</span>
+      </a>
+      <a href="#github-pages-url">
+        <span class="lang-en">How to add a quick link to GitHub Pages URL</span>
+        <span class="lang-pt">Como adicionar um link rápido para o URL do GitHub Pages</span>
+      </a>
     </nav>
   </header>
 
   <main>
-    <h2>Git - GitHub - VSCode errors messages</h2>
+    <h2>
+      <span class="lang-en">Git - GitHub - VSCode errors messages</span>
+      <span class="lang-pt">Git - GitHub - VSCode mensagens de erro</span>
+    </h2>
     <section class="errors">
       <details id="no-secret-key">
         <summary>Git: gpg: skipped &lt;email&gt;: No Secret Key</summary>
         <img src="images/git-gpg-no-key.png" alt="Git No GPG Error">
-        <p> This has to do with how Git is configured with GPG signing process. This is an
-          issue on
-          Windows computers, as the GPG implementation is weird. </p>
-        <p> There are a few potential ways to fix this issue. I would recommend turning
-          off the
-          signing with GPG. </p>
-        <p>Here are the steps to disable this option</p>
-        <p>Go to VSCode preferences - Settings</p>
+        <p>
+          <span class="lang-en">This has to do with how Git is configured with GPG signing process. This is an
+            issue on Windows computers, as the GPG implementation is weird.</span>
+          <span class="lang-pt">Isso está relacionado à forma como o Git está configurado com o processo de assinatura GPG. Este é um problema em computadores Windows, pois a implementação do GPG é estranha.</span>
+        </p>
+        <p>
+          <span class="lang-en">There are a few potential ways to fix this issue. I would recommend turning
+            off the signing with GPG.</span>
+          <span class="lang-pt">Há algumas maneiras de corrigir este problema. Recomendo desativar a assinatura com GPG.</span>
+        </p>
+        <p>
+          <span class="lang-en">Here are the steps to disable this option</span>
+          <span class="lang-pt">Aqui estão os passos para desativar esta opção</span>
+        </p>
+        <p>
+          <span class="lang-en">Go to VSCode preferences - Settings</span>
+          <span class="lang-pt">Vá para VSCode Preferences - Settings</span>
+        </p>
         <img src="images/gpg-1.png" alt="GPG error steps 1">
-        <p> Type this into the search bar at the top to find the setting: gpg commit </p>
+        <p>
+          <span class="lang-en">Type this into the search bar at the top to find the setting: gpg commit</span>
+          <span class="lang-pt">Digite isso na barra de pesquisa no topo para encontrar a configuração: gpg commit</span>
+        </p>
         <img src="images/gpg-2.png" alt="GPG error step 2">
-        <p> Make sure this option is not checked. This is the option that tells VSCode to
-          use PGP
-          while pushing to GitHub: Enables commit signing with GPG or X.509 </p>
+        <p>
+          <span class="lang-en">Make sure this option is not checked. This is the option that tells VSCode to
+            use PGP while pushing to GitHub: Enables commit signing with GPG or X.509</span>
+          <span class="lang-pt">Certifique-se de que esta opção não está marcada. Esta é a opção que diz ao VSCode para usar PGP ao fazer push para o GitHub: Enables commit signing with GPG or X.509</span>
+        </p>
         <img src="images/gpg-3.png" alt="GPG error step 3">
-        <p>Close out of the Settings tab.</p>
-        <a href="#top" class="top-link">Back to Top</a>
+        <p>
+          <span class="lang-en">Close out of the Settings tab.</span>
+          <span class="lang-pt">Feche a aba Settings.</span>
+        </p>
+        <a href="#top" class="top-link">
+          <span class="lang-en">Back to Top</span>
+          <span class="lang-pt">Voltar ao Topo</span>
+        </a>
       </details>
       <details id="no-permission-to-push">
-        <summary>You don&apos;t have permission to push to &lt;GitHub Account&gt; on
-          GitHub
+        <summary>
+          <span class="lang-en">You don&apos;t have permission to push to &lt;GitHub Account&gt; on GitHub</span>
+          <span class="lang-pt">Você não tem permissão para push na &lt;Conta GitHub&gt; no GitHub</span>
         </summary>
-        <p>This error occurs when you have GitHub setup on one account and you try to use
-          another account and GitHub auto logs you into the old account with VSCode. This
-          process is using the Windows Credential Manager.</p>
+        <p>
+          <span class="lang-en">This error occurs when you have GitHub setup on one account and you try to use
+            another account and GitHub auto logs you into the old account with VSCode. This
+            process is using the Windows Credential Manager.</span>
+          <span class="lang-pt">Este erro ocorre quando você tem o GitHub configurado em uma conta e tenta usar outra conta, e o GitHub faz login automático na conta antiga com VSCode. Este processo usa o Windows Credential Manager.</span>
+        </p>
         <img src="images/git-error-push-github.png" alt="Git Error no authorization">
-        <p>This error is because Git was previously configured for another user account on
-          the computer using the global settings. There are a a few solutions.</p>
+        <p>
+          <span class="lang-en">This error is because Git was previously configured for another user account on
+            the computer using the global settings. There are a a few solutions.</span>
+          <span class="lang-pt">Este erro ocorre porque o Git foi configurado anteriormente para outra conta de usuário no computador usando as configurações globais. Há algumas soluções.</span>
+        </p>
         <details>
-          <summary>Remove Windows Credential Manager from auto logging into GitHub
+          <summary>
+            <span class="lang-en">Remove Windows Credential Manager from auto logging into GitHub</span>
+            <span class="lang-pt">Remover o Windows Credential Manager do login automático no GitHub</span>
           </summary>
-          <p>This is the preferred method if the account in question is not being used
-            anymore</p>
-          <p>There are two part to this. If you only do one of them it will work. It is
-            recommended to do both parts.</p>
-          <p>Go to GitHub and log into the old account and click on the user profile
-            picture in the top right of the web page. <span class="menu-select"> Select
-              Settings</span>
+          <p>
+            <span class="lang-en">This is the preferred method if the account in question is not being used anymore</span>
+            <span class="lang-pt">Este é o método preferido se a conta em questão não está mais sendo usada</span>
           </p>
-          <p> On the left navigation menu, select <span class="menu-select">Password and
-              Authentication</span> </p>
-          <img src="images/github-password-auth-reset.png"
-            alt="GitHub Password Authorization link">
-          <p>Then click on the <span class="menu-select">Authorized Oauth Apps</span> tab
+          <p>
+            <span class="lang-en">There are two part to this. If you only do one of them it will work. It is
+              recommended to do both parts.</span>
+            <span class="lang-pt">Há duas partes nisso. Se você fizer apenas uma delas, vai funcionar. É recomendado fazer as duas partes.</span>
+          </p>
+          <p>
+            <span class="lang-en">Go to GitHub and log into the old account and click on the user profile
+              picture in the top right of the web page. <span class="menu-select">Select Settings</span></span>
+            <span class="lang-pt">Acesse o GitHub e faça login na conta antiga e clique na foto de perfil do usuário no canto superior direito da página. <span class="menu-select">Selecione Settings</span></span>
+          </p>
+          <p>
+            <span class="lang-en">On the left navigation menu, select <span class="menu-select">Password and Authentication</span></span>
+            <span class="lang-pt">No menu de navegação à esquerda, selecione <span class="menu-select">Password and Authentication</span></span>
+          </p>
+          <img src="images/github-password-auth-reset.png" alt="GitHub Password Authorization link">
+          <p>
+            <span class="lang-en">Then click on the <span class="menu-select">Authorized Oauth Apps</span> tab</span>
+            <span class="lang-pt">Em seguida, clique na aba <span class="menu-select">Authorized Oauth Apps</span></span>
           </p>
           <img src="images/github-oath-apps.png" alt="GitHub AOuth Tab">
-          <p>Find teh GitHub for VSCode line</p>
-          <p>Click on the <span class="menu-select">3 dots</span> to the left of GitHub
-            for VSCode
+          <p>
+            <span class="lang-en">Find the GitHub for VSCode line</span>
+            <span class="lang-pt">Encontre a linha GitHub for VSCode</span>
+          </p>
+          <p>
+            <span class="lang-en">Click on the <span class="menu-select">3 dots</span> to the left of GitHub for VSCode</span>
+            <span class="lang-pt">Clique nos <span class="menu-select">3 pontos</span> à esquerda de GitHub for VSCode</span>
           </p>
           <img src="images/github-oauth-link.png" alt="GitHub Oauth entry">
-          <p>Click the <span class="menu-select">Revoke</span> option</p>
+          <p>
+            <span class="lang-en">Click the <span class="menu-select">Revoke</span> option</span>
+            <span class="lang-pt">Clique na opção <span class="menu-select">Revoke</span></span>
+          </p>
           <img src="images/github-revoke-oauth.png" alt="GitHub Revoke OAuth">
-          <p>This will force VSCode to re-authenticate with GitHub.</p>
-          <p>Part two of this process is to go into Windows Credential Manager and remove
-            the github.com auto login credentials.</p>
-          <p>Click the start menu button and type "Windows Credential" and you will see
-            the link to this appear in the start menu. Click on that link and you will see
-            something like this</p>
-          <img src="images/windows-credential-manager.png"
-            alt="Windows Credential Manager">
-          <p>Find the entry for github.com, then click on the arrow button on the right
-            side then select the option REMOVE. This will remove that from Windows
-            Credential Manager.</p>
-          <p>The next set is to logout of the user account in VSCode. You do that by
-            clicking on the PRofiles icon and then highlight the name and then clicking on
-            Sign Out for that user.</p>
+          <p>
+            <span class="lang-en">This will force VSCode to re-authenticate with GitHub.</span>
+            <span class="lang-pt">Isso forçará o VSCode a se autenticar novamente com o GitHub.</span>
+          </p>
+          <p>
+            <span class="lang-en">Part two of this process is to go into Windows Credential Manager and remove
+              the github.com auto login credentials.</span>
+            <span class="lang-pt">A segunda parte deste processo é acessar o Windows Credential Manager e remover as credenciais de login automático do github.com.</span>
+          </p>
+          <p>
+            <span class="lang-en">Click the start menu button and type "Windows Credential" and you will see
+              the link to this appear in the start menu. Click on that link and you will see
+              something like this</span>
+            <span class="lang-pt">Clique no botão do menu Iniciar e digite "Windows Credential" e você verá o link aparecer no menu. Clique nesse link e você verá algo assim</span>
+          </p>
+          <img src="images/windows-credential-manager.png" alt="Windows Credential Manager">
+          <p>
+            <span class="lang-en">Find the entry for github.com, then click on the arrow button on the right
+              side then select the option REMOVE. This will remove that from Windows Credential Manager.</span>
+            <span class="lang-pt">Encontre a entrada para github.com, clique no botão de seta no lado direito e selecione a opção REMOVE. Isso removerá do Windows Credential Manager.</span>
+          </p>
+          <p>
+            <span class="lang-en">The next set is to logout of the user account in VSCode. You do that by
+              clicking on the PRofiles icon and then highlight the name and then clicking on Sign Out for that user.</span>
+            <span class="lang-pt">O próximo passo é fazer logout da conta de usuário no VSCode. Você faz isso clicando no ícone de Profiles, destacando o nome e clicando em Sign Out para aquele usuário.</span>
+          </p>
           <img src="images/vscode-sign-out.png" alt="Sing out option in VSCode">
-          <p>Restart VSCode and then try and publish the repository again.</p>
-          <p>This occurs when Git is installed and told to use the Windows Credential
-            Manager and not the Git Credential Manager Core option which is the new
-            default. It may be worth reinstalling Git and make sure that the Git
-            Credential Manager Core option is selected as in this image.</p>
-          <img src="images/git-cred-manager.png" alt="Git Credential Manager"
-            width="300px">
+          <p>
+            <span class="lang-en">Restart VSCode and then try and publish the repository again.</span>
+            <span class="lang-pt">Reinicie o VSCode e tente publicar o repository novamente.</span>
+          </p>
+          <p>
+            <span class="lang-en">This occurs when Git is installed and told to use the Windows Credential
+              Manager and not the Git Credential Manager Core option which is the new
+              default. It may be worth reinstalling Git and make sure that the Git
+              Credential Manager Core option is selected as in this image.</span>
+            <span class="lang-pt">Isso ocorre quando o Git é instalado e configurado para usar o Windows Credential Manager em vez do Git Credential Manager Core, que é o novo padrão. Pode valer reinstalar o Git e garantir que a opção Git Credential Manager Core esteja selecionada como nesta imagem.</span>
+          </p>
+          <img src="images/git-cred-manager.png" alt="Git Credential Manager" width="300px">
         </details>
-        <a href="#top" class="top-link">Back to Top</a>
+        <a href="#top" class="top-link">
+          <span class="lang-en">Back to Top</span>
+          <span class="lang-pt">Voltar ao Topo</span>
+        </a>
       </details>
       <details id="pages-not-initializing">
-        <summary>GitHub Pages does not initialize</summary>
-        <p> There is an issue where the GitHub pages do not initialize the first time.
-          This means you must re-initialize a push to GitHub and then recreate the pages
-          setup. </p>
+        <summary>
+          <span class="lang-en">GitHub Pages does not initialize</span>
+          <span class="lang-pt">GitHub Pages não inicializa</span>
+        </summary>
+        <p>
+          <span class="lang-en">There is an issue where the GitHub pages do not initialize the first time.
+            This means you must re-initialize a push to GitHub and then recreate the pages setup.</span>
+          <span class="lang-pt">Há um problema em que as GitHub pages não inicializam na primeira vez. Isso significa que você deve reinicializar um push para o GitHub e depois recriar a configuração das pages.</span>
+        </p>
         <ol>
           <li>
-            <p>Go to the pages setup page and change the branch to NONE</p>
+            <p>
+              <span class="lang-en">Go to the pages setup page and change the branch to NONE</span>
+              <span class="lang-pt">Vá para a página de configuração das pages e altere o branch para NONE</span>
+            </p>
             <img src="images/github-pages-branch-name.png" alt="GitHub pages branch name">
-            <p>Click Save</p>
+            <p>
+              <span class="lang-en">Click Save</span>
+              <span class="lang-pt">Clique em Save</span>
+            </p>
           </li>
           <li>
-            <p>Go to VSCode and push to GitHub</p>
-            <p>You can do an empty push by typing the following commands in the command
-              prompt </p>
+            <p>
+              <span class="lang-en">Go to VSCode and push to GitHub</span>
+              <span class="lang-pt">Vá para o VSCode e faça push para o GitHub</span>
+            </p>
+            <p>
+              <span class="lang-en">You can do an empty push by typing the following commands in the command prompt</span>
+              <span class="lang-pt">Você pode fazer um push vazio digitando os seguintes comandos no terminal</span>
+            </p>
             <pre class="code-style">
                             git commit --allow-empty -m "Trigger rebuild"<br>
                             git push
                         </pre>
           </li>
           <li>
-            <p>Go back to GitHub Pages and recreate the pages setup.</p>
-            <p>Once you have clicked save on the pages setup, click on the <span
-                class="menu-select">Actions</span> tab</p>
+            <p>
+              <span class="lang-en">Go back to GitHub Pages and recreate the pages setup.</span>
+              <span class="lang-pt">Volte ao GitHub Pages e recrie a configuração das pages.</span>
+            </p>
+            <p>
+              <span class="lang-en">Once you have clicked save on the pages setup, click on the <span class="menu-select">Actions</span> tab</span>
+              <span class="lang-pt">Depois de clicar em save na configuração das pages, clique na aba <span class="menu-select">Actions</span></span>
+            </p>
             <img src="images/github-action-tab.png" alt="GitHub Actions Tab">
-            <p> Watch the top entry until the icon to the left turns blue or green with a
-              check mark. That means it is complete. The red circle with an X means that
-              it
-              failed. </p>
+            <p>
+              <span class="lang-en">Watch the top entry until the icon to the left turns blue or green with a
+                check mark. That means it is complete. The red circle with an X means that it failed.</span>
+              <span class="lang-pt">Observe a entrada do topo até que o ícone à esquerda fique azul ou verde com uma marca de verificação. Isso significa que está completo. O círculo vermelho com um X significa que falhou.</span>
+            </p>
             <img src="images/github-actions-list.png" alt="Github Actions List">
-            <p> You will notice that the process will take longer than 1 minute. This is
-              due to some change GitHub has made on the server due to new features that
-              are being
-              added. Even publishing the push/sync from VSCode takes as long as 5 min on
-              very busy days. </p>
-            <p> If the user gets a failed again, check the spelling of the folders and
-              file names. This process seems to fail if the user has spaces in the folder
-              and filenames and sometimes if there are underscores in these names. </p>
+            <p>
+              <span class="lang-en">You will notice that the process will take longer than 1 minute. This is
+                due to some change GitHub has made on the server due to new features that are being
+                added. Even publishing the push/sync from VSCode takes as long as 5 min on very busy days.</span>
+              <span class="lang-pt">Você notará que o processo levará mais de 1 minuto. Isso se deve a algumas mudanças que o GitHub fez no servidor por causa de novos recursos sendo adicionados. Mesmo o push/sync do VSCode pode levar até 5 minutos em dias muito movimentados.</span>
+            </p>
+            <p>
+              <span class="lang-en">If the user gets a failed again, check the spelling of the folders and
+                file names. This process seems to fail if the user has spaces in the folder
+                and filenames and sometimes if there are underscores in these names.</span>
+              <span class="lang-pt">Se o erro ocorrer novamente, verifique a ortografia das pastas e nomes de arquivos. Este processo parece falhar se o usuário tiver espaços nas pastas e nomes de arquivos, e às vezes se houver sublinhados nesses nomes.</span>
+            </p>
           </li>
         </ol>
-        <a href="#top" class="top-link">Back to Top</a>
+        <a href="#top" class="top-link">
+          <span class="lang-en">Back to Top</span>
+          <span class="lang-pt">Voltar ao Topo</span>
+        </a>
       </details>
       <details id="user-name-email">
-        <summary> Make sure to configure your &apos;user.name&apos; and
-          &apos;user.email&apos; in git </summary>
-        <p> If the user gets this error, they missed that step in the configuration of
-          Git. It is found in the installation steps of Git for Windows. </p>
+        <summary>
+          <span class="lang-en">Make sure to configure your &apos;user.name&apos; and &apos;user.email&apos; in git</span>
+          <span class="lang-pt">Certifique-se de configurar seu &apos;user.name&apos; e &apos;user.email&apos; no git</span>
+        </summary>
+        <p>
+          <span class="lang-en">If the user gets this error, they missed that step in the configuration of
+            Git. It is found in the installation steps of Git for Windows.</span>
+          <span class="lang-pt">Se o usuário receber este erro, ele pulou aquela etapa na configuração do Git. Ela é encontrada nas etapas de instalação do Git para Windows.</span>
+        </p>
         <img src="images/git-username-useremail.png" alt="Git Username Email error">
-        <p> Open the terminal or command prompt. This can be the one inside VSCode </p>
-        <p>Type each of these commands into the command prompt/Terminal window </p>
+        <p>
+          <span class="lang-en">Open the terminal or command prompt. This can be the one inside VSCode</span>
+          <span class="lang-pt">Abra o terminal ou prompt de comando. Pode ser o terminal dentro do VSCode</span>
+        </p>
+        <p>
+          <span class="lang-en">Type each of these commands into the command prompt/Terminal window</span>
+          <span class="lang-pt">Digite cada um desses comandos na janela do terminal</span>
+        </p>
         <pre>
                         git config &minus;global user.name &apos;github user name&apos;<br>
                         git config &minus;global user.email &apos;email address used on github&apos;<br>
                         git config --global core.ignorecase false<br>
                     </pre>
-        <p>Try to push to GitHub</p>
-        <p>If you still have issues, then contact someone for help</p>
-        <a href="#top" class="top-link">Back to Top</a>
+        <p>
+          <span class="lang-en">Try to push to GitHub</span>
+          <span class="lang-pt">Tente fazer push para o GitHub</span>
+        </p>
+        <p>
+          <span class="lang-en">If you still have issues, then contact someone for help</span>
+          <span class="lang-pt">Se ainda tiver problemas, entre em contato com alguém para obter ajuda</span>
+        </p>
+        <a href="#top" class="top-link">
+          <span class="lang-en">Back to Top</span>
+          <span class="lang-pt">Voltar ao Topo</span>
+        </a>
       </details>
       <details id="sync-hang">
-        <summary> VSCode push/sync to GitHub seems to hang and not do anything </summary>
-        <p> There are a few reasons as to why this will occur. There are a couple of
-          things to try.
+        <summary>
+          <span class="lang-en">VSCode push/sync to GitHub seems to hang and not do anything</span>
+          <span class="lang-pt">O push/sync do VSCode para o GitHub parece travar e não fazer nada</span>
+        </summary>
+        <p>
+          <span class="lang-en">There are a few reasons as to why this will occur. There are a couple of things to try.</span>
+          <span class="lang-pt">Há algumas razões pelas quais isso ocorre. Há algumas coisas a tentar.</span>
         </p>
         <ol>
           <li>
-            <p> Open a terminal/command window and try to push to GitHub using the command
-              line </p>
+            <p>
+              <span class="lang-en">Open a terminal/command window and try to push to GitHub using the command line</span>
+              <span class="lang-pt">Abra uma janela de terminal e tente fazer push para o GitHub usando a linha de comando</span>
+            </p>
             <pre>git push</pre>
-            <p> You may get an error that says something like this (It will look different
-              on the various OS&apos;s): </p>
+            <p>
+              <span class="lang-en">You may get an error that says something like this (It will look different on the various OS&apos;s):</span>
+              <span class="lang-pt">Você pode receber um erro que diz algo assim (vai ter aparência diferente nos vários sistemas operacionais):</span>
+            </p>
             <pre>
                                 There is no tracking information for the current branch.<br>
                                 Please specify which branch you want to merge with.<br>
@@ -223,131 +438,218 @@
                                 If you wish to set tracking information for this branch you can do so with:<br><br>
                                 git push --set-upstream origin master
                             </pre>
-            <p>If you get that error at the command line type in the command </p>
+            <p>
+              <span class="lang-en">If you get that error at the command line type in the command</span>
+              <span class="lang-pt">Se você receber esse erro na linha de comando, digite o comando</span>
+            </p>
             <pre>git push &minus;set-upstream origin master</pre>
-            <p>Then do a git push command</p>
-            <p>You may be prompted to authenticate with GitHub again.</p>
-            <p> Once the push/sync is complete, you will need to restart VSCode and the
-              GitHub controls within VSCode should work again. </p>
+            <p>
+              <span class="lang-en">Then do a git push command</span>
+              <span class="lang-pt">Depois execute o comando git push</span>
+            </p>
+            <p>
+              <span class="lang-en">You may be prompted to authenticate with GitHub again.</span>
+              <span class="lang-pt">Você pode ser solicitado a se autenticar com o GitHub novamente.</span>
+            </p>
+            <p>
+              <span class="lang-en">Once the push/sync is complete, you will need to restart VSCode and the GitHub controls within VSCode should work again.</span>
+              <span class="lang-pt">Quando o push/sync estiver concluído, você precisará reiniciar o VSCode e os controles do GitHub dentro do VSCode devem funcionar novamente.</span>
+            </p>
           </li>
-          <li> The other reasons why this process will hang are too numerous and hard to
-            give instructions on how to overcome in this document. This will require more
-            research with debug logs to see if there is a reason for the hang. </li>
+          <li>
+            <span class="lang-en">The other reasons why this process will hang are too numerous and hard to
+              give instructions on how to overcome in this document. This will require more
+              research with debug logs to see if there is a reason for the hang.</span>
+            <span class="lang-pt">As outras razões pelas quais esse processo trava são numerosas demais para fornecer instruções neste documento. Isso exigirá mais pesquisa com logs de debug para descobrir a causa do travamento.</span>
+          </li>
         </ol>
-        <a href="#top" class="top-link">Back to Top</a>
+        <a href="#top" class="top-link">
+          <span class="lang-en">Back to Top</span>
+          <span class="lang-pt">Voltar ao Topo</span>
+        </a>
       </details>
       <details id="git-blocked">
-        <summary> Windows Error message: App or process blocked: git.exe </summary>
-        <p> User is trying to run git commands at the command prompt and Windows is
-          displaying the
-          following Windows System error </p>
+        <summary>
+          <span class="lang-en">Windows Error message: App or process blocked: git.exe</span>
+          <span class="lang-pt">Mensagem de erro do Windows: App ou processo bloqueado: git.exe</span>
+        </summary>
+        <p>
+          <span class="lang-en">User is trying to run git commands at the command prompt and Windows is displaying the following Windows System error</span>
+          <span class="lang-pt">O usuário está tentando executar comandos git no prompt de comando e o Windows está exibindo o seguinte erro de sistema</span>
+        </p>
         <img src="images/windows-unathorixed-change.jpg" alt="Windows Security Issue">
-        <p> The instructions to fix this are specific to the version of Windows that is
-          being run. Here are the basic steps: <a
-            href="https://support.microsoft.com/en-us/windows/allow-an-app-to-access-controlled-folders-b5b6627a-b008-2ca2-7931-7e51e912b034">
+        <p>
+          <span class="lang-en">The instructions to fix this are specific to the version of Windows that is being run. Here are the basic steps:</span>
+          <span class="lang-pt">As instruções para corrigir isso são específicas para a versão do Windows em execução. Aqui estão os passos básicos:</span>
+          <a href="https://support.microsoft.com/en-us/windows/allow-an-app-to-access-controlled-folders-b5b6627a-b008-2ca2-7931-7e51e912b034">
             https://support.microsoft.com/en-us/windows/allow-an-app-to-access-controlled-folders-b5b6627a-b008-2ca2-7931-7e51e912b034
           </a>
         </p>
-        <h3>Use controlled folder access</h3>
-        <p> Controlled folder access in Windows Security reviews the apps that can make
-          changes to files in protected folders and block unauthorized or unsafe apps from
-          accessing or changing files in those folders. </p>
+        <h3>
+          <span class="lang-en">Use controlled folder access</span>
+          <span class="lang-pt">Usar acesso controlado a pastas</span>
+        </h3>
+        <p>
+          <span class="lang-en">Controlled folder access in Windows Security reviews the apps that can make
+            changes to files in protected folders and block unauthorized or unsafe apps from
+            accessing or changing files in those folders.</span>
+          <span class="lang-pt">O acesso controlado a pastas no Windows Security analisa os apps que podem fazer alterações em arquivos em pastas protegidas e bloqueia apps não autorizados ou inseguros de acessar ou alterar arquivos nessas pastas.</span>
+        </p>
         <ol>
-          <li> Select <span class="bolded"> Start> Settings> Update &amp; Security>
-              Windows
-              Security> Virus &amp; threat protection. </span>
+          <li>
+            <span class="lang-en">Select <span class="bolded">Start &gt; Settings &gt; Update &amp; Security &gt; Windows Security &gt; Virus &amp; threat protection.</span></span>
+            <span class="lang-pt">Selecione <span class="bolded">Start &gt; Settings &gt; Update &amp; Security &gt; Windows Security &gt; Virus &amp; threat protection.</span></span>
           </li>
-          <li> Under <span class="bolded">Virus &amp; threat protection</span> settings,
-            select
-            <span class="bolded">Manage settings</span> .
+          <li>
+            <span class="lang-en">Under <span class="bolded">Virus &amp; threat protection</span> settings, select <span class="bolded">Manage settings</span>.</span>
+            <span class="lang-pt">Em configurações de <span class="bolded">Virus &amp; threat protection</span>, selecione <span class="bolded">Manage settings</span>.</span>
           </li>
-          <li> Under <span class="bolded">Controlled folder access</span> , select <span
-              class="bolded">Manage Controlled folder access</span> . </li>
-          <li> Switch the <span class="bolded">Controlled folder access</span> setting to
-            <span class="bolded">On</span> or <span class="bolded">Off</span> .
+          <li>
+            <span class="lang-en">Under <span class="bolded">Controlled folder access</span>, select <span class="bolded">Manage Controlled folder access</span>.</span>
+            <span class="lang-pt">Em <span class="bolded">Controlled folder access</span>, selecione <span class="bolded">Manage Controlled folder access</span>.</span>
+          </li>
+          <li>
+            <span class="lang-en">Switch the <span class="bolded">Controlled folder access</span> setting to <span class="bolded">On</span> or <span class="bolded">Off</span>.</span>
+            <span class="lang-pt">Alterne a configuração de <span class="bolded">Controlled folder access</span> para <span class="bolded">On</span> ou <span class="bolded">Off</span>.</span>
           </li>
         </ol>
-        <p> There is an option to allow just one program to run in this Controlled Folder
-          Access and you can select git.exe from the recently blocked programs. </p>
-        <p> If you look at the Windows Notifications, you may see an error like this. </p>
-        <img src="images/windows-unathorixed-change-2.jpg"
-          alt="Windows Notification Controlled Access">
-        <p> This is the same step as above for the same error. Microsoft has a few diverse
-          ways to present this message. It will also be logged in to the System Logs. </p>
-        <a href="#top" class="top-link">Back to Top</a>
+        <p>
+          <span class="lang-en">There is an option to allow just one program to run in this Controlled Folder Access and you can select git.exe from the recently blocked programs.</span>
+          <span class="lang-pt">Há uma opção para permitir que apenas um programa seja executado neste Controlled Folder Access e você pode selecionar git.exe nos programas bloqueados recentemente.</span>
+        </p>
+        <p>
+          <span class="lang-en">If you look at the Windows Notifications, you may see an error like this.</span>
+          <span class="lang-pt">Se você verificar as Notificações do Windows, pode ver um erro assim.</span>
+        </p>
+        <img src="images/windows-unathorixed-change-2.jpg" alt="Windows Notification Controlled Access">
+        <p>
+          <span class="lang-en">This is the same step as above for the same error. Microsoft has a few diverse ways to present this message. It will also be logged in to the System Logs.</span>
+          <span class="lang-pt">Este é o mesmo passo acima para o mesmo erro. A Microsoft tem algumas formas diferentes de apresentar esta mensagem. Ela também será registrada nos Logs do Sistema.</span>
+        </p>
+        <a href="#top" class="top-link">
+          <span class="lang-en">Back to Top</span>
+          <span class="lang-pt">Voltar ao Topo</span>
+        </a>
       </details>
       <details id="git-rpc-curl-18">
-        <summary>git RPC fail: curl 18 transfer closed with outstanding read data
-          remaining
-        </summary>
+        <summary>git RPC fail: curl 18 transfer closed with outstanding read data remaining</summary>
         <img src="images/git-rpc-curl-18.jpg" alt="Git Error curl 18">
-        <p>A few reasons I have seen this curl 18 error:
+        <p>
+          <span class="lang-en">A few reasons I have seen this curl 18 error:</span>
+          <span class="lang-pt">Algumas razões que já vi para este erro curl 18:</span>
+        </p>
         <ul>
-          <li>Too many files - This is usually related to #3</li>
-          <li>Anti-virus software</li>
-          <li>Number of files and sizes exceeds the buffer size for git. See this article:
+          <li>
+            <span class="lang-en">Too many files - This is usually related to #3</span>
+            <span class="lang-pt">Muitos arquivos - Geralmente relacionado ao item #3</span>
+          </li>
+          <li>
+            <span class="lang-en">Anti-virus software</span>
+            <span class="lang-pt">Software antivírus</span>
+          </li>
+          <li>
+            <span class="lang-en">Number of files and sizes exceeds the buffer size for git. See this article:</span>
+            <span class="lang-pt">O número de arquivos e tamanhos excede o buffer do git. Veja este artigo (somente em inglês):</span>
             <a href="https://9to5answer.com/git-push-gives-error-rpc-failed-curl-18-transfer-closed-with-outstanding-read-data-remaining"
               target="_blank">https://9to5answer.com/git-push-gives-error-rpc-failed-curl-18-transfer-closed-with-outstanding-read-data-remaining</a>
           </li>
-          <li>Speed of internet can also cause this issue. <a
-              href="https://debugah.com/git-clone-error-rpc-failed-curl-18-transfer-closed-with-outstanding-read-data-remaining-18415/"
+          <li>
+            <span class="lang-en">Speed of internet can also cause this issue.</span>
+            <span class="lang-pt">A velocidade da internet também pode causar este problema.</span>
+            <a href="https://debugah.com/git-clone-error-rpc-failed-curl-18-transfer-closed-with-outstanding-read-data-remaining-18415/"
               target="_blank">https://debugah.com/git-clone-error-rpc-failed-curl-18-transfer-closed-with-outstanding-read-data-remaining-18415/</a>
           </li>
-          <li>Running Homebrew on a MAC or Linux machine. There are known issues at times
-            with this error in Homebrew. Homebrew is not supported for students and they
-            will have to find the answers on their own as Homebrew has its own command
-            structure to work with Git & GitHub.</li>
+          <li>
+            <span class="lang-en">Running Homebrew on a MAC or Linux machine. There are known issues at times
+              with this error in Homebrew. Homebrew is not supported for students and they
+              will have to find the answers on their own as Homebrew has its own command
+              structure to work with Git &amp; GitHub.</span>
+            <span class="lang-pt">Usar Homebrew em um MAC ou Linux. Há problemas conhecidos com este erro no Homebrew. O Homebrew não é suportado para alunos e eles terão que encontrar as respostas por conta própria, pois o Homebrew tem sua própria estrutura de comandos para trabalhar com Git e GitHub.</span>
+          </li>
         </ul>
-        <a href="#top" class="top-link">Back to Top</a>
+        <a href="#top" class="top-link">
+          <span class="lang-en">Back to Top</span>
+          <span class="lang-pt">Voltar ao Topo</span>
+        </a>
       </details>
       <details id="git-rpc-curl-92">
-        <summary> git RPC failed; curl 92 HTTP/2 stream 0 was not closed cleanly: CANCEL
-          (err 8)
-        </summary>
+        <summary>git RPC failed; curl 92 HTTP/2 stream 0 was not closed cleanly: CANCEL (err 8)</summary>
         <img src="images/git-rpc-failue-error.png" alt="Git RPC Failure Error">
-        <p> This error has to do with the amount of data being sent to GitHub. On bad
-          internet connections, you can only send enough data that GitHub will keep the
-          connection open. Bad internet connections will drop with this error. There are
-          other reasons this error can occur, but this is the only reason for this error
-          with the data we use. </p>
-        <a href="#top" class="top-link">Back to Top</a>
+        <p>
+          <span class="lang-en">This error has to do with the amount of data being sent to GitHub. On bad
+            internet connections, you can only send enough data that GitHub will keep the
+            connection open. Bad internet connections will drop with this error. There are
+            other reasons this error can occur, but this is the only reason for this error
+            with the data we use.</span>
+          <span class="lang-pt">Este erro está relacionado à quantidade de dados enviados ao GitHub. Em conexões de internet ruins, você só pode enviar dados suficientes para o GitHub manter a conexão aberta. Conexões ruins de internet vão cair com este erro. Há outras razões para este erro, mas esta é a única razão para este erro com os dados que usamos.</span>
+        </p>
+        <a href="#top" class="top-link">
+          <span class="lang-en">Back to Top</span>
+          <span class="lang-pt">Voltar ao Topo</span>
+        </a>
       </details>
       <details id="git-add-folder-denied">
-        <summary> Git does not allow you to add a folder to the repo </summary>
-        <p> If you type the git add &lt;foldername&gt; and get an error that looks like
-          this </p>
+        <summary>
+          <span class="lang-en">Git does not allow you to add a folder to the repo</span>
+          <span class="lang-pt">Git não permite adicionar uma pasta ao repo</span>
+        </summary>
+        <p>
+          <span class="lang-en">If you type the git add &lt;foldername&gt; and get an error that looks like this</span>
+          <span class="lang-pt">Se você digitar git add &lt;foldername&gt; e receber um erro parecido com este</span>
+        </p>
         <pre>Git Error - &apos;main/&apos; does not have a commit checked out</pre>
-        <p> The issue is mot likely that the folder has been initialized as a git
-          repository. Go into that folder and look for the hidden folder/directory called
-          .git </p>
-        <p>Remove the .git folder in the sub-directory</p>
-        <a href="#top" class="top-link">Back to Top</a>
+        <p>
+          <span class="lang-en">The issue is most likely that the folder has been initialized as a git
+            repository. Go into that folder and look for the hidden folder/directory called .git</span>
+          <span class="lang-pt">O problema é muito provavelmente que a pasta foi inicializada como um repository git. Entre nessa pasta e procure pela pasta/diretório oculto chamado .git</span>
+        </p>
+        <p>
+          <span class="lang-en">Remove the .git folder in the sub-directory</span>
+          <span class="lang-pt">Remova a pasta .git no subdiretório</span>
+        </p>
+        <a href="#top" class="top-link">
+          <span class="lang-en">Back to Top</span>
+          <span class="lang-pt">Voltar ao Topo</span>
+        </a>
       </details>
-      <details id="git-ref-tips-error">
-        <summary>Error: Failed to push some refs to…</summary>
-        <p> Updates were rejected because the tip of your current branch is behind its
-          remote counterpart. Integrate the remote change (e.g. &apos;git pull …&apos;)
-          before
-          pushing again. </p>
-        <img src="images/git-ref-tips-error.png" alt="Git Refs Tip Error">
-        <p> The reason for this error is that the code on GitHub was edited and the user
-          did not
-          issue a git pull command before making any changes to their local machine before
-          they
-          started to edit on the local machine. </p>
-        <p>To fix this error there are a few options.</p>
+      <details id=”git-ref-tips-error”>
+        <summary>
+          <span class=”lang-en”>Error: Failed to push some refs to…</span>
+          <span class=”lang-pt”>Erro: Failed to push some refs to…</span>
+        </summary>
+        <p>
+          <span class=”lang-en”>Updates were rejected because the tip of your current branch is behind its
+            remote counterpart. Integrate the remote change (e.g. &apos;git pull …&apos;) before pushing again.</span>
+          <span class=”lang-pt”>As atualizações foram rejeitadas porque o topo do seu branch atual está atrás do seu equivalente remoto. Integre a mudança remota (ex.: &apos;git pull …&apos;) antes de fazer push novamente.</span>
+        </p>
+        <img src=”images/git-ref-tips-error.png” alt=”Git Refs Tip Error”>
+        <p>
+          <span class=”lang-en”>The reason for this error is that the code on GitHub was edited and the user
+            did not issue a git pull command before making any changes to their local machine before they
+            started to edit on the local machine.</span>
+          <span class=”lang-pt”>A razão deste erro é que o código no GitHub foi editado e o usuário não executou um comando git pull antes de fazer alterações na máquina local.</span>
+        </p>
+        <p>
+          <span class=”lang-en”>To fix this error there are a few options.</span>
+          <span class=”lang-pt”>Para corrigir este erro há algumas opções.</span>
+        </p>
         <ol>
-          <li> The first and usually the easiest for those new to Git/GitHub is to
-            recreate the
-            repository. You have to unpublish the site, delete the repository, delete the
-            .git
-            folder on the local and then push back to a Public Repository on GitHub. </li>
           <li>
-            <p> The preferred way is to stash the changes, pull from the server, merge
-              your stashed
-              changes into the update from the server and then push back to the server.
+            <span class=”lang-en”>The first and usually the easiest for those new to Git/GitHub is to
+              recreate the repository. You have to unpublish the site, delete the repository, delete the .git
+              folder on the local and then push back to a Public Repository on GitHub.</span>
+            <span class=”lang-pt”>A primeira e geralmente a mais fácil para iniciantes no Git/GitHub é recriar o repository. Você deve despublicar o site, excluir o repository, excluir a pasta .git local e então fazer push novamente para um Repository público no GitHub.</span>
+          </li>
+          <li>
+            <p>
+              <span class=”lang-en”>The preferred way is to stash the changes, pull from the server, merge
+                your stashed changes into the update from the server and then push back to the server.</span>
+              <span class=”lang-pt”>A forma preferida é fazer stash das alterações, pull do servidor, merge das suas alterações em stash com a atualização do servidor e depois fazer push de volta ao servidor.</span>
             </p>
-            <p>Run these commands:</p>
+            <p>
+              <span class=”lang-en”>Run these commands:</span>
+              <span class=”lang-pt”>Execute estes comandos:</span>
+            </p>
             <pre>
                                 git stash<br>
                                 git pull<br>
@@ -357,435 +659,702 @@
                                 git stash clear &lt;&minus; This will remove the stashed files from memory. Stashed files stay until removed.<br>
                             </pre>
           </li>
-          <li> You can try and issue a &apos;git push -f&apos; command at the command line
-            and see
-            it will go through. This is still not a guarantee that it will push. </li>
           <li>
-            <p> You can create a new branch and push to the new brach. You can then go to
-              the fork
-              and use the built in process on GitHub to validate the change in the fork
-              and merge
-              back to the master/main branch. (This is the way most companies do
-              development) </p>
-            <p>Create a new branch in VSCode</p>
-            <img src="images/vscode-create-branch.png" alt="VSCode Create Branch">
-            <p>Give the branch a new name</p>
-            <img src="images/brach-new-name.png" alt="Branch New Name">
-            <p>Commit and push the new branch</p>
-            <img src="images/vscode-commit-sync.png" alt="VSCode Commit &amp; Sync">
-            <p>Open GitHub repository</p>
-            <p>You should see a message like this</p>
-            <img src="images/github-branch-push-merge.png"
-              alt="Github message about pending merges">
-            <p>Click the Compare &amp; Pull Request button</p>
-            <p>You will see a screen like this</p>
-            <img src="images/brach-pull-request.png" alt="GutHub Branch Pull Request">
-            <p> You can type a comment in box where it says Leave a Comment. </p>
-            <p>Click the Create pull request button</p>
-            <p>Hopefully you will see this message</p>
-            <img src="images/branch-no-conflict.png" alt="GitHub merge no conflict">
-            <p> If you see a message that state there is a conflict, you will have to fix
-              the
-              conflict using one of the options suggested. </p>
-            <p> Once the conflict is resolved and you get this message, click the Merge
-              pull Request
-              button </p>
-            <p>You will then be asked to confirm the merge</p>
-            <img src="images/branch-confirm-merge.png" alt="GitHub confirm Merge message">
-            <p>Click the Confirm Merge button</p>
-            <p> Once the merge is successful you will see this message. Go ahead and
-              delete the
-              branch by clicking the Delete Branch button </p>
-            <img src="images/branch-merge-successful.png"
-              alt="Github Branch Merge successful">
-            <p> If you do not delete the branch you will always push to this branch from
-              VSCode by
-              default now. </p>
-            <p>Go back to VSCode</p>
-            <p> change back to the master branch by using the Checkout To option </p>
-            <img src="images/branch-check-out.png" alt="VSCode Branch Checkout">
-            <p> Select the Main/Master branch. Go by the name and not the number. </p>
-            <img src="images/branch-select-master.png" alt="VSCode Select Master Branch">
-            <p>To remove the local branch open the command prompted</p>
-            <p>Run this git command at the command prompt</p>
+            <span class=”lang-en”>You can try and issue a &apos;git push -f&apos; command at the command line
+              and see it will go through. This is still not a guarantee that it will push.</span>
+            <span class=”lang-pt”>Você pode tentar executar o comando &apos;git push -f&apos; na linha de comando e ver se ele passa. Isso ainda não é garantia de que vai funcionar.</span>
+          </li>
+          <li>
+            <p>
+              <span class=”lang-en”>You can create a new branch and push to the new branch. You can then go to
+                the fork and use the built in process on GitHub to validate the change in the fork and merge
+                back to the master/main branch. (This is the way most companies do development)</span>
+              <span class=”lang-pt”>Você pode criar um novo branch e fazer push para ele. Depois pode ir ao fork e usar o processo integrado do GitHub para validar a mudança no fork e fazer merge de volta ao branch master/main. (Esta é a forma como a maioria das empresas faz desenvolvimento)</span>
+            </p>
+            <p>
+              <span class=”lang-en”>Create a new branch in VSCode</span>
+              <span class=”lang-pt”>Crie um novo branch no VSCode</span>
+            </p>
+            <img src=”images/vscode-create-branch.png” alt=”VSCode Create Branch”>
+            <p>
+              <span class=”lang-en”>Give the branch a new name</span>
+              <span class=”lang-pt”>Dê um nome novo ao branch</span>
+            </p>
+            <img src=”images/brach-new-name.png” alt=”Branch New Name”>
+            <p>
+              <span class=”lang-en”>Commit and push the new branch</span>
+              <span class=”lang-pt”>Faça commit e push do novo branch</span>
+            </p>
+            <img src=”images/vscode-commit-sync.png” alt=”VSCode Commit &amp; Sync”>
+            <p>
+              <span class=”lang-en”>Open GitHub repository</span>
+              <span class=”lang-pt”>Abra o repository no GitHub</span>
+            </p>
+            <p>
+              <span class=”lang-en”>You should see a message like this</span>
+              <span class=”lang-pt”>Você deve ver uma mensagem assim</span>
+            </p>
+            <img src=”images/github-branch-push-merge.png” alt=”Github message about pending merges”>
+            <p>
+              <span class=”lang-en”>Click the Compare &amp; Pull Request button</span>
+              <span class=”lang-pt”>Clique no botão Compare &amp; Pull Request</span>
+            </p>
+            <p>
+              <span class=”lang-en”>You will see a screen like this</span>
+              <span class=”lang-pt”>Você verá uma tela assim</span>
+            </p>
+            <img src=”images/brach-pull-request.png” alt=”GutHub Branch Pull Request”>
+            <p>
+              <span class=”lang-en”>You can type a comment in box where it says Leave a Comment.</span>
+              <span class=”lang-pt”>Você pode digitar um comentário na caixa onde diz Leave a Comment.</span>
+            </p>
+            <p>
+              <span class=”lang-en”>Click the Create pull request button</span>
+              <span class=”lang-pt”>Clique no botão Create pull request</span>
+            </p>
+            <p>
+              <span class=”lang-en”>Hopefully you will see this message</span>
+              <span class=”lang-pt”>Esperamos que você veja esta mensagem</span>
+            </p>
+            <img src=”images/branch-no-conflict.png” alt=”GitHub merge no conflict”>
+            <p>
+              <span class=”lang-en”>If you see a message that state there is a conflict, you will have to fix the conflict using one of the options suggested.</span>
+              <span class=”lang-pt”>Se você ver uma mensagem indicando que há um conflito, você terá que corrigir o conflito usando uma das opções sugeridas.</span>
+            </p>
+            <p>
+              <span class=”lang-en”>Once the conflict is resolved and you get this message, click the Merge pull Request button</span>
+              <span class=”lang-pt”>Quando o conflito for resolvido e você receber esta mensagem, clique no botão Merge pull Request</span>
+            </p>
+            <p>
+              <span class=”lang-en”>You will then be asked to confirm the merge</span>
+              <span class=”lang-pt”>Você será solicitado a confirmar o merge</span>
+            </p>
+            <img src=”images/branch-confirm-merge.png” alt=”GitHub confirm Merge message”>
+            <p>
+              <span class=”lang-en”>Click the Confirm Merge button</span>
+              <span class=”lang-pt”>Clique no botão Confirm Merge</span>
+            </p>
+            <p>
+              <span class=”lang-en”>Once the merge is successful you will see this message. Go ahead and
+                delete the branch by clicking the Delete Branch button</span>
+              <span class=”lang-pt”>Quando o merge for bem-sucedido, você verá esta mensagem. Vá em frente e exclua o branch clicando no botão Delete Branch</span>
+            </p>
+            <img src=”images/branch-merge-successful.png” alt=”Github Branch Merge successful”>
+            <p>
+              <span class=”lang-en”>If you do not delete the branch you will always push to this branch from VSCode by default now.</span>
+              <span class=”lang-pt”>Se você não excluir o branch, sempre fará push para este branch no VSCode por padrão.</span>
+            </p>
+            <p>
+              <span class=”lang-en”>Go back to VSCode</span>
+              <span class=”lang-pt”>Volte ao VSCode</span>
+            </p>
+            <p>
+              <span class=”lang-en”>change back to the master branch by using the Checkout To option</span>
+              <span class=”lang-pt”>Volte ao branch master usando a opção Checkout To</span>
+            </p>
+            <img src=”images/branch-check-out.png” alt=”VSCode Branch Checkout”>
+            <p>
+              <span class=”lang-en”>Select the Main/Master branch. Go by the name and not the number.</span>
+              <span class=”lang-pt”>Selecione o branch Main/Master. Use o nome e não o número.</span>
+            </p>
+            <img src=”images/branch-select-master.png” alt=”VSCode Select Master Branch”>
+            <p>
+              <span class=”lang-en”>To remove the local branch open the command prompt</span>
+              <span class=”lang-pt”>Para remover o branch local, abra o terminal</span>
+            </p>
+            <p>
+              <span class=”lang-en”>Run this git command at the command prompt</span>
+              <span class=”lang-pt”>Execute este comando git no terminal</span>
+            </p>
             <pre>git pull &minus;prune</pre>
-            <p>You will see something like this if it works</p>
-            <img src="images/branch-prune.png" alt="Git Prune Command">
+            <p>
+              <span class=”lang-en”>You will see something like this if it works</span>
+              <span class=”lang-pt”>Você verá algo assim se funcionar</span>
+            </p>
+            <img src=”images/branch-prune.png” alt=”Git Prune Command”>
             <pre>git branch &minus;d &lt;branch name&gt;</pre>
-            <img src="images/branch-delete.png" alt="Git Branch Delete Command">
-            <p> This screenshot shows what happens if you have not switched to the
-              main/master
-              branch first and the branch has not been fully merged. These entries are
-              denoted with
-              the red dot to the left of the command that was run. </p>
-            <p>You must CHECKOUT the main/master branch first</p>
-            <p> You can force the delete by using the -D option. Lowercase &minus;d for
-              the check
-              and uppercase &minus;D to force the delete. </p>
-            <p> You should now only have the one branch on your local computer. This is
-              the
-              preferred option for most classes at school. YOu will have multiple branches
-              if you
-              are working as a group on a single project. </p>
+            <img src=”images/branch-delete.png” alt=”Git Branch Delete Command”>
+            <p>
+              <span class=”lang-en”>This screenshot shows what happens if you have not switched to the
+                main/master branch first and the branch has not been fully merged. These entries are
+                denoted with the red dot to the left of the command that was run.</span>
+              <span class=”lang-pt”>Esta captura de tela mostra o que acontece se você não tiver mudado para o branch main/master primeiro e o branch não tiver sido totalmente incorporado. Essas entradas são marcadas com o ponto vermelho à esquerda do comando executado.</span>
+            </p>
+            <p>
+              <span class=”lang-en”>You must CHECKOUT the main/master branch first</span>
+              <span class=”lang-pt”>Você deve fazer CHECKOUT do branch main/master primeiro</span>
+            </p>
+            <p>
+              <span class=”lang-en”>You can force the delete by using the -D option. Lowercase &minus;d for the check and uppercase &minus;D to force the delete.</span>
+              <span class=”lang-pt”>Você pode forçar a exclusão usando a opção -D. Minúscula &minus;d para verificar e maiúscula &minus;D para forçar a exclusão.</span>
+            </p>
+            <p>
+              <span class=”lang-en”>You should now only have the one branch on your local computer. This is the
+                preferred option for most classes at school. You will have multiple branches if you
+                are working as a group on a single project.</span>
+              <span class=”lang-pt”>Agora você deve ter apenas um branch no seu computador local. Esta é a opção preferida para a maioria das aulas na escola. Você terá múltiplos branches se estiver trabalhando em grupo em um único projeto.</span>
+            </p>
           </li>
         </ol>
-        <a href="#top" class="top-link">Back to Top</a>
+        <a href=”#top” class=”top-link”>
+          <span class=”lang-en”>Back to Top</span>
+          <span class=”lang-pt”>Voltar ao Topo</span>
+        </a>
       </details>
       <details id="git-credential-manager-error">
-        <summary>User is prompted git-credential-manager-core.exe could not be started
+        <summary>
+          <span class="lang-en">User is prompted git-credential-manager-core.exe could not be started</span>
+          <span class="lang-pt">O usuário recebe o aviso: git-credential-manager-core.exe não pôde ser iniciado</span>
         </summary>
-        <p>User gets this prompt every time they go to sync with GitHub</p>
-        <img src="images/git-credential-manaager-net.png"
-          alt="Grit Credential Manager .Net prompt">
-        <p> You have to install Microsoft .Net 4.7.2 to get rid of this prompt and to have
-          Git
-          remember your GitHub credentials. </p>
-        <p> If internet connectivity is an issue, then use this URL to go directly to the
-          download
-          page and download the off-line installer. Install the software, reboot the
-          computer and
-          try to sync with Github. </p>
-        <p> You should not be prompted for this again. If you do then the install did not
-          work
-          correctly. </p>
-        <p>If you get the following message</p>
-        <img src="images/windows-net-not-supported.png" alt="Windows .Net not supported">
-        <p> You must update Windows to at least Windows 10 version 1607. You can tell
-          which version
-          you have boy going to the About option in the Windows Settings. </p>
-        <p> This post on Microsoft Support site shows you how to find which version of
-          Windows you
-          are running. <a
-            href="https://support.microsoft.com/en-us/windows/which-version-of-windows-operating-system-am-i-running-628bec99-476a-2c13-5296-9dd081cdd808"
-            target="_blank"> Find operating system info in Windows 10 </a>
+        <p>
+          <span class="lang-en">User gets this prompt every time they go to sync with GitHub</span>
+          <span class="lang-pt">O usuário recebe este aviso toda vez que tenta fazer sync com o GitHub</span>
         </p>
-        <a href="#top" class="top-link">Back to Top</a>
+        <img src="images/git-credential-manaager-net.png" alt="Grit Credential Manager .Net prompt">
+        <p>
+          <span class="lang-en">You have to install Microsoft .Net 4.7.2 to get rid of this prompt and to have Git remember your GitHub credentials.</span>
+          <span class="lang-pt">Você precisa instalar o Microsoft .Net 4.7.2 para eliminar este aviso e fazer com que o Git lembre suas credenciais do GitHub.</span>
+        </p>
+        <p>
+          <span class="lang-en">If internet connectivity is an issue, then use this URL to go directly to the
+            download page and download the off-line installer. Install the software, reboot the computer and try to sync with Github.</span>
+          <span class="lang-pt">Se a conectividade com a internet for um problema, use este URL para ir diretamente à página de download e baixar o instalador off-line. Instale o software, reinicie o computador e tente fazer sync com o Github.</span>
+        </p>
+        <p>
+          <span class="lang-en">You should not be prompted for this again. If you do then the install did not work correctly.</span>
+          <span class="lang-pt">Você não deve ser solicitado para isso novamente. Se acontecer, a instalação não funcionou corretamente.</span>
+        </p>
+        <p>
+          <span class="lang-en">If you get the following message</span>
+          <span class="lang-pt">Se você receber a seguinte mensagem</span>
+        </p>
+        <img src="images/windows-net-not-supported.png" alt="Windows .Net not supported">
+        <p>
+          <span class="lang-en">You must update Windows to at least Windows 10 version 1607. You can tell which version you have by going to the About option in the Windows Settings.</span>
+          <span class="lang-pt">Você deve atualizar o Windows para pelo menos o Windows 10 versão 1607. Você pode verificar qual versão tem acessando a opção About nas Configurações do Windows.</span>
+        </p>
+        <p>
+          <span class="lang-en">This post on Microsoft Support site shows you how to find which version of Windows you are running.</span>
+          <span class="lang-pt">Esta publicação no site de Suporte da Microsoft mostra como encontrar qual versão do Windows você está executando (somente em inglês).</span>
+          <a href="https://support.microsoft.com/en-us/windows/which-version-of-windows-operating-system-am-i-running-628bec99-476a-2c13-5296-9dd081cdd808"
+            target="_blank">Find operating system info in Windows 10</a>
+        </p>
+        <a href="#top" class="top-link">
+          <span class="lang-en">Back to Top</span>
+          <span class="lang-pt">Voltar ao Topo</span>
+        </a>
       </details>
       <details id="mac-xcode-error">
-        <summary>MacOS error: xcrun: error: invalid active developer path </summary>
-        <h2>Error when running git --version on MAC</h2>
-        <p>When running the "git --version" or "git version" on a Mac, you may encounter
-          this error:
+        <summary>
+          <span class="lang-en">MacOS error: xcrun: error: invalid active developer path</span>
+          <span class="lang-pt">Erro MacOS: xcrun: error: invalid active developer path</span>
+        </summary>
+        <h2>
+          <span class="lang-en">Error when running git --version on MAC</span>
+          <span class="lang-pt">Erro ao executar git --version no MAC</span>
+        </h2>
+        <p>
+          <span class="lang-en">When running the "git --version" or "git version" on a Mac, you may encounter this error:</span>
+          <span class="lang-pt">Ao executar "git --version" ou "git version" em um Mac, você pode encontrar este erro:</span>
         </p>
-        <p>xcrun: error: invalid active developer path
-          (/Library/Developer/CommandLineTools),
-          missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun</p>
+        <p>xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun</p>
         <img src="images/macos-xcode-error.png" alt="MacOS error message">
-        <p>To fix this error you must run the following command in a terminal window on
-          the Mac.
+        <p>
+          <span class="lang-en">To fix this error you must run the following command in a terminal window on the Mac.</span>
+          <span class="lang-pt">Para corrigir este erro, você deve executar o seguinte comando em uma janela de terminal no Mac.</span>
         </p>
         <pre>xcode-select --install</pre>
-        <p>The other way to install these tools is to goto the Apple Developer software
-          page and
-          install from there: <a href="https://developer.apple.com/download/more/"
-            target="_blank">https://developer.apple.com/download/more/</a>
+        <p>
+          <span class="lang-en">The other way to install these tools is to goto the Apple Developer software page and install from there:</span>
+          <span class="lang-pt">A outra forma de instalar essas ferramentas é acessar a página de software do Apple Developer e instalar a partir daí:</span>
+          <a href="https://developer.apple.com/download/more/" target="_blank">https://developer.apple.com/download/more/</a>
         </p>
-        <p>Look for the: "Command Line Tools for Xcode" with the version number that
-          matches your OS
-          version number and does not contain the word 'BETA' as part of the filename. It
-          will look
-          something like this screenshot.</p>
+        <p>
+          <span class="lang-en">Look for the: "Command Line Tools for Xcode" with the version number that matches your OS version number and does not contain the word 'BETA' as part of the filename. It will look something like this screenshot.</span>
+          <span class="lang-pt">Procure por: "Command Line Tools for Xcode" com o número de versão que corresponde ao número de versão do seu sistema operacional e que não contém a palavra 'BETA' no nome do arquivo. Vai parecer algo assim na captura de tela.</span>
+        </p>
         <img src="images/macos-xcode-download.png" alt="MacOS Developer Download">
-        <p>Once the software has been installed make sure to restart the VSCode
-          application by
-          clicking on the menu and select QUIT, (<img src="images/mac-command.png"
-            alt="command icon">-q)</p>
-        <a href="#top" class="top-link">Back to Top</a>
+        <p>
+          <span class="lang-en">Once the software has been installed make sure to restart the VSCode application by clicking on the menu and select QUIT, (<img src="images/mac-command.png" alt="command icon">-q)</span>
+          <span class="lang-pt">Depois de instalar o software, certifique-se de reiniciar o aplicativo VSCode clicando no menu e selecionando QUIT, (<img src="images/mac-command.png" alt="command icon">-q)</span>
+        </p>
+        <a href="#top" class="top-link">
+          <span class="lang-en">Back to Top</span>
+          <span class="lang-pt">Voltar ao Topo</span>
+        </a>
       </details>
       <details id="libcurl-not-found">
-        <summary>Git LoadLibraryExW() failed with" The specified procedure could not be
-          found.?
+        <summary>
+          <span class="lang-en">Git LoadLibraryExW() failed with "The specified procedure could not be found."</span>
+          <span class="lang-pt">Git LoadLibraryExW() falhou com "The specified procedure could not be found."</span>
         </summary>
         <img src="images/libcurl4-not-found.png" alt="Libcurl not found">
-        <p>If you open the Show <span class="bold-text">Command Output</span> you will see
-          the
-          following error: <span class="bold-text">git failed to load library
-            libcurl-4.dll</span>
-        </p>
-        <p>To resolve this error, you must find the libcurl-4.dll file on the system and
-          make a copy
-          of it to the <span class="bolded-text">C:\Program Files\Git\bin\</span> folder
-        </p>
-        <p>for some reason even though Windows generally has the folder that this file can
-          be found
-          in the Path Environmental settings, Git does not always see it and cannot load
-          it. </p>
-        <p>Most Windows systems has this file located in <span
-            class="bold-text">C:\Windows</span>
-          and this folder is part of the Path setting on Windows computers.
         <p>
-          <a href="#top" class="top-link">Back to Top</a>
+          <span class="lang-en">If you open the Show <span class="bold-text">Command Output</span> you will see the following error: <span class="bold-text">git failed to load library libcurl-4.dll</span></span>
+          <span class="lang-pt">Se você abrir o Show <span class="bold-text">Command Output</span> você verá o seguinte erro: <span class="bold-text">git failed to load library libcurl-4.dll</span></span>
+        </p>
+        <p>
+          <span class="lang-en">To resolve this error, you must find the libcurl-4.dll file on the system and make a copy of it to the <span class="bolded-text">C:\Program Files\Git\bin\</span> folder</span>
+          <span class="lang-pt">Para resolver este erro, você deve encontrar o arquivo libcurl-4.dll no sistema e fazer uma cópia para a pasta <span class="bolded-text">C:\Program Files\Git\bin\</span></span>
+        </p>
+        <p>
+          <span class="lang-en">for some reason even though Windows generally has the folder that this file can be found in the Path Environmental settings, Git does not always see it and cannot load it.</span>
+          <span class="lang-pt">Por algum motivo, embora o Windows geralmente tenha a pasta deste arquivo nas configurações de Path Environment, o Git nem sempre consegue localizá-lo e carregá-lo.</span>
+        </p>
+        <p>
+          <span class="lang-en">Most Windows systems has this file located in <span class="bold-text">C:\Windows</span> and this folder is part of the Path setting on Windows computers.</span>
+          <span class="lang-pt">A maioria dos sistemas Windows tem este arquivo localizado em <span class="bold-text">C:\Windows</span> e esta pasta faz parte da configuração do Path nos computadores Windows.</span>
+        </p>
+        <a href="#top" class="top-link">
+          <span class="lang-en">Back to Top</span>
+          <span class="lang-pt">Voltar ao Topo</span>
+        </a>
       </details>
       <details id="install-git">
-        <summary>Error You must install Git first</summary>
-        <p>This error may come up even after you have install the Git software. If that is
-          the case
-          follow these steps.</p>
-        <p>Open the Extensions tab.</p>
+        <summary>
+          <span class="lang-en">Error You must install Git first</span>
+          <span class="lang-pt">Erro: você deve instalar o Git primeiro</span>
+        </summary>
+        <p>
+          <span class="lang-en">This error may come up even after you have install the Git software. If that is the case follow these steps.</span>
+          <span class="lang-pt">Este erro pode aparecer mesmo depois de você ter instalado o software Git. Se for o caso, siga estes passos.</span>
+        </p>
+        <p>
+          <span class="lang-en">Open the Extensions tab.</span>
+          <span class="lang-pt">Abra a aba Extensions.</span>
+        </p>
         <img src="images/vscode-extensions-icon.webp" alt="VSCode extension tab.">
-        <p>Click on the 3 dots in the top right corner.</p>
+        <p>
+          <span class="lang-en">Click on the 3 dots in the top right corner.</span>
+          <span class="lang-pt">Clique nos 3 pontos no canto superior direito.</span>
+        </p>
         <img src="images/vscode-extension-menu.webp" alt="VSCode extension menu">
-        <p>Select Views then Disabled extensions</p>
+        <p>
+          <span class="lang-en">Select Views then Disabled extensions</span>
+          <span class="lang-pt">Selecione Views e depois Disabled extensions</span>
+        </p>
         <img src="images/vscode-extentions-disabled.webp" alt="Disabled extensions">
-        <p>You will now see a new option in the extensions tab that says disabled. It
-          should have a
-          few extensions in there. You can make that area bigger by clicking on the bar
-          that says
-          DISABLED and then dray the top line of the box up.</p>
+        <p>
+          <span class="lang-en">You will now see a new option in the extensions tab that says disabled. It
+            should have a few extensions in there. You can make that area bigger by clicking on the bar
+            that says DISABLED and then drag the top line of the box up.</span>
+          <span class="lang-pt">Você verá agora uma nova opção na aba de extensões que diz disabled. Deve ter algumas extensões lá. Você pode ampliar aquela área clicando na barra que diz DISABLED e arrastando a linha superior da caixa para cima.</span>
+        </p>
         <img src="images/vscode-disabled-move-bar.webp" alt="move bar">
-        <p>Click on Git and then in the right side editor click the enable button</p>
+        <p>
+          <span class="lang-en">Click on Git and then in the right side editor click the enable button</span>
+          <span class="lang-pt">Clique em Git e depois no editor do lado direito clique no botão enable</span>
+        </p>
         <img src="images/vscode-enable-git.webp" alt="enable git">
-        <p>That will auto start Git and Git Base if disabled. If you have GitHub disables
-          as well,
-          you will need to start that using the same process.</p>
-        <a href="#top" class="top-link">Back to Top</a>
+        <p>
+          <span class="lang-en">That will auto start Git and Git Base if disabled. If you have GitHub disabled as well, you will need to start that using the same process.</span>
+          <span class="lang-pt">Isso iniciará automaticamente o Git e o Git Base se estiverem desativados. Se o GitHub também estiver desativado, você precisará iniciá-lo usando o mesmo processo.</span>
+        </p>
+        <a href="#top" class="top-link">
+          <span class="lang-en">Back to Top</span>
+          <span class="lang-pt">Voltar ao Topo</span>
+        </a>
       </details>
       <details id="git-login-not-working">
-        <summary>Never get the Web Page to log into GitHub to authorize Git/GitHub
+        <summary>
+          <span class="lang-en">Never get the Web Page to log into GitHub to authorize Git/GitHub</span>
+          <span class="lang-pt">Nunca aparece a página da Web para fazer login no GitHub e autorizar o Git/GitHub</span>
         </summary>
-        <p>If you never get the web page to open to authorize Git or GitHub use from
-          withing VSCode,
-          You may have an issue with the default web browser setting on your computer.
         <p>
-        <p>Windows users:</p>
+          <span class="lang-en">If you never get the web page to open to authorize Git or GitHub use from within VSCode, you may have an issue with the default web browser setting on your computer.</span>
+          <span class="lang-pt">Se a página da web nunca abrir para autorizar o uso do Git ou GitHub a partir do VSCode, você pode ter um problema com a configuração do navegador padrão no seu computador.</span>
+        </p>
+        <p>
+          <span class="lang-en">Windows users:</span>
+          <span class="lang-pt">Usuários Windows:</span>
+        </p>
         <ul>
-          <li>Install the browser of your choice, if you haven't already. </li>
-          <li>Open the Windows Start menu and click Settings.</li>
-          <li>Click on Apps and then Default Apps.</li>
-          <li>Scroll down and select the current default browser under the "Web Browser"
-            section.
+          <li>
+            <span class="lang-en">Install the browser of your choice, if you haven't already.</span>
+            <span class="lang-pt">Instale o navegador de sua escolha, se ainda não o fez.</span>
           </li>
-          <li>Choose a new web browser from the list and click Set as Default. You may
-            need to
-            repeat this step for different file or link types. </li>
+          <li>
+            <span class="lang-en">Open the Windows Start menu and click Settings.</span>
+            <span class="lang-pt">Abra o menu Iniciar do Windows e clique em Settings.</span>
+          </li>
+          <li>
+            <span class="lang-en">Click on Apps and then Default Apps.</span>
+            <span class="lang-pt">Clique em Apps e depois em Default Apps.</span>
+          </li>
+          <li>
+            <span class="lang-en">Scroll down and select the current default browser under the "Web Browser" section.</span>
+            <span class="lang-pt">Role para baixo e selecione o navegador padrão atual na seção "Web Browser".</span>
+          </li>
+          <li>
+            <span class="lang-en">Choose a new web browser from the list and click Set as Default. You may need to repeat this step for different file or link types.</span>
+            <span class="lang-pt">Escolha um novo navegador da lista e clique em Set as Default. Pode ser necessário repetir este passo para diferentes tipos de arquivo ou link.</span>
+          </li>
         </ul>
-        <p>MacOS Users:</p>
+        <p>
+          <span class="lang-en">MacOS Users:</span>
+          <span class="lang-pt">Usuários MacOS:</span>
+        </p>
         <ul>
-          <li>Download your preferred web browser.</li>
-          <li>Install your browser. Double-click the downloaded DMG file</li>
-          <li>Click the Apple logo in the top-left corner of the screen.</li>
-          <li>Click System Preferences…</li>
-          <li>Click General</li>
-          <li>Click the "Default web browser" drop-down box.</li>
-          <li>Select a Default web browser</li>
+          <li>
+            <span class="lang-en">Download your preferred web browser.</span>
+            <span class="lang-pt">Baixe seu navegador preferido.</span>
+          </li>
+          <li>
+            <span class="lang-en">Install your browser. Double-click the downloaded DMG file</span>
+            <span class="lang-pt">Instale seu navegador. Dê duplo clique no arquivo DMG baixado</span>
+          </li>
+          <li>
+            <span class="lang-en">Click the Apple logo in the top-left corner of the screen.</span>
+            <span class="lang-pt">Clique no logotipo da Apple no canto superior esquerdo da tela.</span>
+          </li>
+          <li>
+            <span class="lang-en">Click System Preferences…</span>
+            <span class="lang-pt">Clique em System Preferences…</span>
+          </li>
+          <li>
+            <span class="lang-en">Click General</span>
+            <span class="lang-pt">Clique em General</span>
+          </li>
+          <li>
+            <span class="lang-en">Click the "Default web browser" drop-down box.</span>
+            <span class="lang-pt">Clique na caixa suspensa "Default web browser".</span>
+          </li>
+          <li>
+            <span class="lang-en">Select a Default web browser</span>
+            <span class="lang-pt">Selecione um navegador padrão</span>
+          </li>
         </ul>
-        <p>Linux Users</p>
-        <p>This command will show you what your current default web browser is:</p>
+        <p>
+          <span class="lang-en">Linux Users</span>
+          <span class="lang-pt">Usuários Linux</span>
+        </p>
+        <p>
+          <span class="lang-en">This command will show you what your current default web browser is:</span>
+          <span class="lang-pt">Este comando mostrará qual é o seu navegador padrão atual:</span>
+        </p>
         <code>xdg-settings get default-web-browser</code>
-        <p>To set the default browser you will use this following format command. Change
-          the
-          firefox.desktop to the browser of your choice </p>
+        <p>
+          <span class="lang-en">To set the default browser you will use this following format command. Change the firefox.desktop to the browser of your choice</span>
+          <span class="lang-pt">Para definir o navegador padrão você usará este formato de comando. Substitua firefox.desktop pelo navegador de sua escolha</span>
+        </p>
         <code>xdg-settings set default-web-browser firefox.desktop</code>
-        <p>Common browser name:</p>
+        <p>
+          <span class="lang-en">Common browser name:</span>
+          <span class="lang-pt">Nomes de navegadores comuns:</span>
+        </p>
         <code>firefox.desktop, google-chrome.desktop, brave-browser.desktop, microsoft-edge.desktop, opera.desktop</code>
-        <a href="#top" class="top-link">Back to Top</a>
+        <a href="#top" class="top-link">
+          <span class="lang-en">Back to Top</span>
+          <span class="lang-pt">Voltar ao Topo</span>
+        </a>
       </details>
       <details id="git-build-fail">
-        <summary>Github Pages Build process fails</summary>
-        <h3>There are 2 potential reasons that have been identified with students.</h3>
+        <summary>
+          <span class="lang-en">Github Pages Build process fails</span>
+          <span class="lang-pt">O processo de build do Github Pages falha</span>
+        </summary>
+        <h3>
+          <span class="lang-en">There are 2 potential reasons that have been identified with students.</span>
+          <span class="lang-pt">Há 2 razões potenciais identificadas com alunos.</span>
+        </h3>
         <details class="sub-details">
-          <summary>User setup GitHub Pages incorrectly</summary>
-          <p>To verify if this is the issue you need to look for this in the error log of
-            the GitHub Pages publishing process.</p>
-          <p>Step 1:</p>
-          <p>Go to the Actions tab of the repository</p>
+          <summary>
+            <span class="lang-en">User setup GitHub Pages incorrectly</span>
+            <span class="lang-pt">O usuário configurou o GitHub Pages incorretamente</span>
+          </summary>
+          <p>
+            <span class="lang-en">To verify if this is the issue you need to look for this in the error log of the GitHub Pages publishing process.</span>
+            <span class="lang-pt">Para verificar se este é o problema, você precisa procurar no log de erros do processo de publicação do GitHub Pages.</span>
+          </p>
+          <p>
+            <span class="lang-en">Step 1:</span>
+            <span class="lang-pt">Passo 1:</span>
+          </p>
+          <p>
+            <span class="lang-en">Go to the Actions tab of the repository</span>
+            <span class="lang-pt">Vá para a aba Actions do repository</span>
+          </p>
           <img src="images/github-action-tab.png" alt="GitHub Actions Tab">
-          <p>Click on the pages build and deployment link next to the error icon</p>
-          <img src="images/github-pages-build-fail.jpg"
-            alt="Link to the pages build error">
-          <p>Then click on either option to see the error</p>
-          <img src="images/github-pages-error-lnks.jpg"
-            alt="GitHub Pages Build Error link">
-
-          <p>This is the error and the part that tells you what is wrong is at the end</p>
-          <img src="images/github-pages-build-error-msg.jpg"
-            alt="GitHub pages build error message">
-
-
-          <p>This is the error text you need to look for at the end of the message</p>
-          <pre
-            class="code-style">Error: No such file or directory @ dir_chdir0 - /github/workspace/docs</pre>
-
-          <p>What the student did was to change the folder in the GitHub Pages setup page.
-            They student has something like this:</p>
+          <p>
+            <span class="lang-en">Click on the pages build and deployment link next to the error icon</span>
+            <span class="lang-pt">Clique no link de build e implantação das pages ao lado do ícone de erro</span>
+          </p>
+          <img src="images/github-pages-build-fail.jpg" alt="Link to the pages build error">
+          <p>
+            <span class="lang-en">Then click on either option to see the error</span>
+            <span class="lang-pt">Depois clique em qualquer opção para ver o erro</span>
+          </p>
+          <img src="images/github-pages-error-lnks.jpg" alt="GitHub Pages Build Error link">
+          <p>
+            <span class="lang-en">This is the error and the part that tells you what is wrong is at the end</span>
+            <span class="lang-pt">Este é o erro e a parte que diz o que está errado fica no final</span>
+          </p>
+          <img src="images/github-pages-build-error-msg.jpg" alt="GitHub pages build error message">
+          <p>
+            <span class="lang-en">This is the error text you need to look for at the end of the message</span>
+            <span class="lang-pt">Este é o texto de erro que você deve procurar no final da mensagem</span>
+          </p>
+          <pre class="code-style">Error: No such file or directory @ dir_chdir0 - /github/workspace/docs</pre>
+          <p>
+            <span class="lang-en">What the student did was to change the folder in the GitHub Pages setup page. The student has something like this:</span>
+            <span class="lang-pt">O que o aluno fez foi alterar a pasta na página de configuração do GitHub Pages. O aluno tem algo assim:</span>
+          </p>
           <img src="images/github-pages-docs.png" alt="GitHub pages docs folder setup">
-          <p>It must be the root folder like this.</p>
-          <img src="images/github-pages-root-folder.png"
-            alt="GitHUb Pages Root Folder setup">
-          <p>Once the user changes it to the root folder and saves the change, a new
-            publishing process will start and it should publish if that is the only issue.
+          <p>
+            <span class="lang-en">It must be the root folder like this.</span>
+            <span class="lang-pt">Deve ser a pasta raiz como esta.</span>
+          </p>
+          <img src="images/github-pages-root-folder.png" alt="GitHUb Pages Root Folder setup">
+          <p>
+            <span class="lang-en">Once the user changes it to the root folder and saves the change, a new publishing process will start and it should publish if that is the only issue.</span>
+            <span class="lang-pt">Quando o usuário alterar para a pasta raiz e salvar a mudança, um novo processo de publicação começará e deve publicar se esse for o único problema.</span>
           </p>
         </details>
         <details class="sub-details">
-          <summary>User creates a repository within a repository</summary>
-
-          <p>This issue does occur and can occur if the student creates multiple
-            repositories during the course.</p>
-          <p>You will first notice that your project did not build and if you look on the
-            code page in GitHub, you will find the last commit message has a red X to the
-            right of it.
+          <summary>
+            <span class="lang-en">User creates a repository within a repository</span>
+            <span class="lang-pt">O usuário cria um repository dentro de outro repository</span>
+          </summary>
+          <p>
+            <span class="lang-en">This issue does occur and can occur if the student creates multiple repositories during the course.</span>
+            <span class="lang-pt">Este problema ocorre e pode ocorrer se o aluno criar múltiplos repositories durante o curso.</span>
+          </p>
+          <p>
+            <span class="lang-en">You will first notice that your project did not build and if you look on the code page in GitHub, you will find the last commit message has a red X to the right of it.</span>
+            <span class="lang-pt">Você primeiro notará que seu projeto não compilou e se você olhar na página de código no GitHub, encontrará a última mensagem de commit com um X vermelho à direita.</span>
           </p>
           <img src="images/github-buld-error-x.webp" alt="GitHub Build error indicator">
-          <p>Click on the Red X and you will be presented with something that looks like
-            this.</p>
+          <p>
+            <span class="lang-en">Click on the Red X and you will be presented with something that looks like this.</span>
+            <span class="lang-pt">Clique no X vermelho e você verá algo assim.</span>
+          </p>
           <img src="images/github-build-check-dialog.webp" alt="Build Check Dialog">
-          <p>Click on the details option next to the item with the red X</p>
-          <img src="images/github-build-check-dialog-details.webp"
-            alt="click details link">
-          <p>Look for the error lines. They start with the word Error: and are in red
-            background color by default</p>
+          <p>
+            <span class="lang-en">Click on the details option next to the item with the red X</span>
+            <span class="lang-pt">Clique na opção details ao lado do item com o X vermelho</span>
+          </p>
+          <img src="images/github-build-check-dialog-details.webp" alt="click details link">
+          <p>
+            <span class="lang-en">Look for the error lines. They start with the word Error: and are in red background color by default</span>
+            <span class="lang-pt">Procure as linhas de erro. Elas começam com a palavra Error: e têm fundo vermelho por padrão</span>
+          </p>
           <img src="images/github-submodule-error.png" alt="submodule error">
-          <p>If the first like of the errors reads like this:</p>
-          <pre
-            class="code-style">&quot;Error: fatal: No url found for submodule path &lt;path to issue&gt; in .gitmodules&quot;</pre>
-          <p>If you have this issue. You have a sub-folder that is also been initialized
-            to
-            be a git repository</p>
-          <p>Another way to see this potential issue is to look at the code and look at
-            the location in the error above. You should see a folder icon with an arrow
-            pointing to the right next to the folder name like this</p>
-          <img src="images/github-submodule-icon-folder.png"
-            alt="submodule folder icon with repository on GitHUb">
-          <p>A third way to check this is in VSCode. </p>
-          <p>To fix this you have to go into the sub-folder mentioned in the error and
-            delete the hidden folder called .git</p>
-          <p>Easiest way to do this is within VSCode. Go to the source control area and
-            click the 3 dots to the right of Source control</p>
+          <p>
+            <span class="lang-en">If the first line of the errors reads like this:</span>
+            <span class="lang-pt">Se a primeira linha dos erros for assim:</span>
+          </p>
+          <pre class="code-style">&quot;Error: fatal: No url found for submodule path &lt;path to issue&gt; in .gitmodules&quot;</pre>
+          <p>
+            <span class="lang-en">If you have this issue. You have a sub-folder that has also been initialized to be a git repository</span>
+            <span class="lang-pt">Se você tiver este problema, tem uma subpasta que também foi inicializada como um repository git</span>
+          </p>
+          <p>
+            <span class="lang-en">Another way to see this potential issue is to look at the code and look at the location in the error above. You should see a folder icon with an arrow pointing to the right next to the folder name like this</span>
+            <span class="lang-pt">Outra forma de ver este problema é olhar o código e a localização no erro acima. Você deve ver um ícone de pasta com uma seta apontando para a direita ao lado do nome da pasta</span>
+          </p>
+          <img src="images/github-submodule-icon-folder.png" alt="submodule folder icon with repository on GitHUb">
+          <p>
+            <span class="lang-en">A third way to check this is in VSCode.</span>
+            <span class="lang-pt">Uma terceira forma de verificar é no VSCode.</span>
+          </p>
+          <p>
+            <span class="lang-en">To fix this you have to go into the sub-folder mentioned in the error and delete the hidden folder called .git</span>
+            <span class="lang-pt">Para corrigir isso você deve entrar na subpasta mencionada no erro e excluir a pasta oculta chamada .git</span>
+          </p>
+          <p>
+            <span class="lang-en">Easiest way to do this is within VSCode. Go to the source control area and click the 3 dots to the right of Source control</span>
+            <span class="lang-pt">A maneira mais fácil é dentro do VSCode. Vá para a área de source control e clique nos 3 pontos à direita de Source control</span>
+          </p>
           <img src="images/vscode-source-control.webp" alt="source control">
-          <p>Select Views then click Source Control Repositories</p>
-          <img src="images/vscode-source-coltrol-repositories.webp"
-            alt="source control repositories">
-          <p>This will then show you all the repositories under the main folder that is
-            open in VSCode. It will look something like this if there are more then 1.</p>
+          <p>
+            <span class="lang-en">Select Views then click Source Control Repositories</span>
+            <span class="lang-pt">Selecione Views e depois clique em Source Control Repositories</span>
+          </p>
+          <img src="images/vscode-source-coltrol-repositories.webp" alt="source control repositories">
+          <p>
+            <span class="lang-en">This will then show you all the repositories under the main folder that is open in VSCode. It will look something like this if there are more than 1.</span>
+            <span class="lang-pt">Isso mostrará todos os repositories sob a pasta principal que está aberta no VSCode. Parecerá algo assim se houver mais de 1.</span>
+          </p>
           <img src="images/vscode-multiple-source-repos.webp" alt="Multiple repositories">
-
-          <h3>How to delete the second local repository.</h3>
-          <p>Use your file manger and go to the sub folder with the initialized
-            repository.
-            Make sure to turn on "Show Hidden Items" and look for the .git folder name and
-            delete it. Do not delete the one in the root folder. </p>
+          <h3>
+            <span class="lang-en">How to delete the second local repository.</span>
+            <span class="lang-pt">Como excluir o segundo repository local.</span>
+          </h3>
+          <p>
+            <span class="lang-en">Use your file manager and go to the sub folder with the initialized repository. Make sure to turn on "Show Hidden Items" and look for the .git folder name and delete it. Do not delete the one in the root folder.</span>
+            <span class="lang-pt">Use seu gerenciador de arquivos e vá para a subpasta com o repository inicializado. Certifique-se de ativar "Show Hidden Items" e procure pelo nome da pasta .git e exclua-a. Não exclua a que está na pasta raiz.</span>
+          </p>
           <pre>For example: do not delete the wdd130/.git folder, but delete all other .git folders in sub folders under the wdd130 folder.</pre>
-          <p>How to do this form command line/terminal using VSCode.</p>
-          <p class="bold-text">Windows Users</p>
-          <p>Option 1:</p>
+          <p>
+            <span class="lang-en">How to do this from command line/terminal using VSCode.</span>
+            <span class="lang-pt">Como fazer isso a partir da linha de comando/terminal usando VSCode.</span>
+          </p>
+          <p class="bold-text">
+            <span class="lang-en">Windows Users</span>
+            <span class="lang-pt">Usuários Windows</span>
+          </p>
+          <p>
+            <span class="lang-en">Option 1:</span>
+            <span class="lang-pt">Opção 1:</span>
+          </p>
           <ul>
-            <li>open terminal</li>
-            <li>Change the terminal type to Git Bash by clicking on the chevron pointing
-              down next to the Plus sign</li>
-            <li>Change folder to the folder with the second repository. For example using
-              the image above:
+            <li>
+              <span class="lang-en">open terminal</span>
+              <span class="lang-pt">abra o terminal</span>
+            </li>
+            <li>
+              <span class="lang-en">Change the terminal type to Git Bash by clicking on the chevron pointing down next to the Plus sign</span>
+              <span class="lang-pt">Mude o tipo de terminal para Git Bash clicando no chevron apontando para baixo ao lado do sinal de Mais</span>
+            </li>
+            <li>
+              <span class="lang-en">Change folder to the folder with the second repository. For example using the image above:</span>
+              <span class="lang-pt">Mude para a pasta com o segundo repository. Por exemplo, usando a imagem acima:</span>
               <pre>cd cse210b</pre>
             </li>
-            <li>Type the following command:
+            <li>
+              <span class="lang-en">Type the following command:</span>
+              <span class="lang-pt">Digite o seguinte comando:</span>
               <pre class="code-style">rm .git -rf</pre>
             </li>
           </ul>
-          <p>Option 2:</p>
+          <p>
+            <span class="lang-en">Option 2:</span>
+            <span class="lang-pt">Opção 2:</span>
+          </p>
           <ul>
-            <li>open terminal. It will default to Powershell</li>
-            <li>Change folder to the folder with the second repository. For example using
-              the image above:
+            <li>
+              <span class="lang-en">open terminal. It will default to Powershell</span>
+              <span class="lang-pt">abra o terminal. Vai abrir como Powershell por padrão</span>
+            </li>
+            <li>
+              <span class="lang-en">Change folder to the folder with the second repository. For example using the image above:</span>
+              <span class="lang-pt">Mude para a pasta com o segundo repository. Por exemplo, usando a imagem acima:</span>
               <pre>cd cse210b</pre>
             </li>
-            <li>Type the following command:
+            <li>
+              <span class="lang-en">Type the following command:</span>
+              <span class="lang-pt">Digite o seguinte comando:</span>
               <pre class="code-style">Remove-Item -Recurse -Force .git</pre>
             </li>
           </ul>
-          <p class="bold-text">Mac and Linux users</p>
+          <p class="bold-text">
+            <span class="lang-en">Mac and Linux users</span>
+            <span class="lang-pt">Usuários Mac e Linux</span>
+          </p>
           <ul>
-            <li>open terminal</li>
-            <li>Change folder to the folder with the second repository. For example using
-              the image above:
+            <li>
+              <span class="lang-en">open terminal</span>
+              <span class="lang-pt">abra o terminal</span>
+            </li>
+            <li>
+              <span class="lang-en">Change folder to the folder with the second repository. For example using the image above:</span>
+              <span class="lang-pt">Mude para a pasta com o segundo repository. Por exemplo, usando a imagem acima:</span>
               <pre>cd cse210b</pre>
             </li>
-            <li>Type the following command for Git Bash:
+            <li>
+              <span class="lang-en">Type the following command for Git Bash:</span>
+              <span class="lang-pt">Digite o seguinte comando para Git Bash:</span>
               <pre class="code-style">rm .git -rf</pre>
             </li>
           </ul>
-          <p>Once done commit and sync with GitHub so that the build process can be
-            re-initialized
+          <p>
+            <span class="lang-en">Once done commit and sync with GitHub so that the build process can be re-initialized</span>
+            <span class="lang-pt">Depois faça commit e sync com o GitHub para que o processo de build possa ser reinicializado</span>
           </p>
-
-
         </details>
-
-        <a href="#top" class="top-link">Back to Top</a>
+        <a href="#top" class="top-link">
+          <span class="lang-en">Back to Top</span>
+          <span class="lang-pt">Voltar ao Topo</span>
+        </a>
       </details>
       <details id="git-allow-unrelated">
-        <summary>Git refusing to merge unrelated histories</summary>
-        <p>When you get the following General Git Error message</p>
+        <summary>
+          <span class="lang-en">Git refusing to merge unrelated histories</span>
+          <span class="lang-pt">Git recusa fazer merge de históricos não relacionados</span>
+        </summary>
+        <p>
+          <span class="lang-en">When you get the following General Git Error message</span>
+          <span class="lang-pt">Quando você receber a seguinte mensagem de erro geral do Git</span>
+        </p>
         <img src="images/git-general-error.png" alt="Git General Error">
-        <p>Click on the Show Command Output button</p>
-        <p>If you get a message that looks like this with the last line stating </p>
+        <p>
+          <span class="lang-en">Click on the Show Command Output button</span>
+          <span class="lang-pt">Clique no botão Show Command Output</span>
+        </p>
+        <p>
+          <span class="lang-en">If you get a message that looks like this with the last line stating</span>
+          <span class="lang-pt">Se você receber uma mensagem como esta com a última linha dizendo</span>
+        </p>
         <pre class="code-style">
           Fatal: refusing to merge unrelated histories
         </pre>
-        <img src="images/git-error-unlrelated-histories.png"
-          alt="Unrelated histories error">
-        <p>Type the following commands in a terminal window in VSCode</p>
+        <img src="images/git-error-unlrelated-histories.png" alt="Unrelated histories error">
+        <p>
+          <span class="lang-en">Type the following commands in a terminal window in VSCode</span>
+          <span class="lang-pt">Digite os seguintes comandos em uma janela de terminal no VSCode</span>
+        </p>
         <pre class="code-style">
             git merge --allow-unrelated-histories<br>
             git merge origin origin/main
           </pre>
-        <p>Then go ahead and make a change and then commit and sync with GitHub.</p>
-        <a href="#top" class="top-link">Back to Top</a>
+        <p>
+          <span class="lang-en">Then go ahead and make a change and then commit and sync with GitHub.</span>
+          <span class="lang-pt">Depois faça uma alteração e então faça commit e sync com o GitHub.</span>
+        </p>
+        <a href="#top" class="top-link">
+          <span class="lang-en">Back to Top</span>
+          <span class="lang-pt">Voltar ao Topo</span>
+        </a>
       </details>
       <details id="git-ssl-error">
-        <summary>You get the following error: fatal: Unable to access 'git repository
-          url': OpenSSL
-          SSL_read: SSL_ERROR_SYSCALL, erro 0 </summary>
-        <p>This error id due to some SSL connectivity issue between your computer and
-          GitHub. There
-          are a variety of reasons why you will get this message.</p>
-        <img src="images/git-ssl-error-0.png"
-          alt="Git Error Unable to access repository due to SSL error">
-        <p>The easiest way to fix this is to re-install/update Git. Go to <a
-            href="https://git-scm.com" target="_blank">git-scm.com</a> and download and
-          install the
-          software.</p>
-        <p><span class="bold-text">Windows computers</span> You can update using one of
-          two methods
+        <summary>
+          <span class="lang-en">You get the following error: fatal: Unable to access 'git repository url': OpenSSL SSL_read: SSL_ERROR_SYSCALL, erro 0</span>
+          <span class="lang-pt">Você recebe o seguinte erro: fatal: Unable to access 'git repository url': OpenSSL SSL_read: SSL_ERROR_SYSCALL, erro 0</span>
+        </summary>
+        <p>
+          <span class="lang-en">This error is due to some SSL connectivity issue between your computer and GitHub. There are a variety of reasons why you will get this message.</span>
+          <span class="lang-pt">Este erro é devido a algum problema de conectividade SSL entre seu computador e o GitHub. Há uma variedade de razões pelas quais você receberá esta mensagem.</span>
+        </p>
+        <img src="images/git-ssl-error-0.png" alt="Git Error Unable to access repository due to SSL error">
+        <p>
+          <span class="lang-en">The easiest way to fix this is to re-install/update Git. Go to <a href="https://git-scm.com" target="_blank">git-scm.com</a> and download and install the software.</span>
+          <span class="lang-pt">A maneira mais fácil de corrigir isso é reinstalar/atualizar o Git. Acesse <a href="https://git-scm.com" target="_blank">git-scm.com</a> e baixe e instale o software.</span>
+        </p>
+        <p>
+          <span class="lang-en"><span class="bold-text">Windows computers</span> You can update using one of two methods</span>
+          <span class="lang-pt"><span class="bold-text">Computadores Windows</span> Você pode atualizar usando um de dois métodos</span>
         </p>
         <ul>
-          <li>Run this command in a CMD prompt on Windows:
+          <li>
+            <span class="lang-en">Run this command in a CMD prompt on Windows:</span>
+            <span class="lang-pt">Execute este comando no prompt CMD no Windows:</span>
             <pre>git update-git-for-windows</pre>
           </li>
-          <li>Download the files and run the installer manually. You can get the
-            installation
-            instructions here: <a href="https://git-scm.com/download/win"
-              target="_blank">Download
-              for Windows</a></li>
+          <li>
+            <span class="lang-en">Download the files and run the installer manually. You can get the installation instructions here: <a href="https://git-scm.com/download/win" target="_blank">Download for Windows</a></span>
+            <span class="lang-pt">Baixe os arquivos e execute o instalador manualmente. Você pode obter as instruções de instalação aqui: <a href="https://git-scm.com/download/win" target="_blank">Download para Windows</a></span>
+          </li>
         </ul>
-        <p><span class="bold-text">Mac Computers</span> Apple supplies the version of Git
-          to run
-          through the XCode software. You must check for software updates for your Mac and
-          install
-          those updates. This is done through the App Store on the Mac. It is a good idea
-          to install
-          all those updates on a regular basis. You can get all the instructions for Mac
-          here: <a href="https://git-scm.com/download/mac target=" _blank">Downloads for
-            macOS</a>
+        <p>
+          <span class="lang-en"><span class="bold-text">Mac Computers</span> Apple supplies the version of Git to run through the XCode software. You must check for software updates for your Mac and install those updates. This is done through the App Store on the Mac. It is a good idea to install all those updates on a regular basis. You can get all the instructions for Mac here: <a href="https://git-scm.com/download/mac" target="_blank">Downloads for macOS</a></span>
+          <span class="lang-pt"><span class="bold-text">Computadores Mac</span> A Apple fornece a versão do Git para executar através do software XCode. Você deve verificar atualizações de software para o seu Mac e instalar essas atualizações. Isso é feito pela App Store no Mac. É uma boa ideia instalar todas essas atualizações regularmente. Você pode obter todas as instruções para Mac aqui: <a href="https://git-scm.com/download/mac" target="_blank">Downloads para macOS</a></span>
         </p>
-        <p><span class="bold-text">Linux Computers</span>If you instal the Git software
-          correctly,
-          you should only need to use your package manager and run the updated command to
-          get the
-          most recent updates. You can get all the install commands for the various Linux
-          Distributions here: <a href="https://git-scm.com/download/linux"
-            target="_blank">Downloads
-            for Linux</a></p>
-        <p class="bold-text">You do need to update Git at least every 4 months, sometime
-          sooner. Git
-          releases updates to the major point release about every 2 to 3 months with bug
-          fixes
-          randomly withing that timeframe.</p>
-        <p>As of when this was written, this table shows the last 3 major point releases
-          with the
-          bug fixes.</p>
+        <p>
+          <span class="lang-en"><span class="bold-text">Linux Computers</span> If you install the Git software correctly, you should only need to use your package manager and run the update command to get the most recent updates. You can get all the install commands for the various Linux Distributions here: <a href="https://git-scm.com/download/linux" target="_blank">Downloads for Linux</a></span>
+          <span class="lang-pt"><span class="bold-text">Computadores Linux</span> Se você instalar o software Git corretamente, você só precisará usar seu gerenciador de pacotes e executar o comando de atualização para obter as atualizações mais recentes. Você pode obter todos os comandos de instalação para as várias distribuições Linux aqui: <a href="https://git-scm.com/download/linux" target="_blank">Downloads para Linux</a></span>
+        </p>
+        <p class="bold-text">
+          <span class="lang-en">You do need to update Git at least every 4 months, sometime sooner. Git releases updates to the major point release about every 2 to 3 months with bug fixes randomly within that timeframe.</span>
+          <span class="lang-pt">Você precisa atualizar o Git pelo menos a cada 4 meses, às vezes antes. O Git lança atualizações para a versão principal a cada 2 a 3 meses com correções de bugs aleatoriamente dentro desse prazo.</span>
+        </p>
+        <p>
+          <span class="lang-en">As of when this was written, this table shows the last 3 major point releases with the bug fixes.</span>
+          <span class="lang-pt">No momento em que isso foi escrito, esta tabela mostra as últimas 3 versões principais com as correções de bugs.</span>
+        </p>
         <table>
           <tr>
-            <th>Version</th>
-            <th>Release Date</th>
+            <th><span class="lang-en">Version</span><span class="lang-pt">Versão</span></th>
+            <th><span class="lang-en">Release Date</span><span class="lang-pt">Data de Lançamento</span></th>
           </tr>
           <tr>
             <td>2.43.0</td>
@@ -812,99 +1381,132 @@
             <td>April 29, 2024</td>
           </tr>
         </table>
-        <a href="#top" class="top-link">Back to Top</a>
+        <a href="#top" class="top-link">
+          <span class="lang-en">Back to Top</span>
+          <span class="lang-pt">Voltar ao Topo</span>
+        </a>
       </details>
     </section>
     <section class="hints">
-      <h2>These are suggestions and hints</h2>
+      <h2>
+        <span class="lang-en">These are suggestions and hints</span>
+        <span class="lang-pt">Estas são sugestões e dicas</span>
+      </h2>
       <details id="formatters-configure">
-        <summary>User is prompted to configure formatter</summary>
-        <p>User is prompted to configure formatter</p>
-        <p>If the user installs the Prettier extension, which is not needed, the first
-          time they go
-          to format the code, they will be prompted to select a formatter for that type of
-          file type
-          (HTML or CSS). VSCode as a code formatter built into the editor that works well
-          with HTML,
-          CSS, JavaScript, and PHP. </p>
+        <summary>
+          <span class="lang-en">User is prompted to configure formatter</span>
+          <span class="lang-pt">O usuário é solicitado a configurar o formatador</span>
+        </summary>
+        <p>
+          <span class="lang-en">User is prompted to configure formatter</span>
+          <span class="lang-pt">O usuário é solicitado a configurar o formatador</span>
+        </p>
+        <p>
+          <span class="lang-en">If the user installs the Prettier extension, which is not needed, the first time they go to format the code, they will be prompted to select a formatter for that type of file type (HTML or CSS). VSCode has a code formatter built into the editor that works well with HTML, CSS, JavaScript, and PHP.</span>
+          <span class="lang-pt">Se o usuário instalar a extensão Prettier, que não é necessária, na primeira vez que formatar o código, será solicitado que selecione um formatador para aquele tipo de arquivo (HTML ou CSS). O VSCode possui um formatador de código integrado ao editor que funciona bem com HTML, CSS, JavaScript e PHP.</span>
+        </p>
         <img src="images/formatters-configure.png" alt="Choose Formatter">
-        <p>One of the issues with the Prettier formatter is that is closes null tags. What
-          this
-          means is that tags such as the img tag will be closed with> at the end. This
-          is XHTML
-          syntax and not part of HTML5 standards.</p>
-        <p>Prettier is what is knows as an Opinionated Formatter. It is opinionated in
-          that the
-          creators of it are stating what they believe is the best way to format something
-          even if
-          it goes against the standards or not explicitly stated that this is the way it
-          must be
-          done. They do not give you the option to turn that off. VSCode setting does give
-          you that
-          option. </p>
-        <a href="#top" class="top-link">Back to Top</a>
+        <p>
+          <span class="lang-en">One of the issues with the Prettier formatter is that it closes null tags. What this means is that tags such as the img tag will be closed with &gt; at the end. This is XHTML syntax and not part of HTML5 standards.</span>
+          <span class="lang-pt">Um dos problemas com o formatador Prettier é que ele fecha tags nulas. Isso significa que tags como a tag img serão fechadas com &gt; no final. Esta é a sintaxe XHTML e não faz parte dos padrões HTML5.</span>
+        </p>
+        <p>
+          <span class="lang-en">Prettier is what is known as an Opinionated Formatter. It is opinionated in that the creators of it are stating what they believe is the best way to format something even if it goes against the standards or not explicitly stated that this is the way it must be done. They do not give you the option to turn that off. VSCode setting does give you that option.</span>
+          <span class="lang-pt">Prettier é o que se conhece como um Formatador Opinativo. É opinativo pois os criadores estão afirmando o que acreditam ser a melhor forma de formatar algo, mesmo que vá contra os padrões ou não seja explicitamente declarado que esta é a forma correta. Eles não dão a opção de desativar isso. A configuração do VSCode dá essa opção.</span>
+        </p>
+        <a href="#top" class="top-link">
+          <span class="lang-en">Back to Top</span>
+          <span class="lang-pt">Voltar ao Topo</span>
+        </a>
       </details>
 
       <details id="commit-sync">
-        <summary>Pushing to GitHub using fewer steps</summary>
-        <p> When you are on the Git tab in VSCode, the button to Commit and Sync may state
-          Commit
-          only. If you click on the down arrow to the right of the button and select
-          Commit &amp;
-          Sync </p>
-        <img src="images/vscode-commit-sync.png" alt="commit &amp; sync">
-        <p> If this is the first time you are doing that you should see the following
-          messages. On
-          the first dialog, click the Always button </p>
-        <img src="images/vscode-stage-commit-message.png" alt="Stage &amp; commit">
-        <p> On this next dialog if you get prompted, click the OK, Don&apos;t Show Again
-          button </p>
-        <img src="images/vscode-pull-push-always.png" alt="Always Pull Push to branch">
-        <p> Sometimes these will prompt the second time you click on the Commit &amp; Sync
-          option.
+        <summary>
+          <span class="lang-en">Pushing to GitHub using fewer steps</span>
+          <span class="lang-pt">Fazendo push para o GitHub com menos passos</span>
+        </summary>
+        <p>
+          <span class="lang-en">When you are on the Git tab in VSCode, the button to Commit and Sync may state Commit only. If you click on the down arrow to the right of the button and select Commit &amp; Sync</span>
+          <span class="lang-pt">Quando você está na aba Git no VSCode, o botão de Commit and Sync pode dizer apenas Commit. Se você clicar na seta para baixo à direita do botão e selecionar Commit &amp; Sync</span>
         </p>
-        <p> You can change your Commit button to Say Commit &amp; Sync by doing the
-          following </p>
+        <img src="images/vscode-commit-sync.png" alt="commit &amp; sync">
+        <p>
+          <span class="lang-en">If this is the first time you are doing that you should see the following messages. On the first dialog, click the Always button</span>
+          <span class="lang-pt">Se esta for a primeira vez que você faz isso, você deve ver as seguintes mensagens. No primeiro diálogo, clique no botão Always</span>
+        </p>
+        <img src="images/vscode-stage-commit-message.png" alt="Stage &amp; commit">
+        <p>
+          <span class="lang-en">On this next dialog if you get prompted, click the OK, Don&apos;t Show Again button</span>
+          <span class="lang-pt">Neste próximo diálogo, se solicitado, clique no botão OK, Don&apos;t Show Again</span>
+        </p>
+        <img src="images/vscode-pull-push-always.png" alt="Always Pull Push to branch">
+        <p>
+          <span class="lang-en">Sometimes these will prompt the second time you click on the Commit &amp; Sync option.</span>
+          <span class="lang-pt">Às vezes estes aparecerão na segunda vez que você clicar na opção Commit &amp; Sync.</span>
+        </p>
+        <p>
+          <span class="lang-en">You can change your Commit button to say Commit &amp; Sync by doing the following</span>
+          <span class="lang-pt">Você pode mudar seu botão de Commit para dizer Commit &amp; Sync fazendo o seguinte</span>
+        </p>
         <ul>
-          <li> Go to the VSCode Settings <img src="images/gpg-1.png"
-              alt="VSCode settings">
+          <li>
+            <span class="lang-en">Go to the VSCode Settings</span>
+            <span class="lang-pt">Vá para VSCode Settings</span>
+            <img src="images/gpg-1.png" alt="VSCode settings">
           </li>
-          <li> In the search bar search for Git: Post Commit Command <img
-              src="images/vscode-settings-sync-search.png" alt="Search VSCode settings">
+          <li>
+            <span class="lang-en">In the search bar search for Git: Post Commit Command</span>
+            <span class="lang-pt">Na barra de pesquisa, pesquise por Git: Post Commit Command</span>
+            <img src="images/vscode-settings-sync-search.png" alt="Search VSCode settings">
           </li>
-          <li> Change the option on that command to be sync <img
-              src="images/vscode-post-command-commit-sync.png" alt="sync &amp; commit">
+          <li>
+            <span class="lang-en">Change the option on that command to be sync</span>
+            <span class="lang-pt">Altere a opção nesse comando para sync</span>
+            <img src="images/vscode-post-command-commit-sync.png" alt="sync &amp; commit">
           </li>
         </ul>
-        <p> This will make it possible for you to click the button once and commit and
-          sync at the
-          same time. Just click this button and both steps are executed in order. </p>
+        <p>
+          <span class="lang-en">This will make it possible for you to click the button once and commit and sync at the same time. Just click this button and both steps are executed in order.</span>
+          <span class="lang-pt">Isso tornará possível clicar no botão uma vez e fazer commit e sync ao mesmo tempo. Basta clicar neste botão e os dois passos são executados em ordem.</span>
+        </p>
         <img src="images/vscode-comit-sync-button.png" alt="commit sync button">
-        <a href="#top" class="top-link">Back to Top</a>
+        <a href="#top" class="top-link">
+          <span class="lang-en">Back to Top</span>
+          <span class="lang-pt">Voltar ao Topo</span>
+        </a>
       </details>
 
       <details id="repo-description">
-        <summary>Adding a description to your repository</summary>
-        <p> One of the things you will see in a lot of repositories is a description of
-          what the
-          repository is all about, how to install and use the code, etc. </p>
-        <p> This is all done using Markdown text. This will show you the details of how to
-          use that
-          so you can describe wheat you repository is all about. </p>
-        <p> First you need to create a file in the top level folder called README.md. It
-          must be
-          capitalized for GitHub to recognize it as the description file for the
-          repository </p>
-        <h4> Teh following information comes from the <a
-            href="https://www.markdownguide.org/" target="_blank"> Markdown Guide </a>
-          website basic syntax page. </h4>
-        <p>The basic syntax is as follows:</p>
+        <summary>
+          <span class="lang-en">Adding a description to your repository</span>
+          <span class="lang-pt">Adicionando uma descrição ao seu repository</span>
+        </summary>
+        <p>
+          <span class="lang-en">One of the things you will see in a lot of repositories is a description of what the repository is all about, how to install and use the code, etc.</span>
+          <span class="lang-pt">Uma das coisas que você verá em muitos repositories é uma descrição sobre o que o repository se trata, como instalar e usar o código, etc.</span>
+        </p>
+        <p>
+          <span class="lang-en">This is all done using Markdown text. This will show you the details of how to use that so you can describe what your repository is all about.</span>
+          <span class="lang-pt">Tudo isso é feito usando texto Markdown. Isso mostrará os detalhes de como usar isso para que você possa descrever do que se trata o seu repository.</span>
+        </p>
+        <p>
+          <span class="lang-en">First you need to create a file in the top level folder called README.md. It must be capitalized for GitHub to recognize it as the description file for the repository</span>
+          <span class="lang-pt">Primeiro você precisa criar um arquivo na pasta de nível superior chamado README.md. Ele deve estar em maiúsculas para o GitHub reconhecê-lo como o arquivo de descrição do repository</span>
+        </p>
+        <h4>
+          <span class="lang-en">The following information comes from the <a href="https://www.markdownguide.org/" target="_blank">Markdown Guide</a> website basic syntax page.</span>
+          <span class="lang-pt">As informações a seguir vêm da página de sintaxe básica do site <a href="https://www.markdownguide.org/" target="_blank">Markdown Guide</a> (somente em inglês).</span>
+        </h4>
+        <p>
+          <span class="lang-en">The basic syntax is as follows:</span>
+          <span class="lang-pt">A sintaxe básica é a seguinte:</span>
+        </p>
         <table class="table table-bordered">
           <thead class="thead-light">
             <tr>
               <th>Markdown</th>
               <th>HTML</th>
-              <th>Rendered Output</th>
+              <th><span class="lang-en">Rendered Output</span><span class="lang-pt">Resultado Renderizado</span></th>
             </tr>
           </thead>
           <tbody>
@@ -1005,14 +1607,14 @@
             </tr>
           </tbody>
         </table>
-        <h3 id="heading-best-practices">Heading Best Practices</h3>
-        <p> Markdown applications don&apos;t agree on how to handle a missing space
-          between the
-          number signs ( <code class="language-plaintext highlighter-rouge">#</code> ) and
-          the
-          heading name. For compatibility, always put a space between the number signs and
-          the
-          heading name. </p>
+        <h3 id="heading-best-practices">
+          <span class="lang-en">Heading Best Practices</span>
+          <span class="lang-pt">Melhores Práticas para Títulos</span>
+        </h3>
+        <p>
+          <span class="lang-en">Markdown applications don&apos;t agree on how to handle a missing space between the number signs ( <code class="language-plaintext highlighter-rouge">#</code> ) and the heading name. For compatibility, always put a space between the number signs and the heading name.</span>
+          <span class="lang-pt">As aplicações Markdown não concordam em como lidar com um espaço faltando entre os sinais de número ( <code class="language-plaintext highlighter-rouge">#</code> ) e o nome do título. Para compatibilidade, sempre coloque um espaço entre os sinais de número e o nome do título.</span>
+        </p>
         <table class="table table-bordered">
           <thead class="thead-light">
             <tr>
@@ -1022,14 +1624,14 @@
                     d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
                     clip-rule="evenodd">
                 </svg>
-                &nbsp; Do this</th>
+                &nbsp; <span class="lang-en">Do this</span><span class="lang-pt">Faça assim</span></th>
               <th><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                   fill="currentColor" class="x-mark">
                   <path fill-rule="evenodd"
                     d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
                     clip-rule="evenodd">
                 </svg>
-                &nbsp; Don&apos;t do this</th>
+                &nbsp; <span class="lang-en">Don&apos;t do this</span><span class="lang-pt">Não faça assim</span></th>
             </tr>
           </thead>
           <tbody>
@@ -1049,7 +1651,9 @@
             </tr>
           </tbody>
         </table>
-        <p> You should also put blank lines before and after a heading for compatibility.
+        <p>
+          <span class="lang-en">You should also put blank lines before and after a heading for compatibility.</span>
+          <span class="lang-pt">Você também deve colocar linhas em branco antes e depois de um título para compatibilidade.</span>
         </p>
         <table class="table table-bordered">
           <thead class="thead-light">
@@ -1060,14 +1664,14 @@
                     d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
                     clip-rule="evenodd">
                 </svg>
-                &nbsp; Do this</th>
+                &nbsp; <span class="lang-en">Do this</span><span class="lang-pt">Faça assim</span></th>
               <th><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                   fill="currentColor" class="x-mark">
                   <path fill-rule="evenodd"
                     d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
                     clip-rule="evenodd">
                 </svg>
-                &nbsp; Don&apos;t do this</th>
+                &nbsp; <span class="lang-en">Don&apos;t do this</span><span class="lang-pt">Não faça assim</span></th>
             </tr>
           </thead>
           <tbody>
@@ -1097,15 +1701,20 @@
             </tr>
           </tbody>
         </table>
-        <h2>Paragraphs</h2>
-        <p> To create paragraphs, use a blank line to separate one or more lines of text.
+        <h2>
+          <span class="lang-en">Paragraphs</span>
+          <span class="lang-pt">Parágrafos</span>
+        </h2>
+        <p>
+          <span class="lang-en">To create paragraphs, use a blank line to separate one or more lines of text.</span>
+          <span class="lang-pt">Para criar parágrafos, use uma linha em branco para separar uma ou mais linhas de texto.</span>
         </p>
         <table class="table table-bordered">
           <thead class="thead-light">
             <tr>
               <th>Markdown</th>
               <th>HTML</th>
-              <th>Rendered Output</th>
+              <th><span class="lang-en">Rendered Output</span><span class="lang-pt">Resultado Renderizado</span></th>
             </tr>
           </thead>
           <tbody>
@@ -1138,19 +1747,18 @@
             </tr>
           </tbody>
         </table>
-        <h3 id="paragraph-best-practices">Paragraph Best Practices</h3>
-        <p> Unless the <a href="https://www.markdownguide.org/basic-syntax/#paragraphs"
-            target="_blank"> paragraph is in a list </a> , don&apos;t indent paragraphs
-          with spaces
-          or tabs. </p>
+        <h3 id="paragraph-best-practices">
+          <span class="lang-en">Paragraph Best Practices</span>
+          <span class="lang-pt">Melhores Práticas para Parágrafos</span>
+        </h3>
+        <p>
+          <span class="lang-en">Unless the <a href="https://www.markdownguide.org/basic-syntax/#paragraphs" target="_blank">paragraph is in a list</a>, don&apos;t indent paragraphs with spaces or tabs.</span>
+          <span class="lang-pt">A menos que o <a href="https://www.markdownguide.org/basic-syntax/#paragraphs" target="_blank">parágrafo esteja em uma lista</a>, não indente parágrafos com espaços ou tabulações.</span>
+        </p>
         <div class="alert alert-info">
           <i class="fas fa-info-circle"></i>
-          <strong>Note:</strong> If you need to indent paragraphs in the output, see
-          the section on
-          how to <a href="https://www.markdownguide.org/hacks/#indent-tab"
-            target="_blank">
-            indent
-            (tab) </a> .
+          <span class="lang-en"><strong>Note:</strong> If you need to indent paragraphs in the output, see the section on how to <a href="https://www.markdownguide.org/hacks/#indent-tab" target="_blank">indent (tab)</a>.</span>
+          <span class="lang-pt"><strong>Nota:</strong> Se você precisar indentar parágrafos na saída, veja a seção sobre como <a href="https://www.markdownguide.org/hacks/#indent-tab" target="_blank">indentar (tab)</a>.</span>
         </div>
         <table class="table table-bordered">
           <thead class="thead-light">
@@ -1161,14 +1769,14 @@
                     d="M19.916 4.626a.75.75 0 0 1 .208 1.04l-9 13.5a.75.75 0 0 1-1.154.114l-6-6a.75.75 0 0 1 1.06-1.06l5.353 5.353 8.493-12.74a.75.75 0 0 1 1.04-.207Z"
                     clip-rule="evenodd">
                 </svg>
-                &nbsp; Do this</th>
+                &nbsp; <span class="lang-en">Do this</span><span class="lang-pt">Faça assim</span></th>
               <th><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                   fill="currentColor" class="x-mark">
                   <path fill-rule="evenodd"
                     d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z"
                     clip-rule="evenodd">
                 </svg>
-                &nbsp; Don&apos;t do this</th>
+                &nbsp; <span class="lang-en">Don&apos;t do this</span><span class="lang-pt">Não faça assim</span></th>
             </tr>
           </thead>
           <tbody>
@@ -1198,58 +1806,106 @@
             </tr>
           </tbody>
         </table>
-        <a href="#top" class="top-link">Back to Top</a>
+        <a href="#top" class="top-link">
+          <span class="lang-en">Back to Top</span>
+          <span class="lang-pt">Voltar ao Topo</span>
+        </a>
       </details>
       <details id="multiple-users">
-        <summary>How to share a computer to commit to GitHub using different accounts
+        <summary>
+          <span class="lang-en">How to share a computer to commit to GitHub using different accounts</span>
+          <span class="lang-pt">Como compartilhar um computador para fazer commit no GitHub usando contas diferentes</span>
         </summary>
-        <p>This process is quite easy. Go to the command prompt/terminal for the root of
-          the
-          project. Then type these commands.</p>
-        <p>You will notice that you have already typed these commands with the global
-          option. These
-          commands sets these for the specific repository only.</p>
-        <pre
-          class="colde-style">git config user.email "email"<br>git config  user.name "github username"</pre>
-        <p>You can check your Git settings with: git config user.name && git config
-          user.email</p>
-        <p>on some systems you will have to run a second command in the terminal</p>
+        <p>
+          <span class="lang-en">This process is quite easy. Go to the command prompt/terminal for the root of the project. Then type these commands.</span>
+          <span class="lang-pt">Este processo é bastante simples. Vá para o terminal na raiz do projeto. Depois digite estes comandos.</span>
+        </p>
+        <p>
+          <span class="lang-en">You will notice that you have already typed these commands with the global option. These commands sets these for the specific repository only.</span>
+          <span class="lang-pt">Você notará que já digitou esses comandos com a opção global. Esses comandos configuram apenas para o repository específico.</span>
+        </p>
+        <pre class="colde-style">git config user.email "email"<br>git config  user.name "github username"</pre>
+        <p>
+          <span class="lang-en">You can check your Git settings with: git config user.name &amp;&amp; git config user.email</span>
+          <span class="lang-pt">Você pode verificar suas configurações do Git com: git config user.name &amp;&amp; git config user.email</span>
+        </p>
+        <p>
+          <span class="lang-en">on some systems you will have to run a second command in the terminal</span>
+          <span class="lang-pt">em alguns sistemas você terá que executar um segundo comando no terminal</span>
+        </p>
         <pre class="colde-style">git commit --amend --reset-author --no-edi</pre>
-        <p>You can also do this manually in the .git/config file found in a hidden
-          sub-folder under
-          the root folder of the repository.</p>
-        <p>Add the following line to the end. Make sure to keep the indentation. It must
-          match what
-          is already in use in your file.</p>
-        <pre
-          class="colde-style">[user]<br>    name = YourName<br>    email = your@email.com</pre>
-        <a href="#top" class="top-link">Back to Top</a>
+        <p>
+          <span class="lang-en">You can also do this manually in the .git/config file found in a hidden sub-folder under the root folder of the repository.</span>
+          <span class="lang-pt">Você também pode fazer isso manualmente no arquivo .git/config encontrado em uma subpasta oculta sob a pasta raiz do repository.</span>
+        </p>
+        <p>
+          <span class="lang-en">Add the following line to the end. Make sure to keep the indentation. It must match what is already in use in your file.</span>
+          <span class="lang-pt">Adicione a seguinte linha ao final. Certifique-se de manter a indentação. Ela deve corresponder ao que já está em uso no seu arquivo.</span>
+        </p>
+        <pre class="colde-style">[user]<br>    name = YourName<br>    email = your@email.com</pre>
+        <a href="#top" class="top-link">
+          <span class="lang-en">Back to Top</span>
+          <span class="lang-pt">Voltar ao Topo</span>
+        </a>
       </details>
       <details id="github-pages-url">
-        <summary>How to add a quick link to your GitHub Pages URL</summary>
-        <p>Log into your repository on GitHub.Then click on the cog icon to the right of
-          the word About.</p>
+        <summary>
+          <span class="lang-en">How to add a quick link to your GitHub Pages URL</span>
+          <span class="lang-pt">Como adicionar um link rápido para o URL do seu GitHub Pages</span>
+        </summary>
+        <p>
+          <span class="lang-en">Log into your repository on GitHub. Then click on the cog icon to the right of the word About.</span>
+          <span class="lang-pt">Faça login no seu repository no GitHub. Depois clique no ícone de engrenagem à direita da palavra About.</span>
+        </p>
         <img src="images/github-gear-icon.webp" alt="GitHub repository gear icon">
-        <p>Click the checkbox for "Use your GitHub Pages website".</p>
+        <p>
+          <span class="lang-en">Click the checkbox for "Use your GitHub Pages website".</span>
+          <span class="lang-pt">Marque a caixa de seleção "Use your GitHub Pages website".</span>
+        </p>
         <img src="images/github-pages-checkbox.webp" alt="GitHUb Pages Check Box">
-        <p>You can add tags to your repository such as HTML5, CSS3, School work, etc. You
-          decide what topics you want to use.</p>
-        <p>It is also recommended to uncheck the Releases and Packages checkbox's. We do
-          not create a release or a package in this class. Those are for code repositories
-          where you are releasing code as software to download and use on a computer or in
-          another program.</p>
-        <p>You can click the save button at the bottom of the modal and then you will see
-          the link to your GitHub Pages website. on your repository page.</p>
+        <p>
+          <span class="lang-en">You can add tags to your repository such as HTML5, CSS3, School work, etc. You decide what topics you want to use.</span>
+          <span class="lang-pt">Você pode adicionar tags ao seu repository, como HTML5, CSS3, trabalho escolar, etc. Você decide quais tópicos quer usar.</span>
+        </p>
+        <p>
+          <span class="lang-en">It is also recommended to uncheck the Releases and Packages checkbox's. We do not create a release or a package in this class. Those are for code repositories where you are releasing code as software to download and use on a computer or in another program.</span>
+          <span class="lang-pt">Também é recomendado desmarcar as caixas de Releases e Packages. Não criamos um release ou um pacote nesta aula. Esses são para repositories de código onde você está lançando código como software para download e uso em um computador ou em outro programa.</span>
+        </p>
+        <p>
+          <span class="lang-en">You can click the save button at the bottom of the modal and then you will see the link to your GitHub Pages website on your repository page.</span>
+          <span class="lang-pt">Você pode clicar no botão save na parte inferior do modal e então verá o link para seu site GitHub Pages na sua página de repository.</span>
+        </p>
         <img src="images/github-pages-url.webp" alt="Link to GitHub Pages URL">
-
       </details>
     </section>
   </main>
   <footer>
-    <p>This file is created and updated for the use of students at BYU Pathway
-      Worldwide taking WDD 130</p>
-    <p>Maintained by Ralph Borcherds</p>
+    <p>
+      <span class="lang-en">This file is created and updated for the use of students at BYU Pathway Worldwide taking WDD 130</span>
+      <span class="lang-pt">Este arquivo é criado e atualizado para uso dos alunos da BYU Pathway Worldwide que cursam WDD 130</span>
+    </p>
+    <p>
+      <span class="lang-en">Maintained by Ralph Borcherds</span>
+      <span class="lang-pt">Mantido por Ralph Borcherds</span>
+    </p>
   </footer>
 
+  <script>
+    function setLang(lang) {
+      document.documentElement.lang = lang;
+      localStorage.setItem('preferredLang', lang);
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-pt').classList.toggle('active', lang === 'pt');
+    }
+
+    function detectBrowserLang() {
+      const browserLang = navigator.language || navigator.userLanguage || 'en';
+      if (browserLang.toLowerCase().startsWith('pt')) return 'pt';
+      return 'en';
+    }
+
+    const savedLang = localStorage.getItem('preferredLang') || detectBrowserLang();
+    setLang(savedLang);
+  </script>
 </body>
 </html>

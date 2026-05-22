@@ -149,8 +149,20 @@ nav a:hover {
   color: var(--nav-background-color);
 }
 
-html[lang="en"] .lang-pt { display: none; }
-html[lang="pt"] .lang-en { display: none; }
+html[lang="en"] .lang-pt,
+html[lang="en"] .lang-es {
+  display: none;
+}
+
+html[lang="pt"] .lang-en,
+html[lang="pt"] .lang-es {
+  display: none;
+}
+
+html[lang="es"] .lang-en,
+html[lang="es"] .lang-pt {
+  display: none;
+}
 
 .bold-code {
   font-weight: 600;
