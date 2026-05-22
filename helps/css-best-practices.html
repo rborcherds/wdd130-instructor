@@ -152,22 +152,33 @@
             é autoexplicativo. Note também que você deve deixar um espaço entre os
             asteriscos e o comentário apenas para legibilidade.</span>
         </p>
-        <pre> /* This is a CSS-style comment */</pre>
+        <pre class="lang-en"> /* This is a CSS-style comment */</pre>
+        <pre class="lang-pt"> /* Este é um comentário no estilo CSS. */</pre>
         <p>
           <span class="lang-en">Put your comments on separate lines preceding the code
             they are referring to, like so:</span>
           <span class="lang-pt">Coloque seus comentários em linhas separadas antes do
             código ao qual eles se referem, assim:</span>
         </p>
-        <pre>
-									<code>h3 {<br>
-												&nbsp;&nbsp;&nbsp;    /* Creates a red drop shadow, offset 1px right and down, with a 2px blur radius */ <br>
-												&nbsp;&nbsp;&nbsp;text-shadow: 1px 1px 2px red;<br>
-												&nbsp;&nbsp;&nbsp;/* Sets the font-size to double the default document font size */<br>
-												&nbsp;&nbsp;&nbsp;font-size: 2rem;<br>
-												}<br>
-									</code>
-							</pre>
+        <pre class="lang-en">
+					<code>h3 {<br>
+								&nbsp;&nbsp;&nbsp;    /* Creates a red drop shadow, offset 1px right and down, with a 2px blur radius */ <br>
+								&nbsp;&nbsp;&nbsp;text-shadow: 1px 1px 2px red;<br>
+								&nbsp;&nbsp;&nbsp;/* Sets the font-size to double the default document font size */<br>
+								&nbsp;&nbsp;&nbsp;font-size: 2rem;<br>
+								}<br>
+					</code>
+				</pre>
+        <pre class="lang-pt">
+					<code>h3 {<br>
+								&nbsp;&nbsp;&nbsp;    /* Cria uma sombra vermelha projetada, deslocada 1px para a direita e para baixo, com um raio de desfoque de 2px. */ <br>
+								&nbsp;&nbsp;&nbsp;text-shadow: 1px 1px 2px red;<br>
+								&nbsp;&nbsp;&nbsp;/* Define o tamanho da fonte para o dobro do tamanho da fonte padrão do documento. */<br>
+								&nbsp;&nbsp;&nbsp;font-size: 2rem;<br>
+								}<br>
+					</code>
+				</pre>
+
       </li>
       <li>
         <h3>
@@ -181,12 +192,12 @@
             aspas duplas. Por exemplo:</span>
         </p>
         <pre>
-									<code>[data-vegetable="liquid"] {<br>
-												&nbsp;&nbsp;&nbsp;background-color: goldenrod;<br>
-												&nbsp;&nbsp;&nbsp;background-image: url("../../media/examples/lizard.png");<br>
-												}<br>
-									</code>
-							</pre>
+					<code>[data-vegetable="liquid"] {<br>
+								&nbsp;&nbsp;&nbsp;background-color: goldenrod;<br>
+								&nbsp;&nbsp;&nbsp;background-image: url("../../media/examples/lizard.png");<br>
+								}<br>
+					</code>
+				</pre>
       </li>
       <li>
         <h3>
@@ -211,7 +222,7 @@
           <span class="lang-pt">Esses valores vão nesta ordem: topo direita baixo
             esquerda.</span>
         </p>
-        <pre> padding: 1em inherit inherit inherit;</pre>
+        <pre> padding: 1em 2em 1em 2em;</pre>
       </li>
       <li>
         <h3>
@@ -430,11 +441,9 @@
   <footer>
     <p>
       <span class="lang-en">This file is created and updated for the use of students at
-        BYU Pathway
-        Worldwide taking WDD 130</span>
+        BYU Pathway Worldwide taking WDD 130</span>
       <span class="lang-pt">Este arquivo é criado e atualizado para uso dos alunos da BYU
-        Pathway
-        Worldwide que cursam WDD 130</span>
+        Pathway Worldwide que cursam WDD 130</span>
     </p>
     <p>
       <span class="lang-en">Maintained by Ralph Borcherds</span>
@@ -447,10 +456,18 @@
       document.documentElement.lang = lang;
       localStorage.setItem('preferredLang', lang);
       document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-      document.getElementById('btn-pt').classList.toggle('active', lang === 'pt');
+      document.getElementById('btn-pt').classList.toggle('active', lang === 'pt-BR');
     }
 
-    const savedLang = localStorage.getItem('preferredLang') || 'en';
+    function detectBrowserLang() {
+      const browserLang = navigator.language || navigator.userLanguage || 'en';
+      if (browserLang.toLowerCase().startsWith('pt')) {
+        return 'pt-BR';
+      }
+      return 'en';
+    }
+
+    const savedLang = localStorage.getItem('preferredLang') || detectBrowserLang();
     setLang(savedLang);
   </script>
 </body>

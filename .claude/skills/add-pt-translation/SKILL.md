@@ -8,7 +8,7 @@ allowed-tools: Read Write
 
 ## Task
 
-Add Portuguese translation to the HTML file at: `$filepath`
+Add Brazilian Portuguese translation to the HTML file at: `$filepath`
 
 Read the file first, then apply all transformations described below, then write the result back.
 
@@ -132,7 +132,7 @@ Wrap every user-visible text node in a matching `lang-en` / `lang-pt` span pair.
       document.documentElement.lang = lang;
       localStorage.setItem('preferredLang', lang);
       document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-      document.getElementById('btn-pt').classList.toggle('active', lang === 'pt');
+      document.getElementById('btn-pt').classList.toggle('active', lang === 'pt-BR');
     }
 
     const savedLang = localStorage.getItem('preferredLang') || 'en';

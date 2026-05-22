@@ -50,16 +50,13 @@
       <li>
         <p>
           <span class="lang-en">Go into GitHub and rename your repository to include
-            "wdd130" and add something
-            descriptive like old or previous such as "wdd130-old". This image shows the
-            entry
-            box and it is found in the repository settings tab / General menu at the
-            top.</span>
+            "wdd130" and add something descriptive like old or previous such as
+            "wdd130-old". This image shows the entry box and it is found in the repository
+            settings tab / General menu at the top.</span>
           <span class="lang-pt">Acesse o GitHub e renomeie seu repositório para incluir
-            "wdd130" e adicione algo
-            descritivo como "antigo" ou "anterior", como "wdd130-old". Esta imagem mostra
-            a caixa de entrada e ela
-            está na aba de configurações do repositório / menu General no topo.</span>
+            "wdd130" e adicione algo descritivo como "antigo" ou "anterior", como
+            "wdd130-old". Esta imagem mostra a caixa de entrada e ela está na aba de
+            configurações do repositório / menu General no topo.</span>
         </p>
         <img src="images/github-repository-rename.webp" alt="GitHub rename repository">
         <p>
@@ -72,13 +69,11 @@
       <li>
         <p>
           <span class="lang-en">Rename the folder on your local computer from wdd130 to
-            match what you renamed
-            the repository to. How you do this will depend on your operating
-            system.</span>
+            match what you renamed the repository to. How you do this will depend on your
+            operating system.</span>
           <span class="lang-pt">Renomeie a pasta no seu computador local de wdd130 para
-            corresponder ao que você
-            renomeou o repositório. Como fazer isso dependerá do seu sistema
-            operacional.</span>
+            corresponder ao que você renomeou o repositório. Como fazer isso dependerá do
+            seu sistema operacional.</span>
         </p>
       </li>
       <li>
@@ -89,27 +84,19 @@
             ponto:</span>
         </p>
         <ul>
-          <li>
-            <span class="lang-en">Delete the local repository folder and re-clone the
-              renamed repository from
+          <li> <span class="lang-en">Delete the local repository folder and re-clone the
+              renamed repository from GitHub.</span> <span class="lang-pt">Excluir a pasta
+              do repositório local e clonar novamente o repositório renomeado do
               GitHub.</span>
-            <span class="lang-pt">Excluir a pasta do repositório local e clonar novamente
-              o repositório renomeado
-              do GitHub.</span>
           </li>
-          <li>
-            <span class="lang-en">Edit the .git/config file in the renamed folder to point
-              to the new
-              repository name.</span>
-            <span class="lang-pt">Editar o arquivo .git/config na pasta renomeada para
-              apontar para o novo nome
-              do repositório.</span>
+          <li> <span class="lang-en">Edit the .git/config file in the renamed folder to
+              point to the new repository name.</span> <span class="lang-pt">Editar o
+              arquivo .git/config na pasta renomeada para apontar para o novo nome do
+              repositório.</span>
           </li>
-          <li>
-            <span class="lang-en">Use the git command line to set the new URL for the
-              renamed repository.</span>
-            <span class="lang-pt">Usar a linha de comando do git para definir o novo URL
-              do repositório renomeado.</span>
+          <li> <span class="lang-en">Use the git command line to set the new URL for the
+              renamed repository.</span> <span class="lang-pt">Usar a linha de comando do
+              git para definir o novo URL do repositório renomeado.</span>
           </li>
         </ul>
         <p>
@@ -123,31 +110,27 @@
         </h2>
         <p>
           <span class="lang-en">Open the .git folder inside the renamed local repository
-            folder. Inside that
-            folder is a file called config. Open that file in a text editor such as VSCode
-            or Notepad.</span>
+            folder. Inside that folder is a file called config. Open that file in a text
+            editor such as VSCode or Notepad.</span>
           <span class="lang-pt">Abra a pasta .git dentro da pasta do repositório local
-            renomeado. Dentro dessa
-            pasta há um arquivo chamado config. Abra esse arquivo em um editor de texto
-            como VSCode ou Notepad.</span>
+            renomeado. Dentro dessa pasta há um arquivo chamado config. Abra esse arquivo
+            em um editor de texto como VSCode ou Notepad.</span>
         </p>
         <p>
           <span class="lang-en">Find the line that starts with "url = " and change the URL
-            to match the new
-            repository name on GitHub.</span>
+            to match the new repository name on GitHub.</span>
           <span class="lang-pt">Encontre a linha que começa com "url = " e altere o URL
-            para corresponder ao
-            novo nome do repositório no GitHub.</span>
+            para corresponder ao novo nome do repositório no GitHub.</span>
         </p>
         <img src="images/vscode--git-config.webp"
           alt="VSCode showing the .git/config file line to edit">
         <p>
           <span class="lang-en">You can get the new URL by opening the repository on
-            GitHub and copying the URL
-            from the address bar and add .git at the end like the image above.</span>
+            GitHub and copying the URL from the address bar and add .git at the end like
+            the image above.</span>
           <span class="lang-pt">Você pode obter o novo URL abrindo o repositório no GitHub
-            e copiando o URL da
-            barra de endereços e adicionando .git no final, como na imagem acima.</span>
+            e copiando o URL da barra de endereços e adicionando .git no final, como na
+            imagem acima.</span>
         </p>
         <p>
           <span class="lang-en">This process will allow you to keep the old code in sync
@@ -163,19 +146,15 @@
         </h2>
         <p>
           <span class="lang-en">Open a terminal in VSCode. On Windows you use Ctrl+` and
-            on a MAC you use ⌃` or
-            you can use the menu option VIEW - Terminal.</span>
+            on a MAC you use ⌃` or you can use the menu option VIEW - Terminal.</span>
           <span class="lang-pt">Abra um terminal no VSCode. No Windows, use Ctrl+` e no
-            MAC, use ⌃` ou você pode
-            usar a opção de menu VIEW - Terminal.</span>
+            MAC, use ⌃` ou você pode usar a opção de menu VIEW - Terminal.</span>
         </p>
         <p>
           <span class="lang-en">Once the terminal is open, type the following command,
-            replacing the NEW-URL
-            with the new repository URL:</span>
+            replacing the NEW-URL with the new repository URL:</span>
           <span class="lang-pt">Depois que o terminal estiver aberto, digite o seguinte
-            comando, substituindo
-            NEW-URL pelo novo URL do repositório:</span>
+            comando, substituindo NEW-URL pelo novo URL do repositório:</span>
         </p>
         <pre><code>git remote set-url origin NEW-URL</code></pre>
       </li>
@@ -213,10 +192,18 @@
       document.documentElement.lang = lang;
       localStorage.setItem('preferredLang', lang);
       document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-      document.getElementById('btn-pt').classList.toggle('active', lang === 'pt');
+      document.getElementById('btn-pt').classList.toggle('active', lang === 'pt-BR');
     }
 
-    const savedLang = localStorage.getItem('preferredLang') || 'en';
+    function detectBrowserLang() {
+      const browserLang = navigator.language || navigator.userLanguage || 'en';
+      if (browserLang.toLowerCase().startsWith('pt')) {
+        return 'pt-BR';
+      }
+      return 'en';
+    }
+
+    const savedLang = localStorage.getItem('preferredLang') || detectBrowserLang();
     setLang(savedLang);
   </script>
 </body>
