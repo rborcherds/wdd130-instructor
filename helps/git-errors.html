@@ -29,9 +29,11 @@
         </a>
       </nav>
       <div class="lang-selector">
-        <button onclick="setLang('en')" class="lang-btn" id="btn-en">English</button>
-        <button onclick="setLang('pt')" class="lang-btn" id="btn-pt">Português</button>
-        <button onclick="setLang('es')" class="lang-btn" id="btn-es">Español</button>
+       <select class="language-selector" onchange="setLang(this.value)">
+        <option value="en">English</option>
+        <option value="es">Español</option>
+        <option value="pt">Português</option>
+      </select>
       </div>
     </div>
 

@@ -127,6 +127,18 @@ nav a:hover {
   align-items: center;
 }
 
+.language-selector {
+  background-color: var(--dark-gray);
+  color: var(--color-white);
+  border: solid var(--nav-text-color) 1px;
+  padding: 0.35rem 0.85rem 0.35rem 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  t
+}
+
 .lang-btn {
   background-color: transparent;
   color: var(--nav-text-color);
