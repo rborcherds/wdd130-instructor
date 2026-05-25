@@ -87,7 +87,8 @@ nav {
 }
 
 
-nav a {
+nav a,
+.nav-title {
   color: var(--nav-text-color);
   padding: 1.5em 1em;
   background-color: var(--nav-background-color);
@@ -97,6 +98,7 @@ nav a {
   border-radius: 50px;
 }
 
+
 nav a:hover {
   background-color: var(--nav-background-hover-color);
   color: var(--nav-hover-color);
@@ -105,7 +107,7 @@ nav a:hover {
 
 .header-layout {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: 3fr 1fr;
   align-items: center;
   background-color: var(--nav-background-color);
 }
@@ -125,6 +127,7 @@ nav a:hover {
   gap: 0.5rem;
   padding: 0.5rem 1rem;
   align-items: center;
+  justify-content: flex-end;
 }
 
 .language-selector {
@@ -136,7 +139,6 @@ nav a:hover {
   cursor: pointer;
   font-family: var(--font-body);
   font-size: 1.15rem;
-  t
 }
 
 .lang-btn {
