@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verify your email address for Microsoft Teams Access</title>
+  <meta name="description" content="Verify your email address for Microsoft Teams Access">
+  <meta name="author" content="Ralph Borcherds">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css">
+</head>
+
+<body>
+
+  <header class="header-layout">
+
+    <nav class="nav-header">
+      <a href="index.html">
+        <span class="lang-en">Resources Home</span>
+        <span class="lang-pt">Início dos Recursos</span>
+        <span class="lang-es">Inicio de Recursos</span>
+      </a>
+    </nav>
+    <div class="lang-selector">
+      <button onclick="setLang('en')" class="lang-btn" id="btn-en">English</button>
+      <button onclick="setLang('pt')" class="lang-btn" id="btn-pt">Português</button>
+      <button onclick="setLang('es')" class="lang-btn" id="btn-es">Español</button>
+    </div>
+
+  </header>
+
+  <main>
+
+    <h1>
+      <span class="lang-en">How to verify your email address for Microsoft Teams Access</span>
+      <span class="lang-pt">Como verificar seu endereço de e-mail para acesso ao Microsoft Teams</span>
+      <span class="lang-es">Cómo verificar su dirección de correo electrónico para el acceso a Microsoft Teams</span>
+    </h1>
+    <p>
+      <span class="lang-en">This is only for students who are having trouble accessing Microsoft Teams.</span>
+      <span class="lang-pt">Isso é apenas para estudantes que estão tendo problemas para acessar o Microsoft Teams.</span>
+      <span class="lang-es">Esto es solo para estudiantes que están teniendo problemas para acceder a Microsoft Teams.</span>
+    </p>
+    <p>
+      <span class="lang-en">All my help starting in week 2 will be in MS Teams only.</span>
+      <span class="lang-pt">Toda a minha ajuda a partir da semana 2 será apenas no MS Teams.</span>
+      <span class="lang-es">Toda mi ayuda a partir de la semana 2 será únicamente en MS Teams.</span>
+    </p>
+    <p>
+      <span class="lang-en">Please watch this short 3-minute video on how to verify your email.</span>
+      <span class="lang-pt">Assista a este vídeo curto de 3 minutos sobre como verificar seu e-mail.</span>
+      <span class="lang-es">Vea este breve video de 3 minutos sobre cómo verificar su correo electrónico.</span>
+    </p>
+    <p><a class="inline_disabled"
+        href="https://byupw.zoom.us/rec/share/V77up_IBEDpADHWIMrj0rRXfk9aRBSsgHAwhqYCaxW5hZQNAAcH2KVhDgW354ElZ.JeB9HHERtT6j0nQG?startTime=1736355846000"
+        target="_blank"
+        rel="noopener">https://byupw.zoom.us/rec/share/V77up_IBEDpADHWIMrj0rRXfk9aRBSsgHAwhqYCaxW5hZQNAAcH2KVhDgW354ElZ.JeB9HHERtT6j0nQG?startTime=1736355846000</a>
+    </p>
+    <p>
+      <span class="lang-en">If you get an error on any of this then let me know.</span>
+      <span class="lang-pt">Se você receber algum erro em qualquer uma dessas etapas, me avise.</span>
+      <span class="lang-es">Si recibe algún error en cualquiera de estos pasos, avíseme.</span>
+    </p>
+  </main>
+
+  <script>
+    function setLang(lang) {
+      document.documentElement.lang = lang;
+      localStorage.setItem('preferredLang', lang);
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.getElementById('btn-pt').classList.toggle('active', lang === 'pt');
+      document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+    }
+
+    function detectBrowserLang() {
+      const browserLang = navigator.language || navigator.userLanguage || 'en';
+      const lang = browserLang.toLowerCase();
+      if (lang.startsWith('pt')) return 'pt';
+      if (lang.startsWith('es')) return 'es';
+      return 'en';
+    }
+
+    const savedLang = localStorage.getItem('preferredLang') || detectBrowserLang();
+    setLang(savedLang);
+  </script>
+</body>
+
+</html>
